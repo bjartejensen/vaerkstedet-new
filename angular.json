@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vaerkstedet-new"
+    }
+  },
+  "defaultProject": "vaerkstedet-new",
+  "cli": {
+    "analytics": "77e7169e-50b3-4ea4-9835-2122e02c8da0"
+  }
 }
