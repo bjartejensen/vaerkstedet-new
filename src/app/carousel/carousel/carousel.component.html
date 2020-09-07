@@ -1,0 +1,32 @@
+
+
+<div class="container">
+
+    <div class="display">
+        <h5>Back Url: {{urlIfBack}}</h5>
+        <h5>SelectedIDX: {{selectedImgUrl}}</h5>
+        <h5>Next Url: {{urlIfNext}}</h5>
+        <h4>Direction {{direction}}</h4>
+    </div>
+
+    <div  @show  class="image-section" >
+
+        <img  [src]="urlIfBack" alt="">
+        <img [@moveleftright]="direction==='next'? 'left': 'right' " [src]="selectedImgUrl" alt="">
+        <img    [src]="urlIfNext" alt="">
+    </div>
+
+    <div class="cta">
+        <button mat-raised-button (click)="onButtonClicked('back')">
+            Back
+        </button>
+        <button mat-raised-button
+            (click)="onButtonClicked('next')"
+        >
+            Next
+        </button>
+    </div>
+
+</div>
+
+

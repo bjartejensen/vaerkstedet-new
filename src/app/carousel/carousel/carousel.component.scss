@@ -1,0 +1,57 @@
+@import "../../../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0%;
+  background: orange;
+}
+
+.display{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    margin: 0%;
+    background: olive;
+}
+
+.image-section {
+    position: relative;
+    display: flex;
+    background: orangered;
+    width: 50%;
+    height: 50%;
+      
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%; 
+      object-fit: contain;
+      margin: auto;
+    }
+}
+
+.cta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    @include mat-elevation(8, pink, 0.8);
+  }
