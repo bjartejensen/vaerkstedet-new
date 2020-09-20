@@ -1,26 +1,36 @@
 
 
-<div class="container">
+<div class="container" @specficTrig 
+(@specficTrig.start)="onAnimationStart($event)"
+ >
 
-    <div class="display">
+    <div class="display" 
+     
+    >
         <h5>Back Url: {{urlIfBack}}</h5>
         <h5>SelectedIDX: {{selectedImgUrl}}</h5>
         <h5>Next Url: {{urlIfNext}}</h5>
-        <h4>Direction {{direction}}</h4>
+        <h4 class="dir" >Direction {{direction}}</h4>
+        <h4 class="state">Animate to State: {{transformCenterImg}}</h4>
+    </div>
+    <!--[@moveleftright]="transformCenterImg"-->
+    <div *ngIf="false"  @show id="carousel-slide" class="carousel-slide" >
+        <img *ngFor="let img of images; let i = index" [src]="img" [alt]="i">
     </div>
 
-    <div  @show  class="image-section" >
-
-        <img  [src]="urlIfBack" alt="">
-        <img [@moveleftright]="direction==='next'? 'left': 'right' " [src]="selectedImgUrl" alt="">
-        <img    [src]="urlIfNext" alt="">
+    <div *ngIf="true"  id="carousel-slide" class="carousel-slide"
+        [@btnClicked]="direction==='left'? 'left': 'center' " 
+     >
+            <img *ngIf="true" [src]="urlIfBack" alt="">
+            <img>
+            <img *ngIf="true"   [src]="urlIfNext" alt="">
     </div>
 
     <div class="cta">
-        <button mat-raised-button (click)="onButtonClicked('back')">
-            Back
+        <button class="backBtn" mat-raised-button (click)="onButtonClicked('back')">
+            left
         </button>
-        <button mat-raised-button
+        <button class="nextBtn" mat-raised-button
             (click)="onButtonClicked('next')"
         >
             Next
