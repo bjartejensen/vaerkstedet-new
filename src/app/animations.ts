@@ -26,6 +26,24 @@ import {
     ])),{params:{duration: "1s", ease: "ease-out"}}
   )
 
+  //query(".out-of-focus",[style({transform:"translateX(-200%)"})])),
+  export const slider: AnimationTriggerMetadata =
+  trigger("slider",[
+    state("left",style({})),
+    
+    transition("*=>left, left => left",[
+      group([
+        query(".out-of-focus",
+            [style({transform:"translateX(-100%)"}),
+            animate(400,style({transform:"translateX(0%)"})),
+            animate("200ms 1000ms",style({transform:"translateX(-100%)"}))]),
+       /*  query(".in-focus",
+            [style({transform:"translateX(0%)"}),animate(400,style({transform:"translateX(100%)"}))])   */
+      ])
+    ])]);
+
+    
+
   export const specficTrig: AnimationTriggerMetadata=
   trigger("specficTrig",[
     transition(":enter",[
@@ -43,6 +61,8 @@ import {
       ])
     ])
   ])
+
+
 
   export const fadeKeyFrame: AnimationTriggerMetadata = 
   

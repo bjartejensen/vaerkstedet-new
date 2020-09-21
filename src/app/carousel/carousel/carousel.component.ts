@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChildren, AfterViewInit, HostBinding, QueryList } from '@angular/core';
-import { show, outAndIn,fadeKeyFrame,specficTrig,btnClicked } from "src/app/animations";
+import { show, outAndIn,fadeKeyFrame,specficTrig,btnClicked,slider } from "src/app/animations";
 import { CarouselButtonDirective } from '../directives/carousel-button.directive';
 import {
   animation,
@@ -22,7 +22,7 @@ import {
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
-  animations: [show,outAndIn,fadeKeyFrame,specficTrig,btnClicked]
+  animations: [show,outAndIn,fadeKeyFrame,specficTrig,btnClicked,slider]
 
   
 
@@ -35,7 +35,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
   images: any[]=[]
   
-
+  selectedIdx:number;
   selectedImgIdx:number = 1;
   selectedImgUrl:string;
   urlIfNext: string;
@@ -54,24 +54,28 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(){
   }
 
-  @HostBinding('style.background') 
+  onIdx($event){
+    this.selectedIdx = $event;
+  }
+
+ /*  @HostBinding('style.background') 
   get backgroundColor(){
       if(this.viewChildren){
-        console.log(this.viewChildren.first.color);
+        //console.log(this.viewChildren.first.color);
         return this.viewChildren.first.color;
       }
       else{
         return "green";
       }
       
-  }
+  } */
 
   private setImages(){
-    //this.images.push("../../../assets/img/3.jpg");
+    this.images.push("../../../assets/img/3.jpg");
     this.images.push("../../../assets/img/1.jpg");
     this.images.push("../../../assets/img/2.jpg");
     this.images.push("../../../assets/img/3.jpg");
-    //this.images.push("../../../assets/img/1.jpg");
+    this.images.push("../../../assets/img/1.jpg");
   }
 
   onAnimationStart($event){
@@ -79,27 +83,27 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
 
 
-  public onButtonClicked(direction:string){
+ /*  public onButtonClicked(direction:string){
 
     this.direction = direction;
 
     switch (direction.toLowerCase()){
 
       case "next":
-        this.moveNext();
+        //this.moveNext();
         break;
       case "back":
-        this.moveBack();
+        //this.moveBack();
         break;
     } 
 
-  } 
+  }  */
 
   public getImgUrl(idx):string{
     return this.images[idx];
   }
 
-  private moveNext(){
+  /* private moveNext(){
 
       if(this.selectedImgIdx===this.maxIdx){
         this.selectedImgIdx=0;
@@ -115,9 +119,9 @@ export class CarouselComponent implements OnInit, AfterViewInit {
       }
 
       this.selectedImgUrl = this.getImgUrl(this.selectedImgIdx);
-  }
+  } */
 
-  private moveBack(){
+ /*  private moveBack(){
     if(this.selectedImgIdx===0){
       this.selectedImgIdx=this.maxIdx;
       this.urlIfBack = this.getImgUrl(this.selectedImgIdx-1);
@@ -131,6 +135,14 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     }
 
     this.selectedImgUrl = this.getImgUrl(this.selectedImgIdx);
+  } */
+
+ /*  public onSliderEnd($event){
+    console.log("Animation",$event);
+  }
+
+  public get state():string{
+    return this.direction;
   }
 
   private get maxIdx(){
@@ -146,7 +158,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   public get transformCenterImg(): string {
     let res = this.direction ==="in"?"out":"in";
     return res;
-  }
+  } */
 
 
   public get transformRightImg():string{

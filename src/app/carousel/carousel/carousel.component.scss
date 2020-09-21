@@ -18,8 +18,8 @@
   outline: green 2px solid; */
   padding: -2%;
 
-  //overflow: hidden;
-  overflow: visible;
+  overflow: hidden;
+  //overflow: visible;
 }
 
 
@@ -37,24 +37,20 @@
 }
 
 .carousel-slide {
-    display: flex;
-    width: 100%;
-    height: 500px;
-    transition: all 0.4 ease-in-out;
-   /*  justify-content: center;
-    background: orangered;
-    width: 50%;
-    height: 50%;    
-    overflow:visible;   */
-    
+  position: relative;  
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+#carousel-slide{
+  
 }
 
 img {
   width: 100%;
   object-fit:cover;
-  //margin:1%;
-  background:green;
-  
+  transition: all 0.4 ease-in-out;
 } 
 
 .cta {
@@ -63,10 +59,22 @@ img {
     justify-content: center;
     align-items: space-evenly;
     @include mat-elevation(8, pink, 0.8);
-  }
-
-.focus{
-  background:rgb(75, 11, 22);
 }
+
+.in-focus{
+  //position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+.out-of-focus{
+  //position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+
 
 

@@ -1,39 +1,40 @@
 
 
-<div class="container" @specficTrig 
-(@specficTrig.start)="onAnimationStart($event)"
- >
+<div class="container" 
+    appCarousel [maxIdx]="images.length-1" [speed]="400" (idx)="onIdx($event)" >
 
-    <div class="display" 
-     
+    <div class="display"     
     >
+        <h5>Image IDX: {{selectedIdx}}</h5>
         <h5>Back Url: {{urlIfBack}}</h5>
         <h5>SelectedIDX: {{selectedImgUrl}}</h5>
         <h5>Next Url: {{urlIfNext}}</h5>
         <h4 class="dir" >Direction {{direction}}</h4>
-        <h4 class="state">Animate to State: {{transformCenterImg}}</h4>
     </div>
     <!--[@moveleftright]="transformCenterImg"-->
-    <div *ngIf="false"  @show id="carousel-slide" class="carousel-slide" >
+    <div *ngIf="true"  id="carousel-slide" class="carousel-slide" >
         <img *ngFor="let img of images; let i = index" [src]="img" [alt]="i">
     </div>
 
-    <div *ngIf="true"  id="carousel-slide" class="carousel-slide"
-        [@btnClicked]="direction==='left'? 'left': 'center' " 
+    <div *ngIf="false"  id="carousel-slide" class="carousel-slide"
+       
      >
-            <img *ngIf="true" [src]="urlIfBack" alt="">
-            <img>
-            <img *ngIf="true"   [src]="urlIfNext" alt="">
+            <img class="out-of-focus"  [src]="urlIfNext" alt="">
+            <img *ngIf="true"  [src]="urlIfBack" alt="">
+            
     </div>
 
+<!--(click)="onButtonClicked('back')"-->
     <div class="cta">
-        <button class="backBtn" mat-raised-button (click)="onButtonClicked('back')">
+        <button class="backBtn" mat-raised-button 
+        >
             left
         </button>
+        
         <button class="nextBtn" mat-raised-button
-            (click)="onButtonClicked('next')"
+           
         >
-            Next
+            right
         </button>
     </div>
 

@@ -7,6 +7,8 @@ const routes: Routes = [
     loadChildren: () =>
       import("./carousel/carousel.module").then((m) => m.CarouselModule)
   }
+  
+
 ]
 
 @NgModule({

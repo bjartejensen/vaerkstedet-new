@@ -1,4 +1,5 @@
-import { Directive, ElementRef, OnInit, OnDestroy, HostBinding, Input, AfterViewInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, OnInit, OnDestroy, HostBinding, Input, AfterViewInit, Renderer2, Output, EventEmitter } from '@angular/core';
+import { Observable, fromEvent, Subscription } from 'rxjs';
 
 @Directive({
   selector: '[appCarousel]'
@@ -6,108 +7,152 @@ import { Directive, ElementRef, OnInit, OnDestroy, HostBinding, Input, AfterView
 export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
 
   backBtn: HTMLElement;
-  nextBtn: HTMLElement;
-  carouselSlide: HTMLElement;
+  backBtnObs$: Observable<any>;
+  backBtnSub:Subscription;
 
+  nextBtn: HTMLElement;
+  nextBtnObs$: Observable<any>;
+  nextBtnSub:Subscription;
+
+  transitionEndObs$:Observable<any>;
+  transitionEndSub:Subscription;
+
+  carouselSlide: HTMLElement;
   carouselImages:NodeList;
 
-  @Input() maxIdx;
   selectedIdx=1;
-
   imageSize:number;
 
+  @Input() maxIdx;
+  @Input() speed:number =400;
+  @Input() easing:string ="ease-in-out";
+  @Output() idx:EventEmitter<number> = new EventEmitter();
+  
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
    ngOnInit(){
-     
-   
    }
 
    ngAfterViewInit(){
-
     this.setBtns();
     this.setCarouselSlide();
     this.setImages();
     this.init();
     this.setEventListeners();
-
    }
 
-   ngOnDestroy(){}
+   ngOnDestroy(){
+    this.removeEventListeners();
+   }
 
-  setEventListeners(){
+  //#region Getter
 
-    this.backBtn.addEventListener("click",()=>{
-      
-     if(this.selectedIdx===0){
-        this.selectedIdx=this.maxIdx;
-      } 
-      else{
-        this.selectedIdx--;
-      }
-
-      this.renderer.setStyle(this.carouselSlide,
-                              "transform",
-                              `translateX(${-this.imageSize*this.selectedIdx}px)`);
-
-      //this.carouselSlide.style.transform = `translateX(${-this.imageSize*this.selectedIdx}px)`
-
-    })
-
-    this.nextBtn.addEventListener("click",()=>{
-      
-      if(this.selectedIdx===this.maxIdx){
-        this.selectedIdx=0;
-      }
-      else{
-        this.selectedIdx++;
-
-        if(this.selectedIdx===this.maxIdx){
-
-          //debugger;
-
-          let t = `translateX(${-this.imageSize}px)`;
-
-          this.renderer.setStyle(this.carouselSlide,
-            "transform",
-            `translateX(${-this.imageSize}px)`);
-
-        }
-
-      }
-
-
-      
-      
-      this.renderer.setStyle(this.carouselSlide,
-        "transform",
-        `translateX(${-this.imageSize*this.selectedIdx}px)`);
-
-    })
+   private get transitionStr():string{
+    return `${this.speed}ms transform ${this.easing}` 
   }
 
   private get translateXStr(){
     return `translateX(${-this.imageSize*this.selectedIdx}px)`
   }
 
+  //#endregion
 
-  init(){
+
+  //#region Private Methods
+  
+  
+
+  private init(){
     this.carouselSlide.style.transform = this.translateXStr;
   }
 
-  setImages(){
+  private setImages(){
     this.imageSize = this.el.nativeElement.clientWidth;
   }
 
-  setCarouselSlide(){
-    
+  private setCarouselSlide(){
     this.carouselSlide = document.querySelector("#carousel-slide");
-    
   }
 
-  setBtns(){
+  private setBtns(){
     this.backBtn = document.querySelector(".backBtn");
     this.nextBtn = document.querySelector(".nextBtn");
   }
+
+  private removeEventListeners(){
+    
+    if(this.backBtnObs$){
+      this.backBtnSub.unsubscribe();
+    }
+
+    if (this.nextBtnObs$){
+      this.nextBtnSub.unsubscribe();
+    }
+    
+    if(this.transitionEndObs$){
+      this.transitionEndSub.unsubscribe();
+    }
+
+   }
+
+  private setTransitionEndObs(){
+
+    this.transitionEndObs$ = fromEvent(this.carouselSlide,"transitionend");
+    this.transitionEndSub = this.transitionEndObs$.subscribe(()=>{
+
+      if(this.selectedIdx===0){
+
+        this.renderer.setStyle(this.carouselSlide,"transition","none");
+        this.selectedIdx=this.maxIdx-1;
+        let t = `translateX(${-this.imageSize*this.selectedIdx}px)`;
+        this.renderer.setStyle(this.carouselSlide,"transform",t);
+      } 
+
+      if(this.selectedIdx===this.maxIdx){
+
+        this.renderer.setStyle(this.carouselSlide,"transition","none");
+        this.selectedIdx=1;
+        let t = `translateX(${-this.imageSize*this.selectedIdx}px)`;
+        this.renderer.setStyle(this.carouselSlide,"transform",t);
+      } 
+    })
+
+  }
+
+  private setBackBtnObs(){
+
+    this.backBtnObs$ = fromEvent(this.backBtn,"click");
+    this.backBtnSub =this.backBtnObs$.subscribe(()=>{
+        this.renderer.setStyle(this.carouselSlide,"transition",this.transitionStr);
+        this.selectedIdx--;
+        this.renderer.setStyle(this.carouselSlide,"transform",this.translateXStr);
+        this.idx.emit(this.selectedIdx);
+    })
+
+  }
+
+  private setNextBtnObs(){
+
+    this.nextBtnObs$ = fromEvent(this.nextBtn,"click");
+    this.nextBtnSub = this.nextBtnObs$.subscribe(()=>{
+
+      this.renderer.setStyle(this.carouselSlide,"transition","400ms transform ease-in");
+      this.selectedIdx++;
+      this.renderer.setStyle(this.carouselSlide,
+        "transform",this.translateXStr);
+    })
+
+  }
+
+  private setEventListeners(){
+
+    this.setBackBtnObs();
+    this.setNextBtnObs();
+    this.setTransitionEndObs();
+  }
+
+  //#endregion
+
+  
 
 }
