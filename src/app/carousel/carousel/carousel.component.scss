@@ -9,31 +9,17 @@
     outline: none !important;
   }
 }
+
 .container {
   width: 50%;
   margin: auto;
-  border: black 2px solid;
-  z-index: 2;
-  /* border: black 2px solid;
-  outline: green 2px solid; */
-  padding: -2%;
-
   overflow: hidden;
-  //overflow: visible;
+  
 }
 
-
-.display{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-    width: 100%;
-    margin: 0%;
-    background: olive;
-    display: flex;
+.caro-container{
+  position: relative;
+  display: flex;
 }
 
 .carousel-slide {
@@ -43,37 +29,25 @@
   height: 500px;
 }
 
-#carousel-slide{
-  
+.example-button-container {
+  position: absolute;
+  display: flex;
+  z-index: 100;
+  top:50%;
+  transform: translate(0%,-50%);
+
+  &:nth-last-of-type(1){
+    right:0;
+  }
+
 }
+
 
 img {
   width: 100%;
   object-fit:cover;
   transition: all 0.4 ease-in-out;
 } 
-
-.cta {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: space-evenly;
-    @include mat-elevation(8, pink, 0.8);
-}
-
-.in-focus{
-  //position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
-}
-
-.out-of-focus{
-  //position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
-}
 
 
 

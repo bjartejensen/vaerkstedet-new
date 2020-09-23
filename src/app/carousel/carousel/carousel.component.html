@@ -1,43 +1,33 @@
 
 
 <div class="container" 
-    appCarousel [maxIdx]="images.length-1" [speed]="400" (idx)="onIdx($event)" >
+    appCarousel 
+    [maxIdx]="images.length-1" 
+    [speed]="800">
 
-    <div class="display"     
-    >
-        <h5>Image IDX: {{selectedIdx}}</h5>
-        <h5>Back Url: {{urlIfBack}}</h5>
-        <h5>SelectedIDX: {{selectedImgUrl}}</h5>
-        <h5>Next Url: {{urlIfNext}}</h5>
-        <h4 class="dir" >Direction {{direction}}</h4>
-    </div>
-    <!--[@moveleftright]="transformCenterImg"-->
-    <div *ngIf="true"  id="carousel-slide" class="carousel-slide" >
-        <img *ngFor="let img of images; let i = index" [src]="img" [alt]="i">
+    <div class="caro-container">
+        <div class="example-button-container">
+            <button mat-fab 
+            style="background: transparent;color:grey" 
+            class="nextBtn" aria-label="Example icon button with a home icon">
+                <mat-icon>arrow_back_ios</mat-icon>
+            </button>
+        </div>
+
+        <div id="carousel-slide" class="carousel-slide" >
+            <img *ngFor="let img of images; let i = index" [src]="img" [alt]="i">
+        </div>
+
+         <div class="example-button-container">
+            <button mat-fab class="backBtn" style="background: transparent;color:grey"  aria-label="Example icon button with a home icon">
+                <mat-icon>arrow_forward_ios</mat-icon>
+            </button>
+        </div>
     </div>
 
-    <div *ngIf="false"  id="carousel-slide" class="carousel-slide"
-       
-     >
-            <img class="out-of-focus"  [src]="urlIfNext" alt="">
-            <img *ngIf="true"  [src]="urlIfBack" alt="">
-            
-    </div>
-
-<!--(click)="onButtonClicked('back')"-->
-    <div class="cta">
-        <button class="backBtn" mat-raised-button 
-        >
-            left
-        </button>
-        
-        <button class="nextBtn" mat-raised-button
-           
-        >
-            right
-        </button>
-    </div>
+    
 
 </div>
 
+    
 

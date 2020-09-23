@@ -1,5 +1,7 @@
 import { Directive, ElementRef, OnInit, OnDestroy, HostBinding, Input, AfterViewInit, Renderer2, Output, EventEmitter } from '@angular/core';
 import { Observable, fromEvent, Subscription } from 'rxjs';
+import {debounceTime, throttleTime} from "rxjs/operators"
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Directive({
   selector: '[appCarousel]'
@@ -28,7 +30,18 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
   @Input() easing:string ="ease-in-out";
   @Output() idx:EventEmitter<number> = new EventEmitter();
   
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2,
+    breakpointObserver: BreakpointObserver) {
+
+      breakpointObserver.observe([
+        Breakpoints.HandsetLandscape,
+        Breakpoints.HandsetPortrait
+      ]).subscribe(result => {
+        if (result.matches) {
+          console.log("break",result);
+        }
+      });
+    }
 
    ngOnInit(){
    }
@@ -121,7 +134,7 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
 
   private setBackBtnObs(){
 
-    this.backBtnObs$ = fromEvent(this.backBtn,"click");
+    this.backBtnObs$ = fromEvent(this.backBtn,"click").pipe(throttleTime(500));
     this.backBtnSub =this.backBtnObs$.subscribe(()=>{
         this.renderer.setStyle(this.carouselSlide,"transition",this.transitionStr);
         this.selectedIdx--;
@@ -133,7 +146,7 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
 
   private setNextBtnObs(){
 
-    this.nextBtnObs$ = fromEvent(this.nextBtn,"click");
+    this.nextBtnObs$ = fromEvent(this.nextBtn,"click").pipe(throttleTime(500));
     this.nextBtnSub = this.nextBtnObs$.subscribe(()=>{
 
       this.renderer.setStyle(this.carouselSlide,"transition","400ms transform ease-in");

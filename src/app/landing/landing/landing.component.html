@@ -1,0 +1,69 @@
+
+<div class="container" (click)="onClick()">
+  
+    <div class="frame"  >
+        <div class="bg-container"  >
+
+                <div class="rect"></div>
+          
+                <ng-container *ngFor="let b of images; let i = index">
+                    <div class="bg" 
+                        *ngIf="isVisible(i)"
+                        [@sageDynamic]="state"
+                        (@sageDynamic.done)="onDone($event)" 
+                        [style.background-image]="'url(' + b + ')'">
+                        
+                        <div class="darken-overlay">
+                        </div>
+
+                        <div  class="header" >
+                            <h2>{{headers[i]}}   </h2>
+                        </div>
+                    </div>
+                </ng-container>
+
+                <div class="bg" 
+                    *ngIf="isVisible(20)"
+                    [@sageDynamic]="state"
+                    (@sageDynamic.done)="onDone($event)" 
+                    [style.background-image]="'url(' + images[idx] + ')'">
+                    
+                    <div class="darken-overlay">
+                    </div>
+
+                    <div  class="header" >
+                        <h2>{{headers[idx]}}   </h2>
+                    </div>
+                </div>
+                    
+                <div class="bg" 
+                    *ngIf="isVisible(5)"
+                    [@sageDynamic]="state"
+                    (@sageDynamic.done)="onDone($event)" 
+                    [style.background-image]="'url(' + images[idx] + ')'">
+
+                    <div class="darken-overlay">
+                    </div>
+
+                    <div  class="header" >
+                        <h2>{{headers[idx]}} {{idx}} </h2>
+                    </div>
+                </div>
+
+                <div class="bg" 
+                    *ngIf="isVisible(5)"
+                    [@sageDynamic]="state"
+                    (@sageDynamic.done)="onDone($event)" 
+                    [style.background-image]="'url(' + images[idx] + ')'">
+
+                    <div class="darken-overlay">
+                    </div>
+
+                    <div  class="header" >
+                        <h2>{{headers[idx]}} {{idx}} </h2>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>

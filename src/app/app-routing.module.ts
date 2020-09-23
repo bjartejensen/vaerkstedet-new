@@ -5,6 +5,11 @@ const routes: Routes = [
   {
     path: "",
     loadChildren: () =>
+      import("./landing/landing.module").then((m) => m.LandingModule)
+  },
+  {
+    path: "carousel",
+    loadChildren: () =>
       import("./carousel/carousel.module").then((m) => m.CarouselModule)
   }
   
