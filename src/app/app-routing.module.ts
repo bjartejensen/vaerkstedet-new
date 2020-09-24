@@ -5,14 +5,16 @@ const routes: Routes = [
   {
     path: "",
     loadChildren: () =>
-      import("./landing/landing.module").then((m) => m.LandingModule)
+      import("./landing/landing.module").then((m) => m.LandingModule),
+    data: { animationState: 'One' }
   },
   {
     path: "carousel",
     loadChildren: () =>
-      import("./carousel/carousel.module").then((m) => m.CarouselModule)
+      import("./carousel/carousel.module").then((m) => m.CarouselModule),
+    data: { animationState: 'Two' }
   }
-  
+ 
 
 ]
 

@@ -36,7 +36,6 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
   images: any[]=[]
  
- 
   constructor() { }
 
   ngOnInit(): void {
