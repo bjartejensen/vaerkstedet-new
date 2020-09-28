@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DesignersResolver } from './services/designers.resolver';
 
 const routes: Routes = [
   {
@@ -13,6 +14,15 @@ const routes: Routes = [
     loadChildren: () =>
       import("./carousel/carousel.module").then((m) => m.CarouselModule),
     data: { animationState: 'Two' }
+  },
+  {
+    path: "designers",
+    loadChildren: () =>
+      import("./designers/designers.module").then((m) => m.DesignersModule),
+        data: { animationState: 'Three' },
+    resolve: {
+      designers:DesignersResolver
+    }
   }
  
 
@@ -20,6 +30,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [DesignersResolver]
 })
 export class AppRoutingModule { }

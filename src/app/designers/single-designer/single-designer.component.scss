@@ -1,0 +1,46 @@
+@import "../../../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+@mixin header {
+    font-family: $din-font;
+    font-weight: 700;
+    font-size: 2.95rem;
+    line-height: 3.25rem;
+    color: $text-color;
+  }
+  
+  @mixin sub-header {
+    font-family: $din-font;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    line-height: 2.25rem;
+    color: $text-color;
+  }
+  
+  @mixin text {
+    font-family: $din-font;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: $text-color;
+  }
+
+  .container{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background:rgb(97, 153, 97);
+}

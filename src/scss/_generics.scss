@@ -1,0 +1,18 @@
+@import "./var";
+
+
+@mixin header {
+    font-family: $din-font;
+    font-weight: 700;
+    font-size: 2.95rem;
+    line-height: 3.25rem;
+    color: $text-color;
+}
+
+@mixin header {
+    font-family: $din-font;
+    font-weight: 700;
+    font-size: 2.95rem;
+    line-height: 3.25rem;
+    color: $text-color;
+}

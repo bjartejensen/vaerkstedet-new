@@ -16,7 +16,7 @@ import {
 
   export const routeTransitionAnimations = trigger('triggerName', [
 
-    transition('One => Two, Two => One', [
+    transition('void => *, * => void', [
       style({ position: 'relative' }),
       query(':enter, :leave', [
         style({

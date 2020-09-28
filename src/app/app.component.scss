@@ -1,0 +1,47 @@
+@import "../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.logo-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background:black;
+    z-index: 1000;
+
+    .logo{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: orange;
+        height: 200px;
+    
+        h2{
+            position: relative;
+            font-family: $din-font;
+            font-weight: 700;
+            font-size: 2em;
+            font-size: 9rem;
+            color: #fff;
+        }
+    }
+
+}
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+
+<ng-template #singledesigner let-singleDesignerData="singleDesignerData" >
+  <app-single-designer [singleDesignerData]="singleDesignerData">
+  </app-single-designer>
+</ng-template> 
+
+<div class="container"
+   (click)="getSingleDesigner('')"
+ [style.flexDirection]="'column'"
+>
+
+    <ng-container *ngIf="singleDesignerObs$ | async as designer">
+        <ng-container *ngTemplateOutlet="singledesigner; context{singleDesignerData: designer}">
+        </ng-container>
+   </ng-container>
+
+    <ng-container >
+
+    <div class="logo">
+
+        <div class="img-container">
+            <img [src]="logoUrl">
+        </div>
+
+        <div *ngIf="false" class="bg"
+            [style.background-image]="'url(' + logoUrl + ')'">
+        </div>
+    </div>
+
+    <div class="intro-section">
+
+        <div class="sub-header">
+            <h2>Din smykkebutik på Nørrebro</h2>
+        </div>
+
+        <div class="text-block"  >
+            <p>{{introText[0]}}</p>
+        </div>
+
+        <div class="text-block"  >
+            <p>{{introText[1]}}</p>
+        </div>
+
+        <div class="text-block"  >
+            <p>{{introText[2]}}</p>
+        </div>
+    </div>
+
+    <div class="cta">
+        <button mat-raised-button>Se Designere</button>
+    </div>
+
+    </ng-container>
+
+</div>
