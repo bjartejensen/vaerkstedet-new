@@ -1,0 +1,36 @@
+<mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav
+      #drawer
+      [fixedInViewport]="true"
+      [attr.role]="'dialog'"
+      [mode]="'over'"
+      [position]="'start'"
+      [opened]="true">
+
+        <button 
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            class="hamburger"
+            id="nav-top"
+            (click)="drawer.toggle(); ">
+            <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
+        </button>
+
+          <mat-nav-list  >
+             <app-menu-list></app-menu-list>
+          </mat-nav-list>
+    </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <button mat-icon-button (click)="drawer.toggle()" color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+  
+    <!--Router Outlet-->
+    <ng-content></ng-content> 
+  
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

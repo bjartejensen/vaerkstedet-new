@@ -5,9 +5,8 @@
 </ng-template> 
 
 <div class="container"
-   (click)="getSingleDesigner('')"
- [style.flexDirection]="'column'"
->
+   
+ [style.flexDirection]="'column'">
 
     <ng-container *ngIf="singleDesignerObs$ | async as designer">
         <ng-container *ngTemplateOutlet="singledesigner; context{singleDesignerData: designer}">

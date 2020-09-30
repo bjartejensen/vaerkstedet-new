@@ -1402,7 +1402,7 @@
         "affectsGlobalScope": false
       },
       "../src/designers/designers/designers.service.ts": {
-        "version": "9c584292cd7e5486b78446e98d6026731fc36edfd52a3f4b4e299d61044d3e59",
+        "version": "cc490f113e37193e86e197e4ec8fa66fc23a950051e95c8594dc4cb69132deb5",
         "signature": "888e15fb092adafd7c24e26c9b9e7bd871845c70f13eab7b1bc83dc2c045669c",
         "affectsGlobalScope": false
       },
@@ -2005,8 +2005,6 @@
       "strictNullChecks": false,
       "skipLibCheck": true,
       "allowSyntheticDefaultImports": true,
-      "project": "../tsconfig.json",
-      "watch": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {

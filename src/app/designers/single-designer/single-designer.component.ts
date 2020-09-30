@@ -1,12 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { SocialMediaLink, SingleDesigner } from 'src/app/models';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-single-designer',
   templateUrl: './single-designer.component.html',
   styleUrls: ['./single-designer.component.scss']
 })
-export class SingleDesignerComponent implements OnInit {
+export class SingleDesignerComponent implements OnInit, OnChanges {
 
   @Input() singleDesignerData:SingleDesigner;
   //singleDesignerData:SingleDesigner 
@@ -16,18 +18,33 @@ export class SingleDesignerComponent implements OnInit {
   portfolioImages:string[];
   socialMediaLinks:SocialMediaLink[] =[]; 
 
-  constructor() { }
+  singleDesignerObs$: Observable<SingleDesigner>;
+
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnChanges(){
+    //this.setProfile();
+  }
 
   ngOnInit(): void {
 
+    this.singleDesignerObs$.subscribe(x=>{
+      debugger;
+    })
     debugger;
+    this.singleDesignerObs$ = this.route.snapshot.data["designer"];
 
+    
+
+    this.setProfile();
+  }
+
+  private setProfile(){
     this.designerName = this.singleDesignerData.name;
     this.description = this.singleDesignerData.description;
-    this.profileImage = this.singleDesignerData.profileImage;
-    this.portfolioImages = this.singleDesignerData.portfolioImages;
-    this.socialMediaLinks = this.singleDesignerData.socialMediaLinks;
-
+    this.profileImage = this.singleDesignerData.profile;
+    this.portfolioImages = this.singleDesignerData.portfolio;
+    this.socialMediaLinks = this.singleDesignerData.socialmedia;
   }
 
   public setSomeUrl(){

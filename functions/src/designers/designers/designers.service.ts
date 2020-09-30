@@ -18,6 +18,8 @@ export class DesignersService {
           .collection(`${designers}`)
           .get();
 
+        
+
         const result = await tmp.docs.map((x) => 
         { return {name:x.data().name, 
                     portfolio: x.data().images,

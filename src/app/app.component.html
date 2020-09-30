@@ -7,12 +7,16 @@
     </div>
 </ng-template>
 
-
-<div [@triggerName]="prepareRoute(outlet)">
-
-        <ng-container  
-        *ngTemplateOutlet="analyticsTemplate">
-        </ng-container>
-
+<app-shell>
+   
     <router-outlet #outlet="outlet"></router-outlet>
-</div>
+   
+   <!-- <div [@triggerName]="prepareRoute(outlet)">
+
+         <ng-container  
+            *ngTemplateOutlet="analyticsTemplate">
+            </ng-container>
+
+   
+    </div> -->
+</app-shell>

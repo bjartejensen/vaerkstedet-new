@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, of, from, scheduled } from 'rxjs';
 import { SingleDesigner } from '../models';
 import { environment } from 'src/environments/environment';
 import { tap,filter } from 'rxjs/operators';
+import {findIndex,snakeCase} from "lodash";
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,16 +21,17 @@ export class DesignersService {
     
   constructor(private httpClient: HttpClient) {}
 
-  public fetchSingleDesigner(name:string){
-
+  public fetchSingleDesigner(name:string):SingleDesigner{
 
     debugger;
-     let t = this.designers.filter((x: SingleDesigner)=>x.name===name);
-     let d:SingleDesigner
-    if(d){
-      this.singleDesignersSubject.next(d);
-    }
+    const singleDesigner :SingleDesigner = this.designers.find(x=> snakeCase(x.name)===name);
 
+    return singleDesigner;
+/* 
+    if(singleDesigner){
+      this.singleDesignersSubject.next(singleDesigner);
+      
+    }  */
   }
 
   public getDesigners():Observable<SingleDesigner[]>{
@@ -36,9 +39,10 @@ export class DesignersService {
     const url = environment.apiPath;
 
     return this.httpClient.get<SingleDesigner[]>
-      (url+"designers/fetch").pipe(tap(designers=>{
-        this.designers = designers; //trigger side effect to store designers
-      }))
+      (url+"designers/fetch").pipe(
+        tap(response=>{
+          this.designers = response["designers"]; //trigger side effect to store designers
+        }))
 
   }
 }

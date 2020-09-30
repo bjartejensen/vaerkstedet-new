@@ -3,7 +3,9 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { SingleDesigner } from 'src/app/models';
 import { DesignersService } from '../../services/designers.service';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { map, tap,filter } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-designers',
@@ -21,9 +23,7 @@ export class DesignersComponent implements OnInit {
     private route: ActivatedRoute,
     breakpointObserver: BreakpointObserver) { 
 
-
-
-    breakpointObserver.observe([
+      breakpointObserver.observe([
       Breakpoints.HandsetLandscape,
       Breakpoints.TabletPortrait,
       Breakpoints.HandsetPortrait
@@ -36,37 +36,27 @@ export class DesignersComponent implements OnInit {
 
   }
 
-  t = "../../../assets/logo/logo-grey.png";
-
   ngOnInit(): void {
 
-    this.designers= this.route.snapshot.data["designers"];
     this.singleDesignerObs$ = this.designersService.singleDesignerObs$;
 
-    this.singleDesignerObs$.subscribe(x=>{
-      debugger;
-    })
+   /*  this.route.params.subscribe(x=>{
 
-   /*  debugger;
-    this.designersService.getDesigners()
-      .subscribe(d=>{
-        debugger;
-      }) */
-
+      if(x.name!="" && x.name!=undefined){
+        this.getSingleDesigner(x.name)
+      }
+      else{
+        this.singleDesignerObs$ = null;
+        this.singleDesignerObs$ = this.designersService.singleDesignerObs$;
+      }
+      
+    }) */
+    
   }
 
   public getSingleDesigner(name:string){
-
-    debugger;
-
-    this.designersService.fetchSingleDesigner("Alice Kaufmann");
-
+    this.designersService.fetchSingleDesigner(name);
   }
-
-  /* public get selectedDesigner():SingleDesigner{
-    return {name: "Louise Rought",profileImage: "",portfolioImages:[],description:[],socialMediaLinks:[]};
-
-  } */
 
   public get logoUrl(){
     return "../../../assets/logo/logo-grey.png";
