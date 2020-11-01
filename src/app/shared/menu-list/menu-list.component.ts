@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute,Route } from '@angular/router';
 import { NavItem } from 'src/app/models';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-menu-list',
@@ -12,12 +13,16 @@ export class MenuListComponent implements OnInit {
   @Input() isMobile:boolean=false;
   @Output() toogleDrawer:EventEmitter<boolean> = new EventEmitter();
 
-  constructor() { }
+  navItems:NavItem[];
 
-  navItems: NavItem[];
+  constructor(private menuService:MenuService) { }
 
   ngOnInit(): void {
     this.setMenuItems();
+  }
+
+  setMenuItems(){
+    this.navItems = this.menuService.getMenuItems();
   }
 
   onMenuItemClicked(toggleDrawer:boolean){
@@ -25,32 +30,8 @@ export class MenuListComponent implements OnInit {
     this.toogleDrawer.emit(toggleDrawer);
   }
 
-  setMenuItems() {
 
-    this.navItems = [
-      {
-        displayName: "Designers",
-        subHeader: "About",
-        route:"designers",
-        toogleDrawer:false,
-        iconName: "",
-        children: [
-          {
-            displayName: "Louise Rought",
-            route:"louise_rought",
-            paramName:"name",
-            paramValue:"louise_rought",
-          },
-          {
-            displayName: "Alice Kaufmann",
-            route:"alice_kaufmann",
-            paramName:"name",
-            paramValue:"alice_kaufmann",
-          },
-       
-        ],
-      }
-    ];
-  }
+
+  
 
 }

@@ -14,50 +14,67 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 90%;
-    height: 60vh;
-    background: palevioletred;
+    height: 90vh;
+    border: solid 1px $cool-pink;
+    margin: 0% auto;
+
 }
 
-.menu-container-d{
+.navblock + .navblock{
+  margin: 0.5em 0%;
+}
+
+/* .menu-container-d{
   @extend .menu-container;
   width: 100vh;
   background:rgb(34, 33, 33);
-}
+} */
 
 .menu{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 100%;
-    background: rgb(182, 9, 67);
+    height: 80%;
+    height: fit-content;
+    margin-top:10%;
 }
 
-.menu-d{
+.logo{
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100%;
-  background: rgb(49, 48, 48);
+  align-content: center;
+  height: 10%;
+  width: 40%;
+  margin: auto;
+  
+  .img-container{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      //margin:auto;
+      //background: $cool-pink;
+
+      img {
+          width: 125px;
+          object-fit:cover;
+      } 
+  }
 }
 
-.li-block{
-    position: relative;
-    display: flex;
-    background:olive;
-    height: 2em;
-    margin: 1em 0%;
+.footer{
+  margin: auto;
 }
 
-.navblock {
-    position: relative;
-    margin: 0.25em 0%;
-}
+
+

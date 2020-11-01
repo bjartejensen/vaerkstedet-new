@@ -1,0 +1,41 @@
+@import "../../../styles.scss";
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: darken($cool-pink,5%);
+    padding: 4px;
+    color: $text-color;
+
+    h2{
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: $menu-font;
+        padding: 2px;
+    }
+
+    h4{
+        font-family: $menu-font;
+        font-weight: 500;
+        font-size: 0.85rem;
+        text-align: center;
+        margin: 2px 0%;
+        padding: 1px;
+        line-height: 0.85rem;
+    }
+
+}
+

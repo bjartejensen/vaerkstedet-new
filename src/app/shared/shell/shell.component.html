@@ -1,30 +1,32 @@
 <mat-sidenav-container class="sidenav-container" >
     <mat-sidenav
       #drawer
+      class="sidenav"
       [fixedInViewport]="true"
       [attr.role]="'dialog'"
       [mode]="'over'"
       [ngStyle]="{'width': w}"
       [position]="'start'"
-      [opened]="false">
+      [opened]="true">
 
         <button 
             type="button"
             aria-label="Toggle sidenav"
             mat-icon-button
             class="hamburger"
+            (click)="drawer.toggle()"
             id="nav-top"
             >
             <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
         </button>
 
-          <mat-nav-list  >
-              <h4>{{w}}</h4>
+          <mat-nav-list class="nav-list">
              <app-menu-list (toogleDrawer)="drawer.toggle()" [isMobile]="isMobile$ | async" ></app-menu-list>
           </mat-nav-list>
+    
     </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content class="sidenav-content">
 
     <button mat-icon-button (click)="drawer.toggle()" color="primary" aria-label="Example icon button with a home icon">
         <mat-icon>menu</mat-icon>

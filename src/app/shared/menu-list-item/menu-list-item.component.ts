@@ -8,12 +8,13 @@ import {
 } from "@angular/animations";
 import { NavItem,NavSubItem } from "../../models";
 import { Router } from "@angular/router";
+import { reveal } from 'src/app/animations';
 
 @Component({
   selector: "app-menu-list-item",
   templateUrl: "./menu-list-item.component.html",
   styleUrls: ["./menu-list-item.component.scss"],
-  animations: [
+  animations: [reveal,
     trigger("indicatorRotate", [
       state("collapsed", style({ transform: "rotate(0deg)" })),
       state("expanded", style({ transform: "rotate(180deg)" })),
@@ -47,9 +48,6 @@ export class MenuListItemComponent implements OnInit {
       let url = `/${this.mainItem.route}`
       this.router.navigate([url])
     }
-
-    
-    
 
   }
 

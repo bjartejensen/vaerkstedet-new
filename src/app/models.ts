@@ -26,7 +26,10 @@ export interface NavItem {
   export interface NavSubItem {
     displayName: string;
     disabled?: boolean;
-    route:string;
+    route?:string;
     paramName?:string,
     paramValue?: string,
+    header?:string,
+    description?: string
+
   }

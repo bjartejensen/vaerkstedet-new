@@ -243,6 +243,16 @@ import {
     ])),{params:{duration: "1s", ease: "ease-out"}}
   )
 
+  export const reveal = trigger("reveal", [
+    transition(":enter", [
+      style({ opacity: 0, transform: "translateY(-10px)" }),
+      animate("250ms 100ms", style({ opacity: 1, transform: "translateY(0px)" })),
+    ]),
+    transition(":leave", [
+      style({ opacity: 1, transform: "translateY(0px)" }),
+      animate("250ms 100ms", style({ opacity: 0, transform: "translateY(-10px)" })),
+    ]),
+  ]);
 
 
 

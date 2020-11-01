@@ -1,16 +1,18 @@
-<div class="container">
+ <div class="menu-container">
 
-    <div class="menu">
-
-    <button class="button is-loading">Loading</button>
-
-        <ul>
-            <li><h4>About</h4></li>
-            <li><h4>Shop</h4></li>
-            <li><h4>Wedding</h4></li>
-            <li><h4>Find</h4></li>
-        </ul>
-
+    <div class="primary-menu">
+            <div class="nav-block" *ngFor="let item of navItems">
+                 <h1>{{item.displayName}}</h1> 
+                 <mat-icon class="icon">add</mat-icon>            
+            </div>
     </div>
 
+    <div class="secondary-menu">
+            <div class="portal"> 
+                <div class="secondary">
+                    <h4>Secondary List</h4>
+                </div>    
+            </div>
+    </div>
+      
 </div>

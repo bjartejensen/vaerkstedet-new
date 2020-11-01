@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavItem } from 'src/app/models';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-menu-list-desktop',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuListDesktopComponent implements OnInit {
 
-  constructor() { }
+  navItems:NavItem[];
+
+  constructor(private menuService:MenuService) { }
 
   ngOnInit(): void {
+    this.setMenuItems();
+  }
+
+  setMenuItems(){
+    this.navItems = this.menuService.getMenuItems();
   }
 
 }

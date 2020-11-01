@@ -21,6 +21,7 @@ import { MenuListComponent } from './menu-list/menu-list.component';
 import { RouterModule } from '@angular/router';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
 import { MenuListDesktopComponent } from './menu-list-desktop/menu-list-desktop.component';
+import { FooterComponent } from './footer/footer.component';
 
 const modules = [
   CommonModule,
@@ -37,7 +38,7 @@ const modules = [
 ];
 
 @NgModule({
-  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent],
+  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent, FooterComponent],
   imports: [
     modules
   ],

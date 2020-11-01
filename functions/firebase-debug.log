@@ -10636,3 +10636,152 @@
 [info] i  functions: Finished "api" in ~1s
 [debug] [2020-11-01T00:02:44.361Z] [worker-api-63828ea4-0553-4216-82b1-23d3425e9eab]: IDLE
 [debug] [2020-11-01T00:02:44.361Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-01T18:14:22.526Z] ----------------------------------------------------------------------
+[debug] [2020-11-01T18:14:22.529Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bjarte\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-11-01T18:14:22.529Z] CLI Version:   7.11.0
+[debug] [2020-11-01T18:14:22.529Z] Platform:      win32
+[debug] [2020-11-01T18:14:22.529Z] Node Version:  v10.15.0
+[debug] [2020-11-01T18:14:22.627Z] Time:          Sun Nov 01 2020 19:14:22 GMT+0100 (GMT+01:00)
+[debug] [2020-11-01T18:14:22.628Z] ----------------------------------------------------------------------
+[debug] [2020-11-01T18:14:22.628Z] 
+[debug] [2020-11-01T18:14:22.708Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-01T18:14:22.709Z] > authorizing via signed-in user
+[debug] [2020-11-01T18:14:22.709Z] [iam] checking project vaerkstedet-ae5e0 for permissions ["firebase.projects.get"]
+[debug] [2020-11-01T18:14:22.712Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-11-01T18:14:22.712Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-11-01T18:14:23.030Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-01T18:14:23.044Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vaerkstedet-ae5e0:testIamPermissions  
+
+[debug] [2020-11-01T18:14:24.057Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-01T18:14:24.060Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/vaerkstedet-ae5e0  
+ 
+[debug] [2020-11-01T18:14:24.461Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Applications\vaerkstedet-new\functions" for Cloud Functions...
+[debug] [2020-11-01T18:14:27.144Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-01T18:14:27.146Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-11-01T18:14:27.146Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-01T18:14:27.147Z] [worker-~diagnostic~-1ec8ff27-6366-4068-956d-7d53ec5844b5]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\15928
+[debug] [2020-11-01T18:14:27.147Z] [worker-~diagnostic~-1ec8ff27-6366-4068-956d-7d53ec5844b5]: BUSY
+[debug] [2020-11-01T18:14:28.258Z] [runtime-status] [15928] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-01T18:14:28.259Z] [runtime-status] [15928] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-01T18:14:28.287Z] [runtime-status] [15928] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-01T18:14:28.314Z] [runtime-status] [15928] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-01T18:14:28.317Z] [runtime-status] [15928] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 15928   - 2020-11-01 19:14:56   [NestFactory] Starting Nest application...
+[info] +  functions[api]: http function initialized (http://localhost:5000/vaerkstedet-ae5e0/us-central1/api).
+[debug] [2020-11-01T18:14:56.343Z] [worker-~diagnostic~-1ec8ff27-6366-4068-956d-7d53ec5844b5]: IDLE
+[info] >  [Nest] 15928   - 2020-11-01 19:14:56   [InstanceLoader] AppModule dependencies initialized +35ms
+[info] >  [Nest] 15928   - 2020-11-01 19:14:56   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 15928   - 2020-11-01 19:14:56   [InstanceLoader] ConfigModule dependencies initialized +2ms
+[info] >  [Nest] 15928   - 2020-11-01 19:15:14   [InstanceLoader] DesignersModule dependencies initialized +17848ms
+[info] >  [Nest] 15928   - 2020-11-01 19:15:14   [RoutesResolver] DesignersController {/designers}: +7ms
+[info] >  [Nest] 15928   - 2020-11-01 19:15:14   [RouterExplorer] Mapped {/fetch, GET} route +3ms
+[info] >  [Nest] 15928   - 2020-11-01 19:15:14   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-01T19:58:50.107Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-01T19:58:50.147Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-01T19:58:50.200Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/fetch --> api
+[debug] [2020-11-01T19:58:50.413Z] [worker-pool] addWorker(api)
+[debug] [2020-11-01T19:58:50.413Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-01T19:58:50.413Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-01T19:58:50.413Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\12200
+[debug] [2020-11-01T19:58:50.414Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: BUSY
+[debug] [2020-11-01T19:58:56.619Z] [runtime-status] [12200] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-01T19:58:56.619Z] [runtime-status] [12200] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-01T19:58:56.672Z] [runtime-status] [12200] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-01T19:58:56.676Z] [runtime-status] [12200] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-01T19:58:56.677Z] [runtime-status] [12200] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-01T19:59:01.370Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-11-01T19:59:01.370Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-11-01T19:59:01.371Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/fetch --> api
+[debug] [2020-11-01T19:59:01.382Z] [worker-pool] addWorker(api)
+[debug] [2020-11-01T19:59:01.382Z] [worker-pool] Adding worker with key api, total=2
+[debug] [2020-11-01T19:59:01.382Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-01T19:59:01.382Z] [worker-api-296971af-76d2-446c-a739-754500aa890b]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\20184
+[debug] [2020-11-01T19:59:01.382Z] [worker-api-296971af-76d2-446c-a739-754500aa890b]: BUSY
+[debug] [2020-11-01T19:59:02.082Z] [runtime-status] [20184] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-01T19:59:02.084Z] [runtime-status] [20184] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-01T19:59:02.088Z] [runtime-status] [20184] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-01T19:59:02.091Z] [runtime-status] [20184] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-01T19:59:02.092Z] [runtime-status] [20184] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 20184   - 2020-11-01 20:59:03   [NestFactory] Starting Nest application...
+[info] >  [Nest] 12200   - 2020-11-01 20:59:03   [NestFactory] Starting Nest application...
+[debug] [2020-11-01T19:59:03.917Z] [runtime-status] [12200] Trigger "api" has been found, beginning invocation!
+[debug] [2020-11-01T19:59:03.917Z] [runtime-status] [20184] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-01T19:59:03.920Z] [runtime-status] [12200] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-01T19:59:03.920Z] [runtime-status] [12200] Running api in mode HTTPS
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-01T19:59:03.922Z] [runtime-status] [20184] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-01T19:59:03.922Z] [runtime-status] [20184] Running api in mode HTTPS
+[debug] [2020-11-01T19:59:03.933Z] [runtime-status] [12200] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\12200
+[debug] [2020-11-01T19:59:03.934Z] [runtime-status] [20184] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\20184
+[info] >  [Nest] 20184   - 2020-11-01 20:59:03   [InstanceLoader] AppModule dependencies initialized +109ms
+[info] >  [Nest] 12200   - 2020-11-01 20:59:03   [InstanceLoader] AppModule dependencies initialized +110ms
+[info] >  [Nest] 20184   - 2020-11-01 20:59:03   [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[info] >  [Nest] 12200   - 2020-11-01 20:59:03   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 20184   - 2020-11-01 20:59:03   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 12200   - 2020-11-01 20:59:03   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 20184   - 2020-11-01 20:59:09   [InstanceLoader] DesignersModule dependencies initialized +5754ms
+[info] >  [Nest] 12200   - 2020-11-01 20:59:09   [InstanceLoader] DesignersModule dependencies initialized +5753ms
+[info] >  [Nest] 20184   - 2020-11-01 20:59:09   [RoutesResolver] DesignersController {/designers}: +7ms
+[info] >  [Nest] 12200   - 2020-11-01 20:59:09   [RoutesResolver] DesignersController {/designers}: +8ms
+[info] >  [Nest] 20184   - 2020-11-01 20:59:09   [RouterExplorer] Mapped {/fetch, GET} route +4ms
+[info] >  [Nest] 12200   - 2020-11-01 20:59:09   [RouterExplorer] Mapped {/fetch, GET} route +4ms
+[info] >  [Nest] 20184   - 2020-11-01 20:59:09   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[info] >  [Nest] 12200   - 2020-11-01 20:59:09   [NestApplication] Nest application successfully started +4ms
+[debug] [2020-11-01T19:59:09.756Z] [functions] Runtime ready! Sending request!
+[info] >  Nest Ready
+[debug] [2020-11-01T19:59:09.767Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-01T19:59:09.770Z] [runtime-status] [20184] Ephemeral server handling GET request
+[debug] [2020-11-01T19:59:09.773Z] [runtime-status] [12200] Ephemeral server handling GET request
+[debug] [2020-11-01T19:59:09.775Z] [runtime-status] [20184] Ephemeral server survived.
+[debug] [2020-11-01T19:59:09.777Z] [runtime-status] [12200] Ephemeral server survived.
+[info] >  suc
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-01T19:59:10.704Z] [worker-api-296971af-76d2-446c-a739-754500aa890b]: IDLE
+[debug] [2020-11-01T19:59:10.704Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] >  suc
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-01T19:59:10.713Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: IDLE
+[debug] [2020-11-01T19:59:10.714Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-01T20:01:03.376Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-01T20:01:03.376Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-01T20:01:03.376Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/fetch --> api
+[debug] [2020-11-01T20:01:03.376Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-01T20:01:03.376Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\12200
+[debug] [2020-11-01T20:01:03.376Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: BUSY
+[debug] [2020-11-01T20:01:03.377Z] [runtime-status] [12200] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-01T20:01:03.378Z] [runtime-status] [12200] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-01T20:01:03.378Z] [runtime-status] [12200] Running api in mode HTTPS
+[debug] [2020-11-01T20:01:03.379Z] [runtime-status] [12200] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\12200
+[debug] [2020-11-01T20:01:03.380Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-01T20:01:03.390Z] [runtime-status] [12200] Ephemeral server handling GET request
+[debug] [2020-11-01T20:01:03.391Z] [runtime-status] [12200] Ephemeral server survived.
+[info] >  suc
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-01T20:01:03.562Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: IDLE
+[debug] [2020-11-01T20:01:03.562Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-01T20:15:27.205Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-01T20:15:27.205Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-01T20:15:27.205Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/fetch --> api
+[debug] [2020-11-01T20:15:27.205Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-01T20:15:27.205Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\12200
+[debug] [2020-11-01T20:15:27.205Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: BUSY
+[debug] [2020-11-01T20:15:27.206Z] [runtime-status] [12200] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-01T20:15:27.207Z] [runtime-status] [12200] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-01T20:15:27.208Z] [runtime-status] [12200] Running api in mode HTTPS
+[debug] [2020-11-01T20:15:27.208Z] [runtime-status] [12200] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\12200
+[debug] [2020-11-01T20:15:27.255Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-01T20:15:27.257Z] [runtime-status] [12200] Ephemeral server handling GET request
+[debug] [2020-11-01T20:15:27.258Z] [runtime-status] [12200] Ephemeral server survived.
+[info] >  suc
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-01T20:15:27.659Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: IDLE
+[debug] [2020-11-01T20:15:27.660Z] [work-queue] {"queueLength":0,"workRunningCount":0}
