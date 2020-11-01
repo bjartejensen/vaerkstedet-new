@@ -35,12 +35,83 @@
     color: $text-color;
   }
 
-  .container{
+.container{
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 40vh;
+    height: 100vh;
     width: 100%;
-    background:rgb(97, 153, 97);
+    border: 2px dashed red;
+    //background:rgb(97, 153, 97);
+}
+
+.title{
+  position: relative;
+  display: flex;
+  margin-top: 10%;
+  background:orange;
+  
+  h4{
+    @include header;  
+  }
+}
+
+.profile-image-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+
+  img{
+    position: relative;
+    width: 25%;
+    height: 200%;
+    object-fit: cover;
+  }
+}
+
+.images-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+
+  img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+}
+
+.description{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin-top: 10%;
+  background:pink;
+
+  p{
+    @include text;
+  }
+
+  p ~ p {
+    margin-top: 0.5em;
+    letter-spacing: 0.1px;
+  }
+}
+
+.carousel-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 90vw;
+  background:orangered;
 }

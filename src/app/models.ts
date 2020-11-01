@@ -16,6 +16,7 @@ export interface SingleDesigner{
 export interface NavItem {
     displayName: string;
     route: string;
+    toogleDrawer:boolean,
     subHeader?:string,
     disabled?: boolean;
     iconName?: string;

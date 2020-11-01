@@ -1,0 +1,69 @@
+@import "../../../styles.scss";
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    background:rgb(34, 33, 33);
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:orchid;
+    height: 70%;
+
+    ul{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        background:olive;
+    }
+
+    li{
+        color: white;
+        height: 5.5rem;
+        list-style: none;
+        margin: 2% 0%;
+
+        h4{
+            font-size: 5rem;
+            font-weight: 800;
+            background:orangered;
+        }
+    }
+
+    &::after{
+        content: "";
+        //position: absolute;
+        display: flex;
+        width: 20px;
+        height: 100%;
+        left: 100%;
+        top:0%;
+        //transform:translate(-50%,-50%);
+        background:orange;
+    }
+
+
+}
+

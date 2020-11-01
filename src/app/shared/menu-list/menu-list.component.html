@@ -1,24 +1,28 @@
+<ng-template #desktop >
+    <app-menu-list-desktop></app-menu-list-desktop>
+</ng-template>
 
-<div class="menu-container">
-    <div class="menu">
-        <ul *ngIf="false">
-            <li class="li-block" 
-                [routerLink]="['/designers']"
-             >Designers</li>
-            <li class="li-block" 
-                [routerLink]="['/designers',{ name: 'Louise Rought' }]"
-             >Louise Rought</li>
-             <li class="li-block" 
-                [routerLink]="['/designers',{ name: 'Alice Kaufmann' }]"
-             >Alice Kaufmann</li>
-             <li class="li-block" 
-                [routerLink]="['/']">Home</li>
-        </ul>
+<ng-template #mobile >
+    <div class="menu-container">
+        <div class="menu">
+            <div class="navblock" *ngFor="let item of navItems">
+                <app-menu-list-item 
+                    (subMenuItemClickedAndToggleDrawer)="onMenuItemClicked($event)"
+                    [mainItem]="item" [subItems]="item.children"></app-menu-list-item>
+            </div>
+        </div>
+    </div>
+</ng-template>
 
-        <div class="navblock" *ngFor="let item of navItems">
-            <app-menu-list-item  
-                [mainItem]="item" [subItems]="item.children"></app-menu-list-item>
+<div class="container">
+
+        <div [ngSwitch]="isMobile">
+            <div *ngSwitchCase="true">
+                <ng-container *ngTemplateOutlet="mobile"></ng-container>
+            </div>
+            <div *ngSwitchDefault  >
+                <ng-container *ngTemplateOutlet="desktop"></ng-container>
+            </div>
         </div>
 
-    </div>
 </div>

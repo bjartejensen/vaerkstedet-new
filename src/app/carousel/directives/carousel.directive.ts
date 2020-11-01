@@ -49,9 +49,10 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
    ngAfterViewInit(){
     this.setBtns();
     this.setCarouselSlide();
+    this.setEventListeners();
     this.setImages();
     this.init();
-    this.setEventListeners();
+    
    }
 
    ngOnDestroy(){
@@ -72,9 +73,6 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
 
 
   //#region Private Methods
-  
-  
-
   private init(){
     this.carouselSlide.style.transform = this.translateXStr;
   }
@@ -136,6 +134,7 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
 
     this.backBtnObs$ = fromEvent(this.backBtn,"click").pipe(throttleTime(500));
     this.backBtnSub =this.backBtnObs$.subscribe(()=>{
+        console.log("Back button clicked")
         this.renderer.setStyle(this.carouselSlide,"transition",this.transitionStr);
         this.selectedIdx--;
         this.renderer.setStyle(this.carouselSlide,"transform",this.translateXStr);
@@ -148,11 +147,11 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
 
     this.nextBtnObs$ = fromEvent(this.nextBtn,"click").pipe(throttleTime(500));
     this.nextBtnSub = this.nextBtnObs$.subscribe(()=>{
-
-      this.renderer.setStyle(this.carouselSlide,"transition","400ms transform ease-in");
+      console.log("Next button clicked")
+      this.renderer.setStyle(this.carouselSlide,"transition",this.transitionStr);
       this.selectedIdx++;
-      this.renderer.setStyle(this.carouselSlide,
-        "transform",this.translateXStr);
+      this.renderer.setStyle(this.carouselSlide, "transform",this.translateXStr);
+      this.idx.emit(this.selectedIdx);
     })
 
   }

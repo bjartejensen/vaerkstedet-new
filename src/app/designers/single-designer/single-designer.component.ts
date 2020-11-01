@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class SingleDesignerComponent implements OnInit, OnChanges {
 
-  @Input() singleDesignerData:SingleDesigner;
+  @Input() singleDesigner?:SingleDesigner;
   //singleDesignerData:SingleDesigner 
   designerName:string ;
   description:string[] = [];
@@ -18,33 +18,25 @@ export class SingleDesignerComponent implements OnInit, OnChanges {
   portfolioImages:string[];
   socialMediaLinks:SocialMediaLink[] =[]; 
 
-  singleDesignerObs$: Observable<SingleDesigner>;
-
   constructor(private route: ActivatedRoute) { }
 
   ngOnChanges(){
-    //this.setProfile();
+    if(this.singleDesigner){
+      this.setProfile();
+    }
+    
   }
 
   ngOnInit(): void {
-
-    this.singleDesignerObs$.subscribe(x=>{
-      debugger;
-    })
-    debugger;
-    this.singleDesignerObs$ = this.route.snapshot.data["designer"];
-
-    
-
-    this.setProfile();
   }
 
   private setProfile(){
-    this.designerName = this.singleDesignerData.name;
-    this.description = this.singleDesignerData.description;
-    this.profileImage = this.singleDesignerData.profile;
-    this.portfolioImages = this.singleDesignerData.portfolio;
-    this.socialMediaLinks = this.singleDesignerData.socialmedia;
+    debugger;
+    this.designerName = this.singleDesigner.name;
+    this.description = this.singleDesigner.description;
+    this.profileImage = this.singleDesigner.profile;
+    this.portfolioImages = this.singleDesigner.portfolio;
+    this.socialMediaLinks = this.singleDesigner.socialmedia;
   }
 
   public setSomeUrl(){

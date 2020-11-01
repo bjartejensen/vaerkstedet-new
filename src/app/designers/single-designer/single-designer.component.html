@@ -1,5 +1,26 @@
 
-<div class="container" *ngIf="singleDesignerObs$ | async as d" >
-    <h4>{{d.name}}</h4>
-    <img [src]="d.profile">
+<div class="container" *ngIf="singleDesigner" >
+
+    <div class="title"> 
+        <h4>{{singleDesigner.name}}</h4>
+    </div>
+
+    <div class="profile-image-container">
+        <img [src]="singleDesigner.profile">    
+    </div>
+
+    <div class="description">
+        <p *ngFor="let d of description">{{d}}</p>
+    </div>
+
+    <div class="carousel-container">
+        <app-carousel [height]="450" [width]="275" [images]="portfolioImages" ></app-carousel>
+    </div>
+
+    <div class="images-container">
+        <img *ngFor="let s of portfolioImages" [src]="s" alt="">
+    </div>
+    
 </div>
+
+

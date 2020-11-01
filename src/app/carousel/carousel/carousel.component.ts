@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, AfterViewInit, HostBinding, QueryList } from '@angular/core';
+import { Component, OnInit, ViewChildren, AfterViewInit, HostBinding, QueryList, Input } from '@angular/core';
 import { show, outAndIn,fadeKeyFrame,specficTrig,btnClicked,slider } from "src/app/animations";
 import { CarouselButtonDirective } from '../directives/carousel-button.directive';
 import {MatButtonModule} from '@angular/material/button';
@@ -31,21 +31,45 @@ import {
 export class CarouselComponent implements OnInit, AfterViewInit {
 
 
-  @ViewChildren(CarouselButtonDirective)
+ /*  @ViewChildren(CarouselButtonDirective)
   viewChildren: QueryList<CarouselButtonDirective>;
-
-  images: any[]=[]
+ */
+  @Input() images: string[]=[]
+  @Input() width: number=0;
+  @Input() height: number=0;
  
   constructor() { }
 
   ngOnInit(): void {
-    this.setImages();
+    
   }
 
   ngAfterViewInit(){
+    this.setImages();
+  }
+
+  public get caroW(){
+    return this.width +"px";
+  }
+
+  public get caroH(){
+    return this.height +"px";
   }
 
   private setImages(){
+    if(this.images && this.images.length>0){
+      let arr = [...this.images];
+      arr.unshift(this.images[this.images.length-1]);
+      arr.push(this.images[0]);
+  
+      this.images = [];
+      this.images = [...arr];
+    }
+    
+
+  }
+
+  private setImagesOld(){
     this.images.push("../../../assets/img/3.jpg");
     this.images.push("../../../assets/img/1.jpg");
     this.images.push("../../../assets/img/2.jpg");

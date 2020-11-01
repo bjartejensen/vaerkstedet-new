@@ -14,8 +14,9 @@
             </button>
         </div>
 
-        <div id="carousel-slide" class="carousel-slide" >
-            <img *ngFor="let img of images; let i = index" [src]="img" [alt]="i">
+        <div id="carousel-slide" class="carousel-slide" 
+            [ngStyle]="{'width': caroW, 'height': caroH}" >
+                <img *ngFor="let img of images; let i = index" [src]="img" [alt]="i">
         </div>
 
          <div class="example-button-container">

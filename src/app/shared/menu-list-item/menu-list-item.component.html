@@ -6,8 +6,8 @@
 
     <div class="list-item">
         <a mat-list-item 
-            (click)="onItemSelected()"
-            [routerLink]="[mainItem.route]"
+            (click)="onMainItemClicked(mainItem);onItemSelected()"
+            
             [ngClass]="{'active': mainItem.route ? router.isActive(mainItem.route, true): false, 'expanded': expanded}"
             class="menu-list-item">
             {{mainItem.displayName}}
@@ -23,7 +23,7 @@
         <div class="sub-menu" *ngIf="expanded">
             <ul>
             <li *ngFor="let child of mainItem.children" 
-                        [routerLink]="[mainItem.route, getChildRoute(child)]" 
+                        (click)="onSubItemClicked(child)"
                 class="sub-item" > {{child.displayName}}
             </li>
             </ul>

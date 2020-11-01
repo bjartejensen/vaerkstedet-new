@@ -20,6 +20,7 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MenuListComponent } from './menu-list/menu-list.component';
 import { RouterModule } from '@angular/router';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
+import { MenuListDesktopComponent } from './menu-list-desktop/menu-list-desktop.component';
 
 const modules = [
   CommonModule,
@@ -36,7 +37,7 @@ const modules = [
 ];
 
 @NgModule({
-  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent],
+  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent],
   imports: [
     modules
   ],

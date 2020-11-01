@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { SingleDesigner } from 'src/app/models';
 import { DesignersService } from '../../services/designers.service';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, of } from 'rxjs';
-import { map, tap,filter } from 'rxjs/operators';
+import { combineLatest, Observable, of } from 'rxjs';
+import { map, tap,filter, startWith } from 'rxjs/operators';
 
 
 @Component({
@@ -17,7 +17,9 @@ export class DesignersComponent implements OnInit {
   screenState: BreakpointState;
 
   designers: SingleDesigner[];
-  singleDesignerObs$: Observable<SingleDesigner>;
+  singleDesignerObs$: Observable<SingleDesigner>; //Observable<SingleDesigner>;
+  selectedDesignerObs$: Observable<object>; //Observable<SingleDesigner>;
+  singleDesigner: SingleDesigner;
 
   constructor(private designersService: DesignersService,
     private route: ActivatedRoute,
@@ -35,23 +37,28 @@ export class DesignersComponent implements OnInit {
     });
 
   }
-
+  
   ngOnInit(): void {
-
-    this.singleDesignerObs$ = this.designersService.singleDesignerObs$;
-
-   /*  this.route.params.subscribe(x=>{
-
-      if(x.name!="" && x.name!=undefined){
-        this.getSingleDesigner(x.name)
-      }
-      else{
-        this.singleDesignerObs$ = null;
-        this.singleDesignerObs$ = this.designersService.singleDesignerObs$;
-      }
-      
-    }) */
     
+    this.setObservableInit();
+    this.handleRouteInit();
+  }
+
+  private setObservableInit(){
+
+    this.singleDesignerObs$ = this.designersService.singleDesignerObs$;//.pipe(startWith(null));
+    this.selectedDesignerObs$ = combineLatest([this.singleDesignerObs$])
+      .pipe(map(s=> {
+        return {singleDesigner: s[0]}
+      }))
+  }
+
+  private handleRouteInit(){
+    this.route.queryParams.subscribe(x=>{
+      if(x.designer!="" && x.designer!=undefined){
+        this.designersService.fetchSingleDesigner(x.designer);
+      }
+    }) 
   }
 
   public getSingleDesigner(name:string){

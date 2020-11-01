@@ -1,18 +1,13 @@
 
-<ng-template #singledesigner let-singleDesignerData="singleDesignerData" >
-  <app-single-designer [singleDesignerData]="singleDesignerData">
-  </app-single-designer>
-</ng-template> 
+<ng-template #singledesigner let-designer="designer">
+    <app-single-designer [singleDesigner]="designer">
+    </app-single-designer>
+</ng-template>
 
 <div class="container"
    
- [style.flexDirection]="'column'">
-
-    <ng-container *ngIf="singleDesignerObs$ | async as designer">
-        <ng-container *ngTemplateOutlet="singledesigner; context{singleDesignerData: designer}">
-        </ng-container>
-   </ng-container>
-
+    [style.flexDirection]="'column'">
+  
     <ng-container >
 
     <div class="logo">
@@ -45,9 +40,17 @@
         </div>
     </div>
 
-    <div class="cta">
-        <button mat-raised-button>Se Designere</button>
-    </div>
+    <!--<div class="cta">
+        <button (click)="getSingleDesigner('Louise Rought')" mat-raised-button>Louise</button>
+        <button (click)="getSingleDesigner('Alice Kaufmann')" mat-raised-button>Alice</button>
+    </div> -->
+    
+    <ng-container *ngIf="selectedDesignerObs$ | async as data" >
+        <ng-template *ngTemplateOutlet="singledesigner;context:{designer:data.singleDesigner}">
+        </ng-template>
+    </ng-container>
+
+   
 
     </ng-container>
 

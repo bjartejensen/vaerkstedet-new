@@ -11,10 +11,7 @@ const routes: Routes = [
   },
   {
     path: ":designerUrl",
-    component: SingleDesignerComponent,
-    resolve: {
-      designer:SingleDesignerResolver
-    }
+    component: SingleDesignerComponent
   }, 
 ];
 
@@ -22,6 +19,6 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
   providers: [SingleDesignerResolver]
-
 })
+
 export class DesignersRoutingModule { }

@@ -4,8 +4,9 @@
       [fixedInViewport]="true"
       [attr.role]="'dialog'"
       [mode]="'over'"
+      [ngStyle]="{'width': w}"
       [position]="'start'"
-      [opened]="true">
+      [opened]="false">
 
         <button 
             type="button"
@@ -13,12 +14,13 @@
             mat-icon-button
             class="hamburger"
             id="nav-top"
-            (click)="drawer.toggle(); ">
+            >
             <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
         </button>
 
           <mat-nav-list  >
-             <app-menu-list></app-menu-list>
+              <h4>{{w}}</h4>
+             <app-menu-list (toogleDrawer)="drawer.toggle()" [isMobile]="isMobile$ | async" ></app-menu-list>
           </mat-nav-list>
     </mat-sidenav>
 

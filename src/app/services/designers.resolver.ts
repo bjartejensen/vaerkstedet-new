@@ -11,10 +11,9 @@ export class SingleDesignerResolver implements Resolve<SingleDesigner>{
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)
             : Observable<SingleDesigner> {
-
-            debugger;
+            
             const name = route.paramMap.get("designerUrl")
-            return of(this.designerService.fetchSingleDesigner(name));
+            return this.designerService.singleDesignerObs$;
         
     }
 
