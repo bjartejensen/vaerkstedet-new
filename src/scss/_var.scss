@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,700|Work+Sans:300,400,700|Lora:400,700&display=swap'");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,700|Lora:400,700&display=swap'");
 
 @font-face {
     font-family: "DIN";
@@ -12,13 +12,29 @@
       format("truetype");
   }
 
-$worksans-font: "Work Sans", sans-serif;
+@font-face {
+    font-family: "Worksans";
+    font-weight: 100 1000;
+    src: url("/assets/fonts/Worksans/WorkSans-VariableFont_wght")
+      format("truetype");
+  }
+
+@font-face {
+    font-family: "Worksans-italic";
+    font-weight: 100 1000;
+    src: url("/assets/fonts/Worksans/WorkSans-Italic-VariableFont_wght")
+      format("truetype");
+  }
+
+
 $lora-font: "Lora", serif;
 $raleway-font: 'Raleway', sans-serif;
 $din-font: DIN;
 $menu-font: "Poppins", sans-serif;
-$header-font: $worksans-font;
+$header-font: "Worksans-italic";
+$text-font: "Worksans";
 
+$background-color: #c8cad3;
 $text-color: rgb(32, 31, 31);
 $cool-grey: #5c5d61;
 $cool-pink: #f4ccc9;

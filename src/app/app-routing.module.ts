@@ -23,6 +23,11 @@ const routes: Routes = [
     resolve: {
       designers:DesignersResolver
     }
+  },
+  {
+    path:"find",
+    loadChildren: ()=> import("./find/find.module").then((m)=>m.FindModule),
+      data:{animationState: 'One'}
   }
  
 

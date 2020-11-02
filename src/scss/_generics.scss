@@ -5,14 +5,22 @@
     font-family: $din-font;
     font-weight: 700;
     font-size: 2.95rem;
-    line-height: 3.25rem;
     color: $text-color;
 }
 
-@mixin header {
+@mixin vaerkstedet{
     font-family: $din-font;
+    font-size: 1.25rem;
     font-weight: 700;
-    font-size: 2.95rem;
-    line-height: 3.25rem;
+    color: darken($cool-grey,20%);
+    text-transform: uppercase;
+    letter-spacing: 1.35px;
+}
+
+@mixin text-desktop{
+    font-family: $text-font;
+    font-size: 1.25rem;
+    font-weight: 400;
     color: $text-color;
 }
+

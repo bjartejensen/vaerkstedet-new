@@ -1,0 +1,148 @@
+@import "../../../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 90vh;
+    height: fit-content;
+    background:$background-color;
+    color: $text-color;
+    //background: orange;
+}
+
+span {
+    &.vaerkstedet{
+        @include vaerkstedet;
+        background: $cool-pink;
+        height: 100%;
+        font-size: 2.4rem;
+        padding: 0% 1%;
+    }
+}
+
+.info-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    min-height: 90vh;
+    //background: palevioletred;
+
+    .header{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //background: orange;
+        margin-top: 5%;
+        width: 100%;
+
+        h1{
+            @include header;
+        }
+    }
+
+    .sub-header{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //background: olive;
+        margin-top: 5%;
+        
+
+        h4{
+           text-align: center;
+           font-size: 2.5rem;
+           color: $text-color;
+           line-height: 2.6rem;
+        }
+
+    }
+
+    .text{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //background: orangered;
+        padding: 1%;
+        margin: auto;
+
+        p{
+            @include text-desktop;
+            font-size: 2rem;
+            line-height: 2.5rem;
+            text-align: justify;
+            width: 75%;
+            padding: 4px;
+            outline: 2px solid $cool-pink;
+            //background: greenyellow;
+        }
+
+    }
+
+    .some{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: fit-content;
+        top:80%;
+        left:0%;
+        transform: rotate(-90deg);
+
+        a{
+            font-family: $menu-font;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+    }
+
+
+
+
+}
+
+.map-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    min-height: 90vh;
+    //background: rgb(95, 19, 44);
+
+    h2{
+        @include header;
+        margin-top: 5%;
+    }
+
+    .gmap {
+        margin: auto;
+        width: 80%;
+        height: 70vh;
+        //max-height: 350px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        border: solid 2px transparent;
+    }
+
+    
+
+}

@@ -10785,3 +10785,53 @@
 [info] i  functions: Finished "api" in ~1s
 [debug] [2020-11-01T20:15:27.659Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: IDLE
 [debug] [2020-11-01T20:15:27.660Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-01T23:11:06.577Z] [worker-api-296971af-76d2-446c-a739-754500aa890b]: exited
+[debug] [2020-11-01T23:11:06.650Z] [worker-api-296971af-76d2-446c-a739-754500aa890b]: FINISHED
+[debug] [2020-11-01T23:11:06.652Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: exited
+[debug] [2020-11-01T23:11:06.653Z] [worker-api-8327b815-de4b-40a3-9d93-269d97a93e87]: FINISHED
+[debug] [2020-11-01T23:11:06.664Z] [worker-~diagnostic~-1ec8ff27-6366-4068-956d-7d53ec5844b5]: exited
+[debug] [2020-11-02T21:08:40.536Z] ----------------------------------------------------------------------
+[debug] [2020-11-02T21:08:40.538Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bjarte\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-11-02T21:08:40.538Z] CLI Version:   7.11.0
+[debug] [2020-11-02T21:08:40.538Z] Platform:      win32
+[debug] [2020-11-02T21:08:40.538Z] Node Version:  v10.15.0
+[debug] [2020-11-02T21:08:40.540Z] Time:          Mon Nov 02 2020 22:08:40 GMT+0100 (GMT+01:00)
+[debug] [2020-11-02T21:08:40.540Z] ----------------------------------------------------------------------
+[debug] [2020-11-02T21:08:40.540Z] 
+[debug] [2020-11-02T21:08:40.649Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-02T21:08:40.650Z] > authorizing via signed-in user
+[debug] [2020-11-02T21:08:40.650Z] [iam] checking project vaerkstedet-ae5e0 for permissions ["firebase.projects.get"]
+[debug] [2020-11-02T21:08:40.652Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-11-02T21:08:40.652Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-11-02T21:08:40.875Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-02T21:08:40.889Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vaerkstedet-ae5e0:testIamPermissions  
+
+[debug] [2020-11-02T21:08:41.791Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-02T21:08:41.794Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/vaerkstedet-ae5e0  
+ 
+[debug] [2020-11-02T21:08:42.122Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Applications\vaerkstedet-new\functions" for Cloud Functions...
+[debug] [2020-11-02T21:08:44.717Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-02T21:08:44.717Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-11-02T21:08:44.717Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-02T21:08:44.718Z] [worker-~diagnostic~-9f58c06c-420c-4c1b-bef6-af6dc4711fe0]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\9188
+[debug] [2020-11-02T21:08:44.718Z] [worker-~diagnostic~-9f58c06c-420c-4c1b-bef6-af6dc4711fe0]: BUSY
+[debug] [2020-11-02T21:08:45.274Z] [runtime-status] [9188] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-02T21:08:45.275Z] [runtime-status] [9188] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-02T21:08:45.442Z] [runtime-status] [9188] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-02T21:08:45.553Z] [runtime-status] [9188] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-02T21:08:45.554Z] [runtime-status] [9188] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 9188   - 2020-11-02 22:09:10   [NestFactory] Starting Nest application...
+[info] +  functions[api]: http function initialized (http://localhost:5000/vaerkstedet-ae5e0/us-central1/api).
+[debug] [2020-11-02T21:09:10.731Z] [worker-~diagnostic~-9f58c06c-420c-4c1b-bef6-af6dc4711fe0]: IDLE
+[info] >  [Nest] 9188   - 2020-11-02 22:09:10   [InstanceLoader] AppModule dependencies initialized +31ms
+[info] >  [Nest] 9188   - 2020-11-02 22:09:10   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 9188   - 2020-11-02 22:09:10   [InstanceLoader] ConfigModule dependencies initialized +0ms
+[info] >  [Nest] 9188   - 2020-11-02 22:09:26   [InstanceLoader] DesignersModule dependencies initialized +16046ms
+[info] >  [Nest] 9188   - 2020-11-02 22:09:26   [RoutesResolver] DesignersController {/designers}: +13ms
+[info] >  [Nest] 9188   - 2020-11-02 22:09:26   [RouterExplorer] Mapped {/fetch, GET} route +5ms
+[info] >  [Nest] 9188   - 2020-11-02 22:09:26   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready

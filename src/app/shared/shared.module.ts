@@ -42,7 +42,7 @@ const modules = [
   imports: [
     modules
   ],
-  exports:[modules,ShellComponent]
+  exports:[modules,ShellComponent,FooterComponent]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModule> {
