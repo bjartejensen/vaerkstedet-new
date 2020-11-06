@@ -1026,7 +1026,7 @@
         "signature": "e7e859feab0004e436960834f5be706cd78a46b6637512d08a75c2c5dcdf4143",
         "affectsGlobalScope": false
       },
-      "../node_modules/axios/index.d.ts": {
+      "../node_modules/@nestjs/common/node_modules/axios/index.d.ts": {
         "version": "e7df7eb51c5090db4bdcdbf9efe053530dff0e33796f40b08b1a3be6c3a351d0",
         "signature": "e7df7eb51c5090db4bdcdbf9efe053530dff0e33796f40b08b1a3be6c3a351d0",
         "affectsGlobalScope": false
@@ -1416,8 +1416,38 @@
         "signature": "54d588da57fbcc09b2aed43f9129f513b9b063060415a2c54668a6bcd53d80b0",
         "affectsGlobalScope": false
       },
+      "../src/email/email/email.controller.ts": {
+        "version": "34625ac39b0710174493958853771fed55e8a2aba1f2d473b549f54c063f08a3",
+        "signature": "013fa4a90519856332396db1b0f4c57fc5e56effd9b10713fdc1e6f04f91ebaa",
+        "affectsGlobalScope": false
+      },
+      "../src/email/email.module.ts": {
+        "version": "e1e8e3e139d3729d62b2029df5d689f590d591a25b45639ef864654919cd2f55",
+        "signature": "b1166961be52cf7264d2b973046fce666a81b0fb49c470ba67919ebe5eb4635d",
+        "affectsGlobalScope": false
+      },
+      "../src/newsletter/newsletter/newsletter.controller.ts": {
+        "version": "de91cdbbdec915e48899d53f642fa6d5880e0fa9ab5eb110835be2c4411b9fae",
+        "signature": "345718b3c10c3d984be8e0e735a6e81568ec5e225bc5051c44941f3122c82349",
+        "affectsGlobalScope": false
+      },
+      "../src/newsletter/newsletter.module.ts": {
+        "version": "f97fe33abf316a01705790d920be5ad37687dfbe93405c59017f9ad519da7f7f",
+        "signature": "ac9288822b530e8cb70550bc11511d71608e6361c40e24b3481c41f1ab1c1178",
+        "affectsGlobalScope": false
+      },
+      "../src/instagram/instagram/instagram.controller.ts": {
+        "version": "b317688cb61206da9bb92da66045ce0be5e108b3fdaca495ee6ebf01f8c12d65",
+        "signature": "c52f2ad2e910149a9ac08e31a066d260d4ae455cede713d895915b3c61f13f1e",
+        "affectsGlobalScope": false
+      },
+      "../src/instagram/instagram.module.ts": {
+        "version": "faaa8822194949ad12eb2ed3680564e7f44bdd8f72be253023c25a0a6cc5b133",
+        "signature": "00cc59cb91917848abe354d279380714f59c8e0135cb89e703415923cfa8600f",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "e6f1caa0e5541d2a4f96c6f274ac52929f5cdb740cd63a220b0e5365acaf1ffd",
+        "version": "f5a94086e987fa18104cd9623ca474d5c12692295d1e5ca1e7da67c3da18d561",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -1811,8 +1841,13 @@
         "signature": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c",
         "affectsGlobalScope": false
       },
+      "../src/filters/http.filter.ts": {
+        "version": "67998f868e8981d19d1e17977c7982f646559945e32ccee3db6a995aa40c2eba",
+        "signature": "7a87d08640ce8e48eb10c60929490c6a7d8e1d6834fcd09d0bb2627300ddda4f",
+        "affectsGlobalScope": false
+      },
       "../src/index.ts": {
-        "version": "6dd965243ab0ba0a52a5c9bf37bd6d0a9cb860500e75b7980ed1069b8b2513e0",
+        "version": "74cea0f0c9b728ce63c6c7ff7c29e2315773b9fe8f16659d45796e4e08f746f5",
         "signature": "c485bd10c9d6c691bda1a92d6cec9b6d689c4b78ae567e6639e6412c45ccff91",
         "affectsGlobalScope": false
       },
@@ -2005,6 +2040,8 @@
       "strictNullChecks": false,
       "skipLibCheck": true,
       "allowSyntheticDefaultImports": true,
+      "project": "../tsconfig.json",
+      "watch": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
@@ -2484,9 +2521,9 @@
       ],
       "../node_modules/@nestjs/common/http/http.service.d.ts": [
         "../../node_modules/rxjs/index.d.ts",
+        "../node_modules/@nestjs/common/node_modules/axios/index.d.ts",
         "../node_modules/@types/node/base.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/axios/index.d.ts"
+        "../node_modules/@types/node/index.d.ts"
       ],
       "../node_modules/@nestjs/common/http/index.d.ts": [
         "../node_modules/@nestjs/common/http/http.module.d.ts",
@@ -2497,9 +2534,9 @@
       ],
       "../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts": [
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@nestjs/common/node_modules/axios/index.d.ts",
         "../node_modules/@types/node/base.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/axios/index.d.ts"
+        "../node_modules/@types/node/index.d.ts"
       ],
       "../node_modules/@nestjs/common/http/interfaces/index.d.ts": [
         "../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts",
@@ -2829,6 +2866,10 @@
       ],
       "../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts": [
         "../../node_modules/rxjs/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@nestjs/common/node_modules/axios/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
@@ -3562,10 +3603,6 @@
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/event-target-shim/index.d.ts"
       ],
-      "../node_modules/axios/index.d.ts": [
-        "../node_modules/@types/node/base.d.ts",
-        "../node_modules/@types/node/index.d.ts"
-      ],
       "../node_modules/event-target-shim/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
@@ -3984,7 +4021,10 @@
         "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts",
-        "../src/designers/designers.module.ts"
+        "../src/designers/designers.module.ts",
+        "../src/email/email.module.ts",
+        "../src/instagram/instagram.module.ts",
+        "../src/newsletter/newsletter.module.ts"
       ],
       "../src/designers/designers.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -4007,6 +4047,23 @@
         "../node_modules/@types/node/index.d.ts",
         "../src/firestore/firestore/firestore.service.ts"
       ],
+      "../src/email/email.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../src/email/email/email.controller.ts"
+      ],
+      "../src/email/email/email.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../src/filters/http.filter.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
       "../src/firestore/firestore/firestore.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/config/index.d.ts",
@@ -4022,7 +4079,32 @@
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/firebase-functions/lib/index.d.ts",
-        "../src/app.module.ts"
+        "../src/app.module.ts",
+        "../src/filters/http.filter.ts"
+      ],
+      "../src/instagram/instagram.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../src/instagram/instagram/instagram.controller.ts"
+      ],
+      "../src/instagram/instagram/instagram.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../src/newsletter/newsletter.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../src/newsletter/newsletter/newsletter.controller.ts"
+      ],
+      "../src/newsletter/newsletter/newsletter.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
       ],
       "../../node_modules/@types/color-name/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
@@ -5399,6 +5481,10 @@
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
+      "../node_modules/@nestjs/common/node_modules/axios/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
       "../node_modules/@nestjs/common/pipes/index.d.ts": [
         "../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts",
         "../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts",
@@ -6129,10 +6215,6 @@
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/event-target-shim/index.d.ts"
       ],
-      "../node_modules/axios/index.d.ts": [
-        "../node_modules/@types/node/base.d.ts",
-        "../node_modules/@types/node/index.d.ts"
-      ],
       "../node_modules/event-target-shim/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
@@ -6553,11 +6635,23 @@
         "../node_modules/@nestjs/config/index.d.ts",
         "../src/firestore/firestore/firestore.service.ts"
       ],
+      "../src/email/email/email.controller.ts": [
+        "../node_modules/@nestjs/config/index.d.ts"
+      ],
+      "../src/filters/http.filter.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
       "../src/firestore/firestore/firestore.service.ts": [
         "../node_modules/@nestjs/config/index.d.ts"
       ],
       "../src/index.ts": [
         "../node_modules/firebase-functions/lib/index.d.ts"
+      ],
+      "../src/instagram/instagram/instagram.controller.ts": [
+        "../node_modules/@nestjs/config/index.d.ts"
+      ],
+      "../src/newsletter/newsletter/newsletter.controller.ts": [
+        "../node_modules/@nestjs/config/index.d.ts"
       ],
       "../../node_modules/@types/color-name/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
@@ -7247,6 +7341,7 @@
       "../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
       "../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
       "../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+      "../node_modules/@nestjs/common/node_modules/axios/index.d.ts",
       "../node_modules/@nestjs/common/pipes/index.d.ts",
       "../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts",
       "../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts",
@@ -7346,7 +7441,6 @@
       "../node_modules/@types/range-parser/index.d.ts",
       "../node_modules/@types/serve-static/index.d.ts",
       "../node_modules/abort-controller/dist/abort-controller.d.ts",
-      "../node_modules/axios/index.d.ts",
       "../node_modules/event-target-shim/index.d.ts",
       "../node_modules/firebase-admin/lib/auth.d.ts",
       "../node_modules/firebase-admin/lib/database.d.ts",
@@ -7421,8 +7515,15 @@
       "../src/designers/designers.module.ts",
       "../src/designers/designers/designers.controller.ts",
       "../src/designers/designers/designers.service.ts",
+      "../src/email/email.module.ts",
+      "../src/email/email/email.controller.ts",
+      "../src/filters/http.filter.ts",
       "../src/firestore/firestore/firestore.service.ts",
       "../src/index.ts",
+      "../src/instagram/instagram.module.ts",
+      "../src/instagram/instagram/instagram.controller.ts",
+      "../src/newsletter/newsletter.module.ts",
+      "../src/newsletter/newsletter/newsletter.controller.ts",
       "../../node_modules/@types/color-name/index.d.ts",
       "../../node_modules/@types/glob/index.d.ts",
       "../../node_modules/@types/jasmine/ts3.1/index.d.ts",

@@ -1,0 +1,167 @@
+@import "../../../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.spinner{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  //background: olive;
+  margin: auto;
+
+  @media (min-width: 768px){
+    height: 80vh;
+    //background: orange;
+  }
+
+}
+
+.header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background: orange;
+}
+
+.content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //background: orangered;
+  width: 80%;
+  margin: 20px auto;
+
+  p{
+    margin: 0%;
+    text-align: center;
+  }
+
+  @media (min-width: 768px){
+    //background: orangered;
+    font-size: 1.45rem;
+    line-height: 1.5rem;
+    width: 80%;
+    margin: 2% auto;
+  }
+
+  p + p{
+    margin-top: 20px;
+    
+  }
+
+}
+
+.signup-form{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1% 2%;
+  margin-top: 2%;
+  //background: orchid;
+
+  .form-item {
+    position: relative;
+    display: flex;
+    width: 80%;
+    max-width: 100%;
+    margin: auto;
+    font-weight: 600;
+    //background: orange;
+
+    @media (min-width: 768px){
+      margin-top: 20px;
+      width: 80%;
+    }
+  
+    .mat-checkbox,
+    .mat-form-field {
+      font-size: 0.9rem;
+      font-family: $text-font; //$menu-font;
+    
+    }
+  
+    input {
+      font-family: $text-font;
+      font-size: 1.02rem;
+      height: 100%;
+
+      @media (min-width: 768px){
+        font-size: 1.5rem;
+      }
+
+    }
+  
+    .mat-checkbox {
+      font-weight: 200;
+    }
+  
+    input,
+    .mat-form-field {
+      width: 95%;
+    }
+   
+  }
+
+  .cta{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    //background: orangered;
+    margin-top: 3%;
+
+    @media (min-width: 768px){
+      width: 85%;
+
+      button{
+        transform: scale(1.25);
+      }
+
+    }
+
+    .btn{
+        padding: 0% 4px;
+    }
+  }
+}
+
+.feedback, .error{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 2%;
+  //background: orangered;
+  margin-top: 2%;
+
+  p{
+    font-size: 0.9rem;
+    line-height: 1.35rem;
+    text-align: center;
+    //background: pink;
+  }
+
+}
+

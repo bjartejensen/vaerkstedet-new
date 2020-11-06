@@ -6,3 +6,7 @@
 typings/
 
 node_modules/
+
+# Environment files
+development.env
+production.env

@@ -1,0 +1,153 @@
+@import "../../../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.spinner{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  z-index: 100;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: auto;
+  //background: orange;
+}
+
+.header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background: orange;
+
+  h1{
+    font-size: 3rem;
+  }
+}
+
+.info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    //background: orangered;
+
+    .content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //background: orangered;
+        width: 80%;
+        margin: 20px auto;
+
+        p{
+            margin: 0%;
+            text-align: center;
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+
+        p + p{
+            margin-top: 20px;
+        }
+    }
+}
+
+.form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    //background: palegreen;
+
+.contact-form{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1% 2%;
+  //background: orchid;
+
+  .form-item {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    font-weight: 600;
+     
+    .mat-checkbox,
+    .mat-form-field {
+      font-size: 0.9rem;
+      font-family: $text-font; //$menu-font;
+    
+    }
+  
+    input {
+      font-family: $text-font;
+      font-size: 1.02rem;
+      height: 100%;
+    }
+  
+    .mat-checkbox {
+      font-weight: 200;
+    }
+  
+    input,
+    .mat-form-field {
+      width: 95%;
+    }
+  
+    textarea {
+      background: rgb(228, 226, 226);
+      min-height: 200px;
+      margin: 0%;
+      font-family: $text-font;
+    }
+  }
+
+  .cta{
+    position: relative;
+    width: 95%;
+
+    button{
+      float: right; 
+    }
+  
+  }
+}
+
+.feedback{
+  position: relative;
+  display: flex;
+  width: 90%;
+  padding: 2%;
+  margin-top: 20px;
+  //background: orangered;
+
+    p{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+}
+
+}
+

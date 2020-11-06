@@ -1,0 +1,19 @@
+
+<ng-template #customdesktop>
+    <app-custommade-desktop></app-custommade-desktop>
+</ng-template>
+
+<div class="container" *ngIf="(isMobile$ | async);else customdesktop" >
+ 
+    <div class="header">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="content">
+        <p *ngFor="let c of content" >
+            {{c}}
+            <br>
+        </p>
+    </div>
+
+</div>

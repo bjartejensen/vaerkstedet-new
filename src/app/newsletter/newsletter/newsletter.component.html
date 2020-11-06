@@ -1,0 +1,61 @@
+ 
+ <ng-template #newsletterdesktop>
+   <app-newsletter-desktop></app-newsletter-desktop>
+</ng-template>
+
+<ng-template #err >
+    <div class="error" *ngIf="errorMessage$ | async as error">
+    <p>{{error}}</p>
+    </div>
+</ng-template>
+
+<div class="spinner" *ngIf="showSpinner$ | async" >
+    <mat-spinner></mat-spinner>
+</div>
+ 
+ <div class="container"  >
+ 
+    <div class="header">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="content">
+        <p *ngFor="let c of content" >
+            {{c}}
+            <br>
+        </p>
+    </div>
+ 
+    <form class="signup-form" [formGroup]="signUpForm">
+
+        <div class="form-row">
+            <div class="form-item">
+                <mat-form-field >
+                    <input 
+                        id="email"
+                        formControlName="email" 
+                        type="email" 
+                        matInput
+                        autocomplete="off"
+                        placeholder="email*" >
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="form-row cta">
+            <button mat-raised-button 
+                class="btn"
+                [disabled]='!signUpForm.valid'
+                (click)="onNewsletterSubscribe()">
+                Tilmeld mig
+            </button>
+        </div>
+   
+    </form>
+
+
+    <div class="feedback" *ngIf="(feedback$ | async ) as userMessage; else err">
+            <p>{{userMessage}}</p>
+    </div>
+
+</div>

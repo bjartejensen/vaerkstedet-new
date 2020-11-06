@@ -12,7 +12,7 @@ export class LayoutService {
   public isLargeMobile$:Observable<boolean>;
   public isDesktop$:Observable<boolean>
 
-  private widthThreshold:string="1024px"
+  private widthThreshold:string="1025px"
  
   constructor(breakpointObserver: BreakpointObserver) {
     

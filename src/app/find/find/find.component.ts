@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LayoutService } from 'src/app/services/layout.service';
+import { FindService } from '../find.service';
 
 @Component({
   selector: 'app-find',
@@ -16,10 +17,19 @@ export class FindComponent implements OnInit {
   isMobile$:Observable<boolean> = this.layoutService.isMobile$;
   isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
 
-  constructor(private layoutService:LayoutService) {
+  content:string;
+  header:string;
+  subHeader:string;
+
+  constructor(private layoutService:LayoutService,private findService:FindService) {
   }
 
   ngOnInit(): void {
+
+    this.content = this.findService.getContent();
+    this.header = this.findService.getHeader();
+    this.subHeader = this.findService.getSubHeader();
+
   }
 
 }

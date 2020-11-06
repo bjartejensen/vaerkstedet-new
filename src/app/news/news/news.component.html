@@ -1,0 +1,24 @@
+
+
+<div class="container" *ngIf="(isMobile$ | async)" >
+ 
+    <div class="header">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="content">
+        <p *ngFor="let c of content" >
+            {{c}}
+            <br>
+        </p>
+    </div>
+
+    <div class="insta-posts" *ngIf="instaPosts$ | async as posts" >
+    
+        <div class="i-post" *ngFor="let post of posts; let i=index" >
+            <app-ipost></app-ipost>            
+        </div>
+
+    </div>
+
+</div>

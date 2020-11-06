@@ -8,6 +8,7 @@ import {
 import { AppModule } from "./app.module";
 import express from "express";
 import { CorsOptions } from "@nestjs/common/interfaces/external/cors-options.interface";
+import { HttpExceptionFilter } from "./filters/http.filter";
 
 const server = express();
 
@@ -26,6 +27,7 @@ const createNestServer = async (expressInstance: any) => {
     optionsSuccessStatus: 204,
   };
 
+  app.useGlobalFilters(new HttpExceptionFilter());
   app.enableCors(corsOptions);
 
   return app.init();

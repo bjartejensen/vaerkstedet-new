@@ -1,0 +1,18 @@
+<ng-template #aboutdesktop>
+    <app-about-desktop></app-about-desktop>
+</ng-template>
+
+<div class="container" *ngIf="(isMobile$ | async);else aboutdesktop" >
+ 
+    <div class="header">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="content">
+        <p *ngFor="let c of content" >
+            {{c}}
+            <br>
+        </p>
+    </div>
+
+</div>

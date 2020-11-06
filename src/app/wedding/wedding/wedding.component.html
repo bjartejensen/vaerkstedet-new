@@ -1,0 +1,18 @@
+<ng-template #weddingdesktop>
+    <app-wedding-desktop></app-wedding-desktop>
+</ng-template>
+
+<div class="container" *ngIf="(isMobile$ | async);else weddingdesktop">
+ 
+    <div class="header">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="content">
+        <p *ngFor="let c of contentOne" >
+            {{c}}
+            <br>
+        </p>
+    </div>
+
+</div>

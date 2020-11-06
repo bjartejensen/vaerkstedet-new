@@ -13,7 +13,19 @@ const routes: Routes = [
     path: "carousel",
     loadChildren: () =>
       import("./carousel/carousel.module").then((m) => m.CarouselModule),
-    data: { animationState: 'Two' }
+      data: { animationState: 'Two' }
+  },
+  {
+    path:"about",
+    loadChildren: ()=>
+      import("./about/about.module").then((m)=>m.AboutModule),
+      data: { animationState: 'Two' }
+  },
+  {
+    path:"collections",
+    loadChildren:()=>import("./collections/collections.module")
+      .then((m)=>m.CollectionsModule),
+      data: { animationState: 'Two' }
   },
   {
     path: "designers",
@@ -25,11 +37,36 @@ const routes: Routes = [
     }
   },
   {
+    path:"news",
+    loadChildren: ()=>
+      import("./news/news.module").then((m)=>m.NewsModule),
+      data: { animationState: 'Two' },
+  }
+  ,{
+    path:"wedding",
+    loadChildren:()=>import("./wedding/wedding.module").then((m)=>m.WeddingModule),
+    data: { animationState: 'Two' },
+  },
+  {
+    path:"custommade",
+    loadChildren:()=>import("./custommade/custommade.module").then((m)=>m.CustommadeModule),
+    data: { animationState: 'Two' },
+  },
+  {
     path:"find",
     loadChildren: ()=> import("./find/find.module").then((m)=>m.FindModule),
       data:{animationState: 'One'}
+  },
+  {
+    path:"contact",
+    loadChildren: ()=> import("./contact/contact.module").then((m)=>m.ContactModule),
+      data:{animationState: 'One'}
+  },
+  {
+    path:"newsletter",
+    loadChildren:()=>import("./newsletter/newsletter.module").then((m)=>m.NewsletterModule),
+    data:{animationState: 'One'}
   }
- 
 
 ]
 

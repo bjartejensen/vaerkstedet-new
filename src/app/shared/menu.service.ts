@@ -20,26 +20,26 @@ export class MenuService {
       {
         displayName: "Home",
         subHeader: "This is home",
-        route:"home",
+        route:"",
         toogleDrawer:true, 
       },
       {
         displayName: "Aktuelt",
         subHeader: "Seneste designs",
-        route:"news",
+        route:"",
         toogleDrawer:false,
         children: [
           {
-            displayName: "Seneste kollektion",
-            route:"collection",
+            displayName: "Seneste designs",
+            route:"news",
+          },
+          {
+            displayName: "Seneste kollektioner",
+            route:"collections",
             header:"Seneste kollektion",
             description: "Vi har netop skudt seneste kollektion. Se de lækre fotos her."
           },
-          {
-            displayName: "Seneste designs",
-            route:"news",
-            
-          },
+         
         ]
       },
       {
@@ -61,8 +61,7 @@ export class MenuService {
             paramValue:"",
           },
         ]
-      }
-      ,
+      },
       {
         displayName: "Designers",
         subHeader: "Vaerkstedets dygtige designere",
@@ -101,6 +100,12 @@ export class MenuService {
           {
             displayName: "Find os",
             route:"find",
+            paramName:"",
+            paramValue:"",
+          },
+          {
+            displayName: "Nyhedsbrev",
+            route:"newsletter",
             paramName:"",
             paramValue:"",
           },

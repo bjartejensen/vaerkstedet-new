@@ -5,19 +5,16 @@
 <div class="container" *ngIf="(isMobile$ | async);else finddesktop" >
    
     <div class="header-container">
-        <h1>Find <span class="vaerkstedet">Vaerkstedet</span></h1>
+        <h1>{{header}}</h1>
     </div>
 
     <div class="sub-header-container">
-        <h4>I Ryesgade - Nørrebros hjerte</h4> 
+        <h4>{{subHeader}}</h4> 
     </div>
 
     <div class="text-container">
           <p>
-             Uanset om du går <span class="attention">målrettet</span> efter et smykke, som du har
-            set her, eller om du blot ønsker at lade dig inspirere,
-            så ser jeg frem til at tage imod dig i min hyggelige
-            <span class="deco">værkstedsbutik</span> i Ryesgade.
+            {{content}}
           </p>
     </div>
     
@@ -32,17 +29,14 @@
         <app-footer></app-footer>
     </div>
 
-    <div class="some-container">
-        <a href="{{instaUrl}}" target="_blank">
-            instagram
-        </a>
-        <a href="{{fbUrl}}" target="_blank">
-            facebook
-        </a>
+    <div class="some">
+            <a href="{{instaUrl}}" target="_blank">
+                ins
+            </a>
+            <a href="{{fbUrl}}" target="_blank">
+                fb
+            </a>
     </div>
-
-  <div class="footer">
-  </div>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

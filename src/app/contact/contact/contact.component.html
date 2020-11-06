@@ -1,0 +1,81 @@
+<ng-template #contactdesktop>
+    <app-contact-desktop></app-contact-desktop>
+</ng-template>
+
+<ng-template #err >
+    <div *ngIf="errorMessage$ | async as error">
+    <p>{{error}}</p>
+    </div>
+</ng-template>
+
+<div class="spinner" *ngIf="showSpinner$ | async" >
+    <mat-spinner></mat-spinner>
+</div>
+
+<div class="container" *ngIf="(isMobile$ | async);else contactdesktop" >
+ 
+    <div class="header">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="content">
+        <p *ngFor="let c of content" >
+            {{c}}
+            <br>
+        </p>
+    </div>
+ 
+    <form autocomplete="off" [formGroup]="contactForm" 
+        class="contact-form" >
+                <div class="form-row">
+                    <div class="form-item">
+                        <mat-form-field >
+                            <input 
+                                formControlName="senderEmail" 
+                                type="email" 
+                                
+                                matInput 
+                                placeholder="email*" >
+                        </mat-form-field> 
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <mat-form-field >
+                            <input 
+                                formControlName="subject" 
+                                type="string" 
+                                matInput 
+                                placeholder="emne*" >
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <mat-form-field >
+                            <textarea 
+                                matInput 
+                                formControlName="message" 
+                                placeholder="besked*">
+                            </textarea>
+
+                        </mat-form-field>
+                    </div>
+                </div>
+            
+                <div class="form-row cta">
+                    <button mat-raised-button 
+                        [disabled]='!contactForm.valid'
+                        (click)="onSubmit()">
+                        Send
+                    </button>
+                </div>
+    </form>
+
+    <div class="feedback" *ngIf="(feedback$ | async ) as userMessage; else err">
+            <p>{{userMessage}}</p>
+    </div>
+
+</div>
