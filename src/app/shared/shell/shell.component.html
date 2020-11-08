@@ -1,13 +1,16 @@
-<mat-sidenav-container class="sidenav-container" >
+<mat-sidenav-container [hasBackdrop]="false" class="sidenav-container" >
     <mat-sidenav
       #drawer
       class="sidenav"
+      [@InAndOut]="isDrawerOpen? 'in': 'out'"
+      (closedStart)="onClosedStart($event)"
+      (openedStart)="onOpenedStart($event)"
       [fixedInViewport]="true"
       [attr.role]="'dialog'"
       [mode]="'over'"
       [ngStyle]="{'width': w}"
       [position]="'start'"
-      [opened]="false">
+      [opened]="true">
 
         <button 
             type="button"
@@ -21,7 +24,11 @@
         </button>
 
           <mat-nav-list class="nav-list">
-             <app-menu-list (toogleDrawer)="drawer.toggle()" [isMobile]="isMobile$ | async" ></app-menu-list>
+             <app-menu-list (toogleDrawer)="drawer.toggle()" 
+             [isMobile]="isMobile$ | async"
+             [isOpened]="isDrawerOpen"
+             
+             ></app-menu-list>
           </mat-nav-list>
     
     </mat-sidenav>

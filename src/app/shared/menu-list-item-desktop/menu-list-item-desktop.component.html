@@ -1,0 +1,47 @@
+<ng-template [@show] #descriptionOnly>
+    
+<div class="basics">
+    <div class="header">
+        <h4> <span>Vaerkstedet</span> - din smykkebutik på Nørrebro</h4>
+    </div>
+
+    <div class="logo-container">
+         <img [src]="logoUrl">
+    </div>
+
+    <div *ngIf="false" class="info-block">
+        <h4>Ryesgade 4, 2200 Købehavn N.</h4>
+        <h4>Åbningstider: ons-fre: 12-18/lør: 11-15</h4>
+    </div>
+
+    <div *ngIf="false" class="info-block">
+        <h4>Telefon: +45 22 56 73 62</h4>
+        <h4 [routerLink]="'/contact'" >Email: mail@vaerk-stedet.dk</h4>
+    </div>
+
+</div>
+   
+    
+</ng-template>
+
+<ng-container
+    *ngIf="menuItem.subMenuItems; else descriptionOnly">
+
+        <div class="info-container">
+
+            <div class="logo-container">
+                <img [src]="logoUrl">
+            </div>
+
+            <div class="items-container"
+                *ngFor="let subMenuItem of menuItem.subMenuItems" >
+
+                <div class="item" (click) ="onSubMenuItemClicked(subMenuItem.url)" >
+                    <h2>{{subMenuItem.header}}</h2>
+                    <h6>{{subMenuItem.subHeader}}</h6>
+                </div>
+            </div>
+
+        </div>
+</ng-container>
+

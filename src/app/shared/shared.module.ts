@@ -22,6 +22,9 @@ import { RouterModule } from '@angular/router';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
 import { MenuListDesktopComponent } from './menu-list-desktop/menu-list-desktop.component';
 import { FooterComponent } from './footer/footer.component';
+import { NgxShowDetailsDirective } from './directives/ngx-show-details.directive';
+import { MenuListItemDesktopComponent } from './menu-list-item-desktop/menu-list-item-desktop.component';
+
 
 const modules = [
   CommonModule,
@@ -38,7 +41,7 @@ const modules = [
 ];
 
 @NgModule({
-  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent, FooterComponent],
+  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent, FooterComponent, NgxShowDetailsDirective, MenuListItemDesktopComponent],
   imports: [
     modules
   ],

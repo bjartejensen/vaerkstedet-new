@@ -11,6 +11,8 @@ import { MenuService } from '../menu.service';
 export class MenuListComponent implements OnInit {
 
   @Input() isMobile:boolean=false;
+  @Input() isOpened:boolean;
+
   @Output() toogleDrawer:EventEmitter<boolean> = new EventEmitter();
 
   navItems:NavItem[];

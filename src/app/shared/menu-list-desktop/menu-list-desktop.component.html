@@ -1,18 +1,30 @@
- <div class="menu-container">
+ 
+<ng-template #detailsSecondary let-data="data" >
+    <div>
+        <app-menu-list-item-desktop [menuItem]="data" ></app-menu-list-item-desktop>
+    </div>
+</ng-template> 
 
-    <div class="primary-menu">
-            <div class="nav-block" *ngFor="let item of navItems">
-                 <h1>{{item.displayName}}</h1> 
-                 <mat-icon class="icon">add</mat-icon>            
+ 
+<div class="menu-container">
+
+    <div class="primary-menu"> 
+            <div class="nav-block" [@InAndOut]="isOpened?'opened':'closed'" *ngFor="let item of menuItems" >
+                 <h1 #elem
+                  (mouseover)="onMouseoverPrimaryItem(item);expanded=true"
+                  (mouseleave)="expanded=false"
+                 >{{item.header}}</h1> 
+                 <mat-icon class="icon"
+                    [@indicatorRotate]="expanded ? 'expanded': 'collapsed'"
+                  *ngIf="item.subMenuItems">add</mat-icon>            
             </div>
     </div>
 
     <div class="secondary-menu">
-            <div class="portal"> 
-                <div class="secondary">
-                    <h4>Secondary List</h4>
-                </div>    
+        <ng-container *ngIf="secondaryMenuContext$ | async as secondaryMenuContext">
+            <div [@reveal] class="portal" *ngxShowDetails="secondaryMenuContext"> 
+                <ng-template *ngTemplateOutlet="detailsSecondary; context: {data: secondaryMenuContext}" ></ng-template>
             </div>
-    </div>
-      
+        </ng-container>   
+     </div>
 </div>

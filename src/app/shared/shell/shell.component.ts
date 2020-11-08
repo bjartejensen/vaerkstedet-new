@@ -5,11 +5,27 @@ import { map, shareReplay, filter, tap } from "rxjs/operators";
 import { Router, NavigationEnd } from "@angular/router";
 import { MatSidenav } from '@angular/material/sidenav';
 import { LayoutService } from 'src/app/services/layout.service';
+import { show } from 'src/app/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-shell',
   templateUrl: './shell.component.html',
-  styleUrls: ['./shell.component.scss']
+  styleUrls: ['./shell.component.scss'],
+  animations: [show,
+    trigger("InAndOut",[
+       
+      state('in', style({ opacity:1 })),
+      transition('* => in', [
+                animate("100ms 300ms")
+      ]),
+      state('out', style({ opacity:0 })),
+      transition('*=>out', [
+        animate("50ms 0ms")
+      ])
+    ])
+
+  ]
 })
 export class ShellComponent implements OnInit {
 
@@ -18,6 +34,8 @@ export class ShellComponent implements OnInit {
     Breakpoints.WebLandscape,
     Breakpoints.WebPortrait,
   ];
+
+  isDrawerOpen:boolean;
 
   isMobile: boolean = true;
 
@@ -64,6 +82,16 @@ export class ShellComponent implements OnInit {
       this.appDrawer.nativeElement.toggle();
     }
     
+  }
+
+  onClosedStart(event){
+    console.log("closing");
+    this.isDrawerOpen = false;
+  }
+  
+  onOpenedStart(event){
+    console.log("opening");
+    this.isDrawerOpen = true;
   }
 
   public get w(){

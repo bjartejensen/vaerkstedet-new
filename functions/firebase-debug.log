@@ -3664,3 +3664,779 @@
 [info] >  [Nest] 11968   - 2020-11-06 23:51:19   [RouterExplorer] Mapped {/fetch, GET} route +1ms
 [info] >  [Nest] 11968   - 2020-11-06 23:51:19   [NestApplication] Nest application successfully started +3ms
 [info] >  Nest Ready
+[debug] [2020-11-07T10:03:53.293Z] ----------------------------------------------------------------------
+[debug] [2020-11-07T10:03:53.295Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bjarte\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-11-07T10:03:53.295Z] CLI Version:   7.11.0
+[debug] [2020-11-07T10:03:53.296Z] Platform:      win32
+[debug] [2020-11-07T10:03:53.296Z] Node Version:  v10.15.0
+[debug] [2020-11-07T10:03:53.297Z] Time:          Sat Nov 07 2020 11:03:53 GMT+0100 (GMT+01:00)
+[debug] [2020-11-07T10:03:53.297Z] ----------------------------------------------------------------------
+[debug] [2020-11-07T10:03:53.297Z] 
+[debug] [2020-11-07T10:03:53.335Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-07T10:03:53.336Z] > authorizing via signed-in user
+[debug] [2020-11-07T10:03:53.336Z] [iam] checking project vaerkstedet-ae5e0 for permissions ["firebase.projects.get"]
+[debug] [2020-11-07T10:03:53.337Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-11-07T10:03:53.338Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-11-07T10:03:53.662Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-07T10:03:53.745Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vaerkstedet-ae5e0:testIamPermissions  
+
+[debug] [2020-11-07T10:03:54.760Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-07T10:03:54.761Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/vaerkstedet-ae5e0  
+ 
+[debug] [2020-11-07T10:03:55.081Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Applications\vaerkstedet-new\functions" for Cloud Functions...
+[debug] [2020-11-07T10:03:58.302Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-07T10:03:58.302Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-11-07T10:03:58.302Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-07T10:03:58.303Z] [worker-~diagnostic~-63321d4e-1e82-4086-8e8c-922cd1ab854c]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\5444
+[debug] [2020-11-07T10:03:58.303Z] [worker-~diagnostic~-63321d4e-1e82-4086-8e8c-922cd1ab854c]: BUSY
+[debug] [2020-11-07T10:03:59.261Z] [runtime-status] [5444] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-07T10:03:59.262Z] [runtime-status] [5444] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-07T10:03:59.266Z] [runtime-status] [5444] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-07T10:03:59.348Z] [runtime-status] [5444] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-07T10:03:59.351Z] [runtime-status] [5444] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 5444   - 2020-11-07 11:04:44   [NestFactory] Starting Nest application...
+[info] +  functions[api]: http function initialized (http://localhost:5000/vaerkstedet-ae5e0/us-central1/api).
+[debug] [2020-11-07T10:04:46.722Z] [worker-~diagnostic~-63321d4e-1e82-4086-8e8c-922cd1ab854c]: IDLE
+[info] >  [Nest] 5444   - 2020-11-07 11:04:46   [InstanceLoader] AppModule dependencies initialized +80ms
+[info] >  [Nest] 5444   - 2020-11-07 11:04:46   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:04:46   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:09   [InstanceLoader] EmailModule dependencies initialized +23053ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:09   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:09   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:09   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [RoutesResolver] DesignersController {/designers}: +544ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [RouterExplorer] Mapped {/fetch, GET} route +5ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [RoutesResolver] InstagramController {/instagram}: +0ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 5444   - 2020-11-07 11:05:10   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-08T17:42:03.881Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T17:42:03.886Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T17:42:03.887Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T17:42:03.937Z] [worker-pool] addWorker(api)
+[debug] [2020-11-08T17:42:03.937Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-08T17:42:03.937Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T17:42:03.938Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T17:42:03.938Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T17:42:04.726Z] [runtime-status] [6940] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-08T17:42:04.728Z] [runtime-status] [6940] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-08T17:42:04.738Z] [runtime-status] [6940] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-08T17:42:04.742Z] [runtime-status] [6940] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-08T17:42:04.743Z] [runtime-status] [6940] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 6940   - 2020-11-08 18:42:10   [NestFactory] Starting Nest application...
+[debug] [2020-11-08T17:42:10.824Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T17:42:10.827Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T17:42:10.827Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T17:42:10.841Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[info] >  [Nest] 6940   - 2020-11-08 18:42:10   [InstanceLoader] AppModule dependencies initialized +99ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:10   [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:10   [InstanceLoader] ConfigModule dependencies initialized +5ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [InstanceLoader] EmailModule dependencies initialized +11107ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [RoutesResolver] DesignersController {/designers}: +9ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [RouterExplorer] Mapped {/fetch, GET} route +4ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 6940   - 2020-11-08 18:42:22   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-08T17:42:22.054Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T17:42:22.067Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T17:42:22.072Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T17:42:22.144Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T17:42:22.145Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T17:43:20.386Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T17:43:20.387Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T17:43:20.387Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T17:43:20.387Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T17:43:20.388Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T17:43:20.388Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T17:43:20.389Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T17:43:20.392Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T17:43:20.393Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T17:43:20.393Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T17:43:20.397Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T17:43:20.405Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T17:43:20.406Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T17:43:20.417Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T17:43:20.417Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:42:32.534Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:42:32.534Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:42:32.534Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:42:32.534Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:42:32.534Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:42:32.534Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:42:32.535Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:42:32.536Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:42:32.536Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:42:32.536Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:42:32.538Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:42:32.540Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:42:32.541Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:42:32.546Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:42:32.546Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:47:29.571Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:47:29.572Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:47:29.572Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:47:29.572Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:47:29.573Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:47:29.573Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:47:29.574Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:47:29.621Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:47:29.622Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:47:29.623Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:47:29.626Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:47:29.635Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:47:29.636Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:47:29.643Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:47:29.643Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:48:32.231Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:48:32.231Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:48:32.231Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:48:32.231Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:48:32.231Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:48:32.231Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:48:32.232Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:48:32.234Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:48:32.234Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:48:32.235Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:48:32.237Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:48:32.239Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:48:32.240Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:48:32.244Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:48:32.244Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:48:40.057Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:48:40.057Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:48:40.057Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:48:40.058Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:48:40.058Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:48:40.058Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:48:40.058Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:48:40.059Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:48:40.059Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:48:40.060Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:48:40.062Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:48:40.065Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:48:40.065Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:48:40.070Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:48:40.070Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:48:54.817Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:48:54.817Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:48:54.817Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:48:54.817Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:48:54.817Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:48:54.817Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:48:54.817Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:48:54.853Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:48:54.854Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:48:54.854Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:48:54.855Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:48:54.857Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:48:54.858Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:48:54.871Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:48:54.871Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:49:02.418Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:49:02.418Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:49:02.418Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:49:02.418Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:49:02.418Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:49:02.418Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:49:02.419Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:49:02.420Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:49:02.420Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:49:02.421Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:49:02.421Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:49:02.423Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:49:02.424Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:49:02.427Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:49:02.427Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:49:12.530Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:49:12.531Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:49:12.531Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:49:12.531Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:49:12.531Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:49:12.531Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:49:12.533Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:49:12.537Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:49:12.538Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:49:12.538Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:49:12.541Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:49:12.547Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:49:12.548Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:49:12.559Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:49:12.559Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:50:26.770Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:50:26.771Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:50:26.771Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:50:26.771Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:50:26.771Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:50:26.771Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:50:26.773Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:50:26.774Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:50:26.774Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:50:26.774Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:50:26.775Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:50:26.777Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:50:26.777Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:50:26.781Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:50:26.781Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:52:03.476Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:52:03.476Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:52:03.476Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:52:03.476Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:52:03.477Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:52:03.477Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:52:03.478Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:52:03.479Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:52:03.479Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:52:03.479Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:52:03.480Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:52:03.482Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:52:03.482Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:52:03.488Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:52:03.488Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:52:15.642Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:52:15.642Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:52:15.642Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:52:15.643Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:52:15.643Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:52:15.643Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:52:15.643Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:52:15.657Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:52:15.657Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:52:15.658Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:52:15.658Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:52:15.660Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:52:15.661Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:52:15.691Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:52:15.691Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:52:45.305Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:52:45.305Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:52:45.306Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:52:45.306Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:52:45.306Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:52:45.306Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:52:45.308Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:52:45.310Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:52:45.311Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:52:45.313Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:52:45.315Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:52:45.319Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:52:45.319Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:52:45.325Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:52:45.325Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:53:24.630Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:53:24.631Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:53:24.631Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:53:24.631Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:53:24.632Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:53:24.632Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:53:24.632Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:53:24.633Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:53:24.634Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:53:24.635Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:53:24.636Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:53:24.638Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:53:24.639Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:53:24.644Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:53:24.644Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:53:55.564Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:53:55.565Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:53:55.565Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:53:55.565Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:53:55.565Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:53:55.565Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:53:55.565Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:53:55.566Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:53:55.567Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:53:55.567Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:53:55.568Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:53:55.570Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:53:55.571Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:53:55.576Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:53:55.576Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:54:00.341Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:54:00.341Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:54:00.341Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:54:00.341Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:54:00.341Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:54:00.341Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:54:00.342Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:54:00.343Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:54:00.343Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:54:00.343Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:54:00.344Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:54:00.346Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:54:00.346Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:54:00.351Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:54:00.351Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:54:38.631Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:54:38.632Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:54:38.632Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:54:38.632Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:54:38.633Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:54:38.633Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:54:38.634Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:54:38.635Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:54:38.635Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:54:38.635Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:54:38.636Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:54:38.639Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:54:38.639Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:54:38.643Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:54:38.643Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:55:24.205Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:55:24.205Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:55:24.205Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:55:24.205Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:55:24.205Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:55:24.206Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:55:24.207Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:55:24.209Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:55:24.209Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:55:24.211Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:55:24.215Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:55:24.220Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:55:24.221Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:55:24.229Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:55:24.229Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:55:45.096Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:55:45.096Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:55:45.096Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:55:45.096Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:55:45.096Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:55:45.096Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:55:45.096Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:55:45.098Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:55:45.098Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:55:45.099Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:55:45.099Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:55:45.102Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:55:45.102Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:55:45.108Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:55:45.108Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:55:54.104Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:55:54.104Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:55:54.104Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:55:54.104Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:55:54.104Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:55:54.104Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:55:54.105Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:55:54.106Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:55:54.107Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:55:54.107Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:55:54.108Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:55:54.109Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:55:54.109Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:55:54.113Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:55:54.113Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:56:19.722Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:56:19.722Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:56:19.722Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:56:19.722Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:56:19.722Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:56:19.722Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:56:19.722Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:56:19.723Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:56:19.723Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:56:19.724Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:56:19.724Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:56:19.727Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:56:19.727Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:56:19.734Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:56:19.734Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:56:25.619Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:56:25.619Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:56:25.619Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:56:25.619Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:56:25.619Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:56:25.619Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:56:25.619Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:56:25.620Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:56:25.620Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:56:25.621Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:56:25.622Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:56:25.624Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:56:25.624Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:56:25.628Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:56:25.628Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:56:36.539Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:56:36.539Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:56:36.539Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:56:36.540Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:56:36.540Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:56:36.540Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:56:36.540Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:56:36.541Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:56:36.542Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:56:36.542Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:56:36.543Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:56:36.545Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:56:36.545Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:56:36.553Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:56:36.553Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:57:21.343Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:57:21.343Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:57:21.344Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:57:21.344Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:57:21.344Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:57:21.344Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:57:21.344Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:57:21.346Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:57:21.346Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:57:21.346Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:57:21.347Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:57:21.349Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:57:21.349Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:57:21.355Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:57:21.355Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:57:54.909Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:57:54.909Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:57:54.909Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:57:54.909Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:57:54.909Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:57:54.909Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:57:54.910Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:57:54.911Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:57:54.912Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:57:54.912Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:57:54.913Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:57:54.915Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:57:54.915Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:57:54.921Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:57:54.921Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:58:38.899Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:58:38.900Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:58:38.900Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:58:38.900Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:58:38.900Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:58:38.900Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:58:38.903Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:58:38.909Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:58:38.910Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:58:38.910Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:58:38.913Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:58:38.921Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:58:38.922Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:58:38.933Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:58:38.933Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:58:46.076Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:58:46.076Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:58:46.076Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:58:46.076Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:58:46.076Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:58:46.076Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:58:46.077Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:58:46.078Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:58:46.078Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:58:46.078Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:58:46.079Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:58:46.081Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:58:46.081Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:58:46.090Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:58:46.090Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T18:59:33.670Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T18:59:33.670Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T18:59:33.670Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T18:59:33.670Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T18:59:33.670Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:59:33.670Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T18:59:33.671Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T18:59:33.672Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T18:59:33.673Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T18:59:33.673Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T18:59:33.674Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T18:59:33.676Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T18:59:33.677Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T18:59:33.680Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T18:59:33.680Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:01:29.636Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:01:29.636Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:01:29.636Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:01:29.636Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:01:29.636Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:01:29.636Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:01:29.637Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:01:29.639Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:01:29.639Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:01:29.639Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:01:29.640Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:01:29.644Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:01:29.644Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:01:29.649Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:01:29.649Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:02:33.790Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:02:33.790Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:02:33.790Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:02:33.790Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:02:33.791Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:02:33.791Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:02:33.792Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:02:33.795Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:02:33.795Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:02:33.796Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:02:33.798Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:02:33.808Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:02:33.809Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:02:33.818Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:02:33.818Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:02:40.981Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:02:40.982Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:02:40.982Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:02:40.982Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:02:40.982Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:02:40.982Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:02:40.982Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:02:40.984Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:02:40.984Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:02:40.984Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:02:40.985Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:02:40.988Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:02:40.989Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:02:40.994Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:02:40.994Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:02:59.537Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:02:59.537Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:02:59.537Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:02:59.537Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:02:59.537Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:02:59.537Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:02:59.538Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:02:59.538Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:02:59.538Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:02:59.539Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:02:59.540Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:02:59.542Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:02:59.543Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:02:59.547Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:02:59.547Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:03:42.441Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:03:42.441Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:03:42.441Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:03:42.441Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:03:42.441Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:03:42.441Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:03:42.442Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:03:42.443Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:03:42.443Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:03:42.443Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:03:42.444Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:03:42.447Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:03:42.447Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:03:42.478Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:03:42.478Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:03:50.950Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:03:50.950Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:03:50.950Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:03:50.950Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:03:50.950Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:03:50.950Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:03:50.951Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:03:50.952Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:03:50.952Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:03:50.953Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:03:50.954Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:03:50.957Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:03:50.958Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:03:50.961Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:03:50.961Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:04:39.204Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:04:39.205Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:04:39.205Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:04:39.205Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:04:39.205Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:04:39.205Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:04:39.205Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:04:39.206Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:04:39.206Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:04:39.206Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:04:39.207Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:04:39.210Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:04:39.210Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:04:39.217Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:04:39.217Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:07:25.730Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:07:25.730Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:07:25.730Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:07:25.730Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:07:25.730Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:07:25.730Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:07:25.731Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:07:25.732Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:07:25.732Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:07:25.732Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:07:25.733Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:07:25.735Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:07:25.735Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:07:25.741Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:07:25.741Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:11:21.859Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:11:21.859Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:11:21.859Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:11:21.859Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:11:21.859Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:11:21.860Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:11:21.860Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:11:21.861Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:11:21.861Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:11:21.861Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:11:21.862Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:11:21.864Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:11:21.864Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:11:21.867Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:11:21.868Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:18:15.749Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:18:15.750Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:18:15.750Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:18:15.750Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:18:15.750Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:18:15.750Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:18:15.751Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:18:15.753Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:18:15.753Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:18:15.753Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:18:15.755Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:18:15.759Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:18:15.761Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:18:15.768Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:18:15.768Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:18:51.005Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:18:51.005Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:18:51.005Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:18:51.005Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:18:51.005Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:18:51.005Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:18:51.006Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:18:51.007Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:18:51.007Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:18:51.007Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:18:51.008Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:18:51.010Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:18:51.011Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:18:51.015Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:18:51.015Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T19:19:33.157Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T19:19:33.157Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T19:19:33.157Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T19:19:33.157Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T19:19:33.157Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:19:33.157Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T19:19:33.158Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T19:19:33.159Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T19:19:33.159Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T19:19:33.160Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T19:19:33.161Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T19:19:33.165Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T19:19:33.166Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T19:19:33.170Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T19:19:33.170Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-08T20:17:57.941Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-08T20:17:57.943Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-08T20:17:57.943Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-08T20:17:57.944Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-08T20:17:57.944Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T20:17:57.944Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: BUSY
+[debug] [2020-11-08T20:17:57.956Z] [runtime-status] [6940] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-08T20:17:57.960Z] [runtime-status] [6940] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-08T20:17:58.029Z] [runtime-status] [6940] Running api in mode HTTPS
+[debug] [2020-11-08T20:17:58.046Z] [runtime-status] [6940] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\6940
+[debug] [2020-11-08T20:17:58.050Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-08T20:17:58.074Z] [runtime-status] [6940] Ephemeral server handling GET request
+[debug] [2020-11-08T20:17:58.076Z] [runtime-status] [6940] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-08T20:17:58.084Z] [worker-api-02aef63d-feb6-4223-bca6-8cf8bb5ca401]: IDLE
+[debug] [2020-11-08T20:17:58.084Z] [work-queue] {"queueLength":0,"workRunningCount":0}
