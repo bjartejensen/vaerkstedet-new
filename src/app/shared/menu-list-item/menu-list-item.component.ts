@@ -6,7 +6,7 @@ import {
   style,
   animate
 } from "@angular/animations";
-import { NavItem,NavSubItem } from "../../models";
+import { MenuModel, NavItem,NavSubItem } from "../../models";
 import { Router } from "@angular/router";
 import { reveal } from 'src/app/animations';
 
@@ -28,8 +28,7 @@ import { reveal } from 'src/app/animations';
 export class MenuListItemComponent implements OnInit {
   expanded: boolean;
  
-  @Input() mainItem: NavItem;
-  @Input() subItems?:NavSubItem[];
+  @Input() menuItem: MenuModel;
   @Output() subMenuItemClickedAndToggleDrawer:EventEmitter<boolean> = new EventEmitter();
 
 
@@ -41,45 +40,33 @@ export class MenuListItemComponent implements OnInit {
   }
 
 
-  onMainItemClicked(mainItem:NavItem){
+  onMainItemClicked(url:string){
 
-    if(this.mainItem.route.toLowerCase()=="designers"){}
-    else{
-      let url = `/${this.mainItem.route}`
-      this.router.navigate([url])
+    debugger;
+
+    if(!!url && url!=""){
+      this.router.navigateByUrl(url);
+      this.subMenuItemClickedAndToggleDrawer.next(true);
     }
 
   }
 
-  onSubItemClicked(subItem:NavSubItem){
+  onSubItemClickedOld(url:string){
 
-    let url = `/${this.mainItem.route}/${subItem.route}`
-
-    if(this.mainItem.route.toLowerCase()=="designers"){
-
-      url = `/${this.mainItem.route}`
-      this.router.navigate([url],{ queryParams: { designer: subItem.displayName }});
-    }
-
-    else{
-      this.router.navigate([url])
-    }
-
+    debugger;
+    //let url = `/${this.menuItem.url}/${subItem.route}`
+    this.router.navigate([url])
     this.subMenuItemClickedAndToggleDrawer.next(true);
-    
-    
-    
-    
   }
 
-  public getChildRoute(item:NavSubItem){
+  public getChildRouteOld(item:NavSubItem){
     let s:any={};
     s[item.paramName] = item.paramValue;
     return s;
   }
 
   onItemSelected() {
-    if (this.mainItem.children && this.mainItem.children.length) {
+    if (this.menuItem.subMenuItems) {
       this.expanded = !this.expanded;
     }
   }

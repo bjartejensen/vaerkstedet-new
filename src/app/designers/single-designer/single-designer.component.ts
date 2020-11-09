@@ -31,7 +31,7 @@ export class SingleDesignerComponent implements OnInit, OnChanges {
   }
 
   private setProfile(){
-    debugger;
+    
     this.designerName = this.singleDesigner.name;
     this.description = this.singleDesigner.description;
     this.profileImage = this.singleDesigner.profile;

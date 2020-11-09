@@ -1,7 +1,8 @@
-<mat-sidenav-container [hasBackdrop]="false" class="sidenav-container" >
+<mat-sidenav-container [hasBackdrop]="false" class="sidenav-container"
+    
+ >
     <mat-sidenav
       #drawer
-      class="sidenav"
       [@InAndOut]="isDrawerOpen? 'in': 'out'"
       (closedStart)="onClosedStart($event)"
       (openedStart)="onOpenedStart($event)"
@@ -22,9 +23,11 @@
             >
             <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
         </button>
-
-          <mat-nav-list class="nav-list">
-             <app-menu-list (toogleDrawer)="drawer.toggle()" 
+  
+        <mat-nav-list class="nav-list"  >
+             <app-menu-list 
+             (toogleDrawer)="drawer.toggle();onTest($event)"
+            class="sidenav" 
              [isMobile]="isMobile$ | async"
              [isOpened]="isDrawerOpen"
              
@@ -33,9 +36,11 @@
     
     </mat-sidenav>
 
-  <mat-sidenav-content class="sidenav-content">
+  <mat-sidenav-content
+  (toogleDrawer)="drawer.toggle(); onTest($event)"
+   class="sidenav-content">
 
-    <button mat-icon-button (click)="drawer.toggle()" color="primary" aria-label="Example icon button with a home icon">
+    <button mat-icon-button  (click)="drawer.toggle()"  color="primary" aria-label="Example icon button with a home icon">
         <mat-icon>menu</mat-icon>
     </button>
   

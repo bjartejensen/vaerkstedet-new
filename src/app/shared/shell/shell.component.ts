@@ -74,6 +74,10 @@ export class ShellComponent implements OnInit {
 
   }
 
+  onTest(event){
+    console.log("Der er faktisk et hit på shell", event )
+  }
+
   onToggleDrawer(shouldToggle:boolean){
 
     debugger;

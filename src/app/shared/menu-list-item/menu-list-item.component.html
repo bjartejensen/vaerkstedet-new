@@ -1,22 +1,21 @@
-<div class="navblock">
+<div class="navblock"
+   >
 
     <div class="header">
-        <h6>{{mainItem.subHeader}}</h6>  
+        <h6>{{menuItem.header}}</h6>  
     </div>
 
     <div class="list-item">
         <a mat-list-item 
             class="anchor"
-            (click)="onMainItemClicked(mainItem);onItemSelected()"
-            [ngClass]="{'vaerkstedet': mainItem.displayName=='Vaerkstedet','active': mainItem.route ? router.isActive(mainItem.route, true): false, 'expanded': expanded}"
-            >
-            {{mainItem.displayName}}
-               
+            (click)="onItemSelected(); onMainItemClicked(menuItem.url)"
+            [ngClass]="{'vaerkstedet': menuItem.header=='Vaerkstedet','active': menuItem.url ? router.isActive(menuItem.url, true): false, 'expanded': expanded}"
+            >{{menuItem.header}}
         </a>
 
-        <ng-container *ngIf="subItems && subItems.length">
+        <ng-container *ngIf="menuItem.subMenuItems">
                         <mat-icon
-                        (click)="onMainItemClicked(mainItem);onItemSelected()"
+                        (click)="onItemSelected()"
                         class="icon"
                         [@indicatorRotate]="expanded ? 'expanded': 'collapsed'">
                         expand_more
@@ -25,9 +24,9 @@
 
         <div class="sub-menu" [@reveal] *ngIf="expanded">
             <ul>
-                <li *ngFor="let child of mainItem.children" 
-                        (click)="onSubItemClicked(child)"
-                    class="sub-item" > {{child.displayName}}
+                <li *ngFor="let subItem of menuItem.subMenuItems" 
+                    (click)="onMainItemClicked(subItem.url)"
+                    class="sub-item" > {{subItem.header}}
                 </li>
             </ul>
         </div> 

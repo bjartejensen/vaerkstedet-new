@@ -24,6 +24,7 @@ import { MenuListDesktopComponent } from './menu-list-desktop/menu-list-desktop.
 import { FooterComponent } from './footer/footer.component';
 import { NgxShowDetailsDirective } from './directives/ngx-show-details.directive';
 import { MenuListItemDesktopComponent } from './menu-list-item-desktop/menu-list-item-desktop.component';
+import { SidenavDirective } from './directives/sidenav.directive';
 
 
 const modules = [
@@ -41,7 +42,7 @@ const modules = [
 ];
 
 @NgModule({
-  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent, FooterComponent, NgxShowDetailsDirective, MenuListItemDesktopComponent],
+  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent, FooterComponent, NgxShowDetailsDirective, MenuListItemDesktopComponent, SidenavDirective],
   imports: [
     modules
   ],

@@ -10,11 +10,17 @@ const routes: Routes = [
     data: { animationState: 'One' }
   },
   {
+    path: "home",
+    loadChildren: () =>
+      import("./landing/landing.module").then((m) => m.LandingModule),
+    data: { animationState: 'One' }
+  },
+  /* {
     path: "carousel",
     loadChildren: () =>
       import("./carousel/carousel.module").then((m) => m.CarouselModule),
       data: { animationState: 'Two' }
-  },
+  }, */
   {
     path:"about",
     loadChildren: ()=>
@@ -66,6 +72,11 @@ const routes: Routes = [
     path:"newsletter",
     loadChildren:()=>import("./newsletter/newsletter.module").then((m)=>m.NewsletterModule),
     data:{animationState: 'One'}
+  },
+  {
+    path:"**",
+    loadChildren: () => import("./landing/landing.module").then((m) => m.LandingModule), 
+    data: { animationState: 'One' }
   }
 
 ]

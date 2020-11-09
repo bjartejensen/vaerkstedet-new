@@ -19,7 +19,7 @@ export class MenuService {
     let menuArr: MenuModel[]=[];
 
     let home = new MenuModel(MenuType.primary,
-            "Home","This is Home", "");
+            "Home","This is Home", "home");
     menuArr.push(home);
 
     let news = new MenuModel(MenuType.primary,
@@ -59,13 +59,15 @@ export class MenuService {
 
       secondArr=[];
       second = new SubMenuModel("Louise Rought","Louise Rought Jewellery","");
-      second.paramName ="name";
-      second.paramValue ="louise_rought";
+      second.paramName ="designer";
+      second.paramValue ="Louise Rought";
+      second.url =`designers?${second.paramName}=${second.paramValue}` // "designers?designer=Louise Rought"
       secondArr.push(second);
 
       second = new SubMenuModel("Alice Kaufmann","Alice Kaufmann Jewellery","");
       second.paramName ="name";
-      second.paramValue ="alice_kaufmann";
+      second.paramValue ="Alice Kaufmann";
+      second.url =`designers?${second.paramName}=${second.paramValue}`
       secondArr.push(second);
 
       designers.setSubMenuItems(secondArr);
@@ -96,7 +98,7 @@ export class MenuService {
       {
         displayName: "Home",
         subHeader: "This is home",
-        route:"",
+        route:"home",
         toogleDrawer:true, 
       },
       {

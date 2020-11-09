@@ -6,10 +6,11 @@
     <div class="menu-container">
        
         <div class="menu">
-            <div class="navblock" *ngFor="let item of navItems">
+            <div class="navblock" *ngFor="let item of menuItems">
                 <app-menu-list-item 
-                    (subMenuItemClickedAndToggleDrawer)="onMenuItemClicked($event)"
-                    [mainItem]="item" [subItems]="item.children"></app-menu-list-item>
+                  
+                    (anyMenuItemClickedAndToggleDrawer)="onMenuItemClicked($event)"
+                    [menuItem]="item"></app-menu-list-item>
             </div>
         </div>
 

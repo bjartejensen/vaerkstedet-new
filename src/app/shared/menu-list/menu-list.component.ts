@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute,Route } from '@angular/router';
-import { NavItem } from 'src/app/models';
+import { MenuModel, NavItem } from 'src/app/models';
 import { MenuService } from '../menu.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class MenuListComponent implements OnInit {
 
   @Output() toogleDrawer:EventEmitter<boolean> = new EventEmitter();
 
-  navItems:NavItem[];
+  menuItems:MenuModel[];
 
   constructor(private menuService:MenuService) { }
 
@@ -24,10 +24,11 @@ export class MenuListComponent implements OnInit {
   }
 
   setMenuItems(){
-    this.navItems = this.menuService.getMenuItems();
+    this.menuItems = this.menuService.getMenuItemModels();
   }
 
   onMenuItemClicked(toggleDrawer:boolean){
+    debugger;
     this.toogleDrawer.emit(toggleDrawer);
   }
 

@@ -8,12 +8,12 @@ export class AboutService {
   constructor() { }
 
   public getHeader():string{
-    return "Sidste nyt fra Vaerkstedet";
+    return "Om Vaerkstedet";
   }
 
   public getContent():string[]{
     let arr:string[]=[];
-    let str ="Her finder du de sidste nye designs der kun lige knap har forladt butikken.";
+    let str ="Vaerkstedet er en smykkebutik i Ryesgade.";
     arr.push(str);
     
     return arr;

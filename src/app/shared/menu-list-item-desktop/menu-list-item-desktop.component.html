@@ -20,7 +20,6 @@
     </div>
 
 </div>
-   
     
 </ng-template>
 
@@ -36,7 +35,7 @@
             <div class="items-container"
                 *ngFor="let subMenuItem of menuItem.subMenuItems" >
 
-                <div class="item" (click) ="onSubMenuItemClicked(subMenuItem.url)" >
+                <div class="item">
                     <h2>{{subMenuItem.header}}</h2>
                     <h6>{{subMenuItem.subHeader}}</h6>
                 </div>

@@ -48,7 +48,7 @@ export class MenuListDesktopComponent implements OnInit, OnChanges {
     = this.secondaryMenuSubject.asObservable();
 
   menuItems:MenuModel[];
-
+ 
   constructor(private menuService:MenuService) {
     
     this.secondaryMenuContext$

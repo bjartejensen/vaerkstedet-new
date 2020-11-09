@@ -55,6 +55,7 @@ export class DesignersComponent implements OnInit {
 
   private handleRouteInit(){
     this.route.queryParams.subscribe(x=>{
+      debugger;
       if(x.designer!="" && x.designer!=undefined){
         this.designersService.fetchSingleDesigner(x.designer);
       }
