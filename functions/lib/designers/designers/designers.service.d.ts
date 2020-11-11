@@ -4,7 +4,8 @@ export declare class DesignersService {
     private readonly configService;
     private readonly firestoreService;
     constructor(configService: ConfigService, firestoreService: FirestoreService);
-    getDesignersInfo(): Promise<{
+    getDesigner(name: string): Promise<FirebaseFirestore.DocumentData>;
+    getAllDesigners(): Promise<{
         name: any;
         portfolio: any;
         profile: any;

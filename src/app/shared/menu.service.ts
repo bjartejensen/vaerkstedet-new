@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { MenuItemDescription, MenuModel, MenuType, NavItem, SubMenuModel } from 'src/app/models';
 
 @Injectable({
@@ -6,12 +8,21 @@ import { MenuItemDescription, MenuModel, MenuType, NavItem, SubMenuModel } from 
 })
 export class MenuService {
 
-  //navItems: NavItem[];
+  shouldToggleSubject: Subject<boolean> = new Subject();
+  shouldToggleObs$ :Observable<boolean> = 
+    this.shouldToggleSubject.asObservable()
+      .pipe(filter(x=>x===true));
 
   constructor() { }
 
   public get logoUrl(){
     return "../../../assets/logo/logo-grey.png";
+  }
+
+  public onItemClicked(clickable:boolean){
+      if(clickable){
+        this.shouldToggleSubject.next(true);
+      }
   }
   
   getMenuItemModels(): MenuModel[]{
@@ -54,23 +65,26 @@ export class MenuService {
       //Designers
       let designers = new MenuModel(MenuType.primary,
             "Designers",
-            "Mød Vaerkstedets dygtige designere",
-            "designers")
+            "Mød Vaerkstedets dygtige designere","designers");
 
       secondArr=[];
       second = new SubMenuModel("Louise Rought","Louise Rought Jewellery","");
-      second.paramName ="designer";
-      second.paramValue ="Louise Rought";
-      second.url =`designers?${second.paramName}=${second.paramValue}` // "designers?designer=Louise Rought"
+      second.subUrl ="louiserought";
+      second.url =`designers/${second.subUrl}`
       secondArr.push(second);
 
       second = new SubMenuModel("Alice Kaufmann","Alice Kaufmann Jewellery","");
-      second.paramName ="name";
-      second.paramValue ="Alice Kaufmann";
-      second.url =`designers?${second.paramName}=${second.paramValue}`
+      second.subUrl ="alicekaufmann";
+      second.url =`designers/${second.subUrl}`
       secondArr.push(second);
 
-      designers.setSubMenuItems(secondArr);
+      second = new SubMenuModel("Joanna Jablko","Joanna Jablko Jewellery","");
+      second.subUrl ="joannajablko";
+      second.url =`designers/${second.subUrl}`
+      secondArr.push(second);
+      
+      
+      designers.setSubMenuItems(secondArr); 
       menuArr.push(designers);
 
       let vaerkstedet = new MenuModel(MenuType.primary,"Vaerkstedet","Din smykkebutik på Nørrebro");
@@ -79,7 +93,7 @@ export class MenuService {
       secondArr.push(second);
       second = new SubMenuModel("Find Varkstedet","I hjertet af Nørrebro. Find os på kortet","find");
       secondArr.push(second);
-      second = new SubMenuModel("Vaerkstedets nyhedsbrev","Skriv dig op til Vaerkstedet nyhedsbrev og få adgang til specialtilbud og arrangementer","newletter");
+      second = new SubMenuModel("Vaerkstedets nyhedsbrev","Skriv dig op til Vaerkstedet nyhedsbrev og få adgang til specialtilbud og arrangementer","newsletter");
       secondArr.push(second);
       second = new SubMenuModel("Kontakt Varkstedet","Skriv en mail til os. Vi svarer altid hurtigt og ser frem til at modtage din henvendelse","contact");
       secondArr.push(second);

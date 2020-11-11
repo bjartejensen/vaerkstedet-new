@@ -1402,13 +1402,13 @@
         "affectsGlobalScope": false
       },
       "../src/designers/designers/designers.service.ts": {
-        "version": "cc490f113e37193e86e197e4ec8fa66fc23a950051e95c8594dc4cb69132deb5",
-        "signature": "888e15fb092adafd7c24e26c9b9e7bd871845c70f13eab7b1bc83dc2c045669c",
+        "version": "d0126c918c34aaf3ff565e73503fcb19b2ef813eb774f9c8e9c1beca626a50d5",
+        "signature": "bf63e838e28f31d02fbf4ef68a3bbd9609f80f1197d03198585190e6d3344520",
         "affectsGlobalScope": false
       },
       "../src/designers/designers/designers.controller.ts": {
-        "version": "9be8d7569a1695126a41e2433dbcf47c1d2a41292b6a9af8023c8144386f016c",
-        "signature": "358c1754d9faef85feea042abf190ab70adc374ada03543f84877bdb44a30b61",
+        "version": "27fa2e2f18a452008b9101e27fabf4fe8982e2c27a1f66d1a8ca6673000e1403",
+        "signature": "31c8b434e2d2af59ed7e9a5ee3dcc282fa06034d7dfd5ffc1665ca04a31ab98b",
         "affectsGlobalScope": false
       },
       "../src/designers/designers.module.ts": {

@@ -17,8 +17,11 @@ export class NewsletterComponent implements OnInit {
   isMobile$:Observable<boolean> = this.layoutService.isMobile$;
   isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
   
+  logoUrl:string ="../../../assets/logo/logo-grey.png";
   header:string;
   content:string[]=[];
+
+
 
   feedback$:Observable<any>;
   errorMessage$: Observable<string>;

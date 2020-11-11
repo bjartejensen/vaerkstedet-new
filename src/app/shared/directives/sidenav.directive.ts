@@ -1,26 +1,21 @@
 import { EventEmitter, Output } from '@angular/core';
 import { Directive } from '@angular/core';
+import { MenuService } from '../menu.service';
 
 @Directive({
-  selector: '[sidenavAs]',
+  selector: '[sidenav]',
   exportAs: 'sidenav'
 })
 export class SidenavDirective {
 
-  @Output() anyMenuItemClickedAndToggleDrawer:EventEmitter<boolean> = new EventEmitter();
   @Output() toggleDrawer: EventEmitter<boolean> = new EventEmitter();
 
-  constructor() { }
+  constructor(private menuService: MenuService) { }
 
-  public onAnyItemClicked(url?:string){
-
-    debugger;
-    if(url){
-      if(url!=null){
-        this.anyMenuItemClickedAndToggleDrawer.emit(true);
-        console.log("Value emitted and route is ", url );
+  public onItemClicked(clickable:boolean){
+      if(clickable){
+        this.menuService.onItemClicked(clickable);
       }
-    }
   }
 
 }

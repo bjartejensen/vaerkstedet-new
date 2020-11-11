@@ -16,13 +16,17 @@ export class WeddingComponent implements OnInit {
   header:string;
   contentOne:string[]=[];
   contentTwo:string[]=[];
+  images:string[]=[];
 
   constructor(private layoutService:LayoutService,
     private weddingService:WeddingService) { }
 
   ngOnInit(): void {
+
+    this.setImages();
     this.setHeader();
     this.setContent();
+    
   }
 
   private setHeader(){
@@ -32,6 +36,10 @@ export class WeddingComponent implements OnInit {
   private setContent(){
     this.contentOne = this.weddingService.getContentOne();
     this.contentTwo = this.weddingService.getContentTwo();
+  }
+
+  private setImages(){
+    this.images = this.weddingService.getImages();
   }
 
 }

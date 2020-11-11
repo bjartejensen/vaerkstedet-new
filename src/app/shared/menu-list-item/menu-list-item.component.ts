@@ -29,41 +29,10 @@ export class MenuListItemComponent implements OnInit {
   expanded: boolean;
  
   @Input() menuItem: MenuModel;
-  @Output() subMenuItemClickedAndToggleDrawer:EventEmitter<boolean> = new EventEmitter();
-
 
   constructor(public router: Router) {}
 
-  //@HostBinding("attr.aria-expanded") ariaExpanded = this.expanded;
-
-  ngOnInit() {
-  }
-
-
-  onMainItemClicked(url:string){
-
-    debugger;
-
-    if(!!url && url!=""){
-      this.router.navigateByUrl(url);
-      this.subMenuItemClickedAndToggleDrawer.next(true);
-    }
-
-  }
-
-  onSubItemClickedOld(url:string){
-
-    debugger;
-    //let url = `/${this.menuItem.url}/${subItem.route}`
-    this.router.navigate([url])
-    this.subMenuItemClickedAndToggleDrawer.next(true);
-  }
-
-  public getChildRouteOld(item:NavSubItem){
-    let s:any={};
-    s[item.paramName] = item.paramValue;
-    return s;
-  }
+  ngOnInit() {}
 
   onItemSelected() {
     if (this.menuItem.subMenuItems) {

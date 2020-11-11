@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DesignersComponent } from './designers/designers.component';
 import { SingleDesignerComponent } from './single-designer/single-designer.component';
-import { SingleDesignerResolver } from '../services/designers.resolver';
+import { SingleDesignerResolver } from './designers.resolver';
 
 const routes: Routes = [
   {
@@ -10,8 +10,11 @@ const routes: Routes = [
     component: DesignersComponent,
   },
   {
-    path: ":designerUrl",
-    component: SingleDesignerComponent
+    path: ":name",
+    component: SingleDesignerComponent,
+    resolve:{
+      singleDesigner: SingleDesignerResolver
+    }
   }, 
 ];
 

@@ -5,10 +5,11 @@ import { SingleDesignerComponent } from './single-designer/single-designer.compo
 import { DesignersComponent } from './designers/designers.component';
 import { HttpClient } from '@angular/common/http';
 import { CarouselModule } from '../carousel/carousel.module';
+import { DesignersDesktopComponent } from './designers-desktop/designers-desktop.component';
 
 
 @NgModule({
-  declarations: [SingleDesignerComponent, DesignersComponent],
+  declarations: [SingleDesignerComponent, DesignersComponent, DesignersDesktopComponent],
   imports: [
     CommonModule,
     DesignersRoutingModule,

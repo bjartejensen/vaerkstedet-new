@@ -1,18 +1,26 @@
 <div class="navblock"
+   
    >
 
-    <div class="header">
+    <div class="header"
+    
+    >
         <h6>{{menuItem.header}}</h6>  
     </div>
 
     <div class="list-item">
+        <!--The expand Icon-->
         <a mat-list-item 
+            #sidenav="sidenav"
+            sidenav
+            (click)="sidenav.onItemClicked(menuItem.clickable);onItemSelected()"
             class="anchor"
-            (click)="onItemSelected(); onMainItemClicked(menuItem.url)"
+            [routerLink]="menuItem.clickable ? [menuItem.url] : []"
             [ngClass]="{'vaerkstedet': menuItem.header=='Vaerkstedet','active': menuItem.url ? router.isActive(menuItem.url, true): false, 'expanded': expanded}"
             >{{menuItem.header}}
         </a>
 
+        <!--The expand Icon-->
         <ng-container *ngIf="menuItem.subMenuItems">
                         <mat-icon
                         (click)="onItemSelected()"
@@ -22,10 +30,14 @@
                         </mat-icon>
         </ng-container>
 
+        <!--The sub elements-->
         <div class="sub-menu" [@reveal] *ngIf="expanded">
             <ul>
                 <li *ngFor="let subItem of menuItem.subMenuItems" 
-                    (click)="onMainItemClicked(subItem.url)"
+                    #sidenav="sidenav"
+                    sidenav
+                    [routerLink]="[subItem.url]"
+                    (click)="sidenav.onItemClicked(subItem.clickable)"
                     class="sub-item" > {{subItem.header}}
                 </li>
             </ul>

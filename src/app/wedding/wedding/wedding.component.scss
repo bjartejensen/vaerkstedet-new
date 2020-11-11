@@ -1,0 +1,129 @@
+@import "../../../styles.scss";
+
+@mixin content-mobile{
+    font-family:$text-font;
+    font-size: 1.15rem;
+    line-height: 2rem;
+    color:$text-color;
+    font-weight: 400;
+    text-align: left;
+
+    @media (min-width: 768px){
+        font-size: 1.25rem;
+    }
+}
+
+@mixin header-mobile{
+    font-family:$it-font;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color:$header-color;
+    text-transform: uppercase;
+
+    @media (min-width: 768px){
+        font-size: 3.5rem;
+    }
+
+}
+
+@mixin sub-header-mobile {
+    font-family:$it-font;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    margin: 2rem 0%;
+    font-weight: 200;
+    color:$header-color;
+    padding: 1rem;
+    background: lighten($cool-grey,70%);
+    border-left: 6px solid rgba(169,169,169,0.3);
+
+    @media (min-width: 768px){
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+}
+
+.header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin: 4rem 0%;
+
+    h1{
+        @include header-mobile;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+}
+
+.content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0%;
+    width: 90%;
+
+    @media (min-width: 768px){
+        width: 75%;
+    }
+
+    p:last-of-type{
+        border-right: 10px solid $cool-pink;
+        padding-right: 2rem;
+        margin: 1rem 0%;
+    }
+
+    p:first-of-type{
+        @include sub-header-mobile;
+        width: 100%;
+    }
+   
+    p{
+        @include content-mobile;
+        width: 90%;
+    }
+}
+
+.img-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+
+        @media (min-width:768px){
+            height: 450px;
+            width: 600px;
+            object-fit: cover;
+        }
+    }
+}
+
+
+
+

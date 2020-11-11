@@ -5,10 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class WeddingService {
 
+  imgArr:string[]=[];
+
   constructor() { }
 
   public getHeader():string{
-    return "Vaerkstedets vielsesringe";
+    //return "Vaerkstedets vielsesringe";
+    return "Vielsesringe";
   }
 
   public getContentOne():string[]{
@@ -34,4 +37,17 @@ export class WeddingService {
 
     return arr;
   }
+
+  public getImages():string[]{
+
+    let img1 = "../../assets/img/wedding/1.jpg";
+    let img2 = "../../assets/img/wedding/2.jpg";
+
+    this.imgArr.push(img1);
+    this.imgArr.push(img2);
+
+    return this.imgArr;
+
+  }
+
 }

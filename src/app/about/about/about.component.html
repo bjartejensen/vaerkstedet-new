@@ -4,12 +4,40 @@
 
 <div class="container" *ngIf="(isMobile$ | async);else aboutdesktop" >
  
-    <div class="header">
+     <div class="header">
         <h1>{{header}}</h1>
     </div>
 
+    <div class="img-container">
+        <img class="mat-elevation-z1" [src]="images[0]" alt="">
+    </div>
+
     <div class="content">
-        <p *ngFor="let c of content" >
+        <p *ngFor="let c of contentOne" >
+            {{c}}
+            <br>
+        </p>
+    </div>
+
+    <div class="img-container">
+        <img class="mat-elevation-z1" [src]="images[1]" alt="">
+    </div>
+    
+
+    <div class="content">
+        <p *ngFor="let c of contentTwo" >
+            {{c}}
+            <br>
+        </p>
+    </div>
+
+    <div class="img-container">
+        <img class="mat-elevation-z1" [src]="images[2]" alt="">
+    </div>
+    
+
+    <div class="content">
+        <p *ngFor="let c of contentThree" >
             {{c}}
             <br>
         </p>

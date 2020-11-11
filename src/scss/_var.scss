@@ -1,40 +1,56 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,400,700|Lora:400,700&display=swap'");
 
+//Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap'|
+
 @font-face {
     font-family: "DIN";
     src: url("/assets/fonts/DIN/D-DINCondensed.woff2") format("woff");
 } 
 
-@font-face {
-    font-family: "Raleway";
+/*  @font-face {
+    font-family: "Raleway", sans-serif;
     font-weight: 100 1000;
     src: url("/assets/fonts/Raleway-VariableFont_wght")
       format("truetype");
-  }
+  } */
 
 @font-face {
-    font-family: "Worksans";
+    font-family: "WorkSans";
     font-weight: 100 1000;
     src: url("/assets/fonts/Worksans/WorkSans-VariableFont_wght")
       format("truetype");
   }
 
 @font-face {
-    font-family: "Worksans-italic";
+    font-family: "WorkSans-italic";
     font-weight: 100 1000;
     src: url("/assets/fonts/Worksans/WorkSans-Italic-VariableFont_wght")
       format("truetype");
   }
 
+@font-face {
+    font-family: "Playfairit";
+    font-weight: 100 1000;
+    src: url("/assets/fonts/Playfair/PlayfairDisplay-Italic-VariableFont_wght.ttf")
+      format("truetype");
+}
+  
+@font-face {
+    font-family: "Playfair";
+    font-weight: 100 1000;
+    src: url("/assets/fonts/Playfair/PlayfairDisplay-VariableFont_wght.ttf")
+      format("truetype");
+} 
 
-$lora-font: "Lora", serif;
-$raleway-font: 'Raleway', sans-serif;
 $din-font: DIN;
 $menu-font: "Poppins", sans-serif;
-$header-font: "Worksans-italic";
-$text-font: "Worksans";
+$header-font: 'Playfairit', serif;
+//$text-font: 'Playfair', serif;
+$it-font: 'Playfairit', serif;
+$text-font: 'Lora'; //400, 700 //'WorkSans', sans-serif; 
 
 $background-color: #c8cad3;
+$header-color: rgb(73, 72, 72);
 $text-color: rgb(32, 31, 31);
 $cool-grey: #5c5d61;
 $cool-pink: #f4ccc9;

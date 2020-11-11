@@ -4,25 +4,19 @@
 
 <div class="container" *ngIf="(isMobile$ | async);else finddesktop" >
    
-    <div class="header-container">
+    <div class="header">
         <h1>{{header}}</h1>
     </div>
 
-    <div class="sub-header-container">
-        <h4>{{subHeader}}</h4> 
-    </div>
-
-    <div class="text-container">
+    <div class="content">
           <p>
             {{content}}
           </p>
     </div>
     
     <div class="map-container">
-        <div class="gmap-location" >
             <iframe title="Vaerkstedet location" class="gmap mat-elevation-z4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4497.904610221482!2d12.558997183979079!3d55.68981696571406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652530118e2a62b%3A0x718d3ead6416b138!2sRyesgade+4%2C+2200+K%C3%B8benhavn+N!5e0!3m2!1sda!2sdk!4v1512823788758">
             </iframe>
-        </div>
     </div>
     
     <div class="contact-container">

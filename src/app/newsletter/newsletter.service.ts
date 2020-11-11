@@ -16,7 +16,7 @@ export class NewsletterService {
   constructor(public http: HttpClient) {}
 
   public getHeader():string{
-    return "Vaerkstedets nyhedsbrev";
+    return "Nyhedsbrev";
   }
 
   public getContent():string[]{

@@ -1,26 +1,32 @@
 
 <div class="container" *ngIf="singleDesigner" >
 
-    <div class="title"> 
+    <div class="info">
+
+    <div *ngIf="true" class="title"> 
         <h4>{{singleDesigner.name}}</h4>
     </div>
 
-    <div class="profile-image-container">
-        <img [src]="singleDesigner.profile">    
+    <div *ngIf="true" class="profile-image-container">
+        <img [src]="singleDesigner.profileimage">    
     </div>
 
-    <div class="description">
-        <p *ngFor="let d of description">{{d}}</p>
+    <div class="content">
+    <p *ngFor="let d of singleDesigner.intro">
+            {{d}}
+        </p>
     </div>
 
-    <div class="carousel-container">
-        <app-carousel [height]="450" [width]="275" [images]="portfolioImages" ></app-carousel>
-    </div>
-
-    <div class="images-container">
-        <img *ngFor="let s of portfolioImages" [src]="s" alt="">
     </div>
     
-</div>
+    <div *ngIf="false" class="carousel-container">
+        <app-carousel [height]="450" [width]="275" [images]="singleDesigner.images" ></app-carousel>
+    </div>
+
+    <div *ngIf="true" class="images-container">
+        <img *ngFor="let s of singleDesigner.images" [src]="s" alt="">
+    </div>
+    
+</div> 
 
 

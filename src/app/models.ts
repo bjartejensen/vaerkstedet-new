@@ -7,10 +7,11 @@ export interface SocialMediaLink{
 
 export interface SingleDesigner{
     name: string;
-    profile: string;
-    portfolio:string[];
-    description:string[];
-    socialmedia: SocialMediaLink[];
+    profileimage: string;
+    images:string[];
+    intro:string[];
+    intro2:string[];
+    socialmedia?: SocialMediaLink[];
 }
 
 export interface NavItem {
@@ -63,16 +64,15 @@ export interface NavItem {
     }
 
     public get clickable():boolean{
-      return !!this.url;
+      return !(!this.url || this.url===undefined || this.url==="");
     }
 
   }
 
   export class SubMenuModel extends MenuModel{
 
-    paramName?:string;
-    paramValue?: string;
-
+    subUrl:string;
+    
     constructor(header:string,subheader:string, url:string){
       super(MenuType.secondary,header,subheader,url);
     }

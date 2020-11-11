@@ -14,15 +14,19 @@ export class CustommadeComponent implements OnInit {
   isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
   
   header:string;
-  content:string[]=[];
+  contentOne:string[]=[];
+  contentTwo:string[]=[];
+  images:string[]=[];
 
   constructor(private layoutService:LayoutService,
       private customService:CustommadeService) { }
 
   ngOnInit(): void {
 
+    this.setImages();
     this.setHeader();
-    this.setContent();
+    this.setContentOne();
+    this.setContentTwo();
 
   }
 
@@ -30,8 +34,16 @@ export class CustommadeComponent implements OnInit {
     this.header = this.customService.getHeader();
   }
 
-  private setContent(){
-    this.content = this.customService.getContent();
+  private setContentOne(){
+    this.contentOne = this.customService.getContentOne();
+  }
+
+  private setContentTwo(){
+    this.contentTwo = this.customService.getContentTwo();
+  }
+
+  private setImages(){
+    this.images = this.customService.getImages();
   }
 
 }

@@ -6,11 +6,21 @@ import { FirestoreService } from "../../firestore/firestore/firestore.service";
 export class DesignersService {
 
     constructor(private readonly configService: ConfigService,
-        private readonly firestoreService: FirestoreService){
+        private readonly firestoreService: FirestoreService){}
 
+    async getDesigner(name:string){
+        
+        const designers = this.configService.get<string>("FIRESTORE_DESIGNERS_COLLECTION");
+    
+        const result = await this.firestoreService.db
+          .collection(`${designers}`)
+          .doc(name)
+          .get()
+
+        return result.data();
     }
 
-    async getDesignersInfo(){
+    async getAllDesigners(){
         
         const designers = this.configService.get<string>("FIRESTORE_DESIGNERS_COLLECTION");
     

@@ -22,7 +22,7 @@ export class CustommadeDesktopComponent implements OnInit {
   ngOnInit(): void {
 
     this.setHeader();
-    this.setContent();
+    //this.setContent();
 
   }
 
@@ -31,7 +31,7 @@ export class CustommadeDesktopComponent implements OnInit {
   }
 
   private setContent(){
-    this.content = this.customService.getContent();
+    //this.content = this.customService.getContent();
   }
 
 }

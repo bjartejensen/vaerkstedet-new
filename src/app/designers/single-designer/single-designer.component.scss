@@ -35,56 +35,136 @@
     color: $text-color;
   }
 
+  @mixin sub-header-mobile {
+    font-family:$it-font;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 0%;
+    font-weight: 200;
+    color:$header-color;
+    padding: 1rem;
+    background: lighten($cool-grey,70%);
+    border-left: 6px solid rgba(169,169,169,0.3);
+
+    @media (min-width: 768px){
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+}
+
 .container{
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
+    //align-items: center;
+    min-height: 100vh;
+    height: fit-content;
     width: 100%;
-    border: 2px dashed red;
+    //border: 2px dashed red;
     //background:rgb(97, 153, 97);
 }
 
-.title{
+.info{
+
   position: relative;
   display: flex;
-  margin-top: 10%;
-  background:orange;
+  justify-content: flex-start;
+  height: fit-content;
+  width: 100%;
+
+}
+
+.article-image{
+  float: left;
+  width: 100%;
+  color: orange;
+  
+  .text{
+    color: green;
+    padding: 0% 0rem;
+  }
+  
+  img{
+    float: left;
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+}
+
+.title{
+  position: absolute;
+  display: flex;
+  top:70%;
+  left:60%;
+  transform: translate(-50%,-50%);
+  //background:orangered;
+  width: fit-content;
+  padding: 0% 2%;
+  z-index: 40;
   
   h4{
     @include header;  
+    color:$header-color;
   }
 }
+
+.content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  padding: 1rem;
+  margin: 3px 0%;
+  width: 95%;
+
+  p{
+    opacity: 0;
+  }
+
+  p:first-of-type{
+    @include sub-header-mobile;
+    width: 100%;
+    opacity: 1;
+  }
+
+}
+
 
 .profile-image-container{
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20%;
+  justify-content: flex-start;
+  //background: orange;
+  margin-left: 0%;
 
   img{
     position: relative;
-    width: 25%;
-    height: 200%;
+    width: 200px;
+    height: 700px;
     object-fit: cover;
+    object-position: 70%;
+    filter: grayscale(100%);
   }
 }
 
 .images-container{
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 20%;
 
   img{
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 90vw;
+    height: 100%;
     object-fit: contain;
+    margin: 2px 0%;
   }
 }
 
@@ -113,5 +193,5 @@
   align-items: center;
   height: 50vh;
   width: 90vw;
-  background:orangered;
+  //background:orangered;
 }

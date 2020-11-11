@@ -7,6 +7,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { LayoutService } from 'src/app/services/layout.service';
 import { show } from 'src/app/animations';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-shell',
@@ -21,7 +22,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
       ]),
       state('out', style({ opacity:0 })),
       transition('*=>out', [
-        animate("50ms 0ms")
+        animate("600ms 250ms")
       ])
     ])
 
@@ -44,7 +45,7 @@ export class ShellComponent implements OnInit {
   isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
 
   @ViewChild("drawer")
-  appDrawer: ElementRef;
+  appDrawer: MatSidenav;
 
   shouldRun:boolean= true;
 
@@ -52,7 +53,8 @@ export class ShellComponent implements OnInit {
   wwwVaerkstedet = "https://vaerk-stedet.dk";
   fbUrl = "https://www.facebook.com/louiseroughtjewellery/";
 
-  constructor(private layoutService: LayoutService) {}
+  constructor(private menuService:MenuService,
+      private layoutService: LayoutService) {}
 
   ngOnInit(): void {
 
@@ -62,28 +64,25 @@ export class ShellComponent implements OnInit {
       this.isMobile = x;
     })  
 
-  /*   this.isLargeMobile$.subscribe(x=>{
-      //debugger;
-      console.log("Large Mobile");
-    }) */
-
-    /* this.isDesktop$.subscribe(x=>{
-      //debugger;
-      console.log("Desktop");
-    }) */
-
+    this.menuService.shouldToggleObs$.subscribe(shouldToggle=>{
+      debugger
+      this.onToggleDrawer(shouldToggle);
+    })
+  
   }
 
   onTest(event){
+
+    debugger;
     console.log("Der er faktisk et hit på shell", event )
   }
 
   onToggleDrawer(shouldToggle:boolean){
 
     debugger;
-    
+
     if(shouldToggle){
-      this.appDrawer.nativeElement.toggle();
+      this.appDrawer.toggle();
     }
     
   }

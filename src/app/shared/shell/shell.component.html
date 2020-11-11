@@ -1,7 +1,11 @@
-<mat-sidenav-container [hasBackdrop]="false" class="sidenav-container"
-    
+<mat-sidenav-container 
+  [hasBackdrop]="true" 
+  class="sidenav-container"
  >
     <mat-sidenav
+      #sidenav="sidenav"
+      sidenav
+      (toggleDrawer)="onTest($event);drawer.toggle()"
       #drawer
       [@InAndOut]="isDrawerOpen? 'in': 'out'"
       (closedStart)="onClosedStart($event)"
@@ -11,7 +15,7 @@
       [mode]="'over'"
       [ngStyle]="{'width': w}"
       [position]="'start'"
-      [opened]="true">
+      [opened]="false">
 
         <button 
             type="button"
@@ -25,22 +29,23 @@
         </button>
   
         <mat-nav-list class="nav-list"  >
-             <app-menu-list 
-             (toogleDrawer)="drawer.toggle();onTest($event)"
+             <app-menu-list
+             
             class="sidenav" 
              [isMobile]="isMobile$ | async"
-             [isOpened]="isDrawerOpen"
-             
+                         
              ></app-menu-list>
           </mat-nav-list>
     
     </mat-sidenav>
 
   <mat-sidenav-content
-  (toogleDrawer)="drawer.toggle(); onTest($event)"
+ 
    class="sidenav-content">
 
-    <button mat-icon-button  (click)="drawer.toggle()"  color="primary" aria-label="Example icon button with a home icon">
+    <button mat-icon-button  (click)="drawer.toggle()"  
+    color="primary" 
+    aria-label="Example icon button with a home icon">
         <mat-icon>menu</mat-icon>
     </button>
   

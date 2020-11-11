@@ -8,8 +8,6 @@
         <div class="menu">
             <div class="navblock" *ngFor="let item of menuItems">
                 <app-menu-list-item 
-                  
-                    (anyMenuItemClickedAndToggleDrawer)="onMenuItemClicked($event)"
                     [menuItem]="item"></app-menu-list-item>
             </div>
         </div>

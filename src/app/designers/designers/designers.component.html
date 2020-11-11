@@ -1,57 +1,19 @@
 
-<ng-template #singledesigner let-designer="designer">
-    <app-single-designer [singleDesigner]="designer">
-    </app-single-designer>
+<ng-template #designersdesktop>
+    <app-designers-desktop></app-designers-desktop>
 </ng-template>
 
-<div class="container"
-   
-    [style.flexDirection]="'column'">
-  
-    <ng-container >
-
-    <div class="logo">
-
-        <div class="img-container">
-            <img [src]="logoUrl">
-        </div>
-
-        <div *ngIf="false" class="bg"
-            [style.background-image]="'url(' + logoUrl + ')'">
-        </div>
+<div class="container" *ngIf="(isMobile$ | async);else designersdesktop" >
+ 
+    <div class="header">
+        <h1>{{header}}</h1>
     </div>
 
-    <div class="intro-section">
-
-        <div class="sub-header">
-            <h2>Din smykkebutik på Nørrebro</h2>
-        </div>
-
-        <div class="text-block"  >
-            <p>{{introText[0]}}</p>
-        </div>
-
-        <div class="text-block"  >
-            <p>{{introText[1]}}</p>
-        </div>
-
-        <div class="text-block"  >
-            <p>{{introText[2]}}</p>
-        </div>
+    <div class="content">
+        <p *ngFor="let c of contentOne" >
+            {{c}}
+            <br>
+        </p>
     </div>
-
-    <!--<div class="cta">
-        <button (click)="getSingleDesigner('Louise Rought')" mat-raised-button>Louise</button>
-        <button (click)="getSingleDesigner('Alice Kaufmann')" mat-raised-button>Alice</button>
-    </div> -->
-    
-    <ng-container *ngIf="selectedDesignerObs$ | async as data" >
-        <ng-template *ngTemplateOutlet="singledesigner;context:{designer:data.singleDesigner}">
-        </ng-template>
-    </ng-container>
-
-   
-
-    </ng-container>
 
 </div>

@@ -31,6 +31,6 @@ export class AboutDesktopComponent implements OnInit {
   }
   
   private setContent(){
-    this.content = this.aboutService.getContent();
+    //this.content = this.aboutService.getContent();
   }
 }
