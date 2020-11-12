@@ -13648,3 +13648,1177 @@
 [info] >  [Nest] 4516   - 2020-11-11 23:46:02   [RouterExplorer] Mapped {/fetch, GET} route +1ms
 [info] >  [Nest] 4516   - 2020-11-11 23:46:02   [NestApplication] Nest application successfully started +13ms
 [info] >  Nest Ready
+[debug] [2020-11-12T20:31:03.636Z] ----------------------------------------------------------------------
+[debug] [2020-11-12T20:31:03.642Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bjarte\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-11-12T20:31:03.643Z] CLI Version:   7.11.0
+[debug] [2020-11-12T20:31:03.643Z] Platform:      win32
+[debug] [2020-11-12T20:31:03.643Z] Node Version:  v10.15.0
+[debug] [2020-11-12T20:31:03.861Z] Time:          Thu Nov 12 2020 21:31:03 GMT+0100 (GMT+01:00)
+[debug] [2020-11-12T20:31:03.861Z] ----------------------------------------------------------------------
+[debug] [2020-11-12T20:31:03.862Z] 
+[debug] [2020-11-12T20:31:04.018Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-12T20:31:04.019Z] > authorizing via signed-in user
+[debug] [2020-11-12T20:31:04.019Z] [iam] checking project vaerkstedet-ae5e0 for permissions ["firebase.projects.get"]
+[debug] [2020-11-12T20:31:04.022Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-11-12T20:31:04.022Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-11-12T20:31:04.252Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-12T20:31:04.707Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vaerkstedet-ae5e0:testIamPermissions  
+
+[debug] [2020-11-12T20:31:05.713Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-12T20:31:05.716Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/vaerkstedet-ae5e0  
+ 
+[debug] [2020-11-12T20:31:06.048Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Applications\vaerkstedet-new\functions" for Cloud Functions...
+[debug] [2020-11-12T20:31:08.667Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T20:31:08.667Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-11-12T20:31:08.667Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T20:31:08.667Z] [worker-~diagnostic~-be1fbb71-5efb-4b01-b60e-07857994d24d]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\9196
+[debug] [2020-11-12T20:31:08.667Z] [worker-~diagnostic~-be1fbb71-5efb-4b01-b60e-07857994d24d]: BUSY
+[debug] [2020-11-12T20:31:09.435Z] [runtime-status] [9196] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T20:31:09.436Z] [runtime-status] [9196] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T20:31:09.441Z] [runtime-status] [9196] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T20:31:09.452Z] [runtime-status] [9196] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T20:31:09.454Z] [runtime-status] [9196] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 9196   - 2020-11-12 21:31:37   [NestFactory] Starting Nest application...
+[info] +  functions[api]: http function initialized (http://localhost:5000/vaerkstedet-ae5e0/us-central1/api).
+[debug] [2020-11-12T20:31:37.515Z] [worker-~diagnostic~-be1fbb71-5efb-4b01-b60e-07857994d24d]: IDLE
+[info] >  [Nest] 9196   - 2020-11-12 21:31:37   [InstanceLoader] AppModule dependencies initialized +61ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:37   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:37   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [InstanceLoader] EmailModule dependencies initialized +6920ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [InstanceLoader] NewsletterModule dependencies initialized +2ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [InstanceLoader] InstagramModule dependencies initialized +3ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [InstanceLoader] DesignersModule dependencies initialized +2ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RoutesResolver] DesignersController {/designers}: +21ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RouterExplorer] Mapped {/:designername, GET} route +14ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RouterExplorer] Mapped {/fetchall, GET} route +3ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RoutesResolver] EmailController {/email}: +2ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RouterExplorer] Mapped {/send, POST} route +3ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RoutesResolver] NewsletterController {/newsletter}: +6ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RouterExplorer] Mapped {/subscribe, POST} route +3ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RoutesResolver] InstagramController {/instagram}: +4ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [RouterExplorer] Mapped {/fetch, GET} route +4ms
+[info] >  [Nest] 9196   - 2020-11-12 21:31:44   [NestApplication] Nest application successfully started +14ms
+[info] >  Nest Ready
+[debug] [2020-11-12T20:51:49.662Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T20:51:49.663Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T20:51:49.663Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/alicekaufmann --> api
+[debug] [2020-11-12T20:51:49.675Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T20:51:49.675Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T20:51:49.675Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T20:51:49.675Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:51:49.675Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: BUSY
+[debug] [2020-11-12T20:51:50.399Z] [runtime-status] [16864] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T20:51:50.401Z] [runtime-status] [16864] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T20:51:50.405Z] [runtime-status] [16864] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T20:51:50.407Z] [runtime-status] [16864] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T20:51:50.407Z] [runtime-status] [16864] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 16864   - 2020-11-12 21:51:51   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T20:51:51.840Z] [runtime-status] [16864] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T20:51:51.841Z] [runtime-status] [16864] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T20:51:51.841Z] [runtime-status] [16864] Running api in mode HTTPS
+[debug] [2020-11-12T20:51:51.845Z] [runtime-status] [16864] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[info] >  [Nest] 16864   - 2020-11-12 21:51:51   [InstanceLoader] AppModule dependencies initialized +37ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:51   [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:51   [InstanceLoader] ConfigModule dependencies initialized +2ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [InstanceLoader] EmailModule dependencies initialized +1168ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RoutesResolver] DesignersController {/designers}: +8ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RouterExplorer] Mapped {/:designername, GET} route +5ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RoutesResolver] NewsletterController {/newsletter}: +0ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 16864   - 2020-11-12 21:51:53   [NestApplication] Nest application successfully started +6ms
+[debug] [2020-11-12T20:51:53.073Z] [functions] Runtime ready! Sending request!
+[info] >  Nest Ready
+[debug] [2020-11-12T20:51:53.088Z] [runtime-status] [16864] Ephemeral server handling GET request
+[debug] [2020-11-12T20:51:53.095Z] [runtime-status] [16864] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~2s
+[debug] [2020-11-12T20:51:54.422Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: IDLE
+[debug] [2020-11-12T20:51:54.423Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T20:52:13.089Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T20:52:13.089Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T20:52:13.089Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/joannajablko --> api
+[debug] [2020-11-12T20:52:13.089Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T20:52:13.089Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:52:13.090Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: BUSY
+[debug] [2020-11-12T20:52:13.090Z] [runtime-status] [16864] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T20:52:13.092Z] [runtime-status] [16864] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T20:52:13.092Z] [runtime-status] [16864] Running api in mode HTTPS
+[debug] [2020-11-12T20:52:13.092Z] [runtime-status] [16864] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:52:13.094Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-12T20:52:13.097Z] [runtime-status] [16864] Ephemeral server handling GET request
+[debug] [2020-11-12T20:52:13.097Z] [runtime-status] [16864] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T20:52:13.238Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: IDLE
+[debug] [2020-11-12T20:52:13.239Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T20:52:28.157Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T20:52:28.157Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T20:52:28.157Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/louiserought --> api
+[debug] [2020-11-12T20:52:28.158Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T20:52:28.158Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:52:28.158Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: BUSY
+[debug] [2020-11-12T20:52:28.158Z] [runtime-status] [16864] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T20:52:28.160Z] [runtime-status] [16864] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T20:52:28.160Z] [runtime-status] [16864] Running api in mode HTTPS
+[debug] [2020-11-12T20:52:28.160Z] [runtime-status] [16864] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:52:28.161Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-12T20:52:28.164Z] [runtime-status] [16864] Ephemeral server handling GET request
+[debug] [2020-11-12T20:52:28.165Z] [runtime-status] [16864] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T20:52:28.275Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: IDLE
+[debug] [2020-11-12T20:52:28.275Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T20:52:49.946Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T20:52:49.946Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T20:52:49.946Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T20:52:49.946Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T20:52:49.946Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:52:49.946Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: BUSY
+[debug] [2020-11-12T20:52:49.947Z] [runtime-status] [16864] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T20:52:49.948Z] [runtime-status] [16864] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T20:52:49.948Z] [runtime-status] [16864] Running api in mode HTTPS
+[debug] [2020-11-12T20:52:49.948Z] [runtime-status] [16864] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:52:49.949Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-12T20:52:49.952Z] [runtime-status] [16864] Ephemeral server handling GET request
+[debug] [2020-11-12T20:52:49.952Z] [runtime-status] [16864] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T20:52:50.541Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: IDLE
+[debug] [2020-11-12T20:52:50.542Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T20:53:46.127Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T20:53:46.127Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T20:53:46.127Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T20:53:46.127Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T20:53:46.127Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:53:46.128Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: BUSY
+[debug] [2020-11-12T20:53:46.130Z] [runtime-status] [16864] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T20:53:46.133Z] [runtime-status] [16864] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T20:53:46.133Z] [runtime-status] [16864] Running api in mode HTTPS
+[debug] [2020-11-12T20:53:46.133Z] [runtime-status] [16864] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\16864
+[debug] [2020-11-12T20:53:46.136Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-12T20:53:46.140Z] [runtime-status] [16864] Ephemeral server handling GET request
+[debug] [2020-11-12T20:53:46.141Z] [runtime-status] [16864] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T20:53:46.147Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: IDLE
+[debug] [2020-11-12T20:53:46.147Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T20:57:14.507Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T20:57:15.525Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T20:57:15.525Z] [worker-~diagnostic~-be1fbb71-5efb-4b01-b60e-07857994d24d]: FINISHING
+[debug] [2020-11-12T20:57:15.525Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-11-12T20:57:15.525Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: FINISHING
+[debug] [2020-11-12T20:57:15.538Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T20:57:15.538Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T20:57:15.539Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T20:57:15.539Z] [worker-~diagnostic~-bc4eea4c-f4f1-4eba-ad11-26d0980ea3af]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\15576
+[debug] [2020-11-12T20:57:15.539Z] [worker-~diagnostic~-bc4eea4c-f4f1-4eba-ad11-26d0980ea3af]: BUSY
+[debug] [2020-11-12T20:57:15.540Z] [worker-~diagnostic~-be1fbb71-5efb-4b01-b60e-07857994d24d]: exited
+[debug] [2020-11-12T20:57:15.540Z] [worker-~diagnostic~-be1fbb71-5efb-4b01-b60e-07857994d24d]: FINISHED
+[debug] [2020-11-12T20:57:15.541Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: exited
+[debug] [2020-11-12T20:57:15.541Z] [worker-api-984543e5-c8a0-468b-a174-ca7e23df3bd7]: FINISHED
+[debug] [2020-11-12T20:57:16.516Z] [runtime-status] [15576] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T20:57:16.536Z] [runtime-status] [15576] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T20:57:16.540Z] [runtime-status] [15576] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T20:57:16.543Z] [runtime-status] [15576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T20:57:16.544Z] [runtime-status] [15576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T20:57:18.223Z] [worker-~diagnostic~-bc4eea4c-f4f1-4eba-ad11-26d0980ea3af]: IDLE
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [InstanceLoader] AppModule dependencies initialized +24ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [InstanceLoader] EmailModule dependencies initialized +573ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RoutesResolver] DesignersController {/designers}: +9ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RouterExplorer] Mapped {/:designername, GET} route +5ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RouterExplorer] Mapped {/send, POST} route +4ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RouterExplorer] Mapped {/subscribe, POST} route +2ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RoutesResolver] InstagramController {/instagram}: +2ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 15576   - 2020-11-12 21:57:18   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-12T20:58:12.473Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T20:58:12.473Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T20:58:12.473Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T20:58:12.473Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T20:58:12.474Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-11-12T20:58:12.492Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T20:58:12.492Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T20:58:12.492Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T20:58:12.492Z] [worker-api-08beb816-e835-4eb9-9293-1257cb1bf2e7]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\11960
+[debug] [2020-11-12T20:58:12.492Z] [worker-api-08beb816-e835-4eb9-9293-1257cb1bf2e7]: BUSY
+[debug] [2020-11-12T20:58:13.206Z] [runtime-status] [11960] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T20:58:13.208Z] [runtime-status] [11960] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T20:58:13.212Z] [runtime-status] [11960] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T20:58:13.214Z] [runtime-status] [11960] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T20:58:13.215Z] [runtime-status] [11960] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T20:58:14.234Z] [runtime-status] [11960] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T20:58:14.235Z] [runtime-status] [11960] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T20:58:14.235Z] [runtime-status] [11960] Running api in mode HTTPS
+[debug] [2020-11-12T20:58:14.240Z] [runtime-status] [11960] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\11960
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [InstanceLoader] AppModule dependencies initialized +34ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [InstanceLoader] EmailModule dependencies initialized +439ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [InstanceLoader] InstagramModule dependencies initialized +0ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [InstanceLoader] DesignersModule dependencies initialized +2ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RoutesResolver] DesignersController {/designers}: +5ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RouterExplorer] Mapped {/:designername, GET} route +5ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 11960   - 2020-11-12 21:58:14   [NestApplication] Nest application successfully started +4ms
+[debug] [2020-11-12T20:58:14.730Z] [functions] Runtime ready! Sending request!
+[info] >  Nest Ready
+[debug] [2020-11-12T20:58:14.744Z] [runtime-status] [11960] Ephemeral server handling GET request
+[debug] [2020-11-12T20:58:14.751Z] [runtime-status] [11960] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T20:58:14.789Z] [worker-api-08beb816-e835-4eb9-9293-1257cb1bf2e7]: IDLE
+[debug] [2020-11-12T20:58:14.789Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:02:01.098Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:02:02.130Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:02:02.130Z] [worker-~diagnostic~-bc4eea4c-f4f1-4eba-ad11-26d0980ea3af]: FINISHING
+[debug] [2020-11-12T21:02:02.131Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-11-12T21:02:02.131Z] [worker-api-08beb816-e835-4eb9-9293-1257cb1bf2e7]: FINISHING
+[debug] [2020-11-12T21:02:02.142Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:02:02.142Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:02:02.142Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:02:02.142Z] [worker-~diagnostic~-5aab6a01-638e-4951-bec0-5520134fad30]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\15932
+[debug] [2020-11-12T21:02:02.142Z] [worker-~diagnostic~-5aab6a01-638e-4951-bec0-5520134fad30]: BUSY
+[debug] [2020-11-12T21:02:02.143Z] [worker-~diagnostic~-bc4eea4c-f4f1-4eba-ad11-26d0980ea3af]: exited
+[debug] [2020-11-12T21:02:02.143Z] [worker-~diagnostic~-bc4eea4c-f4f1-4eba-ad11-26d0980ea3af]: FINISHED
+[debug] [2020-11-12T21:02:02.161Z] [worker-api-08beb816-e835-4eb9-9293-1257cb1bf2e7]: exited
+[debug] [2020-11-12T21:02:02.161Z] [worker-api-08beb816-e835-4eb9-9293-1257cb1bf2e7]: FINISHED
+[debug] [2020-11-12T21:02:03.132Z] [runtime-status] [15932] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:02:03.135Z] [runtime-status] [15932] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:02:03.141Z] [runtime-status] [15932] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:02:03.143Z] [runtime-status] [15932] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:02:03.144Z] [runtime-status] [15932] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 15932   - 2020-11-12 22:02:04   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:02:04.827Z] [worker-~diagnostic~-5aab6a01-638e-4951-bec0-5520134fad30]: IDLE
+[info] >  [Nest] 15932   - 2020-11-12 22:02:04   [InstanceLoader] AppModule dependencies initialized +24ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:04   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:04   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [InstanceLoader] EmailModule dependencies initialized +679ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [InstanceLoader] NewsletterModule dependencies initialized +0ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [InstanceLoader] InstagramModule dependencies initialized +0ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RouterExplorer] Mapped {/:designername, GET} route +5ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RouterExplorer] Mapped {/subscribe, POST} route +2ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [RouterExplorer] Mapped {/fetch, GET} route +2ms
+[info] >  [Nest] 15932   - 2020-11-12 22:02:05   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:02:17.646Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:02:17.647Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:02:17.647Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T21:02:17.647Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:02:17.647Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-11-12T21:02:17.668Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T21:02:17.669Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T21:02:17.669Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:02:17.669Z] [worker-api-4d469f34-49f0-459d-ae9a-7526a905082f]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\5268
+[debug] [2020-11-12T21:02:17.669Z] [worker-api-4d469f34-49f0-459d-ae9a-7526a905082f]: BUSY
+[debug] [2020-11-12T21:02:18.258Z] [runtime-status] [5268] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:02:18.260Z] [runtime-status] [5268] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:02:18.264Z] [runtime-status] [5268] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:02:18.266Z] [runtime-status] [5268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:02:18.267Z] [runtime-status] [5268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:02:19.235Z] [runtime-status] [5268] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:02:19.247Z] [runtime-status] [5268] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:02:19.247Z] [runtime-status] [5268] Running api in mode HTTPS
+[debug] [2020-11-12T21:02:19.247Z] [runtime-status] [5268] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\5268
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [InstanceLoader] AppModule dependencies initialized +34ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [InstanceLoader] EmailModule dependencies initialized +467ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [InstanceLoader] NewsletterModule dependencies initialized +0ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RoutesResolver] DesignersController {/designers}: +7ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RouterExplorer] Mapped {/send, POST} route +3ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RoutesResolver] InstagramController {/instagram}: +1ms
+[debug] [2020-11-12T21:02:19.781Z] [functions] Runtime ready! Sending request!
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [RouterExplorer] Mapped {/fetch, GET} route +8ms
+[info] >  [Nest] 5268   - 2020-11-12 22:02:19   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:02:19.799Z] [runtime-status] [5268] Ephemeral server handling GET request
+[debug] [2020-11-12T21:02:19.805Z] [runtime-status] [5268] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:02:19.837Z] [worker-api-4d469f34-49f0-459d-ae9a-7526a905082f]: IDLE
+[debug] [2020-11-12T21:02:19.837Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:03:40.582Z] File C:\Applications\vaerkstedet-new\functions\src\index.ts changed, reloading triggers
+[debug] [2020-11-12T21:03:40.652Z] File C:\Applications\vaerkstedet-new\functions\src\index.ts changed, reloading triggers
+[debug] [2020-11-12T21:03:41.664Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:03:41.664Z] [worker-~diagnostic~-5aab6a01-638e-4951-bec0-5520134fad30]: FINISHING
+[debug] [2020-11-12T21:03:41.665Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-11-12T21:03:41.665Z] [worker-api-4d469f34-49f0-459d-ae9a-7526a905082f]: FINISHING
+[debug] [2020-11-12T21:03:41.674Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:03:41.674Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:03:41.674Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:03:41.674Z] [worker-~diagnostic~-4ca8c164-d40d-43e8-b895-31899478e179]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\13592
+[debug] [2020-11-12T21:03:41.674Z] [worker-~diagnostic~-4ca8c164-d40d-43e8-b895-31899478e179]: BUSY
+[debug] [2020-11-12T21:03:41.674Z] [worker-~diagnostic~-5aab6a01-638e-4951-bec0-5520134fad30]: exited
+[debug] [2020-11-12T21:03:41.675Z] [worker-~diagnostic~-5aab6a01-638e-4951-bec0-5520134fad30]: FINISHED
+[debug] [2020-11-12T21:03:41.675Z] [worker-api-4d469f34-49f0-459d-ae9a-7526a905082f]: exited
+[debug] [2020-11-12T21:03:41.675Z] [worker-api-4d469f34-49f0-459d-ae9a-7526a905082f]: FINISHED
+[debug] [2020-11-12T21:03:42.369Z] [runtime-status] [13592] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:03:42.372Z] [runtime-status] [13592] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:03:42.377Z] [runtime-status] [13592] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:03:42.379Z] [runtime-status] [13592] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:03:42.380Z] [runtime-status] [13592] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:03:43.427Z] [worker-~diagnostic~-4ca8c164-d40d-43e8-b895-31899478e179]: IDLE
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [InstanceLoader] AppModule dependencies initialized +22ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [InstanceLoader] EmailModule dependencies initialized +425ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [InstanceLoader] NewsletterModule dependencies initialized +2ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RoutesResolver] NewsletterController {/newsletter}: +0ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 13592   - 2020-11-12 22:03:43   [NestApplication] Nest application successfully started +5ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:03:55.972Z] File C:\Applications\vaerkstedet-new\functions\src\index.ts changed, reloading triggers
+[debug] [2020-11-12T21:03:56.982Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:03:56.982Z] [worker-~diagnostic~-4ca8c164-d40d-43e8-b895-31899478e179]: FINISHING
+[debug] [2020-11-12T21:03:56.982Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:03:56.982Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-11-12T21:03:56.991Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:03:56.991Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:03:56.991Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:03:56.991Z] [worker-~diagnostic~-c8346777-463a-4877-998c-e8b42351fc6c]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\9376
+[debug] [2020-11-12T21:03:56.991Z] [worker-~diagnostic~-c8346777-463a-4877-998c-e8b42351fc6c]: BUSY
+[debug] [2020-11-12T21:03:56.991Z] [worker-~diagnostic~-4ca8c164-d40d-43e8-b895-31899478e179]: exited
+[debug] [2020-11-12T21:03:56.991Z] [worker-~diagnostic~-4ca8c164-d40d-43e8-b895-31899478e179]: FINISHED
+[debug] [2020-11-12T21:03:57.638Z] [runtime-status] [9376] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:03:57.640Z] [runtime-status] [9376] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:03:57.644Z] [runtime-status] [9376] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:03:57.646Z] [runtime-status] [9376] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:03:57.648Z] [runtime-status] [9376] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 9376   - 2020-11-12 22:03:58   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:03:58.809Z] [worker-~diagnostic~-c8346777-463a-4877-998c-e8b42351fc6c]: IDLE
+[info] >  [Nest] 9376   - 2020-11-12 22:03:58   [InstanceLoader] AppModule dependencies initialized +23ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:58   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:58   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [InstanceLoader] EmailModule dependencies initialized +503ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 9376   - 2020-11-12 22:03:59   [NestApplication] Nest application successfully started +8ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:03:59.762Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js.map changed, reloading triggers
+[debug] [2020-11-12T21:03:59.764Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js changed, reloading triggers
+[debug] [2020-11-12T21:03:59.766Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.d.ts changed, reloading triggers
+[debug] [2020-11-12T21:03:59.776Z] File C:\Applications\vaerkstedet-new\functions\lib\index.js.map changed, reloading triggers
+[debug] [2020-11-12T21:03:59.778Z] File C:\Applications\vaerkstedet-new\functions\lib\index.js changed, reloading triggers
+[debug] [2020-11-12T21:03:59.783Z] File C:\Applications\vaerkstedet-new\functions\lib\index.d.ts changed, reloading triggers
+[debug] [2020-11-12T21:03:59.826Z] File C:\Applications\vaerkstedet-new\functions\lib\tsconfig.tsbuildinfo changed, reloading triggers
+[debug] [2020-11-12T21:04:00.830Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:04:00.831Z] [worker-~diagnostic~-c8346777-463a-4877-998c-e8b42351fc6c]: FINISHING
+[debug] [2020-11-12T21:04:00.831Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:04:00.843Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:04:00.843Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:04:00.843Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:04:00.843Z] [worker-~diagnostic~-b5c48dfb-a20f-45f4-b03c-72296caebfed]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\10504
+[debug] [2020-11-12T21:04:00.843Z] [worker-~diagnostic~-b5c48dfb-a20f-45f4-b03c-72296caebfed]: BUSY
+[debug] [2020-11-12T21:04:00.844Z] [worker-~diagnostic~-c8346777-463a-4877-998c-e8b42351fc6c]: exited
+[debug] [2020-11-12T21:04:00.844Z] [worker-~diagnostic~-c8346777-463a-4877-998c-e8b42351fc6c]: FINISHED
+[debug] [2020-11-12T21:04:01.606Z] [runtime-status] [10504] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:04:01.608Z] [runtime-status] [10504] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:04:01.612Z] [runtime-status] [10504] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:04:01.614Z] [runtime-status] [10504] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:04:01.615Z] [runtime-status] [10504] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 10504   - 2020-11-12 22:04:02   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:04:02.751Z] [worker-~diagnostic~-b5c48dfb-a20f-45f4-b03c-72296caebfed]: IDLE
+[info] >  [Nest] 10504   - 2020-11-12 22:04:02   [InstanceLoader] AppModule dependencies initialized +22ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:02   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:02   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [InstanceLoader] EmailModule dependencies initialized +1080ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RoutesResolver] DesignersController {/designers}: +7ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RouterExplorer] Mapped {/:designername, GET} route +3ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RoutesResolver] EmailController {/email}: +0ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RoutesResolver] NewsletterController {/newsletter}: +0ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 10504   - 2020-11-12 22:04:03   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:04:29.479Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:04:29.479Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:04:29.479Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T21:04:29.479Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:04:29.503Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T21:04:29.503Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T21:04:29.503Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:04:29.503Z] [worker-api-ac7c8329-1eb0-42ba-83cf-881a8ccdbfbe]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\18016
+[debug] [2020-11-12T21:04:29.503Z] [worker-api-ac7c8329-1eb0-42ba-83cf-881a8ccdbfbe]: BUSY
+[debug] [2020-11-12T21:04:30.084Z] [runtime-status] [18016] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:04:30.086Z] [runtime-status] [18016] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:04:30.090Z] [runtime-status] [18016] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:04:30.092Z] [runtime-status] [18016] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:04:30.093Z] [runtime-status] [18016] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:04:31.171Z] [runtime-status] [18016] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:04:31.171Z] [runtime-status] [18016] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:04:31.172Z] [runtime-status] [18016] Running api in mode HTTPS
+[debug] [2020-11-12T21:04:31.176Z] [runtime-status] [18016] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\18016
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [InstanceLoader] AppModule dependencies initialized +31ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [InstanceLoader] ConfigHostModule dependencies initialized +0ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [InstanceLoader] ConfigModule dependencies initialized +2ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [InstanceLoader] EmailModule dependencies initialized +616ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RoutesResolver] DesignersController {/designers}: +7ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 18016   - 2020-11-12 22:04:31   [NestApplication] Nest application successfully started +4ms
+[debug] [2020-11-12T21:04:31.840Z] [functions] Runtime ready! Sending request!
+[info] >  Nest Ready
+[debug] [2020-11-12T21:04:31.852Z] [runtime-status] [18016] Ephemeral server handling GET request
+[debug] [2020-11-12T21:04:31.864Z] [runtime-status] [18016] Ephemeral server survived.
+[info] >  apiky 1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  instaurl undefined
+[info] >  comb url undefined1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:04:31.900Z] [worker-api-ac7c8329-1eb0-42ba-83cf-881a8ccdbfbe]: IDLE
+[debug] [2020-11-12T21:04:31.900Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:05:08.302Z] File C:\Applications\vaerkstedet-new\functions\src\index.ts changed, reloading triggers
+[debug] [2020-11-12T21:05:08.739Z] File C:\Applications\vaerkstedet-new\functions\lib\index.js changed, reloading triggers
+[debug] [2020-11-12T21:05:08.739Z] File C:\Applications\vaerkstedet-new\functions\lib\index.d.ts changed, reloading triggers
+[debug] [2020-11-12T21:05:08.741Z] File C:\Applications\vaerkstedet-new\functions\lib\index.js.map changed, reloading triggers
+[debug] [2020-11-12T21:05:08.784Z] File C:\Applications\vaerkstedet-new\functions\lib\tsconfig.tsbuildinfo changed, reloading triggers
+[debug] [2020-11-12T21:05:09.795Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:05:09.795Z] [worker-~diagnostic~-b5c48dfb-a20f-45f4-b03c-72296caebfed]: FINISHING
+[debug] [2020-11-12T21:05:09.796Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-11-12T21:05:09.796Z] [worker-api-ac7c8329-1eb0-42ba-83cf-881a8ccdbfbe]: FINISHING
+[debug] [2020-11-12T21:05:09.806Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:05:09.806Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:05:09.806Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:05:09.806Z] [worker-~diagnostic~-6dc5e409-cc21-4fca-bb3b-193eb68e50f8]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\15528
+[debug] [2020-11-12T21:05:09.806Z] [worker-~diagnostic~-6dc5e409-cc21-4fca-bb3b-193eb68e50f8]: BUSY
+[debug] [2020-11-12T21:05:09.807Z] [worker-api-ac7c8329-1eb0-42ba-83cf-881a8ccdbfbe]: exited
+[debug] [2020-11-12T21:05:09.807Z] [worker-api-ac7c8329-1eb0-42ba-83cf-881a8ccdbfbe]: FINISHED
+[debug] [2020-11-12T21:05:09.807Z] [worker-~diagnostic~-b5c48dfb-a20f-45f4-b03c-72296caebfed]: exited
+[debug] [2020-11-12T21:05:09.807Z] [worker-~diagnostic~-b5c48dfb-a20f-45f4-b03c-72296caebfed]: FINISHED
+[debug] [2020-11-12T21:05:10.798Z] [runtime-status] [15528] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:05:10.800Z] [runtime-status] [15528] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:05:10.811Z] [runtime-status] [15528] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:05:10.814Z] [runtime-status] [15528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:05:10.816Z] [runtime-status] [15528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:05:12.153Z] [worker-~diagnostic~-6dc5e409-cc21-4fca-bb3b-193eb68e50f8]: IDLE
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [InstanceLoader] AppModule dependencies initialized +20ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [InstanceLoader] ConfigModule dependencies initialized +2ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [InstanceLoader] EmailModule dependencies initialized +407ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [InstanceLoader] InstagramModule dependencies initialized +0ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RoutesResolver] DesignersController {/designers}: +8ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 15528   - 2020-11-12 22:05:12   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:05:29.267Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:05:29.825Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js.map changed, reloading triggers
+[debug] [2020-11-12T21:05:29.827Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js changed, reloading triggers
+[debug] [2020-11-12T21:05:29.832Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.d.ts changed, reloading triggers
+[debug] [2020-11-12T21:05:29.873Z] File C:\Applications\vaerkstedet-new\functions\lib\tsconfig.tsbuildinfo changed, reloading triggers
+[debug] [2020-11-12T21:05:30.882Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:05:30.883Z] [worker-~diagnostic~-6dc5e409-cc21-4fca-bb3b-193eb68e50f8]: FINISHING
+[debug] [2020-11-12T21:05:30.883Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:05:30.884Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-11-12T21:05:30.908Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:05:30.908Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:05:30.908Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:05:30.908Z] [worker-~diagnostic~-dd305e66-9c84-4478-8598-719e46ba1db9]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\14488
+[debug] [2020-11-12T21:05:30.908Z] [worker-~diagnostic~-dd305e66-9c84-4478-8598-719e46ba1db9]: BUSY
+[debug] [2020-11-12T21:05:30.909Z] [worker-~diagnostic~-6dc5e409-cc21-4fca-bb3b-193eb68e50f8]: exited
+[debug] [2020-11-12T21:05:30.910Z] [worker-~diagnostic~-6dc5e409-cc21-4fca-bb3b-193eb68e50f8]: FINISHED
+[debug] [2020-11-12T21:05:31.834Z] [runtime-status] [14488] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:05:31.836Z] [runtime-status] [14488] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:05:31.840Z] [runtime-status] [14488] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:05:31.842Z] [runtime-status] [14488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:05:31.843Z] [runtime-status] [14488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 14488   - 2020-11-12 22:05:32   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:05:32.875Z] [worker-~diagnostic~-dd305e66-9c84-4478-8598-719e46ba1db9]: IDLE
+[info] >  [Nest] 14488   - 2020-11-12 22:05:32   [InstanceLoader] AppModule dependencies initialized +21ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:32   [InstanceLoader] ConfigHostModule dependencies initialized +0ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:32   [InstanceLoader] ConfigModule dependencies initialized +0ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [InstanceLoader] EmailModule dependencies initialized +373ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [InstanceLoader] NewsletterModule dependencies initialized +0ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [InstanceLoader] DesignersModule dependencies initialized +2ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RoutesResolver] DesignersController {/designers}: +7ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RoutesResolver] InstagramController {/instagram}: +0ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 14488   - 2020-11-12 22:05:33   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:05:55.695Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:05:55.781Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:05:56.124Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js.map changed, reloading triggers
+[debug] [2020-11-12T21:05:56.124Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js changed, reloading triggers
+[debug] [2020-11-12T21:05:56.127Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.d.ts changed, reloading triggers
+[debug] [2020-11-12T21:05:56.164Z] File C:\Applications\vaerkstedet-new\functions\lib\tsconfig.tsbuildinfo changed, reloading triggers
+[debug] [2020-11-12T21:05:57.175Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:05:57.175Z] [worker-~diagnostic~-dd305e66-9c84-4478-8598-719e46ba1db9]: FINISHING
+[debug] [2020-11-12T21:05:57.175Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:05:57.184Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:05:57.184Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:05:57.184Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:05:57.184Z] [worker-~diagnostic~-8436bb5f-b3a5-4036-b78a-49019a00f7a0]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\13908
+[debug] [2020-11-12T21:05:57.184Z] [worker-~diagnostic~-8436bb5f-b3a5-4036-b78a-49019a00f7a0]: BUSY
+[debug] [2020-11-12T21:05:57.185Z] [worker-~diagnostic~-dd305e66-9c84-4478-8598-719e46ba1db9]: exited
+[debug] [2020-11-12T21:05:57.185Z] [worker-~diagnostic~-dd305e66-9c84-4478-8598-719e46ba1db9]: FINISHED
+[debug] [2020-11-12T21:05:58.149Z] [runtime-status] [13908] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:05:58.151Z] [runtime-status] [13908] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:05:58.156Z] [runtime-status] [13908] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:05:58.158Z] [runtime-status] [13908] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:05:58.159Z] [runtime-status] [13908] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:05:59.255Z] [worker-~diagnostic~-8436bb5f-b3a5-4036-b78a-49019a00f7a0]: IDLE
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [InstanceLoader] AppModule dependencies initialized +22ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [InstanceLoader] EmailModule dependencies initialized +401ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RoutesResolver] DesignersController {/designers}: +8ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RoutesResolver] EmailController {/email}: +0ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RoutesResolver] InstagramController {/instagram}: +0ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 13908   - 2020-11-12 22:05:59   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:06:12.326Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:06:12.326Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:06:12.326Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T21:06:12.326Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:06:12.333Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T21:06:12.333Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T21:06:12.333Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:06:12.333Z] [worker-api-66fcddaf-54d7-4a20-a893-511e031e3a6b]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\8576
+[debug] [2020-11-12T21:06:12.333Z] [worker-api-66fcddaf-54d7-4a20-a893-511e031e3a6b]: BUSY
+[debug] [2020-11-12T21:06:12.897Z] [runtime-status] [8576] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:06:12.899Z] [runtime-status] [8576] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:06:12.903Z] [runtime-status] [8576] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:06:12.905Z] [runtime-status] [8576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:06:12.906Z] [runtime-status] [8576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 8576   - 2020-11-12 22:06:13   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:06:13.981Z] [runtime-status] [8576] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:06:13.991Z] [runtime-status] [8576] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:06:13.991Z] [runtime-status] [8576] Running api in mode HTTPS
+[debug] [2020-11-12T21:06:13.991Z] [runtime-status] [8576] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\8576
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [InstanceLoader] AppModule dependencies initialized +33ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [InstanceLoader] ConfigModule dependencies initialized +0ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [InstanceLoader] EmailModule dependencies initialized +393ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RoutesResolver] EmailController {/email}: +1ms
+[debug] [2020-11-12T21:06:14.437Z] [functions] Runtime ready! Sending request!
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:06:14.465Z] [runtime-status] [8576] Ephemeral server handling GET request
+[debug] [2020-11-12T21:06:14.469Z] [runtime-status] [8576] Ephemeral server survived.
+[info] >  apiky 1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  instaurl undefined
+[info] >  comb url undefined1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  [Nest] 8576   - 2020-11-12 22:06:14   [ExceptionsHandler] Request failed with status code 400 +72ms
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:06:14.506Z] [worker-api-66fcddaf-54d7-4a20-a893-511e031e3a6b]: IDLE
+[debug] [2020-11-12T21:06:14.506Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  Error: Request failed with status code 400
+[info] >      at createError (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\createError.js:16:15)
+[info] >      at settle (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\settle.js:17:12)
+[info] >      at IncomingMessage.handleStreamEnd (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\adapters\http.js:244:11)
+[info] >      at IncomingMessage.emit (events.js:187:15)
+[info] >      at endReadableNT (_stream_readable.js:1094:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[debug] [2020-11-12T21:07:17.466Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:07:17.803Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js.map changed, reloading triggers
+[debug] [2020-11-12T21:07:17.805Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js changed, reloading triggers
+[debug] [2020-11-12T21:07:17.807Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.d.ts changed, reloading triggers
+[debug] [2020-11-12T21:07:17.852Z] File C:\Applications\vaerkstedet-new\functions\lib\tsconfig.tsbuildinfo changed, reloading triggers
+[debug] [2020-11-12T21:07:18.861Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:07:18.861Z] [worker-~diagnostic~-8436bb5f-b3a5-4036-b78a-49019a00f7a0]: FINISHING
+[debug] [2020-11-12T21:07:18.862Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-11-12T21:07:18.862Z] [worker-api-66fcddaf-54d7-4a20-a893-511e031e3a6b]: FINISHING
+[debug] [2020-11-12T21:07:18.898Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:07:18.898Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:07:18.898Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:07:18.898Z] [worker-~diagnostic~-2e46398b-8697-43ba-88fb-9cf62ee13990]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\10316
+[debug] [2020-11-12T21:07:18.898Z] [worker-~diagnostic~-2e46398b-8697-43ba-88fb-9cf62ee13990]: BUSY
+[debug] [2020-11-12T21:07:18.899Z] [worker-~diagnostic~-8436bb5f-b3a5-4036-b78a-49019a00f7a0]: exited
+[debug] [2020-11-12T21:07:18.899Z] [worker-~diagnostic~-8436bb5f-b3a5-4036-b78a-49019a00f7a0]: FINISHED
+[debug] [2020-11-12T21:07:18.899Z] [worker-api-66fcddaf-54d7-4a20-a893-511e031e3a6b]: exited
+[debug] [2020-11-12T21:07:18.899Z] [worker-api-66fcddaf-54d7-4a20-a893-511e031e3a6b]: FINISHED
+[debug] [2020-11-12T21:07:19.776Z] [runtime-status] [10316] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:07:19.779Z] [runtime-status] [10316] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:07:19.785Z] [runtime-status] [10316] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:07:19.789Z] [runtime-status] [10316] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:07:19.791Z] [runtime-status] [10316] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 10316   - 2020-11-12 22:07:22   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:07:22.471Z] [worker-~diagnostic~-2e46398b-8697-43ba-88fb-9cf62ee13990]: IDLE
+[info] >  [Nest] 10316   - 2020-11-12 22:07:22   [InstanceLoader] AppModule dependencies initialized +24ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:22   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:22   [InstanceLoader] ConfigModule dependencies initialized +2ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [InstanceLoader] EmailModule dependencies initialized +15093ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RoutesResolver] DesignersController {/designers}: +9ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RouterExplorer] Mapped {/:designername, GET} route +6ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RoutesResolver] EmailController {/email}: +2ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RoutesResolver] NewsletterController {/newsletter}: +0ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 10316   - 2020-11-12 22:07:37   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:08:05.224Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:08:05.225Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:08:05.225Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T21:08:05.225Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:08:05.226Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-11-12T21:08:05.387Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T21:08:05.387Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T21:08:05.387Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:08:05.388Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\14588
+[debug] [2020-11-12T21:08:05.388Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: BUSY
+[debug] [2020-11-12T21:08:20.655Z] [runtime-status] [14588] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:08:20.658Z] [runtime-status] [14588] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:08:20.976Z] [runtime-status] [14588] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:08:20.998Z] [runtime-status] [14588] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:08:21.001Z] [runtime-status] [14588] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 14588   - 2020-11-12 22:08:37   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:08:37.644Z] [runtime-status] [14588] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:08:37.645Z] [runtime-status] [14588] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:08:37.645Z] [runtime-status] [14588] Running api in mode HTTPS
+[debug] [2020-11-12T21:08:37.649Z] [runtime-status] [14588] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\14588
+[info] >  [Nest] 14588   - 2020-11-12 22:08:37   [InstanceLoader] AppModule dependencies initialized +33ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:37   [InstanceLoader] ConfigHostModule dependencies initialized +0ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:37   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [InstanceLoader] EmailModule dependencies initialized +1687ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RoutesResolver] DesignersController {/designers}: +6ms
+[debug] [2020-11-12T21:08:39.393Z] [functions] Runtime ready! Sending request!
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RouterExplorer] Mapped {/:designername, GET} route +7ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RoutesResolver] NewsletterController {/newsletter}: +0ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [RouterExplorer] Mapped {/fetch, GET} route +0ms
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:08:39.409Z] [runtime-status] [14588] Ephemeral server handling GET request
+[debug] [2020-11-12T21:08:39.413Z] [runtime-status] [14588] Ephemeral server survived.
+[info] >  apiky 1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  instaurl undefined
+[info] >  comb url undefined1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  [Nest] 14588   - 2020-11-12 22:08:39   [ExceptionsHandler] Request failed with status code 400 +98ms
+[info] >  Error: Request failed with status code 400
+[info] >      at createError (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\createError.js:16:15)
+[info] >      at settle (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\settle.js:17:12)
+[info] >      at IncomingMessage.handleStreamEnd (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\adapters\http.js:244:11)
+[info] >      at IncomingMessage.emit (events.js:187:15)
+[info] >      at endReadableNT (_stream_readable.js:1094:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:08:39.503Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: IDLE
+[debug] [2020-11-12T21:08:39.504Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:08:49.348Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:08:49.348Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:08:49.349Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T21:08:49.349Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:08:49.349Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\14588
+[debug] [2020-11-12T21:08:49.349Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: BUSY
+[debug] [2020-11-12T21:08:49.349Z] [runtime-status] [14588] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:08:49.350Z] [runtime-status] [14588] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:08:49.350Z] [runtime-status] [14588] Running api in mode HTTPS
+[debug] [2020-11-12T21:08:49.350Z] [runtime-status] [14588] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\14588
+[debug] [2020-11-12T21:08:49.352Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-12T21:08:49.355Z] [runtime-status] [14588] Ephemeral server handling GET request
+[debug] [2020-11-12T21:08:49.355Z] [runtime-status] [14588] Ephemeral server survived.
+[info] >  apiky 1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  instaurl undefined
+[info] >  comb url undefined1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  [Nest] 14588   - 2020-11-12 22:08:49   [ExceptionsHandler] Request failed with status code 400 +9883ms
+[info] >  Error: Request failed with status code 400
+[info] >      at createError (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\createError.js:16:15)
+[info] >      at settle (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\settle.js:17:12)
+[info] >      at IncomingMessage.handleStreamEnd (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\adapters\http.js:244:11)
+[info] >      at IncomingMessage.emit (events.js:187:15)
+[info] >      at endReadableNT (_stream_readable.js:1094:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:08:49.379Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: IDLE
+[debug] [2020-11-12T21:08:49.379Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:09:45.792Z] File C:\Applications\vaerkstedet-new\functions\src\newsletter\newsletter\newsletter.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:09:46.301Z] File C:\Applications\vaerkstedet-new\functions\lib\newsletter\newsletter\newsletter.controller.js.map changed, reloading triggers
+[debug] [2020-11-12T21:09:46.302Z] File C:\Applications\vaerkstedet-new\functions\lib\newsletter\newsletter\newsletter.controller.js changed, reloading triggers
+[debug] [2020-11-12T21:09:46.304Z] File C:\Applications\vaerkstedet-new\functions\lib\newsletter\newsletter\newsletter.controller.d.ts changed, reloading triggers
+[debug] [2020-11-12T21:09:46.341Z] File C:\Applications\vaerkstedet-new\functions\lib\tsconfig.tsbuildinfo changed, reloading triggers
+[debug] [2020-11-12T21:09:47.343Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:09:47.343Z] [worker-~diagnostic~-2e46398b-8697-43ba-88fb-9cf62ee13990]: FINISHING
+[debug] [2020-11-12T21:09:47.344Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-11-12T21:09:47.344Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: FINISHING
+[debug] [2020-11-12T21:09:47.360Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:09:47.360Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:09:47.360Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:09:47.360Z] [worker-~diagnostic~-6c4b1620-329c-4ccd-b8db-56d3378f6fbb]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\17152
+[debug] [2020-11-12T21:09:47.360Z] [worker-~diagnostic~-6c4b1620-329c-4ccd-b8db-56d3378f6fbb]: BUSY
+[debug] [2020-11-12T21:09:47.361Z] [worker-~diagnostic~-2e46398b-8697-43ba-88fb-9cf62ee13990]: exited
+[debug] [2020-11-12T21:09:47.361Z] [worker-~diagnostic~-2e46398b-8697-43ba-88fb-9cf62ee13990]: FINISHED
+[debug] [2020-11-12T21:09:47.361Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: exited
+[debug] [2020-11-12T21:09:47.361Z] [worker-api-c9f20527-885d-4639-a2c1-5364f6d984b6]: FINISHED
+[debug] [2020-11-12T21:09:48.021Z] [runtime-status] [17152] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:09:48.023Z] [runtime-status] [17152] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:09:48.027Z] [runtime-status] [17152] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:09:48.029Z] [runtime-status] [17152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:09:48.030Z] [runtime-status] [17152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:09:49.123Z] [worker-~diagnostic~-6c4b1620-329c-4ccd-b8db-56d3378f6fbb]: IDLE
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [InstanceLoader] AppModule dependencies initialized +20ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [InstanceLoader] EmailModule dependencies initialized +451ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RouterExplorer] Mapped {/send, POST} route +0ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RoutesResolver] NewsletterController {/newsletter}: +0ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RoutesResolver] InstagramController {/instagram}: +0ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [RouterExplorer] Mapped {/fetch, GET} route +0ms
+[info] >  [Nest] 17152   - 2020-11-12 22:09:49   [NestApplication] Nest application successfully started +5ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:16:37.665Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:16:38.103Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js.map changed, reloading triggers
+[debug] [2020-11-12T21:16:38.106Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.js changed, reloading triggers
+[debug] [2020-11-12T21:16:38.108Z] File C:\Applications\vaerkstedet-new\functions\lib\instagram\instagram\instagram.controller.d.ts changed, reloading triggers
+[debug] [2020-11-12T21:16:38.149Z] File C:\Applications\vaerkstedet-new\functions\lib\tsconfig.tsbuildinfo changed, reloading triggers
+[debug] [2020-11-12T21:16:39.164Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:16:39.164Z] [worker-~diagnostic~-6c4b1620-329c-4ccd-b8db-56d3378f6fbb]: FINISHING
+[debug] [2020-11-12T21:16:39.165Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:16:39.165Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-11-12T21:16:39.186Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:16:39.186Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:16:39.186Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:16:39.186Z] [worker-~diagnostic~-25240cb3-d108-40f0-ab38-348b43982d76]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\5960
+[debug] [2020-11-12T21:16:39.186Z] [worker-~diagnostic~-25240cb3-d108-40f0-ab38-348b43982d76]: BUSY
+[debug] [2020-11-12T21:16:39.187Z] [worker-~diagnostic~-6c4b1620-329c-4ccd-b8db-56d3378f6fbb]: exited
+[debug] [2020-11-12T21:16:39.187Z] [worker-~diagnostic~-6c4b1620-329c-4ccd-b8db-56d3378f6fbb]: FINISHED
+[debug] [2020-11-12T21:16:40.012Z] [runtime-status] [5960] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:16:40.016Z] [runtime-status] [5960] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:16:40.021Z] [runtime-status] [5960] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:16:40.025Z] [runtime-status] [5960] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:16:40.026Z] [runtime-status] [5960] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 5960   - 2020-11-12 22:16:42   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:16:42.926Z] [worker-~diagnostic~-25240cb3-d108-40f0-ab38-348b43982d76]: IDLE
+[info] >  [Nest] 5960   - 2020-11-12 22:16:42   [InstanceLoader] AppModule dependencies initialized +24ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:42   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:42   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [InstanceLoader] EmailModule dependencies initialized +397ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RouterExplorer] Mapped {/:designername, GET} route +3ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [RouterExplorer] Mapped {/fetch, GET} route +2ms
+[info] >  [Nest] 5960   - 2020-11-12 22:16:43   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:16:58.665Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:16:58.666Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:16:58.666Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T21:16:58.666Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:16:58.687Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T21:16:58.688Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T21:16:58.688Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:16:58.688Z] [worker-api-f99b6004-8ed8-4c8a-82f5-307cb0af17d2]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\15640
+[debug] [2020-11-12T21:16:58.688Z] [worker-api-f99b6004-8ed8-4c8a-82f5-307cb0af17d2]: BUSY
+[debug] [2020-11-12T21:16:59.389Z] [runtime-status] [15640] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:16:59.391Z] [runtime-status] [15640] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:16:59.396Z] [runtime-status] [15640] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:16:59.398Z] [runtime-status] [15640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:16:59.399Z] [runtime-status] [15640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:17:00.430Z] [runtime-status] [15640] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:17:00.453Z] [runtime-status] [15640] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:17:00.453Z] [runtime-status] [15640] Running api in mode HTTPS
+[debug] [2020-11-12T21:17:00.453Z] [runtime-status] [15640] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\15640
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [InstanceLoader] AppModule dependencies initialized +32ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [InstanceLoader] ConfigHostModule dependencies initialized +2ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [InstanceLoader] EmailModule dependencies initialized +527ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [InstanceLoader] NewsletterModule dependencies initialized +0ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:00   [RoutesResolver] DesignersController {/designers}: +8ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [RouterExplorer] Mapped {/:designername, GET} route +5ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [RoutesResolver] EmailController {/email}: +0ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [RouterExplorer] Mapped {/subscribe, POST} route +2ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [RoutesResolver] InstagramController {/instagram}: +2ms
+[debug] [2020-11-12T21:17:01.026Z] [functions] Runtime ready! Sending request!
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [RouterExplorer] Mapped {/fetch, GET} route +2ms
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:17:01.053Z] [runtime-status] [15640] Ephemeral server handling GET request
+[debug] [2020-11-12T21:17:01.059Z] [runtime-status] [15640] Ephemeral server survived.
+[info] >  apiky 1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  instaurl undefined
+[info] >  comb url undefined1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  [Nest] 15640   - 2020-11-12 22:17:01   [ExceptionsHandler] Request failed with status code 400 +121ms
+[info] >  Error: Request failed with status code 400
+[info] >      at createError (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\createError.js:16:15)
+[info] >      at settle (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\settle.js:17:12)
+[info] >      at IncomingMessage.handleStreamEnd (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\adapters\http.js:244:11)
+[info] >      at IncomingMessage.emit (events.js:187:15)
+[info] >      at endReadableNT (_stream_readable.js:1094:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:17:01.216Z] [worker-api-f99b6004-8ed8-4c8a-82f5-307cb0af17d2]: IDLE
+[debug] [2020-11-12T21:17:01.216Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:18:29.714Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:18:29.715Z] File C:\Applications\vaerkstedet-new\functions\development.env changed, reloading triggers
+[debug] [2020-11-12T21:18:29.801Z] File C:\Applications\vaerkstedet-new\functions\src\instagram\instagram\instagram.controller.ts changed, reloading triggers
+[debug] [2020-11-12T21:18:29.801Z] File C:\Applications\vaerkstedet-new\functions\development.env changed, reloading triggers
+[debug] [2020-11-12T21:18:30.806Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:18:30.806Z] [worker-~diagnostic~-25240cb3-d108-40f0-ab38-348b43982d76]: FINISHING
+[debug] [2020-11-12T21:18:30.806Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-11-12T21:18:30.806Z] [worker-api-f99b6004-8ed8-4c8a-82f5-307cb0af17d2]: FINISHING
+[debug] [2020-11-12T21:18:30.819Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:18:30.819Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:18:30.819Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:18:30.819Z] [worker-~diagnostic~-a1d64575-e547-4702-ada2-569a661d3b40]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\4488
+[debug] [2020-11-12T21:18:30.819Z] [worker-~diagnostic~-a1d64575-e547-4702-ada2-569a661d3b40]: BUSY
+[debug] [2020-11-12T21:18:30.820Z] [worker-api-f99b6004-8ed8-4c8a-82f5-307cb0af17d2]: exited
+[debug] [2020-11-12T21:18:30.820Z] [worker-api-f99b6004-8ed8-4c8a-82f5-307cb0af17d2]: FINISHED
+[debug] [2020-11-12T21:18:30.820Z] [worker-~diagnostic~-25240cb3-d108-40f0-ab38-348b43982d76]: exited
+[debug] [2020-11-12T21:18:30.820Z] [worker-~diagnostic~-25240cb3-d108-40f0-ab38-348b43982d76]: FINISHED
+[debug] [2020-11-12T21:18:31.422Z] [runtime-status] [4488] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:18:31.424Z] [runtime-status] [4488] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:18:31.428Z] [runtime-status] [4488] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:18:31.430Z] [runtime-status] [4488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:18:31.431Z] [runtime-status] [4488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:18:32.443Z] [worker-~diagnostic~-a1d64575-e547-4702-ada2-569a661d3b40]: IDLE
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [InstanceLoader] AppModule dependencies initialized +23ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [InstanceLoader] EmailModule dependencies initialized +527ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:32   [RoutesResolver] DesignersController {/designers}: +7ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [RouterExplorer] Mapped {/fetch, GET} route +1ms
+[info] >  [Nest] 4488   - 2020-11-12 22:18:33   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:18:49.529Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:18:49.529Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:18:49.529Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T21:18:49.529Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:18:49.529Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-11-12T21:18:49.543Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T21:18:49.543Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T21:18:49.543Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:18:49.543Z] [worker-api-02d29063-03ba-446b-998c-6f2ce9426165]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\9408
+[debug] [2020-11-12T21:18:49.543Z] [worker-api-02d29063-03ba-446b-998c-6f2ce9426165]: BUSY
+[debug] [2020-11-12T21:18:50.204Z] [runtime-status] [9408] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:18:50.206Z] [runtime-status] [9408] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:18:50.210Z] [runtime-status] [9408] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:18:50.212Z] [runtime-status] [9408] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:18:50.213Z] [runtime-status] [9408] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:18:51.226Z] [runtime-status] [9408] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:18:51.240Z] [runtime-status] [9408] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:18:51.241Z] [runtime-status] [9408] Running api in mode HTTPS
+[debug] [2020-11-12T21:18:51.241Z] [runtime-status] [9408] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\9408
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [InstanceLoader] AppModule dependencies initialized +32ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [InstanceLoader] EmailModule dependencies initialized +446ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RoutesResolver] EmailController {/email}: +0ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[debug] [2020-11-12T21:18:51.828Z] [functions] Runtime ready! Sending request!
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RouterExplorer] Mapped {/subscribe, POST} route +2ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [RouterExplorer] Mapped {/fetch, GET} route +2ms
+[info] >  [Nest] 9408   - 2020-11-12 22:18:51   [NestApplication] Nest application successfully started +4ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:18:51.870Z] [runtime-status] [9408] Ephemeral server handling GET request
+[debug] [2020-11-12T21:18:51.874Z] [runtime-status] [9408] Ephemeral server survived.
+[info] >  apiky 1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  instaurl https://api.instagram.com/v1/users/self/media/recent/?access_token=
+[info] >  comb url https://api.instagram.com/v1/users/self/media/recent/?access_token=1360815086.2d80256.9ecb1e06dbbb47cfac2f805aa63edaf9
+[info] >  [Nest] 9408   - 2020-11-12 22:18:52   [ExceptionsHandler] Request failed with status code 400 +445ms
+[info] >  Error: Request failed with status code 400
+[info] >      at createError (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\createError.js:16:15)
+[info] >      at settle (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\settle.js:17:12)
+[info] >      at IncomingMessage.handleStreamEnd (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\adapters\http.js:244:11)
+[info] >      at IncomingMessage.emit (events.js:187:15)
+[info] >      at endReadableNT (_stream_readable.js:1094:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:18:52.271Z] [worker-api-02d29063-03ba-446b-998c-6f2ce9426165]: IDLE
+[debug] [2020-11-12T21:18:52.272Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:24:54.898Z] File C:\Applications\vaerkstedet-new\functions\development.env changed, reloading triggers
+[debug] [2020-11-12T21:24:55.316Z] File C:\Applications\vaerkstedet-new\functions\development.env changed, reloading triggers
+[debug] [2020-11-12T21:24:56.329Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-11-12T21:24:56.329Z] [worker-~diagnostic~-a1d64575-e547-4702-ada2-569a661d3b40]: FINISHING
+[debug] [2020-11-12T21:24:56.329Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-11-12T21:24:56.330Z] [worker-api-02d29063-03ba-446b-998c-6f2ce9426165]: FINISHING
+[debug] [2020-11-12T21:24:56.355Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-12T21:24:56.355Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-11-12T21:24:56.355Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-12T21:24:56.355Z] [worker-~diagnostic~-549f6356-3e46-4be5-a386-436f23861e45]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\10344
+[debug] [2020-11-12T21:24:56.355Z] [worker-~diagnostic~-549f6356-3e46-4be5-a386-436f23861e45]: BUSY
+[debug] [2020-11-12T21:24:56.356Z] [worker-api-02d29063-03ba-446b-998c-6f2ce9426165]: exited
+[debug] [2020-11-12T21:24:56.356Z] [worker-api-02d29063-03ba-446b-998c-6f2ce9426165]: FINISHED
+[debug] [2020-11-12T21:24:56.356Z] [worker-~diagnostic~-a1d64575-e547-4702-ada2-569a661d3b40]: exited
+[debug] [2020-11-12T21:24:56.356Z] [worker-~diagnostic~-a1d64575-e547-4702-ada2-569a661d3b40]: FINISHED
+[debug] [2020-11-12T21:24:57.796Z] [runtime-status] [10344] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:24:57.798Z] [runtime-status] [10344] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:24:57.803Z] [runtime-status] [10344] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:24:57.805Z] [runtime-status] [10344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:24:57.806Z] [runtime-status] [10344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:25:00.200Z] [worker-~diagnostic~-549f6356-3e46-4be5-a386-436f23861e45]: IDLE
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [InstanceLoader] AppModule dependencies initialized +22ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [InstanceLoader] EmailModule dependencies initialized +604ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [InstanceLoader] NewsletterModule dependencies initialized +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [InstanceLoader] DesignersModule dependencies initialized +3ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RouterExplorer] Mapped {/fetchall, GET} route +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [RouterExplorer] Mapped {/fetch, GET} route +0ms
+[info] >  [Nest] 10344   - 2020-11-12 22:25:00   [NestApplication] Nest application successfully started +3ms
+[info] >  Nest Ready
+[debug] [2020-11-12T21:25:21.072Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:25:21.072Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:25:21.072Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/instagram/fetch --> api
+[debug] [2020-11-12T21:25:21.072Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-11-12T21:25:21.073Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-11-12T21:25:21.098Z] [worker-pool] addWorker(api)
+[debug] [2020-11-12T21:25:21.099Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-11-12T21:25:21.099Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:25:21.099Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\1320
+[debug] [2020-11-12T21:25:21.099Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: BUSY
+[debug] [2020-11-12T21:25:22.383Z] [runtime-status] [1320] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-12T21:25:22.385Z] [runtime-status] [1320] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-12T21:25:22.389Z] [runtime-status] [1320] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-12T21:25:22.392Z] [runtime-status] [1320] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-12T21:25:22.393Z] [runtime-status] [1320] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 1320   - 2020-11-12 22:25:23   [NestFactory] Starting Nest application...
+[debug] [2020-11-12T21:25:23.889Z] [runtime-status] [1320] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:25:23.901Z] [runtime-status] [1320] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:25:23.902Z] [runtime-status] [1320] Running api in mode HTTPS
+[debug] [2020-11-12T21:25:23.902Z] [runtime-status] [1320] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\1320
+[info] >  [Nest] 1320   - 2020-11-12 22:25:23   [InstanceLoader] AppModule dependencies initialized +35ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:23   [InstanceLoader] ConfigHostModule dependencies initialized +0ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:23   [InstanceLoader] ConfigModule dependencies initialized +2ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [InstanceLoader] EmailModule dependencies initialized +841ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [InstanceLoader] NewsletterModule dependencies initialized +0ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [InstanceLoader] InstagramModule dependencies initialized +1ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [InstanceLoader] DesignersModule dependencies initialized +1ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RoutesResolver] DesignersController {/designers}: +6ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RouterExplorer] Mapped {/:designername, GET} route +4ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RouterExplorer] Mapped {/send, POST} route +1ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RoutesResolver] NewsletterController {/newsletter}: +0ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RouterExplorer] Mapped {/subscribe, POST} route +2ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RoutesResolver] InstagramController {/instagram}: +3ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [RouterExplorer] Mapped {/fetch, GET} route +5ms
+[info] >  [Nest] 1320   - 2020-11-12 22:25:24   [NestApplication] Nest application successfully started +4ms
+[debug] [2020-11-12T21:25:24.814Z] [functions] Runtime ready! Sending request!
+[info] >  Nest Ready
+[debug] [2020-11-12T21:25:24.826Z] [runtime-status] [1320] Ephemeral server handling GET request
+[debug] [2020-11-12T21:25:24.845Z] [runtime-status] [1320] Ephemeral server survived.
+[info] >  apiky 4050152494.02b3604.eca91047688c4916a98316cd0d7bd231
+[info] >  instaurl https://api.instagram.com/v1/users/self/media/recent/?access_token=
+[info] >  comb url https://api.instagram.com/v1/users/self/media/recent/?access_token=4050152494.02b3604.eca91047688c4916a98316cd0d7bd231
+[info] >  [Nest] 1320   - 2020-11-12 22:25:25   [ExceptionsHandler] Request failed with status code 400 +335ms
+[info] >  Error: Request failed with status code 400
+[info] >      at createError (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\createError.js:16:15)
+[info] >      at settle (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\core\settle.js:17:12)
+[info] >      at IncomingMessage.handleStreamEnd (C:\Applications\vaerkstedet-new\functions\node_modules\axios\lib\adapters\http.js:244:11)
+[info] >      at IncomingMessage.emit (events.js:187:15)
+[info] >      at endReadableNT (_stream_readable.js:1094:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:25:25.404Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: IDLE
+[debug] [2020-11-12T21:25:25.404Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:48:30.570Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:48:30.571Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:48:30.586Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/joannajablko --> api
+[debug] [2020-11-12T21:48:30.587Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:48:30.601Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\1320
+[debug] [2020-11-12T21:48:30.601Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: BUSY
+[debug] [2020-11-12T21:48:30.604Z] [runtime-status] [1320] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:48:30.606Z] [runtime-status] [1320] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:48:30.606Z] [runtime-status] [1320] Running api in mode HTTPS
+[debug] [2020-11-12T21:48:30.618Z] [runtime-status] [1320] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\1320
+[debug] [2020-11-12T21:48:30.646Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-12T21:48:30.672Z] [runtime-status] [1320] Ephemeral server handling GET request
+[debug] [2020-11-12T21:48:30.677Z] [runtime-status] [1320] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:48:31.619Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: IDLE
+[debug] [2020-11-12T21:48:31.619Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-11-12T21:48:55.809Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-11-12T21:48:55.809Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-11-12T21:48:55.809Z] Accepted request GET /vaerkstedet-ae5e0/us-central1/api/designers/louiserought --> api
+[debug] [2020-11-12T21:48:55.810Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-11-12T21:48:55.810Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\1320
+[debug] [2020-11-12T21:48:55.810Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: BUSY
+[debug] [2020-11-12T21:48:55.811Z] [runtime-status] [1320] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-11-12T21:48:55.849Z] [runtime-status] [1320] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-11-12T21:48:55.849Z] [runtime-status] [1320] Running api in mode HTTPS
+[debug] [2020-11-12T21:48:55.851Z] [runtime-status] [1320] Attempting to listen to socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\1320
+[debug] [2020-11-12T21:48:55.874Z] [functions] Runtime ready! Sending request!
+[debug] [2020-11-12T21:48:55.883Z] [runtime-status] [1320] Ephemeral server handling GET request
+[debug] [2020-11-12T21:48:55.889Z] [runtime-status] [1320] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-11-12T21:48:56.026Z] [worker-api-b4ad668e-77f5-40a1-94bf-4e485e0e1f47]: IDLE
+[debug] [2020-11-12T21:48:56.026Z] [work-queue] {"queueLength":0,"workRunningCount":0}

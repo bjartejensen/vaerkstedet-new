@@ -31,15 +31,17 @@ export class NewsService {
   public fetchInsta(){
 
     const fetchInstUrl = `${environment.apiPath}instagram/fetch`;
+    debugger;
 
     return this.http.get<any>(fetchInstUrl)
       .pipe(map((posts)=>{
-          //debugger;
+          debugger;
           this.instaPostsSubject.next([]);
           return undefined;
       })).pipe(
-        catchError(()=>{
-          //debugger;
+        catchError((err)=>{
+          console.log(err);
+          debugger;
           return throwError("Ups! Noget gik galt i afsendelsen.")}))
         .pipe(shareReplay()).subscribe();
   }

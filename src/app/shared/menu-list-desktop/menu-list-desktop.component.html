@@ -9,8 +9,14 @@
 <div class="menu-container">
 
     <div class="primary-menu"> 
-            <div class="nav-block" [@InAndOut]="isOpened?'opened':'closed'" *ngFor="let item of menuItems" >
+            <div class="nav-block" 
+           
+            [@InAndOut]="isOpened?'opened':'closed'" *ngFor="let item of menuItems" >
                  <h1 #elem
+                  #sidenav="sidenav"
+                    sidenav
+                    (click)="sidenav.onItemClicked(item.clickable)"
+                    [routerLink]="item.clickable ? [item.url] : []"
                   (mouseover)="onMouseoverPrimaryItem(item);expanded=true"
                   (mouseleave)="expanded=false"
                  >{{item.header}}</h1> 

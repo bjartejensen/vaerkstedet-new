@@ -27,7 +27,7 @@ const createNestServer = async (expressInstance: any) => {
     optionsSuccessStatus: 204,
   };
 
-  app.useGlobalFilters(new HttpExceptionFilter());
+ app.useGlobalFilters(new HttpExceptionFilter());
   app.enableCors(corsOptions);
 
   return app.init();

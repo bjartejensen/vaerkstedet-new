@@ -20,7 +20,7 @@ export class NewsletterController {
               const url = baseUrl + audienceId;
 
             //Fake an error
-            throw new HttpException("En fejl skete",400);
+            //throw new HttpException("En fejl skete",400);
             
             const ret = await axios({
                 method: "post",

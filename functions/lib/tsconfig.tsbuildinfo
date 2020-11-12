@@ -1427,7 +1427,7 @@
         "affectsGlobalScope": false
       },
       "../src/newsletter/newsletter/newsletter.controller.ts": {
-        "version": "de91cdbbdec915e48899d53f642fa6d5880e0fa9ab5eb110835be2c4411b9fae",
+        "version": "911aca2a41d5faf321fd539510a623c641e55174e9060fb70547870acb9af915",
         "signature": "345718b3c10c3d984be8e0e735a6e81568ec5e225bc5051c44941f3122c82349",
         "affectsGlobalScope": false
       },
@@ -1437,7 +1437,7 @@
         "affectsGlobalScope": false
       },
       "../src/instagram/instagram/instagram.controller.ts": {
-        "version": "b317688cb61206da9bb92da66045ce0be5e108b3fdaca495ee6ebf01f8c12d65",
+        "version": "0bdd62504f2e984edf956939fa9b6198b93e0faa4b77e925fa3345231bb156e0",
         "signature": "c52f2ad2e910149a9ac08e31a066d260d4ae455cede713d895915b3c61f13f1e",
         "affectsGlobalScope": false
       },
@@ -1847,7 +1847,7 @@
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "74cea0f0c9b728ce63c6c7ff7c29e2315773b9fe8f16659d45796e4e08f746f5",
+        "version": "7962e34eed95940cac7063b75914feb0abc8e0e07ce43f57746d382f9643ab95",
         "signature": "c485bd10c9d6c691bda1a92d6cec9b6d689c4b78ae567e6639e6412c45ccff91",
         "affectsGlobalScope": false
       },
@@ -7523,7 +7523,20 @@
       "../src/instagram/instagram.module.ts",
       "../src/instagram/instagram/instagram.controller.ts",
       "../src/newsletter/newsletter.module.ts",
-      "../src/newsletter/newsletter/newsletter.controller.ts",
+      [
+        "../src/newsletter/newsletter/newsletter.controller.ts",
+        [
+          {
+            "file": "../src/newsletter/newsletter/newsletter.controller.ts",
+            "start": 50,
+            "length": 13,
+            "messageText": "'HttpException' is declared but its value is never read.",
+            "category": 1,
+            "code": 6133,
+            "reportsUnnecessary": true
+          }
+        ]
+      ],
       "../../node_modules/@types/color-name/index.d.ts",
       "../../node_modules/@types/glob/index.d.ts",
       "../../node_modules/@types/jasmine/ts3.1/index.d.ts",

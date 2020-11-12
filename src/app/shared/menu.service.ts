@@ -34,7 +34,7 @@ export class MenuService {
     menuArr.push(home);
 
     let news = new MenuModel(MenuType.primary,
-      "Aktuelt","Seneste designs");
+      "Aktuelt","Seneste designs","news");
     
       let secondArr: SubMenuModel[]=[];
       let second = new SubMenuModel("Seneste designs",
@@ -45,9 +45,8 @@ export class MenuService {
           "Vi har netop skudt seneste kollektion. Se de lækre fotos her.",
           "collections");
       secondArr.push(second);
-      news.setSubMenuItems(secondArr);
 
-      menuArr.push(news);
+      //menuArr.push(news);
 
       //Weding
       let wedding = new MenuModel(MenuType.primary, "Bryllup","Vaerkstedet elsker...");

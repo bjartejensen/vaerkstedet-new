@@ -1,11 +1,7 @@
-<div class="navblock"
-   
-   >
+<div class="navblock">
 
-    <div class="header"
-    
-    >
-        <h6>{{menuItem.header}}</h6>  
+    <div *ngIf="menuItem.subHeader"  class="header">
+        <h6>{{menuItem.subHeader}}</h6>  
     </div>
 
     <div class="list-item">
