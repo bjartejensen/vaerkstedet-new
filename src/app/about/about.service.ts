@@ -28,36 +28,38 @@ export class AboutService {
     return "Vaerkstedet";
   }
 
-  public getContentTwo():string[]{
+  public getContentOne():string[]{
     let arr:string[]=[];
-    let str ="Den nærværende kundeoplevelse står Vaerkstedet meget nær.";
+    let str ="Nær søerne, med Ravnsborggade som nabo, ligger Vaerkstedet";
     arr.push(str);
-    str ="I vores fokus på unika er kunderne en væsentlig inspirationskilde. Hvad enten det er viderebringelsen af en historie fra 'gaden' eller fortællingen om et arvestykke, så er Vaerkstedet et sted der samler inspirationen op.";
+    str="Vaerkstedet er etableret som en kombination af butik og værksted."
     arr.push(str);
-    str="Vi ved at der ved omdannelse af et arvestykke eller i ønsket om at give en unik gave ofte går en lang proces forud.Vi ved at der ved omdannelse af et arvestykke eller i ønsket om at give en unik gave ofte går en lang proces forud.";
-    arr.push(str);
-    str="Ved bestillingsopgaver lægges der en naturlig vægt på den grundige og uforpligtende dialog og vejledning.";
+    str="Alle smykker i butikkens udstilling er håndlavede og vi har stor erfaring med både omsmeltninger og alle typer af reparationer.";
     arr.push(str);
     return arr;
   }
 
-  public getContentOne():string[]{
+  public getContentTwo():string[]{
     let arr:string[]=[];
-    let str ="Nær søerne, med Ravnsborggade som nabo, fungerer Vaerkstedet som både butik og smykkeværksted.";
+    let str ="Vaerkstedet dyrker kundeplejen";
     arr.push(str);
-    str="Vaerkstedet er etableret som en kombination af butik og værksted."
+    str ="En grundig vejledning og betjening af kunderne er noget af det Vaerkstedet vil kendes for.";
     arr.push(str);
-    str="Vi byder alle velkommen, og bestræber os alligevel på give noget til gaden og nærmiljøet";
+    str="Uanset om I har arvestykke eller I ønsker omdannet eller har fået en ide til et nyt smykke, så samler Vaerkstedet inspirationen op.";
+    arr.push(str);
+    str="Vi sætter en ære i at gå den ekstra mil for vores kunder.";
     arr.push(str);
     return arr;
   }
 
   public getContentThree():string[]{
     let arr:string[]=[];
-    let str ="Vaerkstedet er en smykkebutik i Ryesgade.";
+    let str ="Vi har smykker til at alle anledninger og i alle prisniveauer";
     arr.push(str);
-    str="Vaerkstedet er etableret som en kombination af butik og værksted."
-    
+    str="Hvad enten I ønsker et håndlavet smykke i de mest ekslusive materialer eller hurtigt skal finde en lille, håndlavet ting til en person I har kær, så har Vaerkstedet en bredde og dybde i udvalget."
+    arr.push(str);
+    str="Herudover samarbejder Vaerkstedet med landets dygtigste håndværkere og ekslusive leverandører indenfor perler og sten. Alt er muligt."
+    arr.push(str);
     return arr;
   }
 

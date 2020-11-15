@@ -9,6 +9,8 @@ import { SingleDesigner } from '../models';
 })
 export class DesignersService {
 
+  imgArr:string[]=[];
+
   constructor(private httpClient: HttpClient) { }
 
   public fetchSingleDesigner(name:string):Observable<SingleDesigner>{
@@ -22,14 +24,23 @@ export class DesignersService {
 
   public getContentOne():string[]{
     let arr:string[]=[];
-    let str = "Vaerkstedet formidler en række dygtige, danske smykkedesigneres arbejde i butikken i Ryesgade.";
+    //let str = "Vaerkstedet formidler en række dygtige, danske smykkedesigneres arbejde i butikken i Ryesgade.";
+    let str = "Vaerkstedet eksponerer en række dygtige designere i butikken i Ryesgade";
     arr.push(str);
     str="Trods forskellighed i det designmæssige udtryk er én ting fælles for dem alle - deres fokus på det håndlavede";
     arr.push(str);
-    str ="Klik ind på de enkelte designere i menuen for at læse mere om deres arbejde og se seneste kollektioner.";
-    arr.push(str);
-
     return arr;
   }
+
+  public getImages():string[]{
+
+    let img1 = "../../assets/img/about/2.jpg";
+    this.imgArr.push(img1);
+    return this.imgArr;
+
+  }
+
+
+  
 
 }

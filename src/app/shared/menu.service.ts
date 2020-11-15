@@ -49,24 +49,29 @@ export class MenuService {
       //menuArr.push(news);
 
       //Weding
-      let wedding = new MenuModel(MenuType.primary, "Bryllup","Vaerkstedet elsker...");
+      const wedding = new MenuModel(MenuType.primary, "Vielsesringe","Vaerkstedet elsker...","wedding");
+      menuArr.push(wedding);
 
-      secondArr = [];
-      second= new SubMenuModel("Vielsesringe","Læs om vores grundige tilgang til håndlavede vielses- og forlovelsesringe","wedding");
+      const custommade = new MenuModel(MenuType.primary, "Håndlavede smykker","Vi tror på det håndlavede","custommade");
+      menuArr.push(custommade);
+
+      //Custom Made
+
+     /*  secondArr = [];
+      second= new SubMenuModel("Vielsesringe",
+      "Læs om vores grundige tilgang til håndlavede vielses- og forlovelsesringe","wedding");
       secondArr.push(second);
 
       second= new SubMenuModel("Custom made","","custommade");
       secondArr.push(second);
-      wedding.setSubMenuItems(secondArr);
-
-      menuArr.push(wedding);
+      wedding.setSubMenuItems(secondArr); */
 
       //Designers
       let designers = new MenuModel(MenuType.primary,
             "Designers",
             "Mød Vaerkstedets dygtige designere","designers");
 
-      secondArr=[];
+     /*  secondArr=[];
       second = new SubMenuModel("Louise Rought","Louise Rought Jewellery","");
       second.subUrl ="louiserought";
       second.url =`designers/${second.subUrl}`
@@ -83,18 +88,18 @@ export class MenuService {
       secondArr.push(second);
       
       
-      designers.setSubMenuItems(secondArr); 
+      designers.setSubMenuItems(secondArr);  */
       menuArr.push(designers);
 
       let vaerkstedet = new MenuModel(MenuType.primary,"Vaerkstedet","Din smykkebutik på Nørrebro");
       secondArr = [];
-      second = new SubMenuModel("Om Varkstedet","Vaerkstedets værdier og historie","about");
+      second = new SubMenuModel("Om Vaerkstedet","Vaerkstedets værdier og historie","about");
       secondArr.push(second);
-      second = new SubMenuModel("Find Varkstedet","I hjertet af Nørrebro. Find os på kortet","find");
+      second = new SubMenuModel("Find Vaerkstedet","I hjertet af Nørrebro. Find os på kortet","find");
       secondArr.push(second);
       second = new SubMenuModel("Vaerkstedets nyhedsbrev","Skriv dig op til Vaerkstedet nyhedsbrev og få adgang til specialtilbud og arrangementer","newsletter");
       secondArr.push(second);
-      second = new SubMenuModel("Kontakt Varkstedet","Skriv en mail til os. Vi svarer altid hurtigt og ser frem til at modtage din henvendelse","contact");
+      second = new SubMenuModel("Kontakt Vaerkstedet","Skriv en mail til os. Vi svarer altid hurtigt og ser frem til at modtage din henvendelse","contact");
       secondArr.push(second);
 
       vaerkstedet.setSubMenuItems(secondArr);

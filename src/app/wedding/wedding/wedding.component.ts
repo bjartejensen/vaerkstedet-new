@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { LayoutService } from 'src/app/services/layout.service';
 import { WeddingService } from '../wedding.service';
@@ -19,14 +20,13 @@ export class WeddingComponent implements OnInit {
   images:string[]=[];
 
   constructor(private layoutService:LayoutService,
-    private weddingService:WeddingService) { }
+         private weddingService:WeddingService) { }
 
   ngOnInit(): void {
 
     this.setImages();
     this.setHeader();
     this.setContent();
-    
   }
 
   private setHeader(){

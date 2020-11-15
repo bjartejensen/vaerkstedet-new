@@ -26,8 +26,15 @@ export class DesignersComponent implements OnInit {
     private layoutService:LayoutService) { }
   
   ngOnInit(): void {
+    this.setImages();
     this.setHeader();
     this.setContentOne();
+
+
+  }
+
+  private setImages(){
+    this.images = this.designersService.getImages();
   }
 
   private setHeader(){

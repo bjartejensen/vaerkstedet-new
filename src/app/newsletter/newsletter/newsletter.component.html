@@ -19,7 +19,7 @@
         <h1>{{header}}</h1>
     </div>
 
-    <div *ngIf="false" class="img-container">
+    <div *ngIf="isDesktop$ | async" class="img-container">
         <img [src]="logoUrl" alt="">
     </div>
 

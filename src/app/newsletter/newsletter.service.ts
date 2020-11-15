@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable, Subject, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { catchError, map, shareReplay, tap } from 'rxjs/operators';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,18 @@ export class NewsletterService {
   public showSpinner$: Observable<boolean> = 
             this.showSpinnerSubject.asObservable();
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient,private title:Title, private meta:Meta) {
+    this.setTitleAndMeta();
+  }
+
+  private setTitleAndMeta(){
+ 
+    const title ="Nyhedsbrev fra Vaerkstedet";
+    this.title.setTitle(title);
+    
+    const description="Skriv dig op til Vaerkstedet nyhedsbrev og modtag månedligt nyt om vores seneste tiltag og få gode tilbud ovenikøbet.";
+    this.meta.updateTag({name: "description",content:description});
+  }
 
   public getHeader():string{
     return "Nyhedsbrev";

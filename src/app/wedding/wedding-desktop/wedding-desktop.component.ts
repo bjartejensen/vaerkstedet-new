@@ -16,6 +16,7 @@ export class WeddingDesktopComponent implements OnInit {
   header:string;
   contentOne:string[]=[];
   contentTwo:string[]=[];
+  images:string[]=[];
 
   constructor(private layoutService:LayoutService,
     private weddingService:WeddingService) { }
@@ -23,6 +24,12 @@ export class WeddingDesktopComponent implements OnInit {
   ngOnInit(): void {
     this.setHeader();
     this.setContent();
+    this.setImages();
+
+  }
+
+  private setImages(){
+    this.images = this.weddingService.getImages();
   }
 
   private setHeader(){

@@ -65,22 +65,15 @@ export class ShellComponent implements OnInit {
     })  
 
     this.menuService.shouldToggleObs$.subscribe(shouldToggle=>{
-      debugger
       this.onToggleDrawer(shouldToggle);
     })
   
   }
 
   onTest(event){
-
-    debugger;
-    console.log("Der er faktisk et hit på shell", event )
   }
 
   onToggleDrawer(shouldToggle:boolean){
-
-    debugger;
-
     if(shouldToggle){
       this.appDrawer.toggle();
     }
@@ -88,12 +81,10 @@ export class ShellComponent implements OnInit {
   }
 
   onClosedStart(event){
-    console.log("closing");
     this.isDrawerOpen = false;
   }
   
   onOpenedStart(event){
-    console.log("opening");
     this.isDrawerOpen = true;
   }
 

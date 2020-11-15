@@ -48,7 +48,7 @@ span {
         width: 100%;
 
         h1{
-            @include header;
+            //@include header;
         }
     }
 
@@ -80,7 +80,7 @@ span {
         margin: auto;
 
         p{
-            @include text-desktop;
+            //@include text-desktop;
             font-size: 2rem;
             line-height: 2.5rem;
             text-align: justify;
@@ -129,7 +129,7 @@ span {
     //background: rgb(95, 19, 44);
 
     h2{
-        @include header;
+       // @include header;
         margin-top: 5%;
     }
 

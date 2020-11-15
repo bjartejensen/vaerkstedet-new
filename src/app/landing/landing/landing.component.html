@@ -1,20 +1,19 @@
+<ng-template #landingdesktop>
+    <app-landing-desktop></app-landing-desktop>
+</ng-template>
 
-<div class="container" (click)="changeRoute()" >
+<div class="container" *ngIf="(isMobile$ | async);else landingdesktop">
         <div class="frame"    >
             <div class="bg-container"
                 appSage 
                 (scrollDirection)="onScroll($event)">
-
-                    
-            
+             
                     <ng-container 
                         *ngFor="let b of images; let i = index">
                         
                         <div class="bg" 
                             [ngClass]="state==='UP'? 'bg_zoom':'' "
                             *ngIf="isVisible(i)"
-                            [@sageFull]="state"
-                            (@sageFull.done)="onDone($event)" 
                             [style.background-image]="'url(' + b + ')'">
 
                             <div class="rect"></div>

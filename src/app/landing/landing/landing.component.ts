@@ -1,6 +1,9 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { sageFull } from "src/app/animations";
 import { Router } from '@angular/router';
+import { LayoutService } from 'src/app/services/layout.service';
+import { LandingService } from '../landing.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-landing',
@@ -9,6 +12,9 @@ import { Router } from '@angular/router';
   animations:[sageFull]
 })
 export class LandingComponent implements OnInit {
+  
+  isMobile$:Observable<boolean> = this.layoutService.isMobile$;
+  isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
 
   images: any[]=[];
   headers: string[]=[];
@@ -18,35 +24,27 @@ export class LandingComponent implements OnInit {
   public state:string ="up";
   public isDown:boolean;
 
-  constructor(private router:Router) { }
+  constructor(private landingService:LandingService,
+    private layoutService: LayoutService) {
+
+      this.headers = this.landingService.headers;
+      this.images = this.landingService.images;
+      this.subHeaders = this.landingService.subHeaders;
+
+     }
 
   ngOnInit(): void {
-    this.setImages();
-    this.setHeaders();
-    this.setSubHeaders();
+
+
+
+
+
+    
   }
 
   //#region Private Methods
   
-  private setImages(){
-    this.images.push("../../../assets/img/1.jpg");
-    this.images.push("../../../assets/img/2.jpg");
-    this.images.push("../../../assets/img/3.jpg");
-    this.images.push("../../../assets/img/4.jpg");
-  }
-
-  private setSubHeaders(){
-    this.subHeaders.push("der elsker unika");
-    this.subHeaders.push("der tror på kærligheden");
-    this.subHeaders.push("der tror på bæredygtighed");
-    this.subHeaders.push("der værner om kundeoplevelsen");
-  }
-
-  private setHeaders(){
-    this.headers.push("Black Sun");
-    this.headers.push("Form of Memory");
-    this.headers.push("Leonardo Vandal");
-  }
+  
 
   private onIncreaseIndex(){
     this.idx++;
@@ -60,14 +58,14 @@ export class LandingComponent implements OnInit {
 
   //#region Public Methods
 
-  public changeRoute(){
+  /* public changeRoute(){
     const url:string ="carousel";
     this.router.navigateByUrl("/" + url);
-  }
+  } */
 
-  public onDone(event){
+ /*  public onDone(event){
     console.log(event);
-  }
+  } */
 
   public onScroll(event:string){
     this.onIncreaseIndex();

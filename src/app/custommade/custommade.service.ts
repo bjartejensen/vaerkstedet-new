@@ -15,17 +15,32 @@ export class CustommadeService {
 
   public getContentOne():string[]{
     let arr:string[]=[];
-    let str = "Alle smykker du finder hos os er håndlavede. Vi kærer os om 'håndens arbejde' og udfører alt arbejde med en tilsvarende grundighed.";
+    let str = "Alle smykker du finder hos os er håndlavede";
+
     arr.push(str);
-    str="Ikke mindst når det gælder vores forlovelses- eller vielsesringe.";
+    str="Vi kærer os om 'håndens arbejde' og udfører alt arbejde med en tilsvarende grundighed.";
+    arr.push(str);
+
+   /*  str="Ikke mindst når det gælder vores forlovelses- eller vielsesringe.";
+    arr.push(str);
+    str ="Netop fordi disse ringe så klart symboliserer den unikke relation mellem to mennesker, gør vi en særlig indsats for at 'tune' os ind på jeres valg, inspiration og på smykktets betydning.";
+    arr.push(str); */
+
+    return arr;
+  }
+
+  public getContentTwo(){
+    let arr:string[]=[];
+    let str="Ikke mindst når det gælder vores forlovelses- eller vielsesringe";
     arr.push(str);
     str ="Netop fordi disse ringe så klart symboliserer den unikke relation mellem to mennesker, gør vi en særlig indsats for at 'tune' os ind på jeres valg, inspiration og på smykktets betydning.";
     arr.push(str);
 
     return arr;
+
   }
 
-  public getContentTwo():string[]{
+  public getContentThree():string[]{
     let arr:string[]=[];
     let str = "Vi udfører specialopgaver til alle lejligheder.";
     arr.push(str);

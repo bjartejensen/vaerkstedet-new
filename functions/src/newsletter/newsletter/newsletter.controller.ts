@@ -1,4 +1,4 @@
-import { Controller, Body, Post, Res, HttpStatus, HttpException } from "@nestjs/common";
+import { Controller, Body, Post, Res, HttpStatus } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 const axios = require("axios");
 

@@ -30,8 +30,8 @@ import {
       query(':enter', [style({ top: '-100vh', opacity: 0 })]),
       query(':leave', animateChild()),
       group([
-            query(':leave', [animate('400ms ease-out', style({ top: '100vh', opacity: 0 }))]),
-            query(':enter', [animate('400ms ease-out', style({ top: '0%', opacity: 1 }))])
+            query(':leave', [animate('10ms 2000ms ease-out', style({ top: '1200vh', opacity: 0 }))]),
+            query(':enter', [animate('10ms 2000ms ease-out', style({ top: '0%', opacity: 1 }))])
           ]),
       query(':enter', animateChild())
       ])

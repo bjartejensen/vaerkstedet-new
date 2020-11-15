@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable, Subject, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { catchError, map, shareReplay, tap } from 'rxjs/operators';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,20 @@ export class ContactService {
   public showSpinner$: Observable<boolean> = 
             this.showSpinnerSubject.asObservable();
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient, 
+              private title:Title,
+              private meta:Meta) {
+                this.setTitleAndMeta();
+  }
+
+  private setTitleAndMeta(){
+
+    const title ="Skriv til Vaerkstedet";
+    this.title.setTitle(title);
+    
+    const description="Vi tager med glæde i mod alle henvendelser og svarer tilbage hurtigst muligt.";
+    this.meta.updateTag({name: "description",content:description});
+  }
 
   public getHeader():string{
     return "Kontakt Vaerkstedet";

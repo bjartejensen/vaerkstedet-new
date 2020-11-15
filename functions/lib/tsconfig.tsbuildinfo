@@ -1427,7 +1427,7 @@
         "affectsGlobalScope": false
       },
       "../src/newsletter/newsletter/newsletter.controller.ts": {
-        "version": "911aca2a41d5faf321fd539510a623c641e55174e9060fb70547870acb9af915",
+        "version": "0f3b3bc6f87824a221587c732f9905f78fa5d44e1df7a9ae58c13bfca03005c2",
         "signature": "345718b3c10c3d984be8e0e735a6e81568ec5e225bc5051c44941f3122c82349",
         "affectsGlobalScope": false
       },
@@ -2040,8 +2040,6 @@
       "strictNullChecks": false,
       "skipLibCheck": true,
       "allowSyntheticDefaultImports": true,
-      "project": "../tsconfig.json",
-      "watch": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
@@ -7523,20 +7521,7 @@
       "../src/instagram/instagram.module.ts",
       "../src/instagram/instagram/instagram.controller.ts",
       "../src/newsletter/newsletter.module.ts",
-      [
-        "../src/newsletter/newsletter/newsletter.controller.ts",
-        [
-          {
-            "file": "../src/newsletter/newsletter/newsletter.controller.ts",
-            "start": 50,
-            "length": 13,
-            "messageText": "'HttpException' is declared but its value is never read.",
-            "category": 1,
-            "code": 6133,
-            "reportsUnnecessary": true
-          }
-        ]
-      ],
+      "../src/newsletter/newsletter/newsletter.controller.ts",
       "../../node_modules/@types/color-name/index.d.ts",
       "../../node_modules/@types/glob/index.d.ts",
       "../../node_modules/@types/jasmine/ts3.1/index.d.ts",

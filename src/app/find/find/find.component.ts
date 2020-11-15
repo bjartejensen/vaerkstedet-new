@@ -21,7 +21,8 @@ export class FindComponent implements OnInit {
   header:string;
   subHeader:string;
 
-  constructor(private layoutService:LayoutService,private findService:FindService) {
+  constructor(private findService:FindService,
+            private layoutService:LayoutService) {
   }
 
   ngOnInit(): void {

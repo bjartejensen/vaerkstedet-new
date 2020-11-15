@@ -1,11 +1,88 @@
 @import "./var";
 
-
-@mixin header {
-    font-family: $din-font;
+@mixin header-mobile{
+    font-family:$din-font;
+    font-size: 3.5rem;
     font-weight: 700;
-    font-size: 2.95rem;
-    color: $text-color;
+    color:$header-color;
+    text-transform: uppercase;
+
+    @media (min-width: 768px){
+        font-size: 3.5rem;
+    }
+}
+
+@mixin sub-header-mobile {
+    font-family:$it-font;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    margin: 2rem 0%;
+    font-weight: 200;
+    color:$header-color;
+    padding: 1rem;
+    background: lighten($cool-grey,70%);
+    border-left: 6px solid rgba(169,169,169,0.3);
+
+    @media (min-width: 768px){
+        font-size: 3.25rem;
+        line-height: 3.75rem;
+    }
+}
+
+@mixin content-mobile{
+    font-family:$din-font;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing:1.5px ;
+    color:$header-color;
+    font-weight: 400;
+    text-align: left;
+
+    @media (min-width: 768px){
+        font-size: 1.45rem;
+        letter-spacing:1.75px ;
+    }
+}
+
+@mixin header-desktop{
+    font-family:$din-font;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color:$header-color;
+    text-transform: uppercase;
+
+    @media (min-width: 1200px){
+    }
+}
+
+@mixin sub-header-desktop {
+    font-family:$it-font;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    margin: 2rem 0%;
+    font-weight: 200;
+    color:$header-color;
+    padding: 1rem;
+    background: lighten($cool-grey,70%);
+    border-left: 6px solid rgba(169,169,169,0.3);
+
+    @media (min-width: 1200px){
+    }
+}
+
+@mixin content-desktop{
+    font-family:$din-font;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing:1.5px ;
+    color:$header-color;
+    font-weight: 400;
+    text-align: left;
+
+    @media (min-width: 1200px){
+        font-size: 2.45rem;
+        line-height: 3rem;
+    }
 }
 
 @mixin vaerkstedet{
@@ -17,10 +94,6 @@
     letter-spacing: 1.35px;
 }
 
-@mixin text-desktop{
-    font-family: $text-font;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: $text-color;
-}
+
+
 

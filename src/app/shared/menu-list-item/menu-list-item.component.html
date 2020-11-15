@@ -5,12 +5,12 @@
     </div>
 
     <div class="list-item">
-        <!--The expand Icon-->
+        <!--The main Item Header-->
         <a mat-list-item 
             #sidenav="sidenav"
             sidenav
             (click)="sidenav.onItemClicked(menuItem.clickable);onItemSelected()"
-            class="anchor"
+            class="anchor main-item-header"
             [routerLink]="menuItem.clickable ? [menuItem.url] : []"
             [ngClass]="{'vaerkstedet': menuItem.header=='Vaerkstedet','active': menuItem.url ? router.isActive(menuItem.url, true): false, 'expanded': expanded}"
             >{{menuItem.header}}
@@ -34,7 +34,7 @@
                     sidenav
                     [routerLink]="[subItem.url]"
                     (click)="sidenav.onItemClicked(subItem.clickable)"
-                    class="sub-item" > {{subItem.header}}
+                    class="sub-item-header" > {{subItem.header}}
                 </li>
             </ul>
         </div> 

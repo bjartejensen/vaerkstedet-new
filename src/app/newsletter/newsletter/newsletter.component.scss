@@ -1,47 +1,5 @@
 @import "../../../styles.scss";
 
-@mixin content-mobile{
-    font-family:$text-font;
-    font-size: 1.15rem;
-    line-height: 2rem;
-    color:$text-color;
-    font-weight: 400;
-    text-align: left;
-
-    @media (min-width: 768px){
-        font-size: 1.25rem;
-    }
-}
-
-@mixin header-mobile{
-    font-family:$it-font;
-    font-size: 2.75rem;
-    font-weight: 700;
-    color:$header-color;
-    text-transform: uppercase;
-
-    @media (min-width: 768px){
-        font-size: 3.5rem;
-    }
-
-}
-
-@mixin sub-header-mobile {
-    font-family:$it-font;
-    font-size: 1.5rem;
-    line-height: 2.0rem;
-    margin: 1rem 0%;
-    font-weight: 200;
-    color:$header-color;
-    padding: 1rem;
-    background: lighten($cool-grey,70%);
-    border-left: 6px solid rgba(169,169,169,0.3);
-
-    @media (min-width: 768px){
-        font-size: 3.5rem;
-        line-height: 4.5rem;
-    }
-}
 
 * {
   margin: 0%;
@@ -66,8 +24,6 @@
   justify-content: center;
   align-items: center;
   height: fit-content;
-  
-  //background: olive;
   margin: auto;
 
   @media (min-width: 768px){
@@ -86,11 +42,14 @@
   img{
       width: 80%;
       height: 100%;
+      height: 75px;
+      width: 100px;
       object-fit: cover;
+      //background: orchid;
 
       @media (min-width:768px){
-          height: 450px;
-          width: 600px;
+          height: 250px;
+          width: 200px;
           object-fit: cover;
       }
   }
@@ -103,6 +62,11 @@
   align-items: center;
   height: 80%;
   margin: 1rem 0%;
+  //background: olivedrab;
+
+  @media (min-width:768px){
+    height: fit-content;
+  }
 
   h1{
       @include header-mobile;
@@ -122,25 +86,14 @@
   margin: 0%;
   margin-bottom: 0rem;
   width: 90%;
-  //background: orange;
 
   @media (min-width: 768px){
       width: 75%;
   }
-
-  p:last-of-type{
-    @include sub-header-mobile;
-    width: 100%;
-}
-
-  p:first-of-type{
-    border-right: 10px solid $cool-pink;
-    padding-right: 2rem;
-    margin: 1rem 0%;
-}
  
   p{
       @include content-mobile;
+      text-align: center;
       width: 90%;
   }
 }
@@ -206,8 +159,8 @@
     margin-top: 3%;
 
     @media (min-width: 768px){
-      width: 85%;
-
+      width: 100%;
+      align-items: center;
       button{
         transform: scale(1.25);
       }

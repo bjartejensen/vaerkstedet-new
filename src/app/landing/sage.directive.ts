@@ -1,4 +1,4 @@
-import { Directive, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { Directive, Output, EventEmitter, OnDestroy, Inject, ElementRef } from '@angular/core';
 import { fromEvent,  Subscription } from 'rxjs';
 import { throttleTime, tap } from 'rxjs/operators';
 
@@ -11,7 +11,7 @@ export class SageDirective implements OnDestroy {
   scrollDir: string;
   @Output() scrollDirection:EventEmitter<string> = new EventEmitter();
 
-  constructor() {
+  constructor(private el:ElementRef) {
     this.setListeners();
    }
 
@@ -24,7 +24,7 @@ export class SageDirective implements OnDestroy {
   private setListeners(){
 
     //var source = Observable.fromEvent(window, 'scroll');
-    this.scrollEventSubscription = fromEvent(window, 'wheel').pipe(
+    this.scrollEventSubscription = fromEvent(this.el.nativeElement, 'wheel').pipe(
       throttleTime(2500),
       tap((wheel:WheelEvent) => {
         this.scrollDir =
