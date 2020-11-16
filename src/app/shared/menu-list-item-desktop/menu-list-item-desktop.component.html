@@ -1,6 +1,6 @@
-<ng-template [@show] #descriptionOnly>
+<ng-template  #descriptionOnly>
     
-<div class="basics">
+<div [@subMenuDefaultReveal] class="basics">
     <div class="header">
         <h4> <span>Vaerkstedet</span> - din smykkebutik på Nørrebro</h4>
     </div>
@@ -23,10 +23,10 @@
     
 </ng-template>
 
-<ng-container
+<ng-container 
     *ngIf="menuItem.subMenuItems; else descriptionOnly">
 
-        <div class="info-container">
+        <div [@subMenuReveal]  class="info-container">
 
             <div class="logo-container">
                 <img [src]="logoUrl">

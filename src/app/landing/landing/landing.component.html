@@ -2,7 +2,13 @@
     <app-landing-desktop></app-landing-desktop>
 </ng-template>
 
-<div class="container" *ngIf="(isMobile$ | async);else landingdesktop">
+<div class="test" *ngIf="(isMobile$ | async);else landingdesktop">
+    <div class="logo-container">
+         <img [src]="logoUrl">
+    </div>
+</div>
+
+<div class="container" *ngIf="false">
         <div class="frame"    >
             <div class="bg-container"
                 appSage 

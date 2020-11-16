@@ -1,0 +1,36 @@
+@import "../../../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+
+//For test
+$logo-size: 400px;
+
+.test{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: $cool-grey;
+
+  .logo-container{
+    position: relative;
+    display: flex;
+
+    img {
+        height: $logo-size;
+        width: $logo-size;
+        object-fit:cover;
+    } 
+}
+
+}

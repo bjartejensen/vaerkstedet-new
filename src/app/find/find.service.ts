@@ -28,7 +28,7 @@ export class FindService {
   }
 
   public getContent():string{
-    return "Uanset om du går målrettet efter et smykke, som du har set her, eller om du blot ønsker at lade dig inspirere, så ser jeg frem til at tage imod dig i min hyggelige værkstedsbutik i Ryesgade."
+    return "Uanset om du går målrettet efter et smykke, som du har set i butikkens udstillingsvindue, eller om du blot ønsker at lade dig inspirere, så ser vi frem til at tage imod dig i vores hyggelige værkstedsbutik i Ryesgade. Vi glæder os til at se dig.";
   }
 
 }

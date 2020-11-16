@@ -26,7 +26,7 @@ export class FindComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    
     this.content = this.findService.getContent();
     this.header = this.findService.getHeader();
     this.subHeader = this.findService.getSubHeader();

@@ -21,6 +21,7 @@
     color:$header-color;
     padding: 1rem;
     background: lighten($cool-grey,70%);
+    //background: $background-color;
     border-left: 6px solid rgba(169,169,169,0.3);
 
     @media (min-width: 768px){

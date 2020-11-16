@@ -26,9 +26,9 @@
                         </mat-icon>
         </ng-container>
 
-        <!--The sub elements-->
-        <div class="sub-menu" [@reveal] *ngIf="expanded">
-            <ul>
+        <!--The sub elements *ngIf="expanded"-->
+        <div class="sub-menu" *ngIf="expanded" @subMenuReveal >
+            <ul >
                 <li *ngFor="let subItem of menuItem.subMenuItems" 
                     #sidenav="sidenav"
                     sidenav

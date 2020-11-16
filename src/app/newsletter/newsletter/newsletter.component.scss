@@ -86,10 +86,16 @@
   margin: 0%;
   margin-bottom: 0rem;
   width: 90%;
+  //background: orange;
 
   @media (min-width: 768px){
       width: 75%;
   }
+
+  @media (min-width: 1200px){
+    //background: orangered;
+    width: 50%;
+}
  
   p{
       @include content-mobile;
@@ -120,23 +126,24 @@
       margin-top: 20px;
       width: 80%;
     }
+
+   
   
     .mat-checkbox,
     .mat-form-field {
       font-size: 0.9rem;
-      font-family: $text-font; //$menu-font;
+      font-family: $form-font; //$menu-font;
     
     }
   
     input {
-      font-family: $text-font;
+      font-family: $form-font;
       font-size: 1.02rem;
       height: 100%;
 
       @media (min-width: 768px){
         font-size: 1.5rem;
       }
-
     }
   
     .mat-checkbox {
@@ -146,7 +153,19 @@
     input,
     .mat-form-field {
       width: 95%;
+
+      @media (min-width: 768px){
+        margin: auto;
+        font-size: 1.5rem;
+        width: 75%;
+      }
+
+      @media (min-width: 1200px){
+         width: 55%;
+      }
+
     }
+    
    
   }
 

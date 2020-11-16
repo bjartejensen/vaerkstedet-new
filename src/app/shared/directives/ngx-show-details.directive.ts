@@ -19,11 +19,11 @@ export class NgxShowDetailsDirective implements OnInit {
   private initTemplate(){
     if(this.dataContext){
       this.viewContainer.clear() //clearing the DOM
-      
       //Instantiating an element in the DOM
       this.viewContainer.createEmbeddedView(
         this.templateRef,this.dataContext
       )
+      
     }
   }
 

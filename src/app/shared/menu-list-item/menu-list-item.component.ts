@@ -22,6 +22,9 @@ import { reveal } from 'src/app/animations';
         "expanded <=> collapsed",
         animate("225ms cubic-bezier(0.4,0.0,0.2,1)")
       )
+    ]),
+    trigger("subMenuReveal",[
+      transition("void=>*",animate(200)),
     ])
   ]
 })

@@ -29,8 +29,6 @@ export class DesignersComponent implements OnInit {
     this.setImages();
     this.setHeader();
     this.setContentOne();
-
-
   }
 
   private setImages(){

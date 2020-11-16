@@ -30,6 +30,10 @@ export class LandingService {
     this.meta.addTag({name:"keywords", content:keywords})
   }
 
+  public get logoUrl(){
+    return "../../../assets/logo/logo-gold.png";
+  }
+
   private setImages(){
     this.images.push("../../../assets/img/1.jpg");
     this.images.push("../../../assets/img/2.jpg");

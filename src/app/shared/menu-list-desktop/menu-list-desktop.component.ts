@@ -26,6 +26,16 @@ import { MenuService } from '../menu.service';
         animate("225ms cubic-bezier(0.4,0.0,0.2,1)")
       )
     ]),
+    trigger("subMenuReveal",[
+      transition(":enter",[
+        style({transform:"translateY(-20px)"}),
+        animate(200)]       
+    ),
+    transition("*=>change",animate(200, style({background:"orange"}) )),
+    transition(":leave",[
+      animate(200,style({transform:"translateY(-20px)"}))]       
+  )
+  ]),
     trigger("InAndOut",[
       state('void',style({ opacity: 0,background:'orange' })),
       transition('void => opened', [
@@ -42,6 +52,8 @@ export class MenuListDesktopComponent implements OnInit, OnChanges {
 
   @Input() isOpened:boolean;
   expanded: boolean;
+
+  secondaryTemplateChanged:boolean;
 
   secondaryMenuSubject: BehaviorSubject<MenuModel> = new BehaviorSubject(null);
   secondaryMenuContext$:Observable<MenuModel>
@@ -61,6 +73,12 @@ export class MenuListDesktopComponent implements OnInit, OnChanges {
 
   ngOnChanges(){
     console.log("Opened State?: " , this.isOpened);
+  }
+
+  onTemplateChanged(event){
+    debugger;
+    this.secondaryTemplateChanged = true;
+    console.log("nu ændrede sec template sig");
   }
 
   setMenuItems(){

@@ -71,14 +71,14 @@ onSubmit(){
 
   private setPristineForm(mailSubject: string = ""){
     this.contactForm = new FormGroup({
-      senderEmail: new FormControl("bjartejensen@gmail.com", [
+      senderEmail: new FormControl("", [
         Validators.required,
         Validators.email,
       ]),
-      subject: new FormControl("Testing", [
+      subject: new FormControl("", [
         Validators.required,
       ]),
-      message: new FormControl("Ipsum lipsum", [Validators.required]),
+      message: new FormControl("", [Validators.required]),
       subscribeToNewsletter: new FormControl(),
     });
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesignersService } from '../designers.service';
 
 @Component({
   selector: 'app-designers-desktop',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesignersDesktopComponent implements OnInit {
 
-  constructor() { }
+  header:string;
+  content:string[] =[];
+  contentOne:string[]=[];
+  contentTwo:string[]=[];
+  images:string[]=[]; 
 
+  constructor(private designersService: DesignersService) { }
+  
   ngOnInit(): void {
+    this.setImages();
+    this.setHeader();
+    this.setContentOne();
   }
+
+  private setImages(){
+    this.images = this.designersService.getImages();
+  }
+
+  private setHeader(){
+    this.header = this.designersService.getHeader();
+  }
+
+  private setContentOne(){
+    this.contentOne = this.designersService.getContentOne();
+  }
+
 
 }

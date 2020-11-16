@@ -44,6 +44,9 @@ export class LandingComponent implements OnInit {
 
   //#region Private Methods
   
+  public get logoUrl(){
+    return  this.landingService.logoUrl; //"../../../assets/logo/logo-grey.png";
+  }
   
 
   private onIncreaseIndex(){

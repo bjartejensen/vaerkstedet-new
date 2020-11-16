@@ -10,20 +10,20 @@ import { AboutService } from '../about.service';
 })
 export class AboutDesktopComponent implements OnInit {
 
-  isMobile$:Observable<boolean> = this.layoutService.isMobile$;
-  isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
-
   header:string;
-  content:string[]=[];
+  contentOne:string[]=[];
+  contentTwo:string[]=[];
+  contentThree:string[]=[];
 
-  constructor(private layoutService:LayoutService,
-    private aboutService:AboutService) {}
+  images:string[]=[];
+
+  constructor(private aboutService:AboutService) {}
 
   ngOnInit(): void {
 
+    this.setImages();
     this.setHeader();
     this.setContent();
-    
   }
 
   private setHeader(){
@@ -31,6 +31,12 @@ export class AboutDesktopComponent implements OnInit {
   }
   
   private setContent(){
-    //this.content = this.aboutService.getContent();
+    this.contentOne = this.aboutService.getContentOne();
+    this.contentTwo = this.aboutService.getContentTwo();
+    this.contentThree = this.aboutService.getContentThree();
+  }
+
+  private setImages(){
+    this.images = this.aboutService.getImages();
   }
 }

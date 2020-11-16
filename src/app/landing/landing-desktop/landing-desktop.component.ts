@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LandingService } from '../landing.service';
 
 @Component({
   selector: 'app-landing-desktop',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingDesktopComponent implements OnInit {
 
-  constructor() { }
+  constructor(private landingService:LandingService) { }
 
   ngOnInit(): void {
+  }
+
+  public get logoUrl(){
+    return  this.landingService.logoUrl; //"../../../assets/logo/logo-grey.png";
   }
 
 }

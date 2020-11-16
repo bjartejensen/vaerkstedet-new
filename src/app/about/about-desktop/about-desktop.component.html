@@ -1,0 +1,61 @@
+
+<div class="container" >
+ 
+    <div class="header">
+        <h1>{{header}}</h1>
+    </div>
+
+    <div class="content-container">
+
+            <div class="section">
+
+                <div class="img-container">
+                    <img class="mat-elevation-z1" [src]="images[0]" alt="">
+                </div>
+
+                <div class="content"> 
+                    <p *ngFor="let c of contentOne" >
+                        {{c}}
+                        <br>
+                    </p>
+                </div>
+                
+            </div>
+            
+            <div class="section">
+
+                <div class="img-container">
+                    <img class="mat-elevation-z1" [src]="images[1]" alt="">
+                </div>
+
+                <div class="content">
+                    <p *ngFor="let c of contentTwo" >
+                        {{c}}
+                        <br>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="section">
+
+                <div class="img-container">
+                    <img class="mat-elevation-z1" [src]="images[2]" alt="">
+                </div>
+
+                <div class="content">
+                    <p *ngFor="let c of contentThree" >
+                        {{c}}
+                        <br>
+                    </p>
+                </div>
+
+            </div>
+    
+    </div>
+
+    
+
+    
+
+</div>

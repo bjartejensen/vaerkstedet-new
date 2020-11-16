@@ -10,6 +10,9 @@
   }
 }
 
+$clr-primary: lighten($cool-pink,0%);
+$clr-secondary: darken($cool-pink,10%);
+
 .basics{
     position: relative;
     display: flex;
@@ -151,7 +154,8 @@
 
     &:hover{
         cursor: pointer;
-        color: $cool-white;
+        //color: $cool-white;
+        color: darken($cool-pink,25%);
 
         &::before{
             opacity: 1;
@@ -160,12 +164,13 @@
 
     h2{
         font-size: 2rem;
-        font-family: $header-font;
+        font-family: $din-font;
+        //background:orange;
     }
 
     h6{
         font-size: 1rem;
-        font-family: $menu-font;
+        font-family: $header-font;
 
         //color: $text-color;
         //background: palevioletred;

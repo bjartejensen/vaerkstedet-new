@@ -47,7 +47,7 @@
     padding: 1rem;
     margin: 0%;
     width: 90%;
-    //background: orange;
+    background: orange;
     margin: 0% auto;
     margin-bottom:2rem;
 
@@ -62,12 +62,6 @@
     }
 }
 
-.map-container{
-    position: relative;
-    display: flex;
-    width: 100%;
-    //background: orange;
-}
 
 .gmap {
     position: relative;
@@ -90,6 +84,7 @@
     top:90%;
     left:-4%;
     transform: rotate(-90deg);
+    //background: olive;
 
     @media (min-width: 768px){
         left:0%;

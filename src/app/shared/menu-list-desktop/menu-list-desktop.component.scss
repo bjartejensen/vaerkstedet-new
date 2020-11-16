@@ -17,9 +17,9 @@
     align-items: center;
     width: 90vw;
     height: 90vh;
-    background:rgb(34, 33, 33);
+    //background:rgb(34, 33, 33);
     margin: auto;
-    outline: 13px $cool-pink solid;
+    outline: 3px $cool-pink solid;
 }
 
 .primary-menu{
@@ -35,12 +35,12 @@
    &::after{
        content: "";
        position: absolute;
-       left:99%;
-       opacity: 0.3;
+       left:90%;
+       opacity: 1;
        display:flex;
-       width: 1px;
+       width: 3px;
        height: 100%;
-       background: $cool-pink;
+       background: darken($cool-pink,3%);
        
    }
 
@@ -58,9 +58,9 @@
             font-size: 2.75rem;
             line-height: 3.0rem;
             text-align: start;
-            //background: orangered;
-            font-family: $header-font;
-            font-weight: 600;
+            //background: olive;
+            font-family: $din-font;
+            font-weight: 700;
             color: $cool-grey;
             margin: auto 0%;
             text-transform: uppercase;
@@ -68,7 +68,7 @@
 
             &:hover{
                 cursor: pointer;
-                color: lighten($cool-pink,5%);
+                color: darken($cool-pink,15%);
             }
         }
 
@@ -95,7 +95,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background:rgb(34, 33, 33);
+    //background:rgb(34, 33, 33);
 
     .portal{
         position: relative;

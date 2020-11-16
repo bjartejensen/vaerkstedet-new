@@ -37,8 +37,6 @@ const modules = [
   MatButtonModule,
   MatListModule,
   RouterModule
-  
-
 ];
 
 @NgModule({

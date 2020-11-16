@@ -9,140 +9,146 @@
 .container{
     position: relative;
     display: flex;
+    flex-direction: column;
+    //background: $cool-pink;
+}
+
+.header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    min-height: 90vh;
-    height: fit-content;
-    background:$background-color;
-    color: $text-color;
-    //background: orange;
-}
+    padding: 10px;
+    margin-top: 50px;
+    //background: $cool-blue;
 
-span {
-    &.vaerkstedet{
-        @include vaerkstedet;
-        background: $cool-pink;
-        height: 100%;
-        font-size: 2.4rem;
-        padding: 0% 1%;
+    h1{
+        @include header-desktop;
     }
+
 }
 
-.info-section{
+.content-container{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: inherit;
-    min-height: 90vh;
-    //background: palevioletred;
-
-    .header{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        //background: orange;
-        margin-top: 5%;
-        width: 100%;
-
-        h1{
-            //@include header;
-        }
-    }
-
-    .sub-header{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        //background: olive;
-        margin-top: 5%;
-        
-
-        h4{
-           text-align: center;
-           font-size: 2.5rem;
-           color: $text-color;
-           line-height: 2.6rem;
-        }
-
-    }
-
-    .text{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        //background: orangered;
-        padding: 1%;
-        margin: auto;
-
-        p{
-            //@include text-desktop;
-            font-size: 2rem;
-            line-height: 2.5rem;
-            text-align: justify;
-            width: 75%;
-            padding: 4px;
-            outline: 2px solid $cool-pink;
-            //background: greenyellow;
-        }
-
-    }
-
-    .some{
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: fit-content;
-        top:80%;
-        left:0%;
-        transform: rotate(-90deg);
-
-        a{
-            font-family: $menu-font;
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 10px;
-            text-decoration: none;
-        }
-
-    }
-
-
-
-
 }
 
-.map-section{
+.section{
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: inherit;
-    min-height: 90vh;
-    //background: rgb(95, 19, 44);
+    flex-direction: row;
+    min-height: 80vh;
+    //background: $cool-green;
+    margin: 5% 2%;
 
-    h2{
-       // @include header;
-        margin-top: 5%;
+    @media (min-width:1200px){
+        margin: 2% 200px;
+
     }
 
-    .gmap {
-        margin: auto;
-        width: 80%;
-        height: 70vh;
-        //max-height: 350px;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        border: solid 2px transparent;
+    &:nth-child(odd){
+        flex-direction: row-reverse;
+        .content{
+            margin-left: 10%;
+            //flex: 50%;
+
+            @media (min-width:1200px){
+                margin-left: 2%;
+            }
+        }
+    }
+
+    .img-container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //background: $cool-grey;
+        flex: 50%;
+    
+        .gmap {
+            margin: auto;
+            width: 80%;
+            height: 60vh;
+            //max-height: 350px;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            border: solid 2px transparent;
+        }
     }
 
     
 
 }
+
+.content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 50%;
+    //background: orangered;
+    //outline: 2px $cool-pink solid;
+
+
+    p{
+        font-family:$din-font;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        letter-spacing:1.5px ;
+        color:$header-color;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        width: 60%;
+        text-align: justify;
+
+        
+    } 
+
+
+}
+
+.some{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    top:70%;
+    left:-4%;
+    transform: rotate(-90deg);
+    //background: olive;
+
+   
+    a{
+        font-family: $menu-font;
+        font-weight: 700;
+        font-size: 0.95rem;
+        padding: 10px;
+        text-decoration: none;
+        color: $header-color;
+
+        @media (min-width: 768px){
+            font-size: 1.3rem;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+    
+
+    
+
+

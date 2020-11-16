@@ -1941,6 +1941,11 @@
         "signature": "393137c76bd922ba70a2f8bf1ade4f59a16171a02fb25918c168d48875b0cfb0",
         "affectsGlobalScope": false
       },
+      "../../node_modules/@types/http-proxy/index.d.ts": {
+        "version": "15e05617b8bcc6dd4cb71a716ffa0d7d0a868ac62d7b14d44cb131e1285a5ae4",
+        "signature": "15e05617b8bcc6dd4cb71a716ffa0d7d0a868ac62d7b14d44cb131e1285a5ae4",
+        "affectsGlobalScope": false
+      },
       "../../node_modules/@types/jasmine/ts3.1/index.d.ts": {
         "version": "babcda8cf9308a61af4c9c70fa04c58d37b0ea3afdce0d21eaebeb90a6792ebe",
         "signature": "babcda8cf9308a61af4c9c70fa04c58d37b0ea3afdce0d21eaebeb90a6792ebe",
@@ -4110,6 +4115,10 @@
       ],
       "../../node_modules/@types/glob/index.d.ts": [
         "../../node_modules/@types/minimatch/index.d.ts",
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../../node_modules/@types/http-proxy/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
@@ -6660,6 +6669,10 @@
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
+      "../../node_modules/@types/http-proxy/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
       "../../node_modules/@types/jasmine/ts3.1/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
@@ -7524,6 +7537,7 @@
       "../src/newsletter/newsletter/newsletter.controller.ts",
       "../../node_modules/@types/color-name/index.d.ts",
       "../../node_modules/@types/glob/index.d.ts",
+      "../../node_modules/@types/http-proxy/index.d.ts",
       "../../node_modules/@types/jasmine/ts3.1/index.d.ts",
       "../../node_modules/@types/jasminewd2/index.d.ts",
       "../../node_modules/@types/json-schema/index.d.ts",

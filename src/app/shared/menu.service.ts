@@ -30,7 +30,7 @@ export class MenuService {
     let menuArr: MenuModel[]=[];
 
     let home = new MenuModel(MenuType.primary,
-            "Home","This is Home", "home");
+            "Din smykkebutik i Ryesgade","Velkommen til Vaerkstedet", "home");
     menuArr.push(home);
 
     let news = new MenuModel(MenuType.primary,
@@ -91,7 +91,7 @@ export class MenuService {
       designers.setSubMenuItems(secondArr);  */
       menuArr.push(designers);
 
-      let vaerkstedet = new MenuModel(MenuType.primary,"Vaerkstedet","Din smykkebutik på Nørrebro");
+      let vaerkstedet = new MenuModel(MenuType.primary,"Vaerkstedet","Let's connect");
       secondArr = [];
       second = new SubMenuModel("Om Vaerkstedet","Vaerkstedets værdier og historie","about");
       secondArr.push(second);

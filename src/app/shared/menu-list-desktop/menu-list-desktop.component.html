@@ -28,8 +28,9 @@
 
     <div class="secondary-menu">
         <ng-container *ngIf="secondaryMenuContext$ | async as secondaryMenuContext">
-            <div [@reveal] class="portal" *ngxShowDetails="secondaryMenuContext"> 
-                <ng-template *ngTemplateOutlet="detailsSecondary; context: {data: secondaryMenuContext}" ></ng-template>
+            <div class="portal" 
+                    *ngxShowDetails="secondaryMenuContext"> 
+                <ng-template  *ngTemplateOutlet="detailsSecondary; context: {data: secondaryMenuContext}" ></ng-template>
             </div>
         </ng-container>   
      </div>
