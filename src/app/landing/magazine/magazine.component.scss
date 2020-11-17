@@ -1,0 +1,101 @@
+@import "../../../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+.container{
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    //background: orange;
+    overflow: hidden;
+}
+
+.row-reverse{
+    flex-flow: row-reverse;
+}
+
+.content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    //flex: 100%;
+    width: 60vw ;
+    height: 100%;
+    //background: lighten($cool-green,20%);
+   
+    h2{
+        @include content-desktop();
+        //font-family: $eb-font;
+        
+        @media (min-width: 1200px){
+            font-size: 4rem;
+            line-height: 4.25rem;
+        }
+        
+    }
+   
+    h4{
+        @include sub-header-desktop;
+        font-family: $eb-font;
+        font-style: italic;
+        width: 90%;
+        text-align: center;
+    }
+
+}
+
+.img-container{
+        position: relative;
+        display: flex;
+        /* justify-content: flex-end;
+        align-items: flex-end; */
+        background: $cool-grey;
+        //flex: 50%;
+        //flex: 100%;
+        width: 40vw;
+        height: 100vh;
+        background: $cool-pink;
+
+       
+    
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+    
+            @media (min-width:768px){
+            }
+        }
+}
+
+.step{
+   /*  transform: translate(-50%);
+    transition: none; */
+}
+
+.complete{
+   justify-content: flex-start;
+    /* transform: translate(0%);        
+    transition: 1200 transform ease-in;  */
+}
+
+.complete-image{
+    /* transform: translate(0%);
+    transition: 1200 transform ease-in; */
+}
+
+.btn{
+    width: 50px;
+    height: 30px;
+    padding: 0% 4px;
+   
+}

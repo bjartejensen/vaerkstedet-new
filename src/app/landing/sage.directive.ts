@@ -1,4 +1,4 @@
-import { Directive, Output, EventEmitter, OnDestroy, Inject, ElementRef } from '@angular/core';
+import { Directive, Output, EventEmitter, OnDestroy, Inject, ElementRef, HostListener } from '@angular/core';
 import { fromEvent,  Subscription } from 'rxjs';
 import { throttleTime, tap } from 'rxjs/operators';
 
@@ -20,6 +20,15 @@ export class SageDirective implements OnDestroy {
        this.scrollEventSubscription.unsubscribe();
      }
    }
+
+  @HostListener("click")
+  onClick()
+  {
+    const obs = fromEvent(this.el.nativeElement ,"transitionend");
+    obs.subscribe(()=>{ 
+      debugger;
+    })
+  }
 
   private setListeners(){
 

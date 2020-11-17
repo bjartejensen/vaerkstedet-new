@@ -1,0 +1,41 @@
+<!--(click)="onClick()"-->
+<div (@slide.start)="onAnimationStart($event)"
+    (@slide.done)="onAnimationDone($event)"
+        [@slide]="stateStr" class="container"
+        (click)="onClick()"
+        [ngClass]="{'row-reverse': complete}">
+
+
+    <div *ngIf="false" style="margin-left:10vw">
+        <h4>{{stateStr}}</h4>
+        <h4>{{step? "step":"no step"}}</h4>
+        <h4>{{complete? "complete":"not complete"}}</h4>
+    </div>
+
+<!--[ngClass]="{'step':step}"-->
+   
+
+    <div class="content" (@fadein.done)="onFadeInDone()" >
+        <ng-container class="heading" >
+        <h2  @fadein  *ngIf="(!finalize || bounceBack)">
+            {{header}}
+        </h2>
+        </ng-container>
+        <ng-container class="heading" *ngIf="finalize" >
+        <h4 @fadein  id="content-sub-header">
+            {{subHeader}}
+        </h4>
+
+        <button  @fadein mat-raised-button>
+            {{btnCaption}}
+        </button>
+
+        </ng-container>
+
+    </div>
+
+    <div class="img-container" [ngClass]="{'step':step,'complete':complete , 'complete-image':complete}" >
+        <img class="mat-elevation-z1" [src]="imgUrl" alt="">
+    </div>
+
+</div>

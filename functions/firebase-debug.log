@@ -15347,3 +15347,58 @@
 [info] >      at IncomingMessage.emit (events.js:187:15)
 [info] >      at endReadableNT (_stream_readable.js:1094:12)
 [info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[debug] [2020-11-17T18:08:36.793Z] ----------------------------------------------------------------------
+[debug] [2020-11-17T18:08:36.795Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Bjarte\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-11-17T18:08:36.796Z] CLI Version:   7.11.0
+[debug] [2020-11-17T18:08:36.796Z] Platform:      win32
+[debug] [2020-11-17T18:08:36.796Z] Node Version:  v10.15.0
+[debug] [2020-11-17T18:08:36.797Z] Time:          Tue Nov 17 2020 19:08:36 GMT+0100 (GMT+01:00)
+[debug] [2020-11-17T18:08:36.797Z] ----------------------------------------------------------------------
+[debug] [2020-11-17T18:08:36.797Z] 
+[debug] [2020-11-17T18:08:36.809Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-17T18:08:36.809Z] > authorizing via signed-in user
+[debug] [2020-11-17T18:08:36.810Z] [iam] checking project vaerkstedet-ae5e0 for permissions ["firebase.projects.get"]
+[debug] [2020-11-17T18:08:36.811Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-11-17T18:08:36.812Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-11-17T18:08:37.015Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-17T18:08:37.038Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vaerkstedet-ae5e0:testIamPermissions  
+
+[debug] [2020-11-17T18:08:37.922Z] <<< HTTP RESPONSE 200
+[debug] [2020-11-17T18:08:37.925Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/vaerkstedet-ae5e0  
+ 
+[debug] [2020-11-17T18:08:38.309Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Applications\vaerkstedet-new\functions" for Cloud Functions...
+[debug] [2020-11-17T18:08:40.937Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-11-17T18:08:40.938Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-11-17T18:08:40.938Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-11-17T18:08:40.938Z] [worker-~diagnostic~-80c1a77c-a18e-404c-b821-3bfa3c91d81d]: Assigning socketPath: \\?\pipe\C:\Applications\vaerkstedet-new\functions\4964
+[debug] [2020-11-17T18:08:40.938Z] [worker-~diagnostic~-80c1a77c-a18e-404c-b821-3bfa3c91d81d]: BUSY
+[debug] [2020-11-17T18:08:41.505Z] [runtime-status] [4964] Functions runtime initialized. {"cwd":"C:\\Applications\\vaerkstedet-new\\functions","node_version":"10.15.0"}
+[debug] [2020-11-17T18:08:41.507Z] [runtime-status] [4964] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-11-17T18:08:41.545Z] [runtime-status] [4964] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-11-17T18:08:41.557Z] [runtime-status] [4964] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-11-17T18:08:41.560Z] [runtime-status] [4964] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Applications\\vaerkstedet-new\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] >  [Nest] 4964   - 2020-11-17 19:08:52   [NestFactory] Starting Nest application...
+[info] +  functions[api]: http function initialized (http://localhost:5000/vaerkstedet-ae5e0/us-central1/api).
+[info] >  [Nest] 4964   - 2020-11-17 19:08:53   [InstanceLoader] AppModule dependencies initialized +35ms
+[debug] [2020-11-17T18:08:53.014Z] [worker-~diagnostic~-80c1a77c-a18e-404c-b821-3bfa3c91d81d]: IDLE
+[info] >  [Nest] 4964   - 2020-11-17 19:08:53   [InstanceLoader] ConfigHostModule dependencies initialized +3ms
+[info] >  [Nest] 4964   - 2020-11-17 19:08:53   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [InstanceLoader] EmailModule dependencies initialized +7351ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [InstanceLoader] NewsletterModule dependencies initialized +2ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [InstanceLoader] InstagramModule dependencies initialized +2ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [InstanceLoader] DesignersModule dependencies initialized +4ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RoutesResolver] DesignersController {/designers}: +23ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RouterExplorer] Mapped {/:designername, GET} route +13ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RouterExplorer] Mapped {/fetchall, GET} route +2ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RoutesResolver] EmailController {/email}: +1ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RouterExplorer] Mapped {/send, POST} route +2ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RoutesResolver] NewsletterController {/newsletter}: +1ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RouterExplorer] Mapped {/subscribe, POST} route +1ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RoutesResolver] InstagramController {/instagram}: +1ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [RouterExplorer] Mapped {/fetch, GET} route +2ms
+[info] >  [Nest] 4964   - 2020-11-17 19:09:00   [NestApplication] Nest application successfully started +7ms
+[info] >  Nest Ready

@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -8,8 +9,18 @@ import { ContactService } from '../contact.service';
 @Component({
   selector: 'app-contact-desktop',
   templateUrl: './contact-desktop.component.html',
-  styleUrls: ['./contact-desktop.component.scss']
-})
+  styleUrls: ['./contact-desktop.component.scss'],
+  animations:[
+    trigger("fadein",
+    [
+      transition(":enter",
+      [style({opacity:0, 
+        backgroundColor:"rgba(0,0,0,0.75)",
+        transform: "translateY(-20px)"}),
+        animate("400ms 400ms")
+    ])
+  ])]})
+
 export class ContactDesktopComponent implements OnInit {
 
   contactForm: FormGroup;

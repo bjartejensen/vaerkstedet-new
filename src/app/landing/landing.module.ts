@@ -6,14 +6,17 @@ import { LandingComponent } from './landing/landing.component';
 import { SageDirective } from './sage.directive';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { LandingDesktopComponent } from './landing-desktop/landing-desktop.component';
+import { MagazineComponent } from './magazine/magazine.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
-  declarations: [LandingComponent, SageDirective, LandingDesktopComponent],
+  declarations: [LandingComponent, SageDirective, LandingDesktopComponent, MagazineComponent],
   imports: [
     CommonModule,
     LandingRoutingModule,
-    ScrollingModule
+    ScrollingModule,
+    MatButtonModule
   ]
 })
 export class LandingModule { }
