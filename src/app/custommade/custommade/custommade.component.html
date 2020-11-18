@@ -3,7 +3,7 @@
     <app-custommade-desktop></app-custommade-desktop>
 </ng-template>
 
-<div class="container" *ngIf="(isMobile$ | async);else customdesktop" >
+<div [@loadUnload] class="container" *ngIf="(isMobile$ | async);else customdesktop" >
  
     <div class="header">
         <h1>{{header}}</h1>

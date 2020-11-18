@@ -1,12 +1,15 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
 import { AboutService } from '../about.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
+  animations: [loadUnload]
 })
 export class AboutComponent implements OnInit {
 
@@ -21,13 +24,18 @@ export class AboutComponent implements OnInit {
   images:string[]=[];
 
   constructor(private layoutService:LayoutService,
-    private aboutService:AboutService) {}
+    private aboutService:AboutService,
+    private viewportScroller: ViewportScroller) {}
 
   ngOnInit(): void {
 
     this.setImages();
     this.setHeader();
     this.setContent();
+  }
+
+  onClickScroll(elementId:string):void{
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
   private setHeader(){

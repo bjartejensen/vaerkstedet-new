@@ -43,13 +43,21 @@
 } 
 
 $din-font: DIN;
-$menu-font: "Poppins", sans-serif;
-$header-font: 'Playfairit', serif;
-//$text-font: 'Playfair', serif;
-$it-font: 'Playfairit', serif;
-$text-font: 'Lora'; //400, 700 //'WorkSans', sans-serif; 
-$form-font: $menu-font;
 $eb-font: 'EB Garamond', serif;
+$popping-font: "Poppins", sans-serif;
+
+/* $it-font: 'Playfairit', serif;
+$text-font: 'Lora'; 
+ */
+ 
+$menu-font: $popping-font;
+$header-font: $din-font;
+$sub-header-font: $eb-font;
+$form-font: $popping-font;
+$text-font: $din-font;
+
+//$header-font: 'Playfairit', serif;
+
 
 $background-color: #c8cad3;
 $header-color: rgb(73, 72, 72);

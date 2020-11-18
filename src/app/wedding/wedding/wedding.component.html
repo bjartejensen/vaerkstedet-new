@@ -2,7 +2,7 @@
     <app-wedding-desktop></app-wedding-desktop>
 </ng-template>
 
-<div class="container" *ngIf="(isMobile$ | async);else weddingdesktop">
+<div [@loadUnload] class="container" *ngIf="(isMobile$ | async);else weddingdesktop">
  
     <div *ngIf="true" class="header">
         <h1>{{header}}</h1>

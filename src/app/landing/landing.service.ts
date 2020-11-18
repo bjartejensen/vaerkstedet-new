@@ -31,7 +31,7 @@ export class LandingService {
   }
 
   public get logoUrl(){
-    return "../../../assets/logo/logo-gold.png";
+    return "../../../assets/logo/logo-grey.png";
   }
 
   private setImages(){

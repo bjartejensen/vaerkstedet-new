@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
+import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
 import { WeddingService } from '../wedding.service';
 
 @Component({
   selector: 'app-wedding',
   templateUrl: './wedding.component.html',
-  styleUrls: ['./wedding.component.scss']
+  styleUrls: ['./wedding.component.scss'],
+  animations:[loadUnload]
 })
 export class WeddingComponent implements OnInit {
 

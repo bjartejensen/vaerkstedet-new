@@ -6,7 +6,7 @@ import { MagazineComponent } from './magazine/magazine.component';
 const routes: Routes = [
   {
     path: "",
-    component: MagazineComponent,
+    component: LandingComponent,
   },
 ];
 

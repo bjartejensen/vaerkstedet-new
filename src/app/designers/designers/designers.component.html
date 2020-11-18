@@ -3,7 +3,7 @@
     <app-designers-desktop></app-designers-desktop>
 </ng-template>
 
-<div class="container" *ngIf="(isMobile$ | async);else designersdesktop" >
+<div [@loadUnload] class="container" *ngIf="(isMobile$ | async);else designersdesktop" >
  
     <div class="header">
         <h1>{{header}}</h1>

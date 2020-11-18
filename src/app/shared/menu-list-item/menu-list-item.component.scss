@@ -30,14 +30,12 @@ $clr-secondary: darken($cool-pink,10%);
     height: 100%;
 
     h6{
-        //background: orchid;
-        color: $clr-primary;
         color: $text-color;
         padding: 0% 12px;
         margin: auto 0%;
-        font-family: $it-font;
-        font-size: 0.75rem;
-        font-weight: 500;
+        font-family: $sub-header-font;
+        font-style: italic;
+        font-size: 1rem;
     }
 }
 
@@ -82,10 +80,11 @@ $clr-secondary: darken($cool-pink,10%);
 .vaerkstedet{
     font-family: $din-font;
     font-size: 1.25rem;
-    font-weight: 700;
+    //font-weight: 700;
     color: darken($cool-grey,20%);
+    color:$header-color;
     text-transform: uppercase;
-    letter-spacing: 1.35px;
+    //letter-spacing: 1.05px;
 }
 
 .sub-menu{

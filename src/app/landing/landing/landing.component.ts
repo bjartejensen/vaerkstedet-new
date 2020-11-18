@@ -1,5 +1,4 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { sageFull } from "src/app/animations";
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/services/layout.service';
 import { LandingService } from '../landing.service';
@@ -9,7 +8,7 @@ import { Observable } from 'rxjs';
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
-  animations:[sageFull]
+  animations:[]
 })
 export class LandingComponent implements OnInit {
   
@@ -24,6 +23,9 @@ export class LandingComponent implements OnInit {
   public state:string ="up";
   public isDown:boolean;
 
+  inFocus:number;
+  vec:number[]=[1,1,1,1,1];
+
   constructor(private landingService:LandingService,
     private layoutService: LayoutService) {
 
@@ -33,13 +35,11 @@ export class LandingComponent implements OnInit {
 
      }
 
-  ngOnInit(): void {
+  ngOnInit(): void {   
+  }
 
-
-
-
-
-    
+  onVisible(event){
+    this.inFocus= +event.id;
   }
 
   //#region Private Methods

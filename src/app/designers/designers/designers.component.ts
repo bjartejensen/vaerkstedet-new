@@ -5,11 +5,13 @@ import { ActivatedRoute } from '@angular/router';
 import { combineLatest, Observable, of, Subject } from 'rxjs';
 import { map, tap,filter, startWith } from 'rxjs/operators';
 import { LayoutService } from 'src/app/services/layout.service';
+import { loadUnload } from 'src/app/animations';
 
 @Component({
   selector: 'app-designers',
   templateUrl: './designers.component.html',
-  styleUrls: ['./designers.component.scss']
+  styleUrls: ['./designers.component.scss'],
+  animations:[loadUnload]
 })
 export class DesignersComponent implements OnInit {
 

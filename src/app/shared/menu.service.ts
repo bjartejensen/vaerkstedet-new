@@ -69,7 +69,7 @@ export class MenuService {
       //Designers
       let designers = new MenuModel(MenuType.primary,
             "Designers",
-            "Mød Vaerkstedets dygtige designere","designers");
+            "Mød Vaerkstedets designere","designers");
 
      /*  secondArr=[];
       second = new SubMenuModel("Louise Rought","Louise Rought Jewellery","");

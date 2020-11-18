@@ -8,10 +8,11 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { LandingDesktopComponent } from './landing-desktop/landing-desktop.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { MatButtonModule } from '@angular/material/button';
+import { IntersectionDirective } from './intersection.directive';
 
 
 @NgModule({
-  declarations: [LandingComponent, SageDirective, LandingDesktopComponent, MagazineComponent],
+  declarations: [LandingComponent, SageDirective, LandingDesktopComponent, MagazineComponent, IntersectionDirective],
   imports: [
     CommonModule,
     LandingRoutingModule,

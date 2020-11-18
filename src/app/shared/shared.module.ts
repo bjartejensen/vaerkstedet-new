@@ -37,12 +37,13 @@ const modules = [
   MatButtonModule,
   MatListModule,
   RouterModule
+  
 ];
 
 @NgModule({
   declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent, FooterComponent, NgxShowDetailsDirective, MenuListItemDesktopComponent, SidenavDirective],
   imports: [
-    modules
+    modules  
   ],
   exports:[modules,ShellComponent,FooterComponent]
 })

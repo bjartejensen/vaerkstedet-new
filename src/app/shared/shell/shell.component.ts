@@ -5,7 +5,6 @@ import { map, shareReplay, filter, tap } from "rxjs/operators";
 import { Router, NavigationEnd } from "@angular/router";
 import { MatSidenav } from '@angular/material/sidenav';
 import { LayoutService } from 'src/app/services/layout.service';
-import { show } from 'src/app/animations';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MenuService } from '../menu.service';
 
@@ -13,7 +12,7 @@ import { MenuService } from '../menu.service';
   selector: 'app-shell',
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss'],
-  animations: [show,
+  animations: [
     trigger("InAndOut",[
        
       state('in', style({ opacity:1 })),

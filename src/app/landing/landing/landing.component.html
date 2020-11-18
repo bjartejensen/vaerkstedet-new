@@ -2,10 +2,24 @@
     <app-landing-desktop></app-landing-desktop>
 </ng-template>
 
-<div class="test" *ngIf="(isMobile$ | async);else landingdesktop">
+<!--<div class="test" *ngIf="(isMobile$ | async);else landingdesktop">
     <div class="logo-container">
          <img [src]="logoUrl">
     </div>
+</div>-->
+
+<div class="container" *ngIf="(isMobile$ | async);else landingdesktop">
+
+    <ng-container *ngFor="let v of vec; let i = index">
+        <div class="section" [id]="i" 
+            appIntersection
+            [debounceTime]="0"
+            (visible)="onVisible($event)">
+            <app-magazine [url]="'/wedding'" *ngIf="i<=inFocus">
+            </app-magazine>
+        </div> 
+    </ng-container>
+
 </div>
 
 <div class="container" *ngIf="false">

@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChildren, AfterViewInit, HostBinding, QueryList, Input } from '@angular/core';
-import { show, outAndIn,fadeKeyFrame,specficTrig,btnClicked,slider } from "src/app/animations";
 import { CarouselButtonDirective } from '../directives/carousel-button.directive';
 import {MatButtonModule} from '@angular/material/button';
 import {
@@ -23,9 +22,7 @@ import {
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
-  animations: [show,outAndIn,fadeKeyFrame,specficTrig,btnClicked,slider]
-
-  
+   
 
 })
 export class CarouselComponent implements OnInit, AfterViewInit {

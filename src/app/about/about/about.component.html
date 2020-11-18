@@ -2,9 +2,9 @@
     <app-about-desktop></app-about-desktop>
 </ng-template>
 
-<div class="container" *ngIf="(isMobile$ | async);else aboutdesktop" >
+<div [@loadUnload]  class="container" *ngIf="(isMobile$ | async);else aboutdesktop" >
  
-     <div class="header">
+     <div id="top" class="header">
         <h1>{{header}}</h1>
     </div>
 
@@ -41,6 +41,10 @@
             {{c}}
             <br>
         </p>
+    </div>
+
+    <div (click)="onClickScroll('top')" >
+        <h4>Top</h4>
     </div>
 
 </div>

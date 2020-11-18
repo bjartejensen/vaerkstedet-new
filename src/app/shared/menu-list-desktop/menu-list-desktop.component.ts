@@ -1,7 +1,6 @@
 import { query, stagger, trigger } from '@angular/animations';
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { reveal } from 'src/app/animations';
 
 import {
   state,
@@ -17,7 +16,7 @@ import { MenuService } from '../menu.service';
   selector: 'app-menu-list-desktop',
   templateUrl: './menu-list-desktop.component.html',
   styleUrls: ['./menu-list-desktop.component.scss'],
-  animations: [reveal,
+  animations: [
     trigger("indicatorRotate", [
       state("collapsed", style({ transform: "rotate(0deg)" })),
       state("expanded", style({ transform: "rotate(180deg)" })),

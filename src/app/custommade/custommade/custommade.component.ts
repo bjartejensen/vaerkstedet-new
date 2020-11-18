@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
 import { CustommadeService } from '../custommade.service';
 
 @Component({
   selector: 'app-custommade',
   templateUrl: './custommade.component.html',
-  styleUrls: ['./custommade.component.scss']
+  styleUrls: ['./custommade.component.scss'],
+  animations: [loadUnload]
 })
 export class CustommadeComponent implements OnInit {
 

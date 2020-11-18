@@ -10,47 +10,6 @@
   }
 }
 
-@mixin header {
-    font-family: $din-font;
-    font-weight: 700;
-    font-size: 2.95rem;
-    line-height: 3.25rem;
-    color: $text-color;
-  }
-  
-  @mixin sub-header {
-    font-family: $din-font;
-    font-weight: 700;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    line-height: 2.25rem;
-    color: $text-color;
-  }
-  
-  @mixin text {
-    font-family: $din-font;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: $text-color;
-  }
-
-  @mixin sub-header-mobile {
-    font-family:$it-font;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin: 1rem 0%;
-    font-weight: 200;
-    color:$header-color;
-    padding: 1rem;
-    background: lighten($cool-grey,70%);
-    border-left: 6px solid rgba(169,169,169,0.3);
-
-    @media (min-width: 768px){
-        font-size: 3.5rem;
-        line-height: 4.5rem;
-    }
-}
 
 .container{
     position: relative;
@@ -106,7 +65,7 @@
   z-index: 40;
   
   h4{
-    @include header;  
+    @include header-mobile;  
     color:$header-color;
   }
 }
@@ -177,7 +136,7 @@
   background:pink;
 
   p{
-    @include text;
+    @include content-mobile;
   }
 
   p ~ p {
