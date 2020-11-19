@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
 import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations:[loadUnload]
 })
 export class ContactComponent implements OnInit {
 
@@ -72,14 +74,14 @@ export class ContactComponent implements OnInit {
 
   private setPristineForm(mailSubject: string = ""){
     this.contactForm = new FormGroup({
-      senderEmail: new FormControl("bjartejensen@gmail.com", [
+      senderEmail: new FormControl("", [
         Validators.required,
         Validators.email,
       ]),
-      subject: new FormControl("Testing", [
+      subject: new FormControl("", [
         Validators.required,
       ]),
-      message: new FormControl("Ipsum lipsum", [Validators.required]),
+      message: new FormControl("", [Validators.required]),
       subscribeToNewsletter: new FormControl(),
     });
   }

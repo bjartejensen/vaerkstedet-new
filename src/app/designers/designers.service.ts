@@ -34,8 +34,10 @@ export class DesignersService {
 
   public getImages():string[]{
 
-    let img1 = "../../assets/img/about/2.jpg";
+    let img1 = "../../assets/img/designers/4.jpg";
     this.imgArr.push(img1);
+    let img2 = "../../assets/img/designers/3.jpg";
+    this.imgArr.push(img2);
     return this.imgArr;
 
   }

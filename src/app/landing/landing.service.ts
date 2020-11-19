@@ -7,14 +7,18 @@ import { Meta, Title } from '@angular/platform-browser';
 export class LandingService {
 
   images: any[]=[];
-  headers: string[]=[];
+  //headers: string[]=[];
   subHeaders:string[]=[];
+  btnCaptions:string[]=[];
+  urls:string[]=[];
 
   constructor(private title:Title, private meta: Meta) {
 
     this.setTitleAndMeta();
     this.setImages();
-    this.setHeaders();
+    this.setBtnCaptions();
+    this.setUrls();
+    //this.setHeaders();
     this.setSubHeaders();
 
    }
@@ -35,10 +39,24 @@ export class LandingService {
   }
 
   private setImages(){
-    this.images.push("../../../assets/img/1.jpg");
-    this.images.push("../../../assets/img/2.jpg");
-    this.images.push("../../../assets/img/3.jpg");
-    this.images.push("../../../assets/img/4.jpg");
+    this.images.push("../../../assets/img/landing/1.jpg");
+    this.images.push("../../../assets/img/landing/3.jpg");
+    this.images.push("../../../assets/img/landing/4.jpg");
+    this.images.push("../../../assets/img/landing/6.jpg");
+  }
+
+  private setUrls(){
+    this.urls.push("/custommade");
+    this.urls.push("/wedding");
+    this.urls.push("/about");
+    this.urls.push("/find");
+  }
+
+  private setBtnCaptions(){
+    this.btnCaptions.push("Se mere");
+    this.btnCaptions.push("Vores Vielsesringe");
+    this.btnCaptions.push("Læs mere");
+    this.btnCaptions.push("Find os");
   }
 
   private setSubHeaders(){
@@ -48,10 +66,5 @@ export class LandingService {
     this.subHeaders.push("der værner om kundeoplevelsen");
   }
 
-  private setHeaders(){
-    this.headers.push("Black Sun");
-    this.headers.push("Form of Memory");
-    this.headers.push("Leonardo Vandal");
-  }
 
 }

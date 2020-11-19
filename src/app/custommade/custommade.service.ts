@@ -55,8 +55,8 @@ export class CustommadeService {
 
   public getImages():string[]{
 
-    let img1 = "../../assets/img/custommade/1.jpg";
-    let img2 = "../../assets/img/custommade/2.jpg";
+    let img1 = "../../assets/img/custommade/3.jpg";
+    let img2 = "../../assets/img/custommade/6.jpg";
     
     this.imgArr.push(img1);
     this.imgArr.push(img2);

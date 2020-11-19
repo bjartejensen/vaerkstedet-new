@@ -23,7 +23,7 @@ export const slowStart:string = "cubic-bezier(1,0,1,-0.07)";
 
     transition(":enter",[
       style({opacity:0,transform: "translateX(-20px)"}),
-      animate(`3000ms 300ms ${trnsIn}`)
+      animate(`3000ms 300ms ${trnsIn}`),animateChild()
     ]),
     transition(":leave",[
       animate(`3000ms 300ms ${trnsIn}`,style({opacity:0,transform: "translateX(20px)"}))

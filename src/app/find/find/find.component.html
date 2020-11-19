@@ -2,7 +2,7 @@
     <app-find-desktop></app-find-desktop>
 </ng-template>
 
-<div class="container" *ngIf="(isMobile$ | async);else finddesktop" >
+<div [@loadUnload] class="container" *ngIf="(isMobile$ | async);else finddesktop" >
    
     <div class="header">
         <h1>{{header}}</h1>

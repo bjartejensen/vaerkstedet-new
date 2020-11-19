@@ -12,7 +12,7 @@
     <mat-spinner></mat-spinner>
 </div>
 
-<div class="container" *ngIf="(isMobile$ | async);else contactdesktop" >
+<div @loadUnload class="container" *ngIf="(isMobile$ | async);else contactdesktop" >
  
     <div class="header">
         <h1>{{header}}</h1>

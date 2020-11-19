@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
 import { FindService } from '../find.service';
 
 @Component({
   selector: 'app-find',
   templateUrl: './find.component.html',
-  styleUrls: ['./find.component.scss']
+  styleUrls: ['./find.component.scss'],
+  animations: [loadUnload]
 })
 export class FindComponent implements OnInit {
 

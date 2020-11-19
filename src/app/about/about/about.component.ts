@@ -35,7 +35,9 @@ export class AboutComponent implements OnInit {
   }
 
   onClickScroll(elementId:string):void{
-    this.viewportScroller.scrollToAnchor(elementId);
+    this.aboutService.scrollToSection(elementId);
+
+    //this.viewportScroller.scrollToAnchor(elementId);
   }
 
   private setHeader(){

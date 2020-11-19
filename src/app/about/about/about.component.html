@@ -2,9 +2,9 @@
     <app-about-desktop></app-about-desktop>
 </ng-template>
 
-<div [@loadUnload]  class="container" *ngIf="(isMobile$ | async);else aboutdesktop" >
+<div [@loadUnload] id="top"  class="container" *ngIf="(isMobile$ | async);else aboutdesktop" >
  
-     <div id="top" class="header">
+     <div class="header">
         <h1>{{header}}</h1>
     </div>
 

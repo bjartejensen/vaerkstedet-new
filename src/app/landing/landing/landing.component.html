@@ -10,12 +10,16 @@
 
 <div class="container" *ngIf="(isMobile$ | async);else landingdesktop">
 
-    <ng-container *ngFor="let v of vec; let i = index">
+    <ng-container *ngFor="let img of images; let i = index">
         <div class="section" [id]="i" 
             appIntersection
             [debounceTime]="0"
             (visible)="onVisible($event)">
-            <app-magazine [url]="'/wedding'" *ngIf="i<=inFocus">
+            <app-magazine [imgUrl]="img" 
+                    [subHeader]="subHeaders[i]" 
+                    [url]="urls[i]"
+                    [btnCaption]="btnCaptions[i]"
+                    *ngIf="i<=inFocus">
             </app-magazine>
         </div> 
     </ng-container>
@@ -40,9 +44,7 @@
                             
                             <div class="darken-overlay"></div>
 
-                            <div class="header" >
-                                <h2>{{headers[i]}}</h2>
-                            </div>
+                          
 
                             <div class="sub-header" >
                                 <h4>{{subHeaders[i]}}</h4>

@@ -16,8 +16,9 @@ export class LandingComponent implements OnInit {
   isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
 
   images: any[]=[];
-  headers: string[]=[];
   subHeaders:string[]=[];
+  urls: string[]=[];
+  btnCaptions:string[]=[];
 
   idx: number=0;
   public state:string ="up";
@@ -28,12 +29,12 @@ export class LandingComponent implements OnInit {
 
   constructor(private landingService:LandingService,
     private layoutService: LayoutService) {
-
-      this.headers = this.landingService.headers;
+      
       this.images = this.landingService.images;
       this.subHeaders = this.landingService.subHeaders;
-
-     }
+      this.urls = this.landingService.urls;
+      this.btnCaptions = this.landingService.btnCaptions;
+    }
 
   ngOnInit(): void {   
   }
