@@ -30,8 +30,17 @@ export class LayoutService {
       this.isLargeMobile$ = breakpointObserver.observe([Breakpoints.TabletPortrait, Breakpoints.HandsetLandscape])
         .pipe(map(matches=> matches.matches)).pipe(shareReplay());
 
-
      }
+
+  public scrollToSection(sectionId: string, scrollBehavior: ScrollBehavior = "smooth" ) {
+      const elements = document.getElementById(sectionId);
+  
+      if (!(elements === undefined || elements === null)) {
+        elements.scrollIntoView({ behavior: scrollBehavior });
+      }
+  }
+
+  
 
 
   

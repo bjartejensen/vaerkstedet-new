@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
 import { AboutService } from '../about.service';
 
 @Component({
   selector: 'app-about-desktop',
   templateUrl: './about-desktop.component.html',
-  styleUrls: ['./about-desktop.component.scss']
+  styleUrls: ['./about-desktop.component.scss'],
+  animations: [loadUnload]
 })
 export class AboutDesktopComponent implements OnInit {
 

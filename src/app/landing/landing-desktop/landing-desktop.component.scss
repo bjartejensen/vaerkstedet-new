@@ -10,27 +10,28 @@
   }
 }
 
-
-//For test
-$logo-size: 400px;
-
-.test{
+.container {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background: $cool-grey;
-
-  .logo-container{
-    position: relative;
-    display: flex;
-
-    img {
-        height: $logo-size;
-        width: $logo-size;
-        object-fit:cover;
-    } 
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: hidden;
 }
+
+.section{
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  //margin: 30px 0%;
+  //background: orange;
+
+  &:nth-child(odd){
+   background: $cool-pink;
+  }
+
 
 }

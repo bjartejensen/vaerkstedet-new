@@ -28,6 +28,8 @@ export class FindComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.layoutService.scrollToSection("top","auto");
     
     this.content = this.findService.getContent();
     this.header = this.findService.getHeader();

@@ -3,7 +3,7 @@
     <app-custommade-desktop></app-custommade-desktop>
 </ng-template>
 
-<div [@loadUnload]
+<div id="top" [@loadUnload]
     (@loadUnload.done)="onLoadDone($event)"
  class="container" *ngIf="(isMobile$ | async);else customdesktop" >
  
@@ -46,6 +46,10 @@
             {{c}}
             <br>
         </p>
+    </div>
+
+    <div (click)="layoutService.scrollToSection('top')" >
+        <h4>Top</h4>
     </div>
 
 </div>

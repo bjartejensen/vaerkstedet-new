@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { loadUnload } from 'src/app/animations';
 import { DesignersService } from '../designers.service';
 
 @Component({
   selector: 'app-designers-desktop',
   templateUrl: './designers-desktop.component.html',
-  styleUrls: ['./designers-desktop.component.scss']
+  styleUrls: ['./designers-desktop.component.scss'],
+  animations: [loadUnload]
 })
 export class DesignersDesktopComponent implements OnInit {
 

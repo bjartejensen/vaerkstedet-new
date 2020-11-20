@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { loadUnload } from 'src/app/animations';
 import { FindService } from '../find.service';
 
 @Component({
   selector: 'app-find-desktop',
   templateUrl: './find-desktop.component.html',
-  styleUrls: ['./find-desktop.component.scss']
+  styleUrls: ['./find-desktop.component.scss'],
+  animations: [loadUnload]
 })
 export class FindDesktopComponent implements OnInit {
 
@@ -19,12 +21,8 @@ export class FindDesktopComponent implements OnInit {
   constructor(private findService:FindService) { }
 
   ngOnInit(): void {
-
-    debugger;
     this.content = this.findService.getContent();
     this.header = this.findService.getHeader();
-    
-
   }
 
 }

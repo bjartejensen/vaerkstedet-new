@@ -94,17 +94,6 @@
   @media (min-width: 768px){
       width: 75%;
   }
-
-  /* p:last-of-type{
-    @include sub-header-mobile;
-    width: 100%;
-}
-
-  p:first-of-type{
-    border-right: 10px solid $cool-pink;
-    padding-right: 2rem;
-    margin: 1rem 0%;
-} */
  
   p{
       @include content-mobile;

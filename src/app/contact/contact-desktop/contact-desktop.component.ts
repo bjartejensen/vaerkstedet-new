@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
 import { ContactService } from '../contact.service';
 
@@ -11,7 +12,8 @@ import { ContactService } from '../contact.service';
   templateUrl: './contact-desktop.component.html',
   styleUrls: ['./contact-desktop.component.scss'],
   animations:[
-    trigger("fadein",
+    loadUnload,
+    /* trigger("fadein",
     [
       transition(":enter",
       [style({opacity:0, 
@@ -19,7 +21,9 @@ import { ContactService } from '../contact.service';
         transform: "translateY(-20px)"}),
         animate("400ms 400ms")
     ])
-  ])]})
+  ]) */
+
+]})
 
 export class ContactDesktopComponent implements OnInit {
 

@@ -8,7 +8,7 @@
     </div>
 </div>-->
 
-<div class="container" *ngIf="(isMobile$ | async);else landingdesktop">
+<div class="container" id="top" *ngIf="(isMobile$ | async);else landingdesktop">
 
     <ng-container *ngFor="let img of images; let i = index">
         <div class="section" [id]="i" 
@@ -23,6 +23,10 @@
             </app-magazine>
         </div> 
     </ng-container>
+
+    <div (click)="layoutService.scrollToSection('top')" >
+        <h4>Top</h4>
+    </div>
 
 </div>
 

@@ -23,21 +23,16 @@ export class AboutComponent implements OnInit {
 
   images:string[]=[];
 
-  constructor(private layoutService:LayoutService,
-    private aboutService:AboutService,
-    private viewportScroller: ViewportScroller) {}
+  constructor(private aboutService:AboutService,
+    public layoutService:LayoutService) {}
 
   ngOnInit(): void {
+
+    this.layoutService.scrollToSection("top","auto");
 
     this.setImages();
     this.setHeader();
     this.setContent();
-  }
-
-  onClickScroll(elementId:string):void{
-    this.aboutService.scrollToSection(elementId);
-
-    //this.viewportScroller.scrollToAnchor(elementId);
   }
 
   private setHeader(){

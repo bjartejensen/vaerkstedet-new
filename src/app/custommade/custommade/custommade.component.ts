@@ -41,10 +41,12 @@ export class CustommadeComponent implements OnInit {
   contentTwo:string[]=[];
   images:string[]=[];
 
-  constructor(private layoutService:LayoutService,
+  constructor(public layoutService:LayoutService,
       private customService:CustommadeService) { }
 
   ngOnInit(): void {
+
+    this.layoutService.scrollToSection("top","auto");
 
     this.setImages();
     this.setHeader();

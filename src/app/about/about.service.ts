@@ -9,24 +9,11 @@ export class AboutService {
 
   constructor() { }
 
-  public scrollToSection(sectionId: string, scrollBehavior: string = "auto") {
-    var elements = document.getElementById(sectionId);
-
-    if (!(elements === undefined || elements === null)) {
-      if (scrollBehavior == "smooth") {
-        elements.scrollIntoView({ behavior: "smooth" });
-      } else {
-        elements.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }
-
-
   public getImages():string[]{
 
     let img1 = "../../assets/img/about/2.jpg";
     let img2 = "../../assets/img/about/3.jpg";
-    let img3 = "../../assets/img/about/5.jpg";
+    let img3 = "../../assets/img/about/6.jpg";
     let img4 = "../../assets/img/about/6.jpg";
 
     this.imgArr.push(img1);

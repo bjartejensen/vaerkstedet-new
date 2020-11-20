@@ -25,9 +25,12 @@ export class DesignersComponent implements OnInit {
   images:string[]=[]; 
 
   constructor(private designersService: DesignersService,
-    private layoutService:LayoutService) { }
+    public layoutService:LayoutService) { }
   
   ngOnInit(): void {
+
+    this.layoutService.scrollToSection("top","auto");
+
     this.setImages();
     this.setHeader();
     this.setContentOne();

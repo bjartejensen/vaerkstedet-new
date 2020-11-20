@@ -1,5 +1,4 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/services/layout.service';
 import { LandingService } from '../landing.service';
 import { Observable } from 'rxjs';
@@ -28,7 +27,7 @@ export class LandingComponent implements OnInit {
   vec:number[]=[1,1,1,1,1];
 
   constructor(private landingService:LandingService,
-    private layoutService: LayoutService) {
+    public layoutService: LayoutService) {
       
       this.images = this.landingService.images;
       this.subHeaders = this.landingService.subHeaders;
@@ -37,6 +36,12 @@ export class LandingComponent implements OnInit {
     }
 
   ngOnInit(): void {   
+
+    
+  }
+
+  onClickScroll(elementId:string):void{
+    this.layoutService.scrollToSection(elementId);
   }
 
   onVisible(event){

@@ -1,5 +1,21 @@
-<div class="test">
-    <div class="logo-container">
-         <img [src]="logoUrl">
+<div class="container" id="top">
+
+    <ng-container *ngFor="let img of images; let i = index">
+        <div class="section" [id]="i" 
+            appIntersection
+            [debounceTime]="0"
+            (visible)="onVisible($event)">
+            <app-magazine [imgUrl]="img" 
+                    [subHeader]="subHeaders[i]" 
+                    [url]="urls[i]"
+                    [btnCaption]="btnCaptions[i]"
+                    *ngIf="i<=inFocus">
+            </app-magazine>
+        </div> 
+    </ng-container>
+
+     <div (click)="layoutService.scrollToSection('top')" >
+        <h4>Top</h4>
     </div>
+
 </div>

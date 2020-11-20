@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
 import { CustommadeService } from '../custommade.service';
 
 @Component({
   selector: 'app-custommade-desktop',
   templateUrl: './custommade-desktop.component.html',
-  styleUrls: ['./custommade-desktop.component.scss']
+  styleUrls: ['./custommade-desktop.component.scss'],
+  animations: [loadUnload]
 })
 export class CustommadeDesktopComponent implements OnInit {
   

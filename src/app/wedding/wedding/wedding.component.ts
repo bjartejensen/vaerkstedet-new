@@ -21,10 +21,12 @@ export class WeddingComponent implements OnInit {
   contentTwo:string[]=[];
   images:string[]=[];
 
-  constructor(private layoutService:LayoutService,
+  constructor(public layoutService:LayoutService,
          private weddingService:WeddingService) { }
 
   ngOnInit(): void {
+    
+    this.layoutService.scrollToSection("top","auto");
 
     this.setImages();
     this.setHeader();
@@ -42,6 +44,10 @@ export class WeddingComponent implements OnInit {
 
   private setImages(){
     this.images = this.weddingService.getImages();
+  }
+
+  public get logoUrl(){
+    return "../../../assets/logo/logo-grey.png";
   }
 
 }
