@@ -19,7 +19,7 @@ export class AboutDesktopComponent implements OnInit {
 
   images:string[]=[];
 
-  constructor(private aboutService:AboutService) {}
+  constructor(private aboutService:AboutService,public layoutService:LayoutService) {}
 
   ngOnInit(): void {
 

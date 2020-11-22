@@ -1,0 +1,27 @@
+@import "../../../styles.scss";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.container{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+h4{
+    @include content-mobile();
+    text-align: center;
+    font-family: $menu-font;
+    color:$cool-green;
+    
+
+
+}

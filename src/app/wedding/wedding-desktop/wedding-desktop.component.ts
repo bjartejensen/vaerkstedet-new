@@ -12,16 +12,15 @@ import { WeddingService } from '../wedding.service';
 })
 export class WeddingDesktopComponent implements OnInit {
 
-  isMobile$:Observable<boolean> = this.layoutService.isMobile$;
-  isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
+/*   isMobile$:Observable<boolean> = this.layoutService.isMobile$;
+  isDesktop$: Observable<boolean> = this.layoutService.isDesktop$; */
   
   header:string;
   contentOne:string[]=[];
   contentTwo:string[]=[];
   images:string[]=[];
 
-  constructor(private layoutService:LayoutService,
-    private weddingService:WeddingService) { }
+  constructor(private weddingService:WeddingService,public layoutService:LayoutService,) { }
 
   ngOnInit(): void {
     this.setHeader();

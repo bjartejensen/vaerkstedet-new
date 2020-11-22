@@ -17,7 +17,7 @@ export class CustommadeDesktopComponent implements OnInit {
   contentTwo:string[]=[];
   images:string[]=[];
 
-  constructor(private customService:CustommadeService) { }
+  constructor(private customService:CustommadeService, public layoutService:LayoutService) { }
 
   ngOnInit(): void {
 

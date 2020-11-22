@@ -2,60 +2,23 @@
     <app-landing-desktop></app-landing-desktop>
 </ng-template>
 
-<!--<div class="test" *ngIf="(isMobile$ | async);else landingdesktop">
-    <div class="logo-container">
-         <img [src]="logoUrl">
-    </div>
-</div>-->
+    <div class="container" id="top" *ngIf="(isMobile$ | async);else landingdesktop">
+            <ng-container *ngFor="let img of images; let i = index">
+                <div class="section" [id]="i" 
+                    appIntersection
+                    [debounceTime]="0"
+                    (visible)="onVisible($event)">
+                    <app-magazine [imgUrl]="img" 
+                            [subHeader]="subHeaders[i]" 
+                            [url]="urls[i]"
+                            [btnCaption]="btnCaptions[i]"
+                            *ngIf="i<=inFocus">
+                    </app-magazine>
+                </div> 
+            </ng-container>
 
-<div class="container" id="top" *ngIf="(isMobile$ | async);else landingdesktop">
-
-    <ng-container *ngFor="let img of images; let i = index">
-        <div class="section" [id]="i" 
-            appIntersection
-            [debounceTime]="0"
-            (visible)="onVisible($event)">
-            <app-magazine [imgUrl]="img" 
-                    [subHeader]="subHeaders[i]" 
-                    [url]="urls[i]"
-                    [btnCaption]="btnCaptions[i]"
-                    *ngIf="i<=inFocus">
-            </app-magazine>
-        </div> 
-    </ng-container>
-
-    <div (click)="layoutService.scrollToSection('top')" >
-        <h4>Top</h4>
-    </div>
-
-</div>
-
-<div class="container" *ngIf="false">
-        <div class="frame"    >
-            <div class="bg-container"
-                appSage 
-                (scrollDirection)="onScroll($event)">
-             
-                    <ng-container 
-                        *ngFor="let b of images; let i = index">
-                        
-                        <div class="bg" 
-                            [ngClass]="state==='UP'? 'bg_zoom':'' "
-                            *ngIf="isVisible(i)"
-                            [style.background-image]="'url(' + b + ')'">
-
-                            <div class="rect"></div>
-                            
-                            <div class="darken-overlay"></div>
-
-                          
-
-                            <div class="sub-header" >
-                                <h4>{{subHeaders[i]}}</h4>
-                            </div>
-
-                        </div>
-                    </ng-container>
+            <div class="top" (click)="layoutService.scrollToSection('top')" >
+                <h4>top</h4>
             </div>
-        </div>
-</div>
+    </div>
+

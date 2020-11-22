@@ -32,13 +32,13 @@ const routes: Routes = [
       import("./designers/designers.module").then((m) => m.DesignersModule),
         data: { animationState: 'Three' },
   },
-  {
+ /*  {
     path:"news",
     loadChildren: ()=>
       import("./news/news.module").then((m)=>m.NewsModule),
       data: { animationState: 'Two' },
-  }
-  ,{
+  } */
+  {
     path:"wedding",
     loadChildren:()=>import("./wedding/wedding.module").then((m)=>m.WeddingModule),
     data: { animationState: 'Two' },

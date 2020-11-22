@@ -14,15 +14,13 @@ import { MenuService } from '../menu.service';
   styleUrls: ['./shell.component.scss'],
   animations: [
     trigger("InAndOut",[
-       
       state('in', style({ opacity:1 })),
       transition('* => in', [
-                animate("100ms 300ms")
+                animate("100ms 0ms")
       ]),
-      state('out', style({ opacity:0 })),
-      transition('*=>out', [
-        animate("600ms 250ms")
-      ])
+/*       transition('*=>out', [
+        animate("600ms 1000ms", style({ opacity:0 }))
+      ]) */
     ])
 
   ]

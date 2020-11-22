@@ -26,15 +26,13 @@
             mat-icon-button
             class="hamburger"
             (click)="drawer.toggle()"
-            id="nav-top"
-            >
+            id="nav-top">
             <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
         </button>
   
         <mat-nav-list class="nav-list"  >
              <app-menu-list
-             
-            class="sidenav" 
+                class="sidenav" 
              [isMobile]="isMobile$ | async"
                          
              ></app-menu-list>

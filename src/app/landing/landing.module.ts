@@ -9,6 +9,7 @@ import { LandingDesktopComponent } from './landing-desktop/landing-desktop.compo
 import { MagazineComponent } from './magazine/magazine.component';
 import { MatButtonModule } from '@angular/material/button';
 import { IntersectionDirective } from './intersection.directive';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { IntersectionDirective } from './intersection.directive';
     CommonModule,
     LandingRoutingModule,
     ScrollingModule,
-    MatButtonModule
+    MatButtonModule,
   ]
 })
 export class LandingModule { }

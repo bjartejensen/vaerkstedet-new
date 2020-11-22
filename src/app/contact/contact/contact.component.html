@@ -74,8 +74,10 @@
                 </div>
     </form>
 
-    <div class="feedback" *ngIf="(feedback$ | async ) as userMessage; else err">
-            <p>{{userMessage}}</p>
+    <div class="feedback" [@fade]="state" 
+        (@fade.done)="onFadeDone($event)" 
+        *ngIf="(feedback$ | async ) as userMessage; else err">
+            <p >{{userMessage}}</p>
     </div>
 
 </div>

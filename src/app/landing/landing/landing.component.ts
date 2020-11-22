@@ -1,7 +1,8 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
 import { LandingService } from '../landing.service';
-import { Observable } from 'rxjs';
+import { Observable, timer } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-landing',
@@ -36,8 +37,6 @@ export class LandingComponent implements OnInit {
     }
 
   ngOnInit(): void {   
-
-    
   }
 
   onClickScroll(elementId:string):void{

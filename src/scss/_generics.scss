@@ -96,6 +96,18 @@
     letter-spacing: 1.35px;
 }
 
+.top{
+    cursor: pointer;
+  
+    h4{
+      @include content-mobile();
+      text-align: center;
+      font-family: $menu-font;
+      color:$cool-green; 
+      text-transform: lowercase;
+    }
+  }
+
 
 
 

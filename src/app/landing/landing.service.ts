@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class LandingService {
   subHeaders:string[]=[];
   btnCaptions:string[]=[];
   urls:string[]=[];
+
+  
 
   constructor(private title:Title, private meta: Meta) {
 

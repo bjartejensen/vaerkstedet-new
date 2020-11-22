@@ -25,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NgxShowDetailsDirective } from './directives/ngx-show-details.directive';
 import { MenuListItemDesktopComponent } from './menu-list-item-desktop/menu-list-item-desktop.component';
 import { SidenavDirective } from './directives/sidenav.directive';
+import { TopComponent } from './top/top.component';
 
 
 const modules = [
@@ -41,11 +42,12 @@ const modules = [
 ];
 
 @NgModule({
-  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent, FooterComponent, NgxShowDetailsDirective, MenuListItemDesktopComponent, SidenavDirective],
+  declarations: [ShellComponent, MenuListComponent, MenuListItemComponent, MenuListDesktopComponent, FooterComponent, NgxShowDetailsDirective, 
+    MenuListItemDesktopComponent, SidenavDirective, TopComponent],
   imports: [
     modules  
   ],
-  exports:[modules,ShellComponent,FooterComponent]
+  exports:[modules,ShellComponent,FooterComponent,TopComponent]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModule> {

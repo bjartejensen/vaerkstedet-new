@@ -1,7 +1,8 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
 import { LandingService } from '../landing.service';
-import { Observable } from 'rxjs';
+import { Observable, timer } from 'rxjs';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-landing-desktop',
   templateUrl: './landing-desktop.component.html',
@@ -21,7 +22,6 @@ export class LandingDesktopComponent implements OnInit {
 
   inFocus:number;
   vec:number[]=[1,1,1,1,1];
-
 
   constructor(private landingService:LandingService,
     public layoutService: LayoutService) {

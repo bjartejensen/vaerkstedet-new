@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -10,7 +11,20 @@ import { ContactService } from '../contact.service';
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-  animations:[loadUnload]
+  animations:[loadUnload,
+    trigger("fade",
+    [
+      state("*",style({opacity:1})),
+      state("shown",style({opacity:0})),
+      transition(":enter",[
+        style({opacity:0}),
+        animate(400)
+      ]),
+      transition("*=>shown",[
+        style({opacity:1}),
+        animate("400ms 5000ms")
+      ])
+    ])]
 })
 export class ContactComponent implements OnInit {
 
@@ -25,6 +39,8 @@ export class ContactComponent implements OnInit {
   errorMessage$: Observable<string>;
 
   showSpinner$: Observable<boolean>;
+
+  state:string;
   
   constructor(private layoutService:LayoutService,private contactService:ContactService,
               private route: ActivatedRoute) { 
@@ -57,6 +73,10 @@ export class ContactComponent implements OnInit {
     this.content = this.contactService.getContent();
   }
 
+  onFadeDone(event){
+    this.state ="shown";    
+  }
+
   onSubmit(){
     let from = this.contactForm.value.senderEmail;
     let subject = this.contactForm.value.subject;
@@ -64,7 +84,9 @@ export class ContactComponent implements OnInit {
 
     this.feedback$ = this.contactService.sendEmail(from,subject,message);
 
-    this.feedback$.subscribe(m=>{},
+    this.feedback$.subscribe(m=>{
+          
+    },
       err => {
           this.errorMessage$ = of(err);
       } 
@@ -74,14 +96,14 @@ export class ContactComponent implements OnInit {
 
   private setPristineForm(mailSubject: string = ""){
     this.contactForm = new FormGroup({
-      senderEmail: new FormControl("", [
+      senderEmail: new FormControl("bjartejensen@gmail.com", [
         Validators.required,
         Validators.email,
       ]),
-      subject: new FormControl("", [
+      subject: new FormControl("Test", [
         Validators.required,
       ]),
-      message: new FormControl("", [Validators.required]),
+      message: new FormControl("Dette er en test", [Validators.required]),
       subscribeToNewsletter: new FormControl(),
     });
   }

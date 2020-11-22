@@ -1946,9 +1946,9 @@
         "signature": "15e05617b8bcc6dd4cb71a716ffa0d7d0a868ac62d7b14d44cb131e1285a5ae4",
         "affectsGlobalScope": false
       },
-      "../../node_modules/@types/jasmine/ts3.1/index.d.ts": {
-        "version": "babcda8cf9308a61af4c9c70fa04c58d37b0ea3afdce0d21eaebeb90a6792ebe",
-        "signature": "babcda8cf9308a61af4c9c70fa04c58d37b0ea3afdce0d21eaebeb90a6792ebe",
+      "../../node_modules/@types/jasmine/index.d.ts": {
+        "version": "9635d2a4fc9a533bfefd20f004c2a04a783db1bb61b9dbbd09bef3a8a1f4dbaa",
+        "signature": "9635d2a4fc9a533bfefd20f004c2a04a783db1bb61b9dbbd09bef3a8a1f4dbaa",
         "affectsGlobalScope": true
       },
       "../../node_modules/@types/jasminewd2/index.d.ts": {
@@ -1959,6 +1959,11 @@
       "../../node_modules/@types/json-schema/index.d.ts": {
         "version": "b2be568d8ce95fcb26eebd04c035d94825655fdf689bf67d799f5ff8cbbb1024",
         "signature": "b2be568d8ce95fcb26eebd04c035d94825655fdf689bf67d799f5ff8cbbb1024",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@types/parse-json/index.d.ts": {
+        "version": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
+        "signature": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/q/index.d.ts": {
@@ -4122,12 +4127,12 @@
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
-      "../../node_modules/@types/jasmine/ts3.1/index.d.ts": [
+      "../../node_modules/@types/jasmine/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
       "../../node_modules/@types/jasminewd2/index.d.ts": [
-        "../../node_modules/@types/jasmine/ts3.1/index.d.ts",
+        "../../node_modules/@types/jasmine/index.d.ts",
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
@@ -4136,6 +4141,10 @@
         "../node_modules/@types/node/index.d.ts"
       ],
       "../../node_modules/@types/minimatch/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../../node_modules/@types/parse-json/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
@@ -6673,7 +6682,7 @@
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
-      "../../node_modules/@types/jasmine/ts3.1/index.d.ts": [
+      "../../node_modules/@types/jasmine/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
@@ -6687,6 +6696,10 @@
         "../node_modules/@types/node/index.d.ts"
       ],
       "../../node_modules/@types/minimatch/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../../node_modules/@types/parse-json/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
@@ -7538,10 +7551,11 @@
       "../../node_modules/@types/color-name/index.d.ts",
       "../../node_modules/@types/glob/index.d.ts",
       "../../node_modules/@types/http-proxy/index.d.ts",
-      "../../node_modules/@types/jasmine/ts3.1/index.d.ts",
+      "../../node_modules/@types/jasmine/index.d.ts",
       "../../node_modules/@types/jasminewd2/index.d.ts",
       "../../node_modules/@types/json-schema/index.d.ts",
       "../../node_modules/@types/minimatch/index.d.ts",
+      "../../node_modules/@types/parse-json/index.d.ts",
       "../../node_modules/@types/q/index.d.ts",
       "../../node_modules/@types/selenium-webdriver/chrome.d.ts",
       "../../node_modules/@types/selenium-webdriver/edge.d.ts",
