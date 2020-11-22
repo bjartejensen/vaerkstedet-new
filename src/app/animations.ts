@@ -19,13 +19,7 @@ export const trnsOut:string = "cubic-bezier(.39,.08,1,-0.07)";
 export const trnsIn:string = "cubic-bezier(0,.87,.12,1)";
 export const slowStart:string = "cubic-bezier(1,0,1,-0.07)";
 
-/* ,
-      query(".image-container",[
-        style({opacity:0,transform: "translateX(-20px)"}),
-      animate(`3000ms 300ms ${trnsIn}`),animateChild()
-      ]) */
-
-  export const loadUnload = trigger("loadUnload",[
+export const loadUnload = trigger("loadUnload",[
 
     transition(":enter",[
       group([
@@ -33,10 +27,6 @@ export const slowStart:string = "cubic-bezier(1,0,1,-0.07)";
         style({opacity:0,transform: "translateX(-20px)"}),
         animate(`3000ms 300ms ${trnsIn}`),animateChild()
       ]),
-    /*   query('.some-element-that-may-not-be-there', [
-        animate(...),
-        animate(...)
-      ], { optional: true }) */
       query(".img", [
         style({opacity:0,transform: "translateX(-20px)"}),
       animate(`400ms 2800ms`),animateChild()
@@ -59,30 +49,6 @@ export const slowStart:string = "cubic-bezier(1,0,1,-0.07)";
       animate(`3000ms 300ms ${trnsIn}`,style({opacity:0,transform: "translateX(20px)"}))
     ]),
 
-    
+])
 
-  ])
-
-
-  export const routeTransitionAnimations = trigger('triggerName', [
-
-    transition('void => *, * => void', [
-      style({ position: 'relative' }),
-      query(':enter, :leave', [
-        style({
-          position: 'absolute',
-          overflowY:"hidden",
-          top: 0,
-          right: 0,
-          width: '100%'
-        })
-      ]),
-      query(':enter', [style({ top: '-100vh', opacity: 0 })]),
-      query(':leave', animateChild()),
-      group([
-            query(':leave', [animate('10ms 2000ms ease-out', style({ top: '1200vh', opacity: 0 }))]),
-            query(':enter', [animate('10ms 2000ms ease-out', style({ top: '0%', opacity: 1 }))])
-          ]),
-      query(':enter', animateChild())
-      ])
-  ]);
+ 

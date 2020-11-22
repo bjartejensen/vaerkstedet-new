@@ -16,40 +16,8 @@
   left:0;
   right:0;
   bottom:0;
-  //min-height: 100vh;
-  //overflow: visible;
-  
 }
 
-.logo-container{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background:black;
-    z-index: 1000;
-
-    .logo{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: orange;
-        height: 200px;
-    
-        h2{
-            position: relative;
-            font-family: $din-font;
-            font-weight: 700;
-            font-size: 2em;
-            font-size: 9rem;
-            color: #fff;
-        }
-    }
-
-}
 
 
 

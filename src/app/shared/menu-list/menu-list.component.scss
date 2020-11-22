@@ -21,17 +21,19 @@
     border: solid 1px $cool-pink;
     margin: 0% auto;
 
+    @media (min-width:768px){
+      //background: orange;
+      margin: 5% auto;
+    }
+      
+
+
 }
 
 .navblock + .navblock{
   margin: 0.5em 0%;
 }
 
-/* .menu-container-d{
-  @extend .menu-container;
-  width: 100vh;
-  background:rgb(34, 33, 33);
-} */
 
 .menu{
     position: relative;
@@ -74,6 +76,15 @@
 
 .footer{
   margin: auto;
+  margin-top: 2%;
+
+  @media (min-width:768px){
+    margin-top: 5%;
+  }
+        
+        
+
+
 }
 
 

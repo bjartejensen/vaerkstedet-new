@@ -1,22 +1,4 @@
 
-<ng-template #analyticsTemplate  >
-    <div class="logo-container" *ngIf="false">
-        <div class="logo">
-            <h2>VAERKSTEDET</h2>
-        </div>
-    </div>
-</ng-template>
-
 <app-shell>
-   
-    <router-outlet class="outlet" #outlet="outlet"></router-outlet>
-   
-   <!-- <div [@triggerName]="prepareRoute(outlet)">
-
-         <ng-container  
-            *ngTemplateOutlet="analyticsTemplate">
-            </ng-container>
-
-   
-    </div> -->
+    <router-outlet class="outlet"></router-outlet>
 </app-shell>

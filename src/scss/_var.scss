@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,700|EB+Garamond:ital,wght@1,500&display=swap'|Lora:400,700&display=swap'");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700|EB+Garamond:ital,wght@1,500&display=swap'");
 
 //Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap'|
 
@@ -6,58 +6,20 @@
     font-family: "DIN";
     src: url("/assets/fonts/DIN/D-DINCondensed.woff2") format("woff");
 } 
+ 
 
-/*  @font-face {
-    font-family: "Raleway", sans-serif;
-    font-weight: 100 1000;
-    src: url("/assets/fonts/Raleway-VariableFont_wght")
-      format("truetype");
-  } */
 
-@font-face {
-    font-family: "WorkSans";
-    font-weight: 100 1000;
-    src: url("/assets/fonts/Worksans/WorkSans-VariableFont_wght")
-      format("truetype");
-  }
-
-@font-face {
-    font-family: "WorkSans-italic";
-    font-weight: 100 1000;
-    src: url("/assets/fonts/Worksans/WorkSans-Italic-VariableFont_wght")
-      format("truetype");
-  }
-
-@font-face {
-    font-family: "Playfairit";
-    font-weight: 100 1000;
-    src: url("/assets/fonts/Playfair/PlayfairDisplay-Italic-VariableFont_wght.ttf")
-      format("truetype");
-}
-  
-@font-face {
-    font-family: "Playfair";
-    font-weight: 100 1000;
-    src: url("/assets/fonts/Playfair/PlayfairDisplay-VariableFont_wght.ttf")
-      format("truetype");
-} 
-
+//Base fonts
 $din-font: DIN;
 $eb-font: 'EB Garamond', serif;
 $popping-font: "Poppins", sans-serif;
 
-/* $it-font: 'Playfairit', serif;
-$text-font: 'Lora'; 
- */
- 
+
 $menu-font: $popping-font;
 $header-font: $din-font;
 $sub-header-font: $eb-font;
 $form-font: $popping-font;
 $text-font: $din-font;
-
-//$header-font: 'Playfairit', serif;
-
 
 $background-color: #c8cad3;
 $header-color: rgb(73, 72, 72);
