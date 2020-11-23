@@ -1,5 +1,5 @@
 
-<div @loadUnload class="container" >
+<div @loadUnload id="top" class="container" >
  
     <div class="header">
         <h1>{{header}}</h1>
@@ -35,12 +35,12 @@
                     </p>
                 </div>
 
-            </div> 
+            </div>
     
     </div>
 
-    
-
-    
+    <div class="top" (click)="layoutService.scrollToSection('top')" >
+        <h4>Top</h4>
+    </div>
 
 </div>

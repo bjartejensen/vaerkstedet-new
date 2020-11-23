@@ -32,14 +32,14 @@ export const loadUnload = trigger("loadUnload",[
       animate(`400ms 2800ms`),animateChild()
       ], {optional: true}),
       query(".logo",[
-        style({opacity:0}),
-      animate(`3000ms 0ms ${trnsIn}`,
+        style({opacity:0,transform:"translateX(100%)"}),
+      animate(`2500ms 0ms ${trnsIn}`,
       keyframes( 
         [
-        style({ opacity: 0, offset: 0 }),
-        style({ opacity: 1, offset: 0.1 }),
-        style({ opacity: 1, offset: 0.9 }),
-        style({ opacity: 0.2,  offset: 1 })
+        style({ opacity: 0, offset: 0, transform:"translateX(0%)" }),
+        style({ opacity: 1, offset: 0.1, transform:"translateX(0%)" }),
+        style({ opacity: 1, offset: 0.9, transform:"translateX(0%)" }),
+        style({ opacity: 0.4,  offset: 0.99, transform:"translateX(0%)" })
       ])),animateChild()
       ], {optional: true})
     

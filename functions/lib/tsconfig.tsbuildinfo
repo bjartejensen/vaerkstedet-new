@@ -1426,8 +1426,13 @@
         "signature": "b1166961be52cf7264d2b973046fce666a81b0fb49c470ba67919ebe5eb4635d",
         "affectsGlobalScope": false
       },
+      "../src/filters/http.filter.ts": {
+        "version": "67998f868e8981d19d1e17977c7982f646559945e32ccee3db6a995aa40c2eba",
+        "signature": "7a87d08640ce8e48eb10c60929490c6a7d8e1d6834fcd09d0bb2627300ddda4f",
+        "affectsGlobalScope": false
+      },
       "../src/newsletter/newsletter/newsletter.controller.ts": {
-        "version": "0f3b3bc6f87824a221587c732f9905f78fa5d44e1df7a9ae58c13bfca03005c2",
+        "version": "f7437000a83e44db989440137564b3d580ba9aa2ed2f414c40a16aa87b8ae948",
         "signature": "345718b3c10c3d984be8e0e735a6e81568ec5e225bc5051c44941f3122c82349",
         "affectsGlobalScope": false
       },
@@ -1841,11 +1846,6 @@
         "signature": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c",
         "affectsGlobalScope": false
       },
-      "../src/filters/http.filter.ts": {
-        "version": "67998f868e8981d19d1e17977c7982f646559945e32ccee3db6a995aa40c2eba",
-        "signature": "7a87d08640ce8e48eb10c60929490c6a7d8e1d6834fcd09d0bb2627300ddda4f",
-        "affectsGlobalScope": false
-      },
       "../src/index.ts": {
         "version": "7962e34eed95940cac7063b75914feb0abc8e0e07ce43f57746d382f9643ab95",
         "signature": "c485bd10c9d6c691bda1a92d6cec9b6d689c4b78ae567e6639e6412c45ccff91",
@@ -2050,6 +2050,8 @@
       "strictNullChecks": false,
       "skipLibCheck": true,
       "allowSyntheticDefaultImports": true,
+      "project": "../tsconfig.json",
+      "watch": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
@@ -4112,7 +4114,8 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@types/node/base.d.ts",
-        "../node_modules/@types/node/index.d.ts"
+        "../node_modules/@types/node/index.d.ts",
+        "../src/filters/http.filter.ts"
       ],
       "../../node_modules/@types/color-name/index.d.ts": [
         "../node_modules/@types/node/base.d.ts",

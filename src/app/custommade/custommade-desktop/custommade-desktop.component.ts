@@ -21,6 +21,8 @@ export class CustommadeDesktopComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.customService.setTitleAndMeta();
+
     this.setImages();
     this.setHeader();
     this.setContentOne();

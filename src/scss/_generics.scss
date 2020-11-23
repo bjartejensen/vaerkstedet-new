@@ -13,7 +13,7 @@
 }
 
 @mixin sub-header-mobile {
-    font-family: $eb-font;
+    font-family: $sub-header-font;
     font-style: italic;
     font-size: 3rem;
     line-height: 3.75rem;
@@ -58,7 +58,8 @@
 }
 
 @mixin sub-header-desktop {
-    font-family:$sub-header-font;
+    font-family: $sub-header-font;
+    font-style: italic;
     font-size: 3rem;
     line-height: 3.75rem;
     margin: 2rem 0%;
@@ -74,7 +75,7 @@
 
 @mixin content-desktop{
     font-family:$din-font;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     line-height: 2rem;
     letter-spacing:1.5px ;
     color:$header-color;
@@ -82,7 +83,7 @@
     text-align: left;
 
     @media (min-width: 1200px){
-        font-size: 2.45rem;
+        font-size: 2.25rem;
         line-height: 3rem;
     }
 }

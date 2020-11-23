@@ -1,8 +1,10 @@
-import { Controller, Body, Post, Res, HttpStatus } from "@nestjs/common";
+import { Controller, Body, Post, Res, HttpStatus, UseFilters } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
+import { HttpExceptionFilter } from "../../filters/http.filter";
 const axios = require("axios");
 
 @Controller('newsletter')
+@UseFilters(new HttpExceptionFilter())
 export class NewsletterController {
 
     constructor(private configService: ConfigService) {}
@@ -19,7 +21,9 @@ export class NewsletterController {
               const baseUrl = this.configService.get<string>("MAILCHIMP_BASE_URL");
               const url = baseUrl + audienceId;
 
-            //Fake an error
+              console.log("Url",apiKey);
+
+              //Fake an error
             //throw new HttpException("En fejl skete",400);
             
             const ret = await axios({
@@ -37,8 +41,10 @@ export class NewsletterController {
                   Authorization: "auth " + apiKey,
                 },
               });
+
+            console.log("Ret",ret);
             
-            return await response.status(HttpStatus.OK).json({ status: ret });
+            return response.status(HttpStatus.OK);
     }
 
 }

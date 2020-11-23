@@ -4,37 +4,22 @@
 </ng-template>
 
 <div id="top" [@loadUnload]
-    (@loadUnload.done)="onLoadDone($event)"
- class="container" *ngIf="(isMobile$ | async);else customdesktop" >
+    class="container" *ngIf="(isMobile$ | async);else customdesktop" >
  
     <div class="header">
         <h1>{{header}}</h1>
     </div>
 
-<!-- [@imagefun]="state"
-        (@imagefun.done)="onAnimDone($event)"-->
+    <div class="img-container">
+      <!--  <img class="logo" [src]="logoUrl">-->
+        <img  class="mat-elevation-z1" [src]="images[0]" alt="">
+    </div> 
 
-    <div   
-       
-        class="merge">
-
-            <div 
-       [@imagefun]="state"
-        (@imagefun.done)="onAnimDone($event)"     
-            
-            class="img-container">
-                <img
-            
-                class="mat-elevation-z1" [src]="images[0]" alt="">
-            </div>
-
-            <div class="content c">
-                <p [id]="'c_' + i" *ngFor="let c of contentOne; let i=index" >
-                    {{c}}
-                    <br>
-                </p>
-            </div>
-
+    <div class="content c">
+        <p *ngFor="let c of contentOne; let i=index" >
+            {{c}}
+            <br>
+        </p>
     </div>
 
     <div class="img-container">

@@ -1,16 +1,17 @@
-
-<ng-template #designersdesktop>
-    <app-designers-desktop></app-designers-desktop>
+<ng-template #sustaindesktop>
+    <app-sustain-desktop></app-sustain-desktop>
 </ng-template>
 
-<div id="top" [@loadUnload] class="container" *ngIf="(isMobile$ | async);else designersdesktop" >
+<div id="top" [@loadUnload] 
+    class="container" *ngIf="(isMobile$ | async);else sustaindesktop">
  
     <div class="header">
         <h1>{{header}}</h1>
     </div>
-
+    
     <div class="img-container">
-        <img class="mat-elevation-z1" [src]="images[0]" alt="">
+        <img class="logo" [src]="logoUrl">
+        <img class="img mat-elevation-z1" [src]="images[0]" alt="">
     </div>
 
     <div class="content">

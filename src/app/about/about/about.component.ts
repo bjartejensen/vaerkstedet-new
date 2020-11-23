@@ -30,6 +30,8 @@ export class AboutComponent implements OnInit {
 
     this.layoutService.scrollToSection("top","auto");
 
+    this.aboutService.setTitleAndMeta();
+
     this.setImages();
     this.setHeader();
     this.setContent();

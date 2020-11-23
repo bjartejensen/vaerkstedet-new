@@ -59,10 +59,10 @@ const routes: Routes = [
       data:{animationState: 'One'}
   },
   {
-    path:"newsletter",
-    loadChildren:()=>import("./newsletter/newsletter.module").then((m)=>m.NewsletterModule),
+    path:"sustain",
+    loadChildren:()=>import("./sustain/sustain.module").then((m)=>m.SustainModule),
     data:{animationState: 'One'}
-  },
+  }, 
   {
     path:"**",
     loadChildren: () => import("./landing/landing.module").then((m) => m.LandingModule), 

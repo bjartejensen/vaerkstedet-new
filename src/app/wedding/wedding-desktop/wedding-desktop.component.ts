@@ -23,6 +23,9 @@ export class WeddingDesktopComponent implements OnInit {
   constructor(private weddingService:WeddingService,public layoutService:LayoutService,) { }
 
   ngOnInit(): void {
+
+    this.weddingService.setTitleAndMeta();
+
     this.setHeader();
     this.setContent();
     this.setImages();

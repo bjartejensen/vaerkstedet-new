@@ -15,16 +15,17 @@ import { ContactService } from '../contact.service';
     trigger("fade",
     [
       state("*",style({opacity:1})),
-      state("shown",style({opacity:0})),
+      state("shown",style({opacity:0,position:"absolute"})),
       transition(":enter",[
         style({opacity:0}),
         animate(400)
       ]),
       transition("*=>shown",[
         style({opacity:1}),
-        animate("400ms 5000ms")
+        animate("400ms 5000ms",style({opacity:0,transform:"translateY(20px)"}) ),
       ])
-    ])]
+    ])
+  ]
 })
 export class ContactComponent implements OnInit {
 
@@ -51,6 +52,8 @@ export class ContactComponent implements OnInit {
 
     this.setHeader();
     this.setContent();
+
+    this.contactService.setTitleAndMeta();
 
     this.route.paramMap.subscribe((params) => {
       let id = params.get("id");
@@ -85,7 +88,10 @@ export class ContactComponent implements OnInit {
     this.feedback$ = this.contactService.sendEmail(from,subject,message);
 
     this.feedback$.subscribe(m=>{
-          
+
+      this.contactForm.reset();
+      this.contactForm.markAsUntouched();
+
     },
       err => {
           this.errorMessage$ = of(err);
@@ -96,14 +102,12 @@ export class ContactComponent implements OnInit {
 
   private setPristineForm(mailSubject: string = ""){
     this.contactForm = new FormGroup({
-      senderEmail: new FormControl("bjartejensen@gmail.com", [
+      senderEmail: new FormControl("", [
         Validators.required,
         Validators.email,
       ]),
-      subject: new FormControl("Test", [
-        Validators.required,
-      ]),
-      message: new FormControl("Dette er en test", [Validators.required]),
+      subject: new FormControl("",Validators.required),
+      message: new FormControl("", Validators.required ),
       subscribeToNewsletter: new FormControl(),
     });
   }

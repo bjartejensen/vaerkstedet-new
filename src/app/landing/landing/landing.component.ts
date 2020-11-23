@@ -37,6 +37,9 @@ export class LandingComponent implements OnInit {
     }
 
   ngOnInit(): void {   
+
+    this.landingService.setTitleAndMeta();
+
   }
 
   onClickScroll(elementId:string):void{

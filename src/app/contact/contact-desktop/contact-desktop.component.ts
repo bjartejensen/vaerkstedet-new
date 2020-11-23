@@ -1,4 +1,4 @@
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -13,16 +13,19 @@ import { ContactService } from '../contact.service';
   styleUrls: ['./contact-desktop.component.scss'],
   animations:[
     loadUnload,
-    /* trigger("fadein",
+    trigger("fade",
     [
-      transition(":enter",
-      [style({opacity:0, 
-        backgroundColor:"rgba(0,0,0,0.75)",
-        transform: "translateY(-20px)"}),
-        animate("400ms 400ms")
+      state("*",style({opacity:1})),
+      state("shown",style({opacity:0,position:"absolute"})),
+      transition(":enter",[
+        style({opacity:0}),
+        animate(400)
+      ]),
+      transition("*=>shown",[
+        style({opacity:1}),
+        animate("400ms 5000ms",style({opacity:0,transform:"translateY(20px)"}) ),
+      ])
     ])
-  ]) */
-
 ]})
 
 export class ContactDesktopComponent implements OnInit {
@@ -39,14 +42,18 @@ export class ContactDesktopComponent implements OnInit {
 
   showSpinner$: Observable<boolean>;
 
+  state:string;
+
   constructor(private layoutService:LayoutService,private contactService:ContactService,
     private route: ActivatedRoute) { 
       this.showSpinner$ = this.contactService.showSpinner$;
 }
 ngOnInit(): void {
 
+  this.contactService.setTitleAndMeta();
   this.setHeader();
   this.setContent();
+  
 
   this.route.paramMap.subscribe((params) => {
     let id = params.get("id");
@@ -69,6 +76,10 @@ private setContent(){
   this.content = this.contactService.getContent();
 }
 
+onFadeDone(event){
+  this.state ="shown";    
+}
+
 onSubmit(){
   let from = this.contactForm.value.senderEmail;
   let subject = this.contactForm.value.subject;
@@ -76,7 +87,10 @@ onSubmit(){
 
   this.feedback$ = this.contactService.sendEmail(from,subject,message);
 
-  this.feedback$.subscribe(m=>{},
+  this.feedback$.subscribe(m=>{
+    this.contactForm.reset();
+    this.contactForm.markAsUntouched();
+  },
     err => {
         this.errorMessage$ = of(err);
     } 
@@ -84,17 +98,18 @@ onSubmit(){
 
 }
 
-  private setPristineForm(mailSubject: string = ""){
-    this.contactForm = new FormGroup({
-      senderEmail: new FormControl("", [
-        Validators.required,
-        Validators.email,
-      ]),
-      subject: new FormControl("", [
-        Validators.required,
-      ]),
-      message: new FormControl("", [Validators.required]),
-      subscribeToNewsletter: new FormControl(),
-    });
-  }
+private setPristineForm(mailSubject: string = ""){
+
+  this.contactForm = new FormGroup({
+    senderEmail: new FormControl("", [
+      Validators.required,
+      Validators.email,
+    ]),
+    subject: new FormControl("",Validators.required),
+    message: new FormControl("", Validators.required ),
+    subscribeToNewsletter: new FormControl(),
+  });
+}
+
+
 }

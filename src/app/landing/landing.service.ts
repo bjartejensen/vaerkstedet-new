@@ -17,7 +17,7 @@ export class LandingService {
 
   constructor(private title:Title, private meta: Meta) {
 
-    this.setTitleAndMeta();
+    
     this.setImages();
     this.setBtnCaptions();
     this.setUrls();
@@ -26,7 +26,7 @@ export class LandingService {
 
    }
 
-  private setTitleAndMeta():void{
+  public setTitleAndMeta():void{
     let header = "Håndlavede smykker i Ryesgade. Specialdesigns og grundigt håndværk. Fokus på bæredygtige materialer og ansvarlige leverandører.";
     this.title.setTitle(header);
 
@@ -41,31 +41,35 @@ export class LandingService {
     return "../../../assets/logo/logo-grey.png";
   }
 
+  public get logoGoldUrl(){
+    return "../../../assets/logo/logo-gold.png";
+  }
+
   private setImages(){
+    this.images.push("../../../assets/img/landing/2.jpg");
+    this.images.push("../../../assets/img/landing/6.jpg");
     this.images.push("../../../assets/img/landing/1.jpg");
     this.images.push("../../../assets/img/landing/3.jpg");
-    this.images.push("../../../assets/img/landing/4.jpg");
-    this.images.push("../../../assets/img/landing/6.jpg");
   }
 
   private setUrls(){
-    this.urls.push("/custommade");
+    this.urls.push("/sustain");
     this.urls.push("/wedding");
+    this.urls.push("/custommade");
     this.urls.push("/about");
-    this.urls.push("/find");
   }
 
   private setBtnCaptions(){
-    this.btnCaptions.push("Se mere");
+    this.btnCaptions.push("Vores tilgang");
     this.btnCaptions.push("Vores Vielsesringe");
-    this.btnCaptions.push("Læs mere");
-    this.btnCaptions.push("Find os");
+    this.btnCaptions.push("Alt er håndlavet");
+    this.btnCaptions.push("Vores tilgang");
   }
 
   private setSubHeaders(){
-    this.subHeaders.push("der elsker unika");
-    this.subHeaders.push("der tror på kærligheden");
     this.subHeaders.push("der tror på bæredygtighed");
+    this.subHeaders.push("der tror på kærligheden");
+    this.subHeaders.push("der elsker unika");
     this.subHeaders.push("der værner om kundeoplevelsen");
   }
 

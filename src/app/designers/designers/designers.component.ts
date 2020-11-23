@@ -31,9 +31,12 @@ export class DesignersComponent implements OnInit {
 
     this.layoutService.scrollToSection("top","auto");
 
+    this.designersService.setTitleAndMeta();
+
     this.setImages();
     this.setHeader();
     this.setContentOne();
+    this.setContenTwo();
   }
 
   private setImages(){
@@ -47,5 +50,10 @@ export class DesignersComponent implements OnInit {
   private setContentOne(){
     this.contentOne = this.designersService.getContentOne();
   }
+
+  private setContenTwo(){
+    this.contentTwo = this.designersService.getContentTwo();
+  }
+
 
 }

@@ -11,23 +11,8 @@ export const trns:string = "cubic-bezier(.02,.95,.05,.99)";
   selector: 'app-custommade',
   templateUrl: './custommade.component.html',
   styleUrls: ['./custommade.component.scss'],
-  animations: [loadUnload,
-  trigger('imagefun',[
-    state("start",
-    style({opacity: 1, borderRadius:"0%",clipPath: "inset(0% 0px 0px 0px)"}) 
-    ),
-   /*  transition(":enter",[
-      style({opacity:0,width:"100vw"}),
-      animate(4000,style({opacity:1})),animateChild()]), */
-    transition("*=>start",[
-       query(":self",[
-          style({transform:"translate(-120px,0px)", clipPath: "inset(0% 100% 0px 0px)"}),
-          animate(`400ms 0ms ${trns}`) 
-        ]) 
-     
-      ])
-  ])
-  ]
+  animations: [loadUnload]
+  
 })
 export class CustommadeComponent implements OnInit {
 
@@ -48,6 +33,8 @@ export class CustommadeComponent implements OnInit {
 
     this.layoutService.scrollToSection("top","auto");
 
+    this.customService.setTitleAndMeta();
+
     this.setImages();
     this.setHeader();
     this.setContentOne();
@@ -55,13 +42,6 @@ export class CustommadeComponent implements OnInit {
 
   }
 
-  onLoadDone(event){
-    this.state = "start";
-  }
-
-  onAnimDone(event:AnimationEvent){
-    console.log("ev: ", event);
-  }
 
   private setHeader(){
     this.header = this.customService.getHeader();
@@ -77,6 +57,10 @@ export class CustommadeComponent implements OnInit {
 
   private setImages(){
     this.images = this.customService.getImages();
+  }
+
+  public get logoUrl(){
+    return "../../../assets/logo/logo-grey.png";
   }
 
 }

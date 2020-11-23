@@ -170,6 +170,7 @@
 
     button{
       float: right; 
+      font-family: $form-font;
     }
 
     @media (min-width: 768px){
@@ -192,9 +193,8 @@
   //background: orangered;
 
   p{
-    font-size: 0.9rem;
-    line-height: 1.35rem;
-    text-align: center;
+    @include content-mobile;
+  
   }
 
 }

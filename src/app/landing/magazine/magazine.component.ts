@@ -39,7 +39,7 @@ export const slowStart:string = "cubic-bezier(1,0,1,-0.07)";
       state('complete',style({opacity:0,transform:"translateY(0px)",height:"20px"})),
       transition(":enter",[
         style({transform:"translateY(-10px)"}),
-        animate(`3000ms 100ms ${trns}`,style({opacity:1,transform:"translateY(0px)"})),
+        animate(`2000ms 100ms ${trns}`,style({opacity:1,transform:"translateY(0px)"})),
         //animate(`400ms 0ms`,style({opacity:0,transform:"translateX(100px)"})), 
         animateChild()
       ]),
@@ -150,6 +150,12 @@ export class MagazineComponent implements OnInit {
   public get logoUrl(){
     return  this.landingService.logoUrl; //"../../../assets/logo/logo-grey.png";
   }
+
+  public get logoGoldUrl(){
+    return  this.landingService.logoUrl; //"../../../assets/logo/logo-grey.png";
+  }
+
+
 
   onSubHeaderAnimation(event:AnimationEvent){
 

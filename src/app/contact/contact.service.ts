@@ -17,12 +17,12 @@ export class ContactService {
   constructor(public http: HttpClient, 
               private title:Title,
               private meta:Meta) {
-                this.setTitleAndMeta();
+                
   }
 
-  private setTitleAndMeta(){
+  public setTitleAndMeta(){
 
-    const title ="Skriv til os";
+    const title ="Skriv til Vaerkstedet";
     this.title.setTitle(title);
     
     const description="Vi tager med glæde i mod alle henvendelser og svarer tilbage hurtigst muligt.";
@@ -38,7 +38,7 @@ export class ContactService {
     let str ="Har du et spørgsmål til vores smykker - eller har du fået en ide til et smykke - så tøv ikke med at skrive til Vaerkstedet.";
     arr.push(str);
     str = "Vi tager med glæde i mod alle henvendelser og svarer tilbage hurtigst muligt.";
-    arr.push(str);
+   // arr.push(str);
     return arr;
   }
 

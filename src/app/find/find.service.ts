@@ -7,10 +7,9 @@ import { Meta, Title } from '@angular/platform-browser';
 export class FindService {
 
   constructor(private title:Title, private meta: Meta) {
-      this.setTitleAndMeta();
-   }
+  }
 
-  private setTitleAndMeta(){
+  public setTitleAndMeta(){
 
     const title ="Find Vaerkstedet";
     this.title.setTitle(title);
@@ -28,7 +27,7 @@ export class FindService {
   }
 
   public getContent():string{
-    return "Uanset om du går målrettet efter et smykke, som du har set i butikkens udstillingsvindue, eller om du blot ønsker at lade dig inspirere, så ser vi frem til at tage imod dig i vores hyggelige værkstedsbutik i Ryesgade. Vi glæder os til at se dig.";
+    return "Uanset om du går målrettet efter et smykke, som du har set i butikkens udstillingsvindue, eller om du blot ønsker at lade dig inspirere, så ser vi frem til at tage imod dig i vores hyggelige værkstedsbutik i Ryesgade.";
   }
 
 }

@@ -19,10 +19,15 @@ export class DesignersDesktopComponent implements OnInit {
   constructor(private designersService: DesignersService) { }
   
   ngOnInit(): void {
+
+    this.designersService.setTitleAndMeta();
+
     this.setImages();
     this.setHeader();
     this.setContentOne();
+    this.setContenTwo();
   }
+
 
   private setImages(){
     this.images = this.designersService.getImages();
@@ -34,6 +39,10 @@ export class DesignersDesktopComponent implements OnInit {
 
   private setContentOne(){
     this.contentOne = this.designersService.getContentOne();
+  }
+
+  private setContenTwo(){
+    this.contentTwo = this.designersService.getContentTwo();
   }
 
 

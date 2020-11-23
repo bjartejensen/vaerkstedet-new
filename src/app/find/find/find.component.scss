@@ -17,6 +17,10 @@
     //background:$background-color;
     color: $text-color;
     //background: orange;
+
+    @media (min-width: 768px){
+        justify-content: center;
+    }
 }
 
 .header{
@@ -25,8 +29,8 @@
     justify-content: center;
     align-items: center;
     height: 80%;
-    margin: 2rem 0%;
-    
+    margin: 0%;
+    margin-top: 4em;
     //background: orangered;
     
     h1{
@@ -34,7 +38,7 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        line-height: 3rem;
+        //line-height: 3rem;
     }
 }
 
@@ -44,12 +48,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    //padding: 1rem;
     margin: 0%;
     width: 90%;
     //background: orange;
-    margin: 0% auto;
-    margin-bottom:2rem;
+    margin: 2rem auto;
+    //margin-bottom:2rem;
 
     @media (min-width: 768px){
         width: 75%;
@@ -57,8 +61,10 @@
    
     p{
         @include content-mobile;
-        width: 90%;
+        width: 95%;
+        line-height: 1.5rem;
         text-align: center;
+        //background: olive;
     }
 }
 

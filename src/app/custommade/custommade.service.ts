@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,12 @@ export class CustommadeService {
 
   imgArr:string[]=[];
 
-  constructor() { }
+  constructor(private title:Title,private meta:Meta) { }
+
+  public setTitleAndMeta(){
+    this.title.setTitle("Kunden i centrum");
+    this.meta.updateTag({name: "description",content:"Hos Vaerkstedet er den grundige vejledning og service en helt afgørende del af vores DNA."});
+  }
 
   public getHeader():string{
     return "Custom Made";
@@ -55,8 +61,8 @@ export class CustommadeService {
 
   public getImages():string[]{
 
-    let img1 = "../../assets/img/custommade/3.jpg";
-    let img2 = "../../assets/img/custommade/6.jpg";
+    let img1 = "../../assets/img/custommade/2.jpg";
+    let img2 = "../../assets/img/custommade/1.jpg";
     
     this.imgArr.push(img1);
     this.imgArr.push(img2);

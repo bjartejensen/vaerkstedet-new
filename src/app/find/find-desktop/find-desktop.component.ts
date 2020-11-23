@@ -21,6 +21,9 @@ export class FindDesktopComponent implements OnInit {
   constructor(private findService:FindService) { }
 
   ngOnInit(): void {
+
+    this.findService.setTitleAndMeta();
+
     this.content = this.findService.getContent();
     this.header = this.findService.getHeader();
   }

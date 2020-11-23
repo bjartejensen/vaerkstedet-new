@@ -16,7 +16,8 @@ import { MenuService } from '../menu.service';
     trigger("InAndOut",[
       state('in', style({ opacity:1 })),
       transition('* => in', [
-                animate("100ms 0ms")
+          style({opacity:0}),
+                animate("100ms 200ms")
       ]),
 /*       transition('*=>out', [
         animate("600ms 1000ms", style({ opacity:0 }))
@@ -57,7 +58,7 @@ export class ShellComponent implements OnInit {
 
     this.isMobile$.subscribe(x=>{
       //debugger
-      console.log("Mobile");
+      //console.log("Mobile");
       this.isMobile = x;
     })  
 

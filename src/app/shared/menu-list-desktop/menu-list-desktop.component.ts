@@ -62,30 +62,29 @@ export class MenuListDesktopComponent implements OnInit, OnChanges {
  
   constructor(private menuService:MenuService) {
     
-    this.secondaryMenuContext$
-      .subscribe(x=>console.log("obs$ emitted ",x ))
+  /*   this.secondaryMenuContext$
+      .subscribe(x=>console.log("obs$ emitted ",x )) */
   }
 
   ngOnInit(): void {
     this.setMenuItems();
+    this.onMouseoverPrimaryItem(null);
   }
 
   ngOnChanges(){
-    console.log("Opened State?: " , this.isOpened);
   }
 
   onTemplateChanged(event){
     debugger;
     this.secondaryTemplateChanged = true;
-    console.log("nu ændrede sec template sig");
+    //console.log("nu ændrede sec template sig");
   }
 
   setMenuItems(){
     this.menuItems = this.menuService.getMenuItemModels();
   }
 
-  public onMouseoverPrimaryItem(item:MenuModel){
-    console.log(item);
+  public onMouseoverPrimaryItem(item:MenuModel | null){
      this.secondaryMenuSubject.next(item);
      this.expanded = true;
   }

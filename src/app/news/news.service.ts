@@ -40,7 +40,7 @@ export class NewsService {
           return undefined;
       })).pipe(
         catchError((err)=>{
-          console.log(err);
+          //console.log(err);
           debugger;
           return throwError("Ups! Noget gik galt i afsendelsen.")}))
         .pipe(shareReplay()).subscribe();

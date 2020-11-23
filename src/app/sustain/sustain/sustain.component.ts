@@ -2,15 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { loadUnload } from 'src/app/animations';
 import { LayoutService } from 'src/app/services/layout.service';
-import { WeddingService } from '../wedding.service';
+import { SustainService } from '../sustain.service';
+
+
 
 @Component({
-  selector: 'app-wedding',
-  templateUrl: './wedding.component.html',
-  styleUrls: ['./wedding.component.scss'],
+  selector: 'app-sustain',
+  templateUrl: './sustain.component.html',
+  styleUrls: ['./sustain.component.scss'],
   animations:[loadUnload]
 })
-export class WeddingComponent implements OnInit {
+export class SustainComponent implements OnInit {
 
   isMobile$:Observable<boolean> = this.layoutService.isMobile$;
   isDesktop$: Observable<boolean> = this.layoutService.isDesktop$;
@@ -21,13 +23,13 @@ export class WeddingComponent implements OnInit {
   images:string[]=[];
 
   constructor(public layoutService:LayoutService,
-         private weddingService:WeddingService) { }
+         private sustainService:SustainService) { }
 
   ngOnInit(): void {
-    
+
     this.layoutService.scrollToSection("top","auto");
 
-    this.weddingService.setTitleAndMeta();
+    this.sustainService.setTitleAndMeta();
 
     this.setImages();
     this.setHeader();
@@ -35,16 +37,16 @@ export class WeddingComponent implements OnInit {
   }
 
   private setHeader(){
-    this.header = this.weddingService.getHeader();
+    this.header = this.sustainService.getHeader();
   }
 
   private setContent(){
-    this.contentOne = this.weddingService.getContentOne();
-    this.contentTwo = this.weddingService.getContentTwo();
+    this.contentOne = this.sustainService.getContentOne();
+    this.contentTwo = this.sustainService.getContentTwo();
   }
 
   private setImages(){
-    this.images = this.weddingService.getImages();
+    this.images = this.sustainService.getImages();
   }
 
   public get logoUrl(){

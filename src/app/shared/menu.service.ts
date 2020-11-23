@@ -33,8 +33,7 @@ export class MenuService {
             "Din smykkebutik i Ryesgade","Velkommen til Vaerkstedet", "home");
     menuArr.push(home);
 
-    let news = new MenuModel(MenuType.primary,
-      "Aktuelt","Seneste designs","news");
+   
     
       let secondArr: SubMenuModel[]=[];
       let second = new SubMenuModel("Seneste designs",
@@ -54,6 +53,10 @@ export class MenuService {
 
       const custommade = new MenuModel(MenuType.primary, "Håndlavede smykker","Vi tror på det håndlavede","custommade");
       menuArr.push(custommade);
+
+      const sustain = new MenuModel(MenuType.primary,
+        "Vaerkstedet & Bæredygtighed","Vores tilgang","sustain");
+      menuArr.push(sustain);
 
       //Custom Made
 
@@ -97,8 +100,8 @@ export class MenuService {
       secondArr.push(second);
       second = new SubMenuModel("Find Vaerkstedet","I hjertet af Nørrebro. Find os på kortet","find");
       secondArr.push(second);
-      second = new SubMenuModel("Vaerkstedets nyhedsbrev","Skriv dig op til Vaerkstedet nyhedsbrev og få adgang til specialtilbud og arrangementer","newsletter");
-      secondArr.push(second);
+     /*  second = new SubMenuModel("Vaerkstedets nyhedsbrev","Skriv dig op til Vaerkstedet nyhedsbrev og få adgang til specialtilbud og arrangementer","newsletter");
+      secondArr.push(second); */
       second = new SubMenuModel("Kontakt Vaerkstedet","Skriv en mail til os. Vi svarer altid hurtigt og ser frem til at modtage din henvendelse","contact");
       secondArr.push(second);
 

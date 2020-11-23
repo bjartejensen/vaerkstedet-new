@@ -15,8 +15,6 @@ export class WeddingService {
   constructor(private titleService:Title,
     private meta: Meta) { 
 
-      this.setTitleAndMeta();
-
     }
 
   public setTitleAndMeta(){
@@ -26,14 +24,6 @@ export class WeddingService {
     this.descriptionTag = {name: "description",content:"Håndlavede vielsesringe i alle prisniveauer og materialer"};
     this.meta.updateTag(this.descriptionTag);
     
-    //Twitter
-    //this.twitterTag = {name: "twitter:card",content:"Håndlavede vielsesringe i alle prisniveauer og materialer"};
-
-    //Facebook
-    /* <meta property="og:title" content="Sam Vloeberghs - Freelance Webdeveloper &amp; Software Engineer">
-    <meta property="og:description" content="Hi there! 👋 Thank you for visiting my website!">
-    <meta property="og:url" content="https://samvloeberghs.be/">  */
-
   }
 
   public getHeader():string{

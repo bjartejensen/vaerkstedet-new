@@ -33,6 +33,9 @@ export class LandingDesktopComponent implements OnInit {
     }
 
   ngOnInit(): void {
+
+    this.landingService.setTitleAndMeta();
+
   }
 
   onVisible(event){

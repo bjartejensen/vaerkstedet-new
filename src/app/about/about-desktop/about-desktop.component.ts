@@ -23,6 +23,10 @@ export class AboutDesktopComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.aboutService.setTitleAndMeta();
+
+    this.layoutService.scrollToSection("top","auto");
+
     this.setImages();
     this.setHeader();
     this.setContent();

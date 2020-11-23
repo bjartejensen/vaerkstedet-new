@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -7,13 +8,23 @@ export class AboutService {
 
   imgArr:string[]=[];
 
-  constructor() { }
+  constructor(private title:Title,private meta:Meta) { }
+
+  public setTitleAndMeta(){
+
+    const title ="Din smykkebutik i Ryesgade";
+    this.title.setTitle(title);
+    
+    const description="Vaerkstedet i Ryesgade. Håndlavede smykker, bæredygtigt håndværk, lokalt hensyn, kunden i centrum.";
+    this.meta.updateTag({name: "description",content:description});
+  }
+
 
   public getImages():string[]{
 
-    let img1 = "../../assets/img/about/2.jpg";
-    let img2 = "../../assets/img/about/3.jpg";
-    let img3 = "../../assets/img/about/6.jpg";
+    let img1 = "../../assets/img/about/1.jpg";
+    let img2 = "../../assets/img/about/10.jpg";
+    let img3 = "../../assets/img/about/8.jpg";
     let img4 = "../../assets/img/about/6.jpg";
 
     this.imgArr.push(img1);
@@ -28,26 +39,26 @@ export class AboutService {
     return "Vaerkstedet";
   }
 
-  public getContentOne():string[]{
+  public getContentTwo():string[]{
     let arr:string[]=[];
     let str ="Nær søerne, med Ravnsborggade som nabo, ligger Vaerkstedet";
     arr.push(str);
-    str="Vaerkstedet er etableret som en kombination af butik og værksted."
+    str="Vaerkstedet er etableret som en kombination af butik og værksted, så når I kommer på besøg, summer butikken ofte af vores designere der arbejder."
     arr.push(str);
     str="Alle smykker i butikkens udstilling er håndlavede og vi har stor erfaring med både omsmeltninger og alle typer af reparationer.";
     arr.push(str);
     return arr;
   }
 
-  public getContentTwo():string[]{
+  public getContentOne():string[]{
     let arr:string[]=[];
     let str ="Vaerkstedet dyrker kundeplejen";
     arr.push(str);
-    str ="En grundig vejledning og betjening af kunderne er noget af det Vaerkstedet vil kendes for.";
-    arr.push(str);
     str="Uanset om I har arvestykke eller I ønsker omdannet eller har fået en ide til et nyt smykke, så samler Vaerkstedet inspirationen op.";
     arr.push(str);
-    str="Vi sætter en ære i at gå den ekstra mil for vores kunder.";
+    str ="En grundig vejledning og betjening af kunderne er noget af det Vaerkstedet vil kendes for.";
+    arr.push(str);
+    str="Vi sætter en ære i at gå den ekstra mil for vores kunder. Vaerkstedet dyrker kundeplejen";
     arr.push(str);
     return arr;
   }
