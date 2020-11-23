@@ -21,7 +21,7 @@ export class SustainService {
 
   public setTitleAndMeta(){
     this.title.setTitle("Vaerkstedets syn på bæredygtighed");
-    this.meta.updateTag({name: "description",content:"Hos Vaerkstedet er den grundige vejledning og service en helt afgørende del af vores DNA."});
+    this.meta.updateTag({name: "description",content:"Vaerkstedet dyrker bæredygtigheden. Vi vejleder om omsmeltninger og om bæredygtige valg af materialer."});
   }
   
   public getHeader():string{

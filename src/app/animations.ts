@@ -37,9 +37,10 @@ export const loadUnload = trigger("loadUnload",[
       keyframes( 
         [
         style({ opacity: 0, offset: 0, transform:"translateX(0%)" }),
-        style({ opacity: 1, offset: 0.1, transform:"translateX(0%)" }),
-        style({ opacity: 1, offset: 0.9, transform:"translateX(0%)" }),
-        style({ opacity: 0.4,  offset: 0.99, transform:"translateX(0%)" })
+        style({ opacity: 0.95, offset: 0.25, transform:"translateX(0%)" }),
+        style({ opacity: 0.25, offset: 0.5, transform:"translateX(0%)" }),
+        style({ opacity: 0.95, offset: 0.75, transform:"translateX(0%)" }),
+        style({ opacity: 0,  offset: 1, transform:"translateX(0%)" })
       ])),animateChild()
       ], {optional: true})
     
