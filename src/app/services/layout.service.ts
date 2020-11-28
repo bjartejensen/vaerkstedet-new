@@ -23,7 +23,7 @@ export class LayoutService {
           return (ad.matches)
         })).pipe(shareReplay());
       
-      this.isMobile$ = breakpointObserver.observe([Breakpoints.Handset,Breakpoints.TabletPortrait])
+      this.isMobile$ = breakpointObserver.observe([Breakpoints.Handset])
         .pipe(map(matches=> matches.matches)).pipe(shareReplay());
 
 

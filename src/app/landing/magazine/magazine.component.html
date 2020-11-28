@@ -4,9 +4,14 @@
     [ngStyle]="{'background': backgroundColor}"
     [ngClass]="{'row-reverse': currentState==='complete'}">
 
-    <div class="content" >
+<!--[@contentseq]="{value: currentState, params: { delay: (isMobile? '1500ms': '300ms'), background: (isMobile? 'rgba(244,204,201,0.7)': 'transparent') }}"-->
+<!--[ngStyle]="{background:'rgba(244, 204, 201, 0.8)'}"-->
+    <div class="content"
+        [ngStyle]="{ width: (currentState==='complete' && isMobile)?'100vw':'60vw', left: (currentState==='complete' && isMobile)? '0vw' : '0vw'}"
+        [ngClass]="{'pos-absolute': (currentState==='complete' && isMobile), 'content-desktop': isDesktop}"
+     >
 
-        <div class="logo-container" [@btnseq]="currentState">
+        <div *ngIf="isDesktop" class="logo-container" [@btnseq]="currentState">
             <img [src]="logoUrl">
         </div>
         
@@ -17,11 +22,10 @@
              >
             {{header}}
         </h2>
-             
-        <h4 [@subheaderseq]="currentState"
+           <!-- [ngStyle]="{'background': backgroundColor}"-->  
+        <h4  [@subheaderseq]="currentState"
             (@subheaderseq.start)="onSubHeaderAnimation($event)" 
             (@subheaderseq.done)="onSubHeaderAnimation($event)"
-            [ngStyle]="{'background': backgroundColor}"
              >
             {{subHeader}}
         </h4>
@@ -34,6 +38,7 @@
     </div>
 
     <div class="img-container" 
+        
         [@imageseq]="currentState"
         (@imageseq.done)="onImageAnimation($event)" >
         <img class="mat-elevation-z1" [src]="imgUrl" alt="">

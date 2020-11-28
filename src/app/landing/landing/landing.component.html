@@ -3,7 +3,7 @@
 </ng-template>
 
     <div class="container" id="top" *ngIf="(isMobile$ | async);else landingdesktop">
-            <ng-container *ngFor="let img of images; let i = index">
+            <ng-container *ngFor="let img of images; let i = index; let odd = odd">
                 <div class="section" [id]="i" 
                     appIntersection
                     [debounceTime]="0"
@@ -12,6 +12,7 @@
                             [subHeader]="subHeaders[i]" 
                             [url]="urls[i]"
                             [btnCaption]="btnCaptions[i]"
+                            [backgroundColor]="odd? 'rgba(255, 255, 255, 0.7)' :'rgba(244, 204, 201, 0.7)'  "
                             *ngIf="i<=inFocus">
                     </app-magazine>
                 </div> 

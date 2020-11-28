@@ -11,14 +11,16 @@
     display: flex;
     min-height: 100vh;
     width: 100%;
-    align-items: center;
-    //background: orange;
+    align-items: flex-start;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
 .row-reverse{
     flex-flow: row-reverse;
 }
+
+
 
 .content{
     position: relative;
@@ -27,14 +29,13 @@
     justify-content: space-evenly;
     align-items: center;
     //flex: 100%;
-    width: 60vw ;
-    height: 90vh;
+    width: 100vw ;
+    height: 100vh;
+    transition: all 1200 ease-in;
     //background: orange;
-    justify-content: flex-start;
-    justify-content: space-around;
 
     @media (min-width: 1200px){
-        justify-content: space-around;
+        //justify-content: space-around;
     }
    
     h2{
@@ -44,7 +45,7 @@
         line-height: 2rem;
         padding: 0% 5px;
         text-align: center;
-
+        
         @media (min-width: 768px){
             font-size: 4rem;
             line-height: 4.5rem;
@@ -63,34 +64,66 @@
         width: 90%;
         text-align: center;
         opacity: 0;
-        font-size: 2rem;
-        line-height: 2.5rem;
+        border: none;
+        //font-size: 2rem;
+        //line-height: 2.5rem;
         padding: 0%;
+        margin: 0%;
+        background: transparent;
+        //color:$text-color;
         
         @media (min-width: 768px){
             font-size: 4rem;
             line-height: 4.5rem;
-            margin: auto;
+           // margin: auto;
         }
 
         @media (min-width: 1200px){
             font-size: 4rem;
             line-height: 4.5rem;
             width: 40%;
-            margin: 10% 5%;
+            margin: 0% 5%;
         }
     }
 
 }
 
+
+.pos-absolute{
+    position: absolute;
+    background:"rgba(244, 204, 201, 0.7)";
+    //background: orange;
+    left:0;
+    top:0;
+    width: 100vw;
+    z-index: 20;
+    animation-name: example;
+    animation-duration: 400ms ;
+    animation-delay: 2000ms;
+}
+
+@keyframes example {
+    from {background-color: transparent;}
+    to {background-color: "rgba(244, 204, 201, 0.7)";}
+  }
+
+.content-desktop{
+    justify-content: space-evenly;
+}
+
 .img-container{
         position: relative;
         display: flex;
-        background: $cool-grey;
-        width: 40vw;
+        //background: $cool-grey;
+        width: 100vw;
         height: 100vh;
-        background: $cool-pink;
         opacity: 0;
+
+        @media (min-width:768px){
+            width: 40vw;
+            height: 100vh;
+        }
+
     
         img{
             width: 100%;
@@ -99,6 +132,7 @@
             //object-position: 70%;
                 
             @media (min-width:768px){
+                
             }
         }
 }
@@ -111,10 +145,11 @@
     font-family: $menu-font;
     color:$header-color;
     outline: $cool-grey 3px solid;
-
+   
     @media (min-width:768px){
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 0% 1.5rem;
+        font-weight: 700;
     }
 }
 

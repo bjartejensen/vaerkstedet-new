@@ -2,7 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
 import { LandingService } from '../landing.service';
 import { Observable, timer } from 'rxjs';
-import { map } from 'rxjs/operators';
+import "../../../dateExt";
 
 @Component({
   selector: 'app-landing',
@@ -26,6 +26,7 @@ export class LandingComponent implements OnInit {
 
   inFocus:number;
   vec:number[]=[1,1,1,1,1];
+  ngZone: any;
 
   constructor(private landingService:LandingService,
     public layoutService: LayoutService) {
@@ -37,6 +38,14 @@ export class LandingComponent implements OnInit {
     }
 
   ngOnInit(): void {   
+    let d = new Date();
+    let a = d.getWeekNumber();
+    //let dd = d.addDays(1); 
+ 
+
+    
+    
+
 
     this.landingService.setTitleAndMeta();
 
@@ -53,7 +62,7 @@ export class LandingComponent implements OnInit {
   //#region Private Methods
   
   public get logoUrl(){
-    return  this.landingService.logoUrl; //"../../../assets/logo/logo-grey.png";
+    return  this.landingService.logoGoldUrl; //"../../../assets/logo/logo-grey.png";
   }
   
 

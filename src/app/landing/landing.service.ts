@@ -49,7 +49,11 @@ export class LandingService {
     this.images.push("../../../assets/img/landing/2.jpg");
     this.images.push("../../../assets/img/landing/6.jpg");
     this.images.push("../../../assets/img/landing/1.jpg");
-    this.images.push("../../../assets/img/landing/3.jpg");
+    this.images.push("../../../assets/img/landing/3.jpg"); 
+   /*  this.images.push("../../../assets/img/alice/1.jpg");
+    this.images.push("../../../assets/img/landing/1.jpg");
+    this.images.push("../../../assets/img/alice/3.jpg");
+    this.images.push("../../../assets/img/alice/4.jpg");  */
   }
 
   private setUrls(){

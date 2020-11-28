@@ -1,5 +1,6 @@
-import { animate, animateChild, group, keyframes, query, stagger, state, style, transition, trigger } from '@angular/animations';
+import { animate, animateChild, animation, group, keyframes, query, stagger, state, style, transition, trigger, useAnimation } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
+import { LayoutService } from 'src/app/services/layout.service';
 import { LandingService } from '../landing.service';
 
 /* keyframes([
@@ -12,12 +13,41 @@ export const trnsOut:string = "cubic-bezier(.39,.08,1,-0.07)";
 export const trnsIn:string = "cubic-bezier(0,.87,.12,1)";
 export const slowStart:string = "cubic-bezier(1,0,1,-0.07)";
 
+export let contentStylessdas = style({opacity:1, background:"rgba(244, 204, 201, 0.7)", transform:"translateY(0px)" },)
+export let contentState = state('complete',style({background:"{{background}}"}),
+{
+  params:{
+    background:"rgba(244, 204, 201, 0.7)"
+  }
+}
+
+)
+
+export let contentSeqAnimation = animation(
+  animate("300ms {{delay}} ease-in"),
+  {
+    params:{
+      delay:"300ms",
+    }
+  }
+)
+
 @Component({
   selector: 'app-magazine',
   templateUrl: './magazine.component.html',
   styleUrls: ['./magazine.component.scss'],
   animations:[
 
+    trigger('contentseq',[
+      //state('complete',style({opacity:1, background:"rgb(244,204,201,0.0)", transform:"translateY(0px)" })),
+      contentState,
+      transition("*=>complete",[
+        style({opacity:0}),
+        useAnimation(contentSeqAnimation)
+      ]
+       )
+    ]),
+ 
     trigger("fadein",
     [
       transition(":enter",
@@ -25,18 +55,18 @@ export const slowStart:string = "cubic-bezier(1,0,1,-0.07)";
       animate("2250ms 0ms cubic-bezier(.02,.95,.05,.99)")
     ])]),
 
-    trigger("containerseq",[
+   /*  trigger("containerseq",[
       transition(":enter",
         [style({opacity:0, 
           backgroundColor:"rgba(0,0,0,0.75)",
           transform: "scale(0.75)"}),
         animate("400ms 400ms"),animateChild()]
       ),  
-    ]),
+    ]), */
 
     trigger('headerseq',[
       state('change',style({opacity:0,transform:"translateY(0px)"})),
-      state('complete',style({opacity:0,transform:"translateY(0px)",height:"20px"})),
+      state('complete',style({opacity:0,transform:"translateY(0px)",height:"0px", margin:"0%", padding:"0%", display:"none"})),
       transition(":enter",[
         style({transform:"translateY(-10px)"}),
         animate(`2000ms 100ms ${trns}`,style({opacity:1,transform:"translateY(0px)"})),
@@ -77,6 +107,8 @@ export const slowStart:string = "cubic-bezier(1,0,1,-0.07)";
       transition("*=>complete",animate("300ms 1000ms"))
     ]),
 
+    
+
     trigger("imageseq",
     [
       state('void',style({opacity:0,transform:"translateY(10px)"})),
@@ -115,7 +147,21 @@ export class MagazineComponent implements OnInit {
   @Input() url:string ="";
   @Input() backgroundColor:string = "transparent";
 
-  constructor(private landingService:LandingService) { }
+  isMobile:boolean = false;
+  isDesktop: boolean = false;
+
+  constructor(private landingService:LandingService, private layoutService:LayoutService) { 
+
+    this.layoutService.isMobile$.subscribe(x=>{
+      this.isMobile = x;
+    })
+
+    this.layoutService.isDesktop$.subscribe(x=>{
+      console.log("is desktop", x);
+      this.isDesktop =x;
+    })
+
+  }
 
   state:boolean =false;
   step:boolean = false;
@@ -152,7 +198,7 @@ export class MagazineComponent implements OnInit {
   }
 
   public get logoGoldUrl(){
-    return  this.landingService.logoUrl; //"../../../assets/logo/logo-grey.png";
+    return  this.landingService.logoGoldUrl; //"../../../assets/logo/logo-grey.png";
   }
 
 
