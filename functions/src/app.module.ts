@@ -1,22 +1,22 @@
 import { ConfigModule } from "@nestjs/config";
 import { Module } from "@nestjs/common";
-import { DesignersModule } from "./designers/designers.module"
+//import { DesignersModule } from "./designers/designers.module"
 //import { FirestoreService } from './firestore/firestore/firestore.service';
 import { EmailModule } from './email/email.module';
-import { NewsletterModule } from './newsletter/newsletter.module';
-import { InstagramModule } from './instagram/instagram.module';
+/* import { NewsletterModule } from './newsletter/newsletter.module';
+import { InstagramModule } from './instagram/instagram.module'; */
 
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: "development.env",
+      envFilePath: "production.env",
       isGlobal: true,
     }),
-    DesignersModule,
-    EmailModule,
-    NewsletterModule,
-    InstagramModule
+    //DesignersModule,
+    EmailModule
+   /*  NewsletterModule,
+    InstagramModule */
   ]
   //providers: [FirestoreService],
 })
