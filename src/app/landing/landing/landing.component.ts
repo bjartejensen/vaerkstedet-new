@@ -38,17 +38,7 @@ export class LandingComponent implements OnInit {
     }
 
   ngOnInit(): void {   
-    let d = new Date();
-    let a = d.getWeekNumber();
-    //let dd = d.addDays(1); 
- 
-
-    
-    
-
-
     this.landingService.setTitleAndMeta();
-
   }
 
   onClickScroll(elementId:string):void{
@@ -77,15 +67,6 @@ export class LandingComponent implements OnInit {
   //#endregion
 
   //#region Public Methods
-
-  /* public changeRoute(){
-    const url:string ="carousel";
-    this.router.navigateByUrl("/" + url);
-  } */
-
- /*  public onDone(event){
-    console.log(event);
-  } */
 
   public onScroll(event:string){
     this.onIncreaseIndex();

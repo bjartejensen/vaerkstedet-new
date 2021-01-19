@@ -17,7 +17,6 @@ import { InstagramModule } from './instagram/instagram.module';
     EmailModule,
     NewsletterModule,
     InstagramModule
-    
   ]
   //providers: [FirestoreService],
 })

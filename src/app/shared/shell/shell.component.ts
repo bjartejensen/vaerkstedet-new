@@ -19,9 +19,9 @@ import { MenuService } from '../menu.service';
           style({opacity:0}),
                 animate("100ms 200ms")
       ]),
-/*       transition('*=>out', [
-        animate("600ms 1000ms", style({ opacity:0 }))
-      ]) */
+    /*   transition('*=>out', [
+        animate("3000ms 0ms", style({ opacity:0 }))
+      ])  */
     ])
 
   ]
@@ -57,8 +57,6 @@ export class ShellComponent implements OnInit {
   ngOnInit(): void {
 
     this.isMobile$.subscribe(x=>{
-      //debugger
-      //console.log("Mobile");
       this.isMobile = x;
     })  
 
@@ -80,6 +78,7 @@ export class ShellComponent implements OnInit {
 
   onClosedStart(event){
     this.isDrawerOpen = false;
+    //this.appDrawer.toggle();
   }
   
   onOpenedStart(event){

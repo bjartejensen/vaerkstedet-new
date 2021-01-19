@@ -28,7 +28,7 @@ export class MenuListComponent implements OnInit {
   }
 
   onMenuItemClicked(toggleDrawer:boolean){
-    debugger;
+    //debugger;
     this.toogleDrawer.emit(toggleDrawer);
   }
 

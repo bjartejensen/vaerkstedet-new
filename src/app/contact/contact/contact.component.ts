@@ -22,7 +22,7 @@ import { ContactService } from '../contact.service';
       ]),
       transition("*=>shown",[
         style({opacity:1}),
-        animate("400ms 5000ms",style({opacity:0,transform:"translateY(20px)"}) ),
+        animate("400ms 5000ms",style({opacity:0,transform:"translateY(20px)"})),
       ])
     ])
   ]

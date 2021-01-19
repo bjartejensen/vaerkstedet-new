@@ -40,5 +40,24 @@
   z-index: 10000;
   left:5px;
   top:5px;
-  //background: rgb(45, 42, 231);
+  //background:$cool-blue;
+  
+}
+
+.menu-icon{
+  color:$cool-blue6;
+  color:$cool-grey;
+  //font-size: 2rem;
+  outline: transparent;
+  background: transparent !important;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+
+
+  @media (min-width: 1200px){
+    font-size: 2.5rem;
+  }
+
+
 }

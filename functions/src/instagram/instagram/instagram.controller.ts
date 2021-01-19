@@ -14,12 +14,7 @@ export class InstagramController {
             const apiKey = this.configService.get<string>("INSTAGRAM_API_KEY");
             const instaUrl =this.configService.get<string>("INSTAGRAM_URL");
 
-            console.log("apiky",apiKey);
-            console.log("instaurl",instaUrl);
-
             const url = `${instaUrl}${apiKey}`;
-            console.log("comb url",url);
-
             const res = await axios({
             method: "get",
             url: url,

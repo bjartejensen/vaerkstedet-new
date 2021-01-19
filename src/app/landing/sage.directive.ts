@@ -26,7 +26,6 @@ export class SageDirective implements OnDestroy {
   {
     const obs = fromEvent(this.el.nativeElement ,"transitionend");
     obs.subscribe(()=>{ 
-      debugger;
     })
   }
 

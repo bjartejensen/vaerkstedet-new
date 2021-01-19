@@ -25,22 +25,15 @@ export class CarouselButtonDirective {
     this.color = this.possibleColors[colorPick];
    
   }
- /*  @HostBinding("class.focus")
-  get isButtonFocus(){
-    return this.focus;
-  } */
-      
 
   @HostListener('mouseover')
   onFocus(){
-    //debugger;
     this.focus = true;
     this.color ="red";
   }
 
   @HostListener('mouseleave')
   onBlur(){
-    //debugger;
     this.focus = false;
   }
 

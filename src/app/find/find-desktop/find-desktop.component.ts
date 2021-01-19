@@ -10,9 +10,10 @@ import { FindService } from '../find.service';
 })
 export class FindDesktopComponent implements OnInit {
 
-  instaUrl = "https://www.instagram.com/louiseroughtjewellery/?hl=da";
+  
+  instaUrl = "https://www.instagram.com/vaerkstedet2200/";
   wwwVaerkstedet = "https://vaerk-stedet.dk";
-  fbUrl = "https://www.facebook.com/louiseroughtjewellery/";
+  fbUrl = "https://www.facebook.com/Vaerkstedet2200";
   
   content:string;
   header:string;

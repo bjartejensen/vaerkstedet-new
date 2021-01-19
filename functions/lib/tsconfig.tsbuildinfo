@@ -1402,12 +1402,12 @@
         "affectsGlobalScope": false
       },
       "../src/designers/designers/designers.service.ts": {
-        "version": "d0126c918c34aaf3ff565e73503fcb19b2ef813eb774f9c8e9c1beca626a50d5",
+        "version": "f6854ffb16b3aac42cfec93efbb4dd9529c28473b402874fa85a4ed2834e283d",
         "signature": "bf63e838e28f31d02fbf4ef68a3bbd9609f80f1197d03198585190e6d3344520",
         "affectsGlobalScope": false
       },
       "../src/designers/designers/designers.controller.ts": {
-        "version": "27fa2e2f18a452008b9101e27fabf4fe8982e2c27a1f66d1a8ca6673000e1403",
+        "version": "1f52c40866d5b282ca58c264f3b670ee6c86291b878252177c8b6f77da93e88a",
         "signature": "31c8b434e2d2af59ed7e9a5ee3dcc282fa06034d7dfd5ffc1665ca04a31ab98b",
         "affectsGlobalScope": false
       },
@@ -1432,7 +1432,7 @@
         "affectsGlobalScope": false
       },
       "../src/newsletter/newsletter/newsletter.controller.ts": {
-        "version": "f7437000a83e44db989440137564b3d580ba9aa2ed2f414c40a16aa87b8ae948",
+        "version": "2cb29b5775d115e208eea42dcd91aa8807c10c50536cfbfeeaaed6843fa1d103",
         "signature": "345718b3c10c3d984be8e0e735a6e81568ec5e225bc5051c44941f3122c82349",
         "affectsGlobalScope": false
       },
@@ -1442,7 +1442,7 @@
         "affectsGlobalScope": false
       },
       "../src/instagram/instagram/instagram.controller.ts": {
-        "version": "0bdd62504f2e984edf956939fa9b6198b93e0faa4b77e925fa3345231bb156e0",
+        "version": "606cfa161ee5413fb9790b480b63d48d28ef760738313e4ed5a476da6f0ea6ef",
         "signature": "c52f2ad2e910149a9ac08e31a066d260d4ae455cede713d895915b3c61f13f1e",
         "affectsGlobalScope": false
       },
@@ -1452,7 +1452,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "f5a94086e987fa18104cd9623ca474d5c12692295d1e5ca1e7da67c3da18d561",
+        "version": "42f340a33cf2ddd6120018d1948929416df7526652c6f79bbf408dca136b1042",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -1847,7 +1847,7 @@
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "7962e34eed95940cac7063b75914feb0abc8e0e07ce43f57746d382f9643ab95",
+        "version": "f01d3f2eed230965afb1a57f5a2aef2b6c1f69e273c6a004e88aa6a81c13e9c4",
         "signature": "c485bd10c9d6c691bda1a92d6cec9b6d689c4b78ae567e6639e6412c45ccff91",
         "affectsGlobalScope": false
       },

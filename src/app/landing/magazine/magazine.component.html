@@ -7,7 +7,7 @@
 <!--[@contentseq]="{value: currentState, params: { delay: (isMobile? '1500ms': '300ms'), background: (isMobile? 'rgba(244,204,201,0.7)': 'transparent') }}"-->
 <!--[ngStyle]="{background:'rgba(244, 204, 201, 0.8)'}"-->
     <div class="content"
-        [ngStyle]="{ width: (currentState==='complete' && isMobile)?'100vw':'60vw', left: (currentState==='complete' && isMobile)? '0vw' : '0vw'}"
+        [ngStyle]="{ width: (currentState==='complete' && isMobile)?'100vw':'50vw', left: (currentState==='complete' && isMobile)? '0vw' : '0vw'}"
         [ngClass]="{'pos-absolute': (currentState==='complete' && isMobile), 'content-desktop': isDesktop}"
      >
 
@@ -23,17 +23,19 @@
             {{header}}
         </h2>
            <!-- [ngStyle]="{'background': backgroundColor}"-->  
+       
+
+        <button class="btn" [routerLink]="url" 
+            [@btnseq]="currentState" mat-raised-button>
+            {{btnCaption}}
+        </button>
+
         <h4  [@subheaderseq]="currentState"
             (@subheaderseq.start)="onSubHeaderAnimation($event)" 
             (@subheaderseq.done)="onSubHeaderAnimation($event)"
              >
             {{subHeader}}
         </h4>
-
-        <button class="btn" [routerLink]="url" 
-            [@btnseq]="currentState" mat-raised-button>
-            {{btnCaption}}
-        </button>
 
     </div>
 

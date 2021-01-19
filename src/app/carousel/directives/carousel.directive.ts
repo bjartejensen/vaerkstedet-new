@@ -38,7 +38,6 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
         Breakpoints.HandsetPortrait
       ]).subscribe(result => {
         if (result.matches) {
-          console.log("break",result);
         }
       });
     }
@@ -134,7 +133,6 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
 
     this.backBtnObs$ = fromEvent(this.backBtn,"click").pipe(throttleTime(500));
     this.backBtnSub =this.backBtnObs$.subscribe(()=>{
-        console.log("Back button clicked")
         this.renderer.setStyle(this.carouselSlide,"transition",this.transitionStr);
         this.selectedIdx--;
         this.renderer.setStyle(this.carouselSlide,"transform",this.translateXStr);
@@ -147,7 +145,6 @@ export class CarouselDirective implements OnInit,AfterViewInit,OnDestroy {
 
     this.nextBtnObs$ = fromEvent(this.nextBtn,"click").pipe(throttleTime(500));
     this.nextBtnSub = this.nextBtnObs$.subscribe(()=>{
-      console.log("Next button clicked")
       this.renderer.setStyle(this.carouselSlide,"transition",this.transitionStr);
       this.selectedIdx++;
       this.renderer.setStyle(this.carouselSlide, "transform",this.translateXStr);

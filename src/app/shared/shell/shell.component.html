@@ -20,14 +20,16 @@
       [position]="'start'"
       [opened]="false">
 
+      <!--(click)="drawer.toggle()"-->
+
         <button 
             type="button"
             aria-label="Toggle sidenav"
             mat-icon-button
-            class="hamburger"
             (click)="drawer.toggle()"
-            id="nav-top">
-            <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
+            class="hamburger"
+             id="nav-top">
+            <mat-icon class="menu-icon" aria-label="Side nav toggle icon">close</mat-icon>
         </button>
   
         <mat-nav-list class="nav-list"  >
@@ -45,9 +47,9 @@
    class="sidenav-content">
 
     <button mat-icon-button class="menu-btn"  (click)="drawer.toggle()"  
-    color="primary" 
+    
     aria-label="Example icon button with a home icon">
-        <mat-icon>menu</mat-icon>
+        <mat-icon class="menu-icon">menu</mat-icon>
     </button>
   
     <!--Router Outlet-->

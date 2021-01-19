@@ -21,8 +21,6 @@ export class NewsletterController {
               const baseUrl = this.configService.get<string>("MAILCHIMP_BASE_URL");
               const url = baseUrl + audienceId;
 
-              console.log("Url",apiKey);
-
               //Fake an error
             //throw new HttpException("En fejl skete",400);
             
@@ -40,9 +38,10 @@ export class NewsletterController {
                 headers: {
                   Authorization: "auth " + apiKey,
                 },
-              });
+              }); 
 
-            console.log("Ret",ret);
+            console.log(ret);
+
             
             return response.status(HttpStatus.OK);
     }

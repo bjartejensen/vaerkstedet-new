@@ -61,9 +61,6 @@ export class MenuListDesktopComponent implements OnInit, OnChanges {
   menuItems:MenuModel[];
  
   constructor(private menuService:MenuService) {
-    
-  /*   this.secondaryMenuContext$
-      .subscribe(x=>console.log("obs$ emitted ",x )) */
   }
 
   ngOnInit(): void {
@@ -75,9 +72,8 @@ export class MenuListDesktopComponent implements OnInit, OnChanges {
   }
 
   onTemplateChanged(event){
-    debugger;
+    //debugger;
     this.secondaryTemplateChanged = true;
-    //console.log("nu ændrede sec template sig");
   }
 
   setMenuItems(){

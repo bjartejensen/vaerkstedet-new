@@ -55,5 +55,9 @@ export class DesignersComponent implements OnInit {
     this.contentTwo = this.designersService.getContentTwo();
   }
 
+  public get logoUrl(){
+    return "../../../assets/logo/logo-grey.png";
+  }
+
 
 }

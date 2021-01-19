@@ -20,6 +20,8 @@
     //background:rgb(34, 33, 33);
     margin: auto;
     outline: 3px $cool-pink solid;
+    outline: 3px $cool-grey solid;
+    outline: 5px solid lighten($cool-grey,20%);
 }
 
 .primary-menu{
@@ -38,9 +40,10 @@
        left:90%;
        opacity: 1;
        display:flex;
-       width: 3px;
+       width: 5px;
        height: 100%;
        background: darken($cool-pink,3%);
+       //background: lighten($cool-grey,10%);
        
    }
 
@@ -69,7 +72,7 @@
 
             &:hover{
                 cursor: pointer;
-                color: darken($cool-pink,15%);
+                color: darken($cool-pink,10%);
             }
         }
 

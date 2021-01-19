@@ -43,9 +43,9 @@ export class DesignersService {
   public getContentOne():string[]{
     let arr:string[]=[];
     //let str = "Vaerkstedet formidler en række dygtige, danske smykkedesigneres arbejde i butikken i Ryesgade.";
-    let str = "Vaerkstedet eksponerer en række dygtige designere i butikken i Ryesgade";
+    let str = "Vaerkstedet eksponerer en række dygtige designere, i butikken i Ryesgade";
     arr.push(str);
-    str="Vaerkstedet værner om det grundige håndværk og alle designere tilknyttet Vaerkstedet holder den håndværksmæssige fane højt – alt er håndlavet.";
+    str="Vaerkstedet værner om det grundige håndværk og alle designere, tilknyttet Vaerkstedet, holder den håndværksmæssige fane højt – alt er håndlavet.";
     arr.push(str);
 
   

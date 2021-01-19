@@ -39,7 +39,6 @@ export class DesignersService {
 
 
         return tmp.size>0 ? result : null;
-        //console.log(result);
 
     }
 

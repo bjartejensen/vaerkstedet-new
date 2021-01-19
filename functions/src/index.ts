@@ -18,17 +18,24 @@ const createNestServer = async (expressInstance: any) => {
     new ExpressAdapter(expressInstance)
   );
 
-  const development = true; //app.get(ConfigService).isDevelopment();
+  //const development = true; //app.get(ConfigService).isDevelopment();
 
-  const corsOptions: CorsOptions = {
-    origin: development ? "*" : "https://mloggs.com",
+ /*  const corsOptions: CorsOptions = {
+    origin:  "*", //: "https://mloggs.com",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     credentials: true,
     optionsSuccessStatus: 204,
-  };
+  }; */
 
- app.useGlobalFilters(new HttpExceptionFilter());
-  app.enableCors(corsOptions);
+  const corsOptions: CorsOptions ={
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
+  }
+
+app.useGlobalFilters(new HttpExceptionFilter());
+app.enableCors(corsOptions);
 
   return app.init();
 };

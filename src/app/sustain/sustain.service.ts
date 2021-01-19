@@ -26,7 +26,7 @@ export class SustainService {
   
   public getHeader():string{
     //return "Vaerkstedets vielsesringe";
-    return "Værkstedet og bæredygtighed";
+    return "Vaerkstedet og bæredygtighed";
   }
 
   public getContentOne():string[]{
@@ -34,7 +34,7 @@ export class SustainService {
     let arr:string[]=[];
     let str ="Smykkedesignere har en naturlig fascination af ædelmetallers skønhed";
     arr.push(str);
-    str = "På Vaerkstedet facineres vi af formbarhedens muligheder for at skabe smykker der etablerer kontakt mellem mennesker baseret på materialer der er dannet for millioner af år tilbage i jordens indre";
+    str = "På Vaerkstedet facineres vi af formbarhedens muligheder for at skabe smykker der etablerer kontakt mellem mennesker." ;// baseret på materialer der er dannet for millioner af år tilbage i jordens indre";
     arr.push(str);
     str="Men vi lever i en tid hvor vi tvinges til at stille krav til hvordan vi agerer i forhold til miljøet - også som smykkedesignere.";
     arr.push(str);
@@ -45,9 +45,9 @@ export class SustainService {
   public getContentTwo():string[]{
 
     let arr:string[]=[];
-    let str="Bevægelsen i retning af stærkere bevidsthed om materialers tilblivelse og videredistribution er vigtig og rigtig";
+    let str="Bevægelsen i retning af stærkere bevidsthed om materialers tilblivelse og distribution er vigtig og rigtig";
     arr.push(str);
-    str="På Vaerkstedet gør vi derfor en særlig indsats for at vejlede jer i forhold til eventuelle bæredygtige valg af materialer og ædelsten.";
+    str="På Vaerkstedet gør vi derfor en særlig indsats for at vejlede jer i forhold til bæredygtige valg af materialer og ædelsten.";
     arr.push(str);
 
     return arr;

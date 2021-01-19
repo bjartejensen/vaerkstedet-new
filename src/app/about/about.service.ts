@@ -54,11 +54,11 @@ export class AboutService {
     let arr:string[]=[];
     let str ="Vaerkstedet dyrker kundeplejen";
     arr.push(str);
-    str="Uanset om I har arvestykke eller I ønsker omdannet eller har fået en ide til et nyt smykke, så samler Vaerkstedet inspirationen op.";
+    str="Uanset om I har et arvestykke I ønsker omdannet, eller har fået en ide til et nyt smykke, så samler Vaerkstedet inspirationen op.";
     arr.push(str);
     str ="En grundig vejledning og betjening af kunderne er noget af det Vaerkstedet vil kendes for.";
     arr.push(str);
-    str="Vi sætter en ære i at gå den ekstra mil for vores kunder. Vaerkstedet dyrker kundeplejen";
+    str="Vi sætter en ære i at gå den ekstra mil for vores kunder. Vaerkstedet dyrker kundeplejen.";
     arr.push(str);
     return arr;
   }
@@ -67,10 +67,10 @@ export class AboutService {
     let arr:string[]=[];
     let str ="Vi har smykker til at alle anledninger og i alle prisniveauer";
     arr.push(str);
-    str="Hvad enten I ønsker et håndlavet smykke i de mest ekslusive materialer eller hurtigt skal finde en lille, håndlavet ting til en person I har kær, så har Vaerkstedet en bredde og dybde i udvalget."
+    str="Hvad enten I ønsker et håndlavet smykke i de mest ekslusive materialer, eller hurtigt skal finde en lille, håndlavet ting til en person I har kær, så har Vaerkstedet en bredde og dybde i udvalget."
     arr.push(str);
-    str="Herudover samarbejder Vaerkstedet med landets dygtigste håndværkere og ekslusive leverandører indenfor perler og sten. Alt er muligt."
-    arr.push(str);
+  /*   str="Herudover samarbejder Vaerkstedet med landets dygtigste håndværkere og ekslusive leverandører indenfor perler og sten. Alt er muligt."
+    arr.push(str); */
     return arr;
   }
 

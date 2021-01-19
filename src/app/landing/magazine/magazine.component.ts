@@ -103,7 +103,7 @@ export let contentSeqAnimation = animation(
     ]), */
 
     trigger('btnseq',[
-      state('complete',style({opacity:1,transform:"translateX(0%)"})),
+      state('complete',style({opacity:0.8,transform:"translateX(0%)"})),
       transition("*=>complete",animate("300ms 1000ms"))
     ]),
 
@@ -112,12 +112,12 @@ export let contentSeqAnimation = animation(
     trigger("imageseq",
     [
       state('void',style({opacity:0,transform:"translateY(10px)"})),
-      state('*',style({opacity:1,transform:"translateY(0px)"})),
+      state('*',style({opacity:1,width:"50vw",transform:"translateY(0px)"})),
       state('change',style({opacity:1,transform:"translateY(0px)"})),
       state('complete',style({opacity:1,transform:"translateX(0%)"})),
       state('rebound',style({opacity:0,transform:"translateX(0%)"})),
       
-      transition(":enter",[animate("400ms 800ms"),animateChild()]),
+      transition(":enter",[animate(`800ms 800ms ${trns}`),animateChild()]),
       transition("*=>change",
       [
         animate(`400ms 0ms ${trnsOut}`,style({opacity: 0,transform:"translateX(100%)"})),
@@ -157,7 +157,6 @@ export class MagazineComponent implements OnInit {
     })
 
     this.layoutService.isDesktop$.subscribe(x=>{
-      console.log("is desktop", x);
       this.isDesktop =x;
     })
 

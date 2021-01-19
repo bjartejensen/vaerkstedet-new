@@ -46,10 +46,10 @@ export class LandingService {
   }
 
   private setImages(){
-    this.images.push("../../../assets/img/landing/2.jpg");
+    this.images.push("../../../assets/img/landing/5.jpg");
     this.images.push("../../../assets/img/landing/6.jpg");
     this.images.push("../../../assets/img/landing/1.jpg");
-    this.images.push("../../../assets/img/landing/3.jpg"); 
+    this.images.push("../../../assets/img/landing/2.jpg"); 
    /*  this.images.push("../../../assets/img/alice/1.jpg");
     this.images.push("../../../assets/img/landing/1.jpg");
     this.images.push("../../../assets/img/alice/3.jpg");
@@ -57,24 +57,24 @@ export class LandingService {
   }
 
   private setUrls(){
-    this.urls.push("/sustain");
-    this.urls.push("/wedding");
     this.urls.push("/custommade");
+    this.urls.push("/wedding");
     this.urls.push("/about");
+    this.urls.push("/sustain");
   }
 
   private setBtnCaptions(){
-    this.btnCaptions.push("Vores tilgang");
-    this.btnCaptions.push("Vores Vielsesringe");
     this.btnCaptions.push("Alt er håndlavet");
+    this.btnCaptions.push("Vores Vielsesringe");
+    this.btnCaptions.push("Jer i centrum");
     this.btnCaptions.push("Vores tilgang");
   }
 
   private setSubHeaders(){
-    this.subHeaders.push("der tror på bæredygtighed");
-    this.subHeaders.push("der tror på kærligheden");
     this.subHeaders.push("der elsker unika");
+    this.subHeaders.push("der dyrker på kærligheden");
     this.subHeaders.push("der værner om kundeoplevelsen");
+    this.subHeaders.push("der tror på bæredygtighed");
   }
 
 

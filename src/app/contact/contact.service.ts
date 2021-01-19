@@ -56,6 +56,8 @@ export class ContactService {
 
     return this.http.post<any>(sendGridUrl,body)
       .pipe(map(()=>{
+
+        debugger;
         this.showSpinnerSubject.next(false);
         return "Tak for din henvendelse. Vi bestræber os på at vende tilbage indenfor 24 timer (og gerne før)."
       })).pipe(

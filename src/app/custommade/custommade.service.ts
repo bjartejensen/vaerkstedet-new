@@ -21,7 +21,7 @@ export class CustommadeService {
 
   public getContentOne():string[]{
     let arr:string[]=[];
-    let str = "Alle smykker du finder hos os er håndlavede";
+    let str = "Alle smykker du finder hos os, er håndlavede";
 
     arr.push(str);
     str="Vi kærer os om 'håndens arbejde' og udfører alt arbejde med en tilsvarende grundighed.";
@@ -61,8 +61,8 @@ export class CustommadeService {
 
   public getImages():string[]{
 
-    let img1 = "../../assets/img/custommade/2.jpg";
-    let img2 = "../../assets/img/custommade/1.jpg";
+    let img1 = "../../assets/img/custommade/1.jpg";
+    let img2 = "../../assets/img/custommade/9.jpg";
     
     this.imgArr.push(img1);
     this.imgArr.push(img2);

@@ -19,8 +19,6 @@ export class DesignersController {
         }
 
         catch(err){
-           // console.log(JSON.stringify(err));
-
             return response
             .status(400)
             .send(`Event get all error: ${JSON.stringify(err)}`);
@@ -41,7 +39,6 @@ export class DesignersController {
         }
 
         catch(err){
-           // console.log(JSON.stringify(err));
 
             return response
             .status(400)

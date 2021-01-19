@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { loadUnload } from 'src/app/animations';
+import { LayoutService } from 'src/app/services/layout.service';
 import { DesignersService } from '../designers.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class DesignersDesktopComponent implements OnInit {
   contentTwo:string[]=[];
   images:string[]=[]; 
 
-  constructor(private designersService: DesignersService) { }
+  constructor(private designersService: DesignersService,
+    public layoutService:LayoutService) { }
   
   ngOnInit(): void {
 
