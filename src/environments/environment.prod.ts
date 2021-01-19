@@ -1,4 +1,7 @@
 export const environment = {
   production: true,
-  apiPath: "http://localhost:5000/vaerkstedet-ae5e0/us-central1/api/",
+  apiPath: "https://us-central1-vaerkstedet-ae5e0.cloudfunctions.net/api/",
+           
+          
+
 };
