@@ -30,7 +30,7 @@ export class DesignersService {
 
         
 
-        const result = await tmp.docs.map((x) => 
+        const result = await tmp.docs.map((x:any) => 
         { return {name:x.data().name, 
                     portfolio: x.data().images,
                     profile: x.data().profileimage,

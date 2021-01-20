@@ -10,7 +10,7 @@ import { InstagramModule } from './instagram/instagram.module'; */
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: "production.env",
+      envFilePath: "development.env",
       isGlobal: true,
     }),
     //DesignersModule,

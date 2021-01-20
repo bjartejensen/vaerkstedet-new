@@ -52,7 +52,9 @@ export class ContactService {
       message: message,
     };
 
-    const sendGridUrl = `${environment.apiPath}email/send`;
+  
+    //const sendGridUrl = `${environment.apiPath}email/send`;
+    const sendGridUrl =  "https://us-central1-louiserought-2405c.cloudfunctions.net/api/mail/sendmail";
 
     return this.http.post<any>(sendGridUrl,body)
       .pipe(map(()=>{

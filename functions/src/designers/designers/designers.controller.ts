@@ -7,7 +7,7 @@ export class DesignersController {
     constructor(private designersService: DesignersService){}
 
     @Get(":designername")
-    async fetchDesigner(@Param("designername") designerName:any,@Res() response ){
+    async fetchDesigner(@Param("designername") designerName:any,@Res() response:any ){
 
         try{
 
@@ -27,7 +27,7 @@ export class DesignersController {
     }
 
     @Get("fetchall")
-    async fetchDesigners(@Res() response ){
+    async fetchDesigners(@Res() response:any ){
 
         try{
 

@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiPath: "http://localhost:5000/vaerkstedet-ae5e0/us-central1/api/",
+  
 };
 
 /*
