@@ -51,15 +51,11 @@ export class ContactService {
       subject: subject,
       message: message,
     };
-
-  
-    //const sendGridUrl = `${environment.apiPath}email/send`;
-    const sendGridUrl =  "https://us-central1-louiserought-2405c.cloudfunctions.net/api/mail/sendmail";
+   
+    const sendGridUrl =  environment.mailPath;
 
     return this.http.post<any>(sendGridUrl,body)
-      .pipe(map(()=>{
-
-        debugger;
+      .pipe(map((x)=>{
         this.showSpinnerSubject.next(false);
         return "Tak for din henvendelse. Vi bestræber os på at vende tilbage indenfor 24 timer (og gerne før)."
       })).pipe(

@@ -20,12 +20,12 @@ const routes: Routes = [
       import("./about/about.module").then((m)=>m.AboutModule),
       data: { animationState: 'Two' }
   },
-  {
+ /*  {
     path:"collections",
     loadChildren:()=>import("./collections/collections.module")
       .then((m)=>m.CollectionsModule),
       data: { animationState: 'Two' }
-  },
+  }, */
   {
     path: "designers",
     loadChildren: () =>

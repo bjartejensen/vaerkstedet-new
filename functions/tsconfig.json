@@ -7,7 +7,6 @@
     "sourceMap": true,
     "strict": false,
     "target": "es2017",
-    "lib": ["es2017"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": true,
@@ -20,7 +19,5 @@
     "allowSyntheticDefaultImports": true
   },
   "compileOnSave": true,
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

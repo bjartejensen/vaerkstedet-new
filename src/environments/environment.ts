@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiPath: "http://localhost:5000/vaerkstedet-ae5e0/us-central1/api/",
+  mailPath:"https://us-central1-pencil-test-98d8d.cloudfunctions.net/api/email/send"
   
 };
 

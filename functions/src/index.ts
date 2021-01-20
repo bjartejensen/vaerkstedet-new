@@ -8,7 +8,7 @@ import cors from "cors";
 import { AppModule } from "./app.module";
 import express from "express";
 import { CorsOptions } from "@nestjs/common/interfaces/external/cors-options.interface";
-import { HttpExceptionFilter } from "./filters/http.filter";
+//import { HttpExceptionFilter } from "./filters/http.filter";
 //import { ConfigService } from "@nestjs/config";
 
 const server = express();
@@ -19,7 +19,7 @@ const createNestServer = async (expressInstance: any) => {
   const app = await NestFactory.create<NestExpressApplication>(
     AppModule,
     new ExpressAdapter(expressInstance)
-  );
+  ); 
 
   //const development = true; //app.get(ConfigService).isDevelopment();
 
@@ -31,7 +31,7 @@ const createNestServer = async (expressInstance: any) => {
     optionsSuccessStatus: 204,
   }; 
 
-  app.useGlobalFilters(new HttpExceptionFilter());
+ // app.useGlobalFilters(new HttpExceptionFilter());
 
   app.enableCors(corsOptions);
 
