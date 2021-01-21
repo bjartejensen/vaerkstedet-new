@@ -25,19 +25,19 @@ export const loadUnload = trigger("loadUnload",[
       group([
       query(":self",[
         style({opacity:0,transform: "translateX(-20px)"}),
-        animate(`3000ms 300ms ${trnsIn}`),animateChild()
+        animate(`2000ms 300ms ${trnsIn}`),animateChild()
       ]),
       query(".img", [
         style({opacity:0,transform: "translateX(-20px)"}),
-      animate(`400ms 2800ms`),animateChild()
+      animate(`400ms 1800ms`),animateChild()
       ], {optional: true}),
       query(".content", [
         style({opacity:0,transform: "translateX(-20px)"}),
-      animate(`400ms 2800ms`),animateChild()
+      animate(`400ms 1800ms`),animateChild()
       ], {optional: true}),
       query(".logo",[
         style({opacity:0,transform:"translateX(100%)"}),
-      animate(`2500ms 0ms ${trnsIn}`,
+      animate(`1500ms 0ms ${trnsIn}`,
       keyframes( 
         [
         style({ opacity: 0, offset: 0, transform:"translateX(0%)" }),

@@ -41,6 +41,7 @@
   left:5px;
   top:5px;
   cursor: pointer;
+  outline: none;
 
   //background:$cool-blue;
   
@@ -52,6 +53,7 @@
   align-self: center;
   font-size: 2rem;
   color:$cool-grey;
+  outline: none;
 
   @media (min-width: 1200px){
     font-size: 2.5rem;
