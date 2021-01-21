@@ -9,6 +9,8 @@ export interface SocialMediaLink{
     url: string;
 }
 
+//a comment
+
 export interface SingleDesigner{
     name: string;
     profileimage: string;
