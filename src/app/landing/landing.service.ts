@@ -72,7 +72,7 @@ export class LandingService {
 
   private setSubHeaders(){
     this.subHeaders.push("der elsker unika");
-    this.subHeaders.push("der dyrker på kærligheden");
+    this.subHeaders.push("der dyrker kærligheden");
     this.subHeaders.push("der værner om kundeoplevelsen");
     this.subHeaders.push("der tror på bæredygtighed");
   }

@@ -35,28 +35,27 @@
     //overflow-x: hidden;
 } 
 
-.menu-btn{
+.menu-btn, .icon{
   position: absolute;
   z-index: 10000;
   left:5px;
   top:5px;
+  cursor: pointer;
+
   //background:$cool-blue;
   
 }
 
 .menu-icon{
-  color:$cool-blue6;
-  color:$cool-grey;
-  //font-size: 2rem;
-  outline: transparent;
-  background: transparent !important;
   display: flex;
   justify-self: center;
   align-self: center;
-
+  font-size: 2rem;
+  color:$cool-grey;
 
   @media (min-width: 1200px){
     font-size: 2.5rem;
+
   }
 
 

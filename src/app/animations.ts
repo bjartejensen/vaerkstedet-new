@@ -31,6 +31,10 @@ export const loadUnload = trigger("loadUnload",[
         style({opacity:0,transform: "translateX(-20px)"}),
       animate(`400ms 2800ms`),animateChild()
       ], {optional: true}),
+      query(".content", [
+        style({opacity:0,transform: "translateX(-20px)"}),
+      animate(`400ms 2800ms`),animateChild()
+      ], {optional: true}),
       query(".logo",[
         style({opacity:0,transform:"translateX(100%)"}),
       animate(`2500ms 0ms ${trnsIn}`,

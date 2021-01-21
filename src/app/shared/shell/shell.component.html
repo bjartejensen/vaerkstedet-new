@@ -22,15 +22,13 @@
 
       <!--(click)="drawer.toggle()"-->
 
-        <button 
-            type="button"
+        <div 
             aria-label="Toggle sidenav"
-            mat-icon-button
             (click)="drawer.toggle()"
-            class="hamburger"
+            class="icon"
              id="nav-top">
             <mat-icon class="menu-icon" aria-label="Side nav toggle icon">close</mat-icon>
-        </button>
+        </div>
   
         <mat-nav-list class="nav-list"  >
              <app-menu-list
@@ -46,11 +44,12 @@
  
    class="sidenav-content">
 
-    <button mat-icon-button class="menu-btn"  (click)="drawer.toggle()"  
-    
-    aria-label="Example icon button with a home icon">
+    <div 
+      aria-label="Example icon button with a home icon"
+      (click)="drawer.toggle()"  
+      class="icon">
         <mat-icon class="menu-icon">menu</mat-icon>
-    </button>
+    </div>
   
     <!--Router Outlet-->
     <ng-content></ng-content> 
